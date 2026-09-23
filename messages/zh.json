@@ -1,0 +1,132 @@
+{
+  "meta": {
+    "title": "Apptivity — Apps for Every Activity | 印度尼西亚软件公司",
+    "description": "Apptivity（PT Lawson Semesta Indonesia）是一家基于三赢三位一体模式的软件公司：为中小企业、专业人士、政府机构和国有企业提供实惠、透明、友好的IT解决方案。"
+  },
+  "nav": {
+    "about": "关于我们",
+    "scheme": "商业模式",
+    "ownership": "应用归属",
+    "mechanism": "合作流程",
+    "legal": "法律资质",
+    "contact": "联系我们"
+  },
+  "hero": {
+    "eyebrow": "印度尼西亚软件公司",
+    "titleA": "认识",
+    "titleB": "Apptivity",
+    "tagline": "Apps for every activity",
+    "sub": "帮助每一位遇到可用IT方案解决的困难的人——价格实惠、低廉且透明。",
+    "ctaPrimary": "免费WhatsApp咨询",
+    "ctaSecondary": "查看商业模式",
+    "waText": "你好Apptivity，我想咨询项目合作，能详细介绍一下吗？"
+  },
+  "about": {
+    "eyebrow": "01 — 什么是Apptivity？",
+    "title": "实惠、透明、友好的IT解决方案。",
+    "body1": "Apptivity是一家软件公司，帮助所有遇到可用IT方案解决的困难的人，以实惠、低廉且透明的价格提供服务。Apptivity采用三位一体模式：用户位于屋顶位置，下方两侧由推广员和程序员作为基石支撑。",
+    "eyebrow2": "02 — 我们的目标是什么？",
+    "body2": "帮助提升印度尼西亚的经济发展水平，推动信息技术在社会各阶层的均衡普及——包括专业人士、中小企业、政府机构、私营企业以及国有/地方国有企业（BUMN/D），通过实惠、友好且高效的解决方案实现。",
+    "audiences": ["专业人士", "中小企业", "政府机构", "私营企业", "BUMN/D"]
+  },
+  "why": {
+    "eyebrow": "03 — 为什么选择Apptivity？",
+    "body": "因为我们帮助用户/客户针对其需求或问题获得最佳建议与最优替代方案，从不强迫用户/客户成交。而当需要时，Apptivity已拥有高质量、值得信赖的人才，能够承接大大小小的IT项目。"
+  },
+  "scheme": {
+    "eyebrow": "商业模式——三赢三位一体",
+    "title": "客户居于顶峰，双引擎支撑。",
+    "intro": "Apptivity采用三赢三位一体商业模式，正如我们的Logo所描绘：三位一体的顶峰是客户（Sahabat/挚友）数字化目标的达成与满意；而支撑顶峰的力量，是协同合作的自由推广员与开发者，共同构成三赢之力。",
+    "pillars": [
+      {
+        "name": "客户（Sahabat）",
+        "tag": "三位一体之巅",
+        "body": "挚友是我们的首要任务，为挚友提供最优解决方案。"
+      },
+      {
+        "name": "推广员",
+        "tag": "最前线",
+        "body": "引领挚友以最优方案解决问题的最前线。在Apptivity.id有两种推广员：主要与普通。主要推广员是同时身为挚友的推广员，普通推广员是任何与挚友对接的联络人。"
+      },
+      {
+        "name": "开发者",
+        "tag": "执行团队",
+        "body": "根据挚友需求快速响应、高效执行项目的开发团队。"
+      }
+    ]
+  },
+  "ownership": {
+    "eyebrow": "应用归属",
+    "title": "买断或租赁——随心选择。",
+    "intro": "应用归属我们提供2种选择。",
+    "tabBuy": "买断（购买）",
+    "tabRent": "租赁",
+    "pros": "优点",
+    "cons": "不足",
+    "buy": {
+      "pros": [
+        "永久免费咨询",
+        "登记为主要推广员",
+        "获得应用所有权，可按需自行定制",
+        "项目结项后不再收取任何费用"
+      ],
+      "cons": [
+        "超出初期约定的大小新增需求将产生额外费用",
+        "服务器租赁、域名及其他附加工具不包含在项目金额内"
+      ]
+    },
+    "rent": {
+      "pros": [
+        "永久免费咨询",
+        "登记为主要推广员",
+        "小幅新增免费",
+        "免费提供Apptivity.id服务器与内置域名",
+        "大幅新增仅收取少量费用"
+      ],
+      "cons": [
+        "应用非自有，无法随时按需修改",
+        "需按年缴纳租赁费用"
+      ]
+    }
+  },
+  "mechanism": {
+    "eyebrow": "04 — Apptivity合作流程",
+    "title": "清晰的四个步骤。",
+    "steps": [
+      {
+        "title": "联系我们",
+        "body": "用户或客户可直接拨打所列号码，或向我们的社交媒体账号发送私信（DM），随后我们将讨论问题与最优方案。"
+      },
+      {
+        "title": "详谈项目细节",
+        "body": "如需Apptivity专业人员，将为您对接，从项目细节一直谈到合同。"
+      },
+      {
+        "title": "全程监督至交付",
+        "body": "所有工作均由Apptivity监督，直至项目完成。"
+      },
+      {
+        "title": "退款保障",
+        "body": "若项目与初期约定不符，将按缺失功能或约定比例退还用户/客户款项；若需求超出约定，反之亦然。"
+      }
+    ]
+  },
+  "legal": {
+    "eyebrow": "05 — 证照/法律资质",
+    "title": "合法主体，交易可查。",
+    "body": "Apptivity隶属于PT Lawson Semesta Indonesia（个人有限责任公司／PT perorangan），每笔交易与税务均如实申报，法律资质可追责，因此各利益相关方无需对经由Apptivity.id的交易与合作存疑。",
+    "company": "PT Lawson Semesta Indonesia",
+    "entity": "PT Perorangan"
+  },
+  "cta": {
+    "title": "还有疑问？立即DM或WhatsApp——免费！",
+    "sub": "先免费咨询，无需承诺。告诉我们您的问题，我们将给出最佳建议与方案。",
+    "waButton": "WhatsApp咨询",
+    "igButton": "Instagram私信",
+    "note": "欢迎点赞、评论、收藏并分享给家人、朋友、熟人与同事！"
+  },
+  "footer": {
+    "tagline": "Apps for every activity",
+    "rights": "© 2026 PT Lawson Semesta Indonesia. 版权所有。"
+  }
+}

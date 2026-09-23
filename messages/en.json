@@ -1,0 +1,132 @@
+{
+  "meta": {
+    "title": "Apptivity — Apps for Every Activity | Indonesian Software House",
+    "description": "Apptivity (PT Lawson Semesta Indonesia) is a software house built on a win-win trilogy: affordable, transparent, friendly IT solutions for SMEs, professionals, government, and state-owned enterprises."
+  },
+  "nav": {
+    "about": "About",
+    "scheme": "Business Scheme",
+    "ownership": "Ownership",
+    "mechanism": "Process",
+    "legal": "Legality",
+    "contact": "Contact Us"
+  },
+  "hero": {
+    "eyebrow": "Indonesian Software House",
+    "titleA": "Meet",
+    "titleB": "Apptivity",
+    "tagline": "Apps for every activity",
+    "sub": "Helping anyone whose problems can be solved with IT solutions — at affordable, low, and transparent prices.",
+    "ctaPrimary": "Free WhatsApp Chat",
+    "ctaSecondary": "See Business Scheme",
+    "waText": "Hello Apptivity, I'd like to discuss a project. Could you share more info?"
+  },
+  "about": {
+    "eyebrow": "01 — What is Apptivity?",
+    "title": "Affordable, transparent, friendly IT solutions.",
+    "body1": "Apptivity is a software house that helps anyone facing difficulties that can be solved with IT solutions, at affordable, low, and transparent prices. Apptivity uses a trilogy scheme: users sit at the roof, supported below by affiliators and programmers as the foundation.",
+    "eyebrow2": "02 — What is our goal?",
+    "body2": "To help raise Indonesia's economic level and to even out the distribution of information technology adoption across all layers of society — Professionals, SMEs, Government, Private Companies, and State/Region-Owned Enterprises (BUMN/D) — through solutions that are affordable, friendly, and highly effective.",
+    "audiences": ["Professionals", "SMEs", "Government", "Private", "BUMN/D"]
+  },
+  "why": {
+    "eyebrow": "03 — Why Apptivity?",
+    "body": "Because we help users/clients get the best solution for their needs or problems with the best advice and alternatives — never forcing users/clients into a transaction. But when needed, Apptivity already has qualified and trusted professionals to deliver IT projects of any scale, large or small."
+  },
+  "scheme": {
+    "eyebrow": "Business Scheme — Win-Win Trilogy",
+    "title": "Clients at the peak, carried by two strengths.",
+    "intro": "Apptivity runs a win-win trilogy business scheme reflected in our logo: the peak of the trilogy is the satisfaction and fulfillment of our clients' digitalization goals — whom we call friends (sahabat). The strength that holds up that peak is freelance affiliators and developers working in synergy, forming the win-win trilogy.",
+    "pillars": [
+      {
+        "name": "Client (Sahabat)",
+        "tag": "Peak of the trilogy",
+        "body": "Friends are our priority in delivering the best solutions for them."
+      },
+      {
+        "name": "Affiliator",
+        "tag": "Front line",
+        "body": "The front line guiding friends to solve problems with the best solutions at Apptivity.id. There are 2 types: Primary and Regular. A Primary Affiliator is a friend who is also an affiliator, while a Regular Affiliator is anyone connecting friends to us."
+      },
+      {
+        "name": "Developer",
+        "tag": "Execution team",
+        "body": "A fast-response team delivering projects according to our friends' needs."
+      }
+    ]
+  },
+  "ownership": {
+    "eyebrow": "App Ownership",
+    "title": "Buy or rent — pick what fits.",
+    "intro": "For app ownership we offer 2 options.",
+    "tabBuy": "Purchase (Buy)",
+    "tabRent": "Subscription (Rent)",
+    "pros": "Advantages",
+    "cons": "Drawbacks",
+    "buy": {
+      "pros": [
+        "Free consultation forever",
+        "Registered as a Primary Affiliator",
+        "Full app ownership with freedom to customize as needed",
+        "No charges whatsoever after project close"
+      ],
+      "cons": [
+        "Any small or large additions beyond the initial agreement incur extra cost",
+        "Server rental, domain, and additional tools are not included in the project value"
+      ]
+    },
+    "rent": {
+      "pros": [
+        "Free consultation forever",
+        "Registered as a Primary Affiliator",
+        "Small additions free of charge",
+        "Built-in server and domain rental provided free on Apptivity.id servers and domain",
+        "Large additions at a light extra cost"
+      ],
+      "cons": [
+        "The app is not owned, so it cannot be modified at any time",
+        "Yearly rental fee applies"
+      ]
+    }
+  },
+  "mechanism": {
+    "eyebrow": "04 — Apptivity Mechanism",
+    "title": "Four clear steps.",
+    "steps": [
+      {
+        "title": "Contact us",
+        "body": "Users or clients can directly contact the listed number or simply send a Direct Message (DM) to our social media accounts, then we discuss the problem and the best solution."
+      },
+      {
+        "title": "Detail the project",
+        "body": "If you need Apptivity professionals, you will be connected to discuss the project in detail, up to the contract."
+      },
+      {
+        "title": "Supervised until done",
+        "body": "All activities are supervised by Apptivity until the project is complete."
+      },
+      {
+        "title": "Money-back guarantee",
+        "body": "If the project does not match the initial agreement, the user's/client's money is refunded proportionally to the missing features or agreement — and vice versa if there are excess requests."
+      }
+    ]
+  },
+  "legal": {
+    "eyebrow": "05 — License / Legality",
+    "title": "A legal entity, recorded transactions.",
+    "body": "Apptivity operates under PT Lawson Semesta Indonesia as a single-shareholder company (PT perorangan); as such every transaction and tax is reported and legality is accountable, so all stakeholders need not hesitate about transactions and business through Apptivity.id.",
+    "company": "PT Lawson Semesta Indonesia",
+    "entity": "PT Perorangan"
+  },
+  "cta": {
+    "title": "Want to ask further? DM and WhatsApp us now — FREE!",
+    "sub": "Consult first with zero commitment. Tell us your problem, we'll give our best advice and alternatives.",
+    "waButton": "WhatsApp Chat",
+    "igButton": "Instagram DM",
+    "note": "Like, comment, save, and share with your family, friends, acquaintances, and colleagues!"
+  },
+  "footer": {
+    "tagline": "Apps for every activity",
+    "rights": "© 2026 PT Lawson Semesta Indonesia. All rights reserved."
+  }
+}

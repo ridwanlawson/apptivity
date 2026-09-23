@@ -1,26 +1,85 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-navy-950: #061029;
+  --color-navy-800: #0d2758;
+  --color-brand: #1d5fad;
+  --color-sky-hi: #5aa8e8;
+  --color-teal-deep: #153f39;
+  --color-gold: #f0bf4c;
+  --color-gold-soft: #f7d47e;
+  --color-paper: #f5f6fa;
+  --color-ink: #0a1020;
+  --color-muted: #4b5568;
+  --font-sans: "Plus Jakarta Sans", "Noto Sans JP", "Noto Sans SC",
+    system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-navy-950);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-navy-950);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-gold);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 16px;
+  z-index: 100;
+  background: var(--color-gold);
+  color: var(--color-navy-950);
+  font-weight: 700;
+  padding: 10px 18px;
+  border-radius: 999px;
+  transition: top 0.2s ease;
+}
+.skip-link:focus {
+  top: 12px;
+}
+
+/* Word-reveal initial state (JS animates to visible; no-JS stays visible) */
+.js .reveal-word {
+  display: inline-block;
+  transform: translateY(110%);
+}
+.js .reveal-mask {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  padding-bottom: 0.08em;
+  margin-bottom: -0.08em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .js .reveal-word {
+    transform: none;
+  }
 }

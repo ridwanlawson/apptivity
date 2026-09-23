@@ -1,0 +1,132 @@
+{
+  "meta": {
+    "title": "Apptivity — Apps for Every Activity | Software House Indonesia",
+    "description": "Apptivity (PT Lawson Semesta Indonesia) adalah software house dengan skema win-win trilogy: solusi IT murah, transparan, dan bersahabat untuk UMKM, profesional, pemerintahan, dan BUMN/D."
+  },
+  "nav": {
+    "about": "Tentang",
+    "scheme": "Skema Bisnis",
+    "ownership": "Kepemilikan",
+    "mechanism": "Mekanisme",
+    "legal": "Legalitas",
+    "contact": "Hubungi Kami"
+  },
+  "hero": {
+    "eyebrow": "Software House Indonesia",
+    "titleA": "Yuk Kenalan",
+    "titleB": "dengan Apptivity",
+    "tagline": "Apps for every activity",
+    "sub": "Membantu siapa saja yang kesulitannya bisa diatasi dengan solusi IT — dengan harga terjangkau, murah, dan transparan.",
+    "ctaPrimary": "Chat WhatsApp Gratis",
+    "ctaSecondary": "Lihat Skema Bisnis",
+    "waText": "Halo Apptivity, saya tertarik diskusi project. Boleh info lebih lanjut?"
+  },
+  "about": {
+    "eyebrow": "01 — Apa itu Apptivity?",
+    "title": "Solusi IT murah, transparan, bersahabat.",
+    "body1": "Apptivity adalah perusahaan software house yang membantu siapa saja yang sedang dalam kesulitan yang solusinya bisa diatasi dengan solusi IT dengan harga yang terjangkau, murah dan transparan. Apptivity menggunakan skema trilogi yaitu pada posisi atap sebagai users dan untuk sisi di bawah adalah affiliator dan programmer sebagai pondasinya.",
+    "eyebrow2": "02 — Apa tujuan kami?",
+    "body2": "Membantu meningkatkan taraf perekonomian Indonesia dan membantu dalam penyamarataan distribusi penerapan teknologi informasi kepada seluruh lapisan elemen masyarakat baik Profesional, UMKM, Pemerintahan maupun Perusahaan Swasta dan BUMN/D melalui solusi yang murah, bersahabat dan sangat solutif.",
+    "audiences": ["Profesional", "UMKM", "Pemerintahan", "Swasta", "BUMN/D"]
+  },
+  "why": {
+    "eyebrow": "03 — Kenapa harus Apptivity?",
+    "body": "Karena kami membantu users/client dalam mendapatkan solusi terbaik untuk kebutuhan atau masalahnya dengan saran dan alternatif terbaik, tanpa memaksakan apakah users/client harus melakukan transaksi. Tetapi jika dibutuhkan, Apptivity sudah memiliki SDM yang berkualitas dan terpercaya dalam mengerjakan proyek-proyek IT baik yang berskala besar maupun kecil."
+  },
+  "scheme": {
+    "eyebrow": "Skema Bisnis — Win-Win Trilogy",
+    "title": "Sahabat di puncak, ditopang dua kekuatan.",
+    "intro": "Apptivity mengusung skema bisnis win-win trilogy yang tergambar pada logo kami, dimana puncak dari trilogy ini adalah kepuasan dan tercapainya tujuan dari digitalisasi klien Apptivity atau kita sebut juga dengan sahabat. Sementara itu yang menjadi kekuatan yang membantu tercapainya puncak trilogy ini adalah freelance affiliator dan developer yang bersinergi sehingga terbentuk kekuatan win-win trilogy ini.",
+    "pillars": [
+      {
+        "name": "Klien (Sahabat)",
+        "tag": "Puncak trilogy",
+        "body": "Sahabat adalah prioritas kami dalam memberikan solusi terbaik untuk sahabat kami."
+      },
+      {
+        "name": "Affiliator",
+        "tag": "Garda terdepan",
+        "body": "Menjadi garda terdepan dalam mengantarkan sahabat untuk menyelesaikan masalah dengan solusi terbaik pada Apptivity.id. Terdapat 2 jenis affiliator yaitu Utama dan Biasa. Affiliator Utama adalah sahabat yang juga menjadi affiliator, sedangkan Affiliator Biasa adalah siapapun yang menjadi penghubung dengan sahabat."
+      },
+      {
+        "name": "Developer",
+        "tag": "Tim eksekusi",
+        "body": "Tim cepat tanggap dalam mengerjakan proyek sesuai dengan kebutuhan sahabat kami."
+      }
+    ]
+  },
+  "ownership": {
+    "eyebrow": "Kepemilikan Aplikasi",
+    "title": "Beli atau sewa — pilih yang cocok.",
+    "intro": "Untuk kepemilikan aplikasi kami menyediakan 2 pilihan.",
+    "tabBuy": "Pembelian (Beli)",
+    "tabRent": "Penyewaan (Sewa)",
+    "pros": "Kelebihan",
+    "cons": "Kekurangan",
+    "buy": {
+      "pros": [
+        "Gratis konsultasi selamanya",
+        "Terdaftar sebagai Affiliator Utama",
+        "Dapat hak milik atas aplikasi dan bisa custom sendiri sesuai kebutuhan",
+        "Tidak dikenakan biaya apapun setelah close project"
+      ],
+      "cons": [
+        "Apabila terjadi penambahan kecil atau besar di luar kesepakatan awal akan dikenakan tambahan biaya",
+        "Sewa server, domain dan alat-alat tambahan lainnya tidak termasuk ke dalam nilai project"
+      ]
+    },
+    "rent": {
+      "pros": [
+        "Gratis konsultasi selamanya",
+        "Terdaftar sebagai Affiliator Utama",
+        "Penambahan kecil bebas biaya",
+        "Sewa server dan domain bawaan diberikan secara gratis di server dan domain Apptivity.id",
+        "Penambahan besar akan dikenakan biaya ringan"
+      ],
+      "cons": [
+        "Aplikasi tidak dimiliki sehingga tidak bisa diubah kapanpun dibutuhkan",
+        "Dikenakan biaya sewa pertahun"
+      ]
+    }
+  },
+  "mechanism": {
+    "eyebrow": "04 — Mekanisme Apptivity",
+    "title": "Empat langkah yang jelas.",
+    "steps": [
+      {
+        "title": "Hubungi kami",
+        "body": "Users atau client bisa langsung menghubungi nomor yang tertera atau Direct Message (DM) saja ke akun social media kami, lalu akan dibahas terkait masalah dan solusi terbaik."
+      },
+      {
+        "title": "Bahasa project detail",
+        "body": "Jika membutuhkan tenaga profesional dari Apptivity maka akan dihubungkan untuk membahas project secara detail hingga kontrak."
+      },
+      {
+        "title": "Diawasi hingga tuntas",
+        "body": "Seluruh kegiatan akan diawasi oleh Apptivity hingga proyek tuntas."
+      },
+      {
+        "title": "Jaminan pengembalian dana",
+        "body": "Jika proyek tidak seperti kesepakatan di awal maka uang users/client akan dikembalikan sebanyak dari fitur atau kesepakatan yang kurang tersebut, begitu juga sebaliknya jika ada permintaan berlebih."
+      }
+    ]
+  },
+  "legal": {
+    "eyebrow": "05 — License / Legalitas",
+    "title": "Berbadan hukum, transaksi tercatat.",
+    "body": "Apptivity berdiri di atas nama PT Lawson Semesta Indonesia sebagai PT perorangan, dengan begitu setiap transaksi dan pajak akan dilaporkan dan untuk legalitas dapat dipertanggungjawabkan sehingga semua stakeholders tidak perlu ragu terkait transaksi dan bisnis melalui Apptivity.id.",
+    "company": "PT Lawson Semesta Indonesia",
+    "entity": "PT Perorangan"
+  },
+  "cta": {
+    "title": "Ingin bertanya lebih lanjut? DM dan WhatsApp segera — GRATIS!",
+    "sub": "Konsultasi dulu tanpa komitmen. Ceritakan masalah Anda, kami beri saran dan alternatif terbaik.",
+    "waButton": "Chat WhatsApp",
+    "igButton": "DM Instagram",
+    "note": "Ayo like, comment, save dan share kepada keluarga, teman, kenalan dan kolega Anda!"
+  },
+  "footer": {
+    "tagline": "Apps for every activity",
+    "rights": "© 2026 PT Lawson Semesta Indonesia. Seluruh hak cipta dilindungi."
+  }
+}
