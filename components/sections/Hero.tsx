@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import LogoMark from "../LogoMark";
+import Aurora from "../Aurora";
 import MagneticButton from "../MagneticButton";
 import { markJs, whenReady } from "@/lib/anim";
 import { waLink } from "@/lib/site";
@@ -82,11 +83,8 @@ export default function Hero({ dict, locale }: { dict: HeroDict; locale: Locale 
           "linear-gradient(135deg, #061029 0%, #0d2758 70%, #123063 100%)",
       }}
     >
-      {/* soft glows */}
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-32 right-[10%] h-96 w-96 rounded-full bg-brand/30 blur-[120px]" />
-        <div className="absolute bottom-0 left-[5%] h-72 w-72 rounded-full bg-sky-hi/15 blur-[100px]" />
-      </div>
+      {/* living background */}
+      <Aurora variant="hero" />
 
       <div className="relative mx-auto grid max-w-6xl gap-10 px-4 pb-20 pt-32 sm:px-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-center lg:pt-40">
         <div>
@@ -142,7 +140,7 @@ export default function Hero({ dict, locale }: { dict: HeroDict; locale: Locale 
           aria-hidden="true"
         >
           <div className="absolute inset-0 rounded-full bg-sky-hi/20 blur-[80px]" />
-          <LogoMark className="relative h-auto w-full drop-shadow-2xl" />
+          <LogoMark className="relative aspect-square w-full drop-shadow-2xl" />
         </div>
       </div>
 

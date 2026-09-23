@@ -69,7 +69,7 @@ export async function generateMetadata({
       description: t("description"),
     },
     robots: { index: true, follow: true },
-    icons: { icon: "/favicon.svg" },
+    icons: { icon: "/logo.png", apple: "/logo.png" },
   };
 }
 
@@ -104,7 +104,7 @@ export default async function LocaleLayout({
     alternateName: SITE_NAME,
     slogan: TAGLINE,
     url: SITE_URL,
-    logo: `${SITE_URL}/favicon.svg`,
+    logo: `${SITE_URL}/logo.png`,
     sameAs: [IG_URL],
     areaServed: "ID",
   };

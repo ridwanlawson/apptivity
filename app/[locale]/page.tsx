@@ -7,6 +7,7 @@ import Ownership, { type OwnershipDict } from "@/components/sections/Ownership";
 import Mechanism, { type MechanismDict } from "@/components/sections/Mechanism";
 import Legal, { type LegalDict } from "@/components/sections/Legal";
 import Cta, { type CtaDict } from "@/components/sections/Cta";
+import Marquee from "@/components/Marquee";
 import type { Locale } from "@/lib/i18n";
 
 type PageMessages = {
@@ -18,6 +19,7 @@ type PageMessages = {
   mechanism: MechanismDict;
   legal: LegalDict;
   cta: CtaDict;
+  ticker: string[];
 };
 
 export default async function LocalePage({
@@ -32,6 +34,7 @@ export default async function LocalePage({
   return (
     <>
       <Hero dict={m.hero} locale={locale as Locale} />
+      <Marquee items={m.ticker} />
       <About dict={m.about} why={m.why} />
       <Scheme dict={m.scheme} />
       <Ownership dict={m.ownership} />
