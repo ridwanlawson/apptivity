@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import LogoMark from "./LogoMark";
-import { TAGLINE, SITE_NAME, COMPANY } from "@/lib/site";
+import { TAGLINE, SITE_DOMAIN, COMPANY } from "@/lib/site";
 
 function signalReady(): void {
   (window as unknown as { __apptivityReady?: boolean }).__apptivityReady = true;
@@ -95,7 +95,7 @@ export default function Preloader() {
         <motion.div
           className="fixed inset-0 z-[90] flex flex-col items-center justify-center gap-4 bg-navy-950"
           role="status"
-          aria-label={`${SITE_NAME} loading`}
+          aria-label={`${SITE_DOMAIN} loading`}
           exit={{ opacity: 0, y: -40, transition: { duration: 0.45 } }}
         >
           <motion.div
@@ -111,7 +111,7 @@ export default function Preloader() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.15 }}
           >
-            {SITE_NAME}
+            {SITE_DOMAIN}
           </motion.p>
           <motion.p
             className="text-sm font-medium tracking-wide text-sky-hi"

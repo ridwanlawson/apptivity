@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import LogoMark from "../LogoMark";
-import Aurora from "../Aurora";
+import Backdrop from "../Backdrop";
 import MagneticButton from "../MagneticButton";
 import { markJs, whenReady } from "@/lib/anim";
 import { waLink } from "@/lib/site";
@@ -83,8 +83,8 @@ export default function Hero({ dict, locale }: { dict: HeroDict; locale: Locale 
           "linear-gradient(135deg, #061029 0%, #0d2758 70%, #123063 100%)",
       }}
     >
-      {/* living background */}
-      <Aurora variant="hero" />
+      {/* living + interactive background */}
+      <Backdrop variant="hero" />
 
       <div className="relative mx-auto grid max-w-6xl gap-10 px-4 pb-20 pt-32 sm:px-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-center lg:pt-40">
         <div>

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Apptivity — Apps for Every Activity | インドネシアのソフトウェアハウス",
+    "title": "apptivity.id — Apps for Every Activity | インドネシアのソフトウェアハウス",
     "description": "Apptivity（PT Lawson Semesta Indonesia）はウィンウィン・トリロジーに基づくソフトウェアハウスです。手頃で透明性が高く、親しみやすいITソリューションを中小企業、専門家、政府機関、国有企業に提供します。"
   },
   "nav": {
@@ -9,6 +9,7 @@
     "ownership": "所有形態",
     "mechanism": "進め方",
     "legal": "法的根拠",
+    "brief": "案件相談",
     "contact": "お問い合わせ"
   },
   "hero": {
@@ -124,6 +125,29 @@
     "waButton": "WhatsAppで相談",
     "igButton": "Instagram DM",
     "note": "ぜひ「いいね・コメント・保存・シェア」をご家族、ご友人、お知り合い、同僚の方へ！"
+  },
+  "brief": {
+    "eyebrow": "案件相談",
+    "title": "理想のアプリを教えてください。",
+    "sub": "3つのステップに答えるだけで、そのままWhatsAppで送信できます — 無料、コミットメントなし。",
+    "steps": ["アプリの種類", "所有形態", "お客様情報"],
+    "typeLabel": "どんなアプリを作りたいですか？",
+    "types": ["プラットフォーム / Webアプリ", "モバイルアプリ", "AI機能 / 連携", "相談 / 要件定義", "その他"],
+    "ownLabel": "どちらにしますか？",
+    "buy": "購入（所有権あり）",
+    "rent": "レンタル（年額）",
+    "nameLabel": "お名前",
+    "namePh": "お名前 / 会社名",
+    "contactLabel": "WhatsApp番号 / メール",
+    "contactPh": "連絡可能な番号またはメール",
+    "detailLabel": "ご要望をお聞かせください",
+    "detailPh": "例：店舗用のレジアプリ、レポートとレシート機能が必要…",
+    "back": "戻る",
+    "next": "次へ",
+    "submit": "WhatsAppで送信",
+    "reviewTitle": "送信前に確認",
+    "required": "必須項目",
+    "waIntro": "こんにちは、apptivity.id！新規案件のご相談です："
   },
   "ticker": ["永久無料相談", "中小企業", "専門家", "政府機関", "BUMN/D", "返金保証", "主要アフィリエイター", "PT Lawson Semesta Indonesia"],
   "footer": {

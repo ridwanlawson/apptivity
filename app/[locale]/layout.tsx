@@ -126,6 +126,7 @@ export default async function LocaleLayout({
               ownership: tNav("ownership"),
               mechanism: tNav("mechanism"),
               legal: tNav("legal"),
+              brief: tNav("brief"),
               contact: tNav("contact"),
             }}
             waText={tHero("waText")}

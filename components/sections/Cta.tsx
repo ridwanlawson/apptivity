@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import MagneticButton from "../MagneticButton";
-import Aurora from "../Aurora";
+import Backdrop from "../Backdrop";
 import { useReveal } from "@/lib/anim";
 import { IG_URL, waLink } from "@/lib/site";
 
@@ -29,7 +29,7 @@ export default function Cta({ dict }: { dict: CtaDict }) {
           "linear-gradient(135deg, #0d2758 0%, #061029 75%)",
       }}
     >
-      <Aurora variant="cta" />
+      <Backdrop variant="cta" />
       <div className="relative mx-auto max-w-3xl px-4 py-20 text-center sm:px-6 lg:py-28">
         <h2
           data-reveal

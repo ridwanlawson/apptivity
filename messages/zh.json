@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Apptivity — Apps for Every Activity | 印度尼西亚软件公司",
+    "title": "apptivity.id — Apps for Every Activity | 印度尼西亚软件公司",
     "description": "Apptivity（PT Lawson Semesta Indonesia）是一家基于三赢三位一体模式的软件公司：为中小企业、专业人士、政府机构和国有企业提供实惠、透明、友好的IT解决方案。"
   },
   "nav": {
@@ -9,6 +9,7 @@
     "ownership": "应用归属",
     "mechanism": "合作流程",
     "legal": "法律资质",
+    "brief": "发起项目",
     "contact": "联系我们"
   },
   "hero": {
@@ -124,6 +125,29 @@
     "waButton": "WhatsApp咨询",
     "igButton": "Instagram私信",
     "note": "欢迎点赞、评论、收藏并分享给家人、朋友、熟人与同事！"
+  },
+  "brief": {
+    "eyebrow": "发起项目",
+    "title": "告诉我们你理想的应用。",
+    "sub": "回答3个快速步骤，即可直接发送到我们的WhatsApp——免费、无需承诺。",
+    "steps": ["应用类型", "归属方式", "联系信息"],
+    "typeLabel": "你想做什么应用？",
+    "types": ["平台 / Web应用", "移动应用", "AI功能 / 集成", "咨询 / 需求梳理", "其他"],
+    "ownLabel": "选择哪一种？",
+    "buy": "买断（拥有所有权）",
+    "rent": "租赁（按年）",
+    "nameLabel": "姓名",
+    "namePh": "你的姓名 / 公司",
+    "contactLabel": "WhatsApp号 / 邮箱",
+    "contactPh": "有效的号码或邮箱",
+    "detailLabel": "描述你的需求",
+    "detailPh": "例如：给我的店做收银应用，需要报表和小票…",
+    "back": "返回",
+    "next": "继续",
+    "submit": "通过WhatsApp发送",
+    "reviewTitle": "发送前请确认",
+    "required": "必填",
+    "waIntro": "你好apptivity.id！新的项目需求："
   },
   "ticker": ["永久免费咨询", "中小企业", "专业人士", "政府机构", "BUMN/D", "退款保障", "主要推广员", "PT Lawson Semesta Indonesia"],
   "footer": {

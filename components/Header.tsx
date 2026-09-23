@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import LogoMark from "./LogoMark";
 import LocaleSwitcher from "./LocaleSwitcher";
-import { SITE_NAME, waLink } from "@/lib/site";
+import { SITE_DOMAIN, waLink } from "@/lib/site";
 import type { Locale } from "@/lib/i18n";
 
 type NavDict = {
@@ -12,6 +12,7 @@ type NavDict = {
   ownership: string;
   mechanism: string;
   legal: string;
+  brief: string;
   contact: string;
 };
 
@@ -40,6 +41,7 @@ export default function Header({
     { href: `/${locale}#kepemilikan`, label: nav.ownership },
     { href: `/${locale}#mekanisme`, label: nav.mechanism },
     { href: `/${locale}#legalitas`, label: nav.legal },
+    { href: `/${locale}#mulai`, label: nav.brief },
   ];
 
   return (
@@ -57,11 +59,11 @@ export default function Header({
         <a
           href={`/${locale}`}
           className="flex items-center gap-2"
-          aria-label={`${SITE_NAME} home`}
+          aria-label={`${SITE_DOMAIN} home`}
         >
           <LogoMark className="h-8 w-8" />
           <span className="text-lg font-extrabold tracking-tight text-white">
-            {SITE_NAME}
+            {SITE_DOMAIN}
           </span>
         </a>
 

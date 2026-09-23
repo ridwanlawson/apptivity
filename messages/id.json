@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Apptivity — Apps for Every Activity | Software House Indonesia",
+    "title": "apptivity.id — Apps for Every Activity | Software House Indonesia",
     "description": "Apptivity (PT Lawson Semesta Indonesia) adalah software house dengan skema win-win trilogy: solusi IT murah, transparan, dan bersahabat untuk UMKM, profesional, pemerintahan, dan BUMN/D."
   },
   "nav": {
@@ -9,6 +9,7 @@
     "ownership": "Kepemilikan",
     "mechanism": "Mekanisme",
     "legal": "Legalitas",
+    "brief": "Mulai Project",
     "contact": "Hubungi Kami"
   },
   "hero": {
@@ -124,6 +125,29 @@
     "waButton": "Chat WhatsApp",
     "igButton": "DM Instagram",
     "note": "Ayo like, comment, save dan share kepada keluarga, teman, kenalan dan kolega Anda!"
+  },
+  "brief": {
+    "eyebrow": "Mulai Project",
+    "title": "Ceritakan aplikasi impianmu.",
+    "sub": "Jawab 3 langkah cepat, lalu kirim langsung ke WhatsApp kami — gratis, tanpa komitmen.",
+    "steps": ["Jenis aplikasi", "Kepemilikan", "Data diri"],
+    "typeLabel": "Mau buat aplikasi apa?",
+    "types": ["Platform / Web App", "Aplikasi Mobile", "Fitur AI / Integrasi", "Konsultasi / Scoping", "Lainnya"],
+    "ownLabel": "Mau yang mana?",
+    "buy": "Beli (hak milik)",
+    "rent": "Sewa (tahunan)",
+    "nameLabel": "Nama",
+    "namePh": "Nama kamu / perusahaan",
+    "contactLabel": "No. WA / Email",
+    "contactPh": "08xx atau email aktif",
+    "detailLabel": "Ceritakan kebutuhanmu",
+    "detailPh": "Contoh: aplikasi kasir untuk toko saya, perlu laporan dan struk...",
+    "back": "Kembali",
+    "next": "Lanjut",
+    "submit": "Kirim via WhatsApp",
+    "reviewTitle": "Cek lagi sebelum kirim",
+    "required": "Wajib diisi",
+    "waIntro": "Halo apptivity.id! Brief project baru:"
   },
   "ticker": ["Konsultasi Gratis Selamanya", "UMKM", "Profesional", "Pemerintahan", "BUMN/D", "Jaminan Pengembalian Dana", "Affiliator Utama", "PT Lawson Semesta Indonesia"],
   "footer": {

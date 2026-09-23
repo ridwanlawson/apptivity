@@ -1,5 +1,5 @@
 import LogoMark from "./LogoMark";
-import { SITE_NAME, COMPANY, IG_URL, waLink } from "@/lib/site";
+import { SITE_DOMAIN, COMPANY, IG_URL, waLink } from "@/lib/site";
 import type { Locale } from "@/lib/i18n";
 
 export default function Footer({
@@ -19,7 +19,7 @@ export default function Footer({
         <div>
           <div className="flex items-center gap-2">
             <LogoMark className="h-9 w-9" />
-            <p className="text-lg font-extrabold">{SITE_NAME}</p>
+            <p className="text-lg font-extrabold">{SITE_DOMAIN}</p>
           </div>
           <p className="mt-2 text-sm text-sky-hi">{tagline}</p>
           <p className="mt-1 text-sm text-white/60">{COMPANY}</p>

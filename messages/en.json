@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Apptivity — Apps for Every Activity | Indonesian Software House",
+    "title": "apptivity.id — Apps for Every Activity | Indonesian Software House",
     "description": "Apptivity (PT Lawson Semesta Indonesia) is a software house built on a win-win trilogy: affordable, transparent, friendly IT solutions for SMEs, professionals, government, and state-owned enterprises."
   },
   "nav": {
@@ -9,6 +9,7 @@
     "ownership": "Ownership",
     "mechanism": "Process",
     "legal": "Legality",
+    "brief": "Start a Project",
     "contact": "Contact Us"
   },
   "hero": {
@@ -124,6 +125,29 @@
     "waButton": "WhatsApp Chat",
     "igButton": "Instagram DM",
     "note": "Like, comment, save, and share with your family, friends, acquaintances, and colleagues!"
+  },
+  "brief": {
+    "eyebrow": "Start a Project",
+    "title": "Tell us your dream app.",
+    "sub": "Answer 3 quick steps, then send it straight to our WhatsApp — free, no commitment.",
+    "steps": ["App type", "Ownership", "Your details"],
+    "typeLabel": "What do you want to build?",
+    "types": ["Platform / Web App", "Mobile App", "AI Feature / Integration", "Consultation / Scoping", "Other"],
+    "ownLabel": "Which one?",
+    "buy": "Buy (full ownership)",
+    "rent": "Rent (yearly)",
+    "nameLabel": "Name",
+    "namePh": "Your name / company",
+    "contactLabel": "WhatsApp No. / Email",
+    "contactPh": "Active number or email",
+    "detailLabel": "Describe your needs",
+    "detailPh": "E.g.: a cashier app for my store, needs reports and receipts...",
+    "back": "Back",
+    "next": "Continue",
+    "submit": "Send via WhatsApp",
+    "reviewTitle": "Review before sending",
+    "required": "Required",
+    "waIntro": "Hello apptivity.id! New project brief:"
   },
   "ticker": ["Free Consultation Forever", "SMEs", "Professionals", "Government", "BUMN/D", "Money-Back Guarantee", "Primary Affiliator", "PT Lawson Semesta Indonesia"],
   "footer": {
