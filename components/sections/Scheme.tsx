@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SectionHeading from "../SectionHeading";
@@ -16,13 +17,21 @@ export type SchemeDict = {
 };
 
 const ACTIVE_STYLES = [
-  { dot: "bg-gold", ring: "ring-gold", text: "text-gold", card: "border-gold" },
-  { dot: "bg-sky-hi", ring: "ring-sky-hi", text: "text-sky-hi", card: "border-sky-hi" },
-  { dot: "bg-emerald-300", ring: "ring-emerald-300", text: "text-emerald-300", card: "border-emerald-300" },
+  { dot: "bg-gold", text: "text-gold", card: "border-gold", glow: "#f0bf4c" },
+  { dot: "bg-sky-hi", text: "text-sky-hi", card: "border-sky-hi", glow: "#5aa8e8" },
+  { dot: "bg-emerald-300", text: "text-emerald-300", card: "border-emerald-300", glow: "#6ee7b7" },
 ];
 
-// Scrollytelling: sticky triangle visual (CSS position:sticky — no JS pin,
-// mobile-safe) + active pillar highlight driven by ScrollTrigger.
+// Hotspot positions (% of the logo image): peak, left foot, right foot.
+const HOTSPOTS = [
+  { left: "50%", top: "13%" },
+  { left: "28%", top: "76%" },
+  { left: "72%", top: "71%" },
+];
+
+// Scrollytelling on the real logo: the trilogy "tergambar pada logo kami" —
+// peak = Sahabat, left foot = Affiliator, right foot = Developer.
+// Sticky visual (CSS, mobile-safe) + ScrollTrigger highlight + click-to-focus.
 export default function Scheme({ dict }: { dict: SchemeDict }) {
   const ref = useRef<HTMLElement>(null);
   const [active, setActive] = useState(0);
@@ -46,6 +55,16 @@ export default function Scheme({ dict }: { dict: SchemeDict }) {
     return () => ctx.revert();
   }, []);
 
+  const focusPillar = (i: number) => {
+    setActive(i);
+    document
+      .getElementById(`pilar-${i}`)
+      ?.scrollIntoView({
+        behavior: prefersReducedMotion() ? "auto" : "smooth",
+        block: "center",
+      });
+  };
+
   const pillars = dict.pillars;
 
   return (
@@ -68,60 +87,77 @@ export default function Scheme({ dict }: { dict: SchemeDict }) {
         </p>
 
         <div className="mt-12 grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
-          {/* Sticky visual */}
+          {/* Sticky visual: the logo itself as the diagram */}
           <div className="lg:sticky lg:top-24 lg:self-start">
             <div
-              className="relative mx-auto max-w-sm rounded-3xl border border-white/10 bg-white/5 p-8"
-              aria-hidden="true"
+              data-reveal
+              className="relative mx-auto max-w-sm rounded-3xl border border-white/10 bg-white/5 p-6"
             >
-              <svg viewBox="0 0 300 250" className="w-full">
-                <polygon
-                  points="150,30 40,210 260,210"
-                  fill="none"
-                  stroke="rgba(255,255,255,0.15)"
-                  strokeWidth="2"
+              <div className="relative aspect-square w-full">
+                <Image
+                  src="/logo.png"
+                  alt="Logo Apptivity — puncak adalah Sahabat, kaki kiri Affiliator, kaki kanan Developer"
+                  fill
+                  sizes="380px"
+                  className="object-contain"
                 />
-                {/* Sahabat — peak */}
-                <circle
-                  cx="150"
-                  cy="30"
-                  r={active === 0 ? 16 : 11}
-                  className={active === 0 ? "fill-[#f0bf4c]" : "fill-white/30"}
-                  style={{ transition: "all .4s" }}
-                />
-                {/* Affiliator — base left */}
-                <circle
-                  cx="40"
-                  cy="210"
-                  r={active === 1 ? 16 : 11}
-                  className={active === 1 ? "fill-[#5aa8e8]" : "fill-white/30"}
-                  style={{ transition: "all .4s" }}
-                />
-                {/* Developer — base right */}
-                <circle
-                  cx="260"
-                  cy="210"
-                  r={active === 2 ? 16 : 11}
-                  className={active === 2 ? "fill-[#6ee7b7]" : "fill-white/30"}
-                  style={{ transition: "all .4s" }}
-                />
-              </svg>
-              <ul className="mt-4 space-y-2 text-center text-sm font-bold">
-                {pillars.map((p, i) => (
-                  <li
-                    key={p.name}
-                    className={
-                      i === active
-                        ? ACTIVE_STYLES[i % ACTIVE_STYLES.length]?.text
-                        : "text-white/40"
-                    }
-                    style={{ transition: "color .4s" }}
-                  >
-                    {i === 0 ? "▲ " : i === 1 ? "◀ " : "▶ "}
-                    {p.name}
-                  </li>
-                ))}
-              </ul>
+                {pillars.map((p, i) => {
+                  const st = ACTIVE_STYLES[i % ACTIVE_STYLES.length];
+                  const spot = HOTSPOTS[i % HOTSPOTS.length];
+                  const isActive = i === active;
+                  return (
+                    <button
+                      key={p.name}
+                      type="button"
+                      onClick={() => focusPillar(i)}
+                      aria-label={`Fokus ke ${p.name}`}
+                      aria-pressed={isActive}
+                      className="group absolute -translate-x-1/2 -translate-y-1/2 rounded-full p-3"
+                      style={{ left: spot?.left, top: spot?.top }}
+                    >
+                      <span
+                        aria-hidden="true"
+                        className={`relative block h-5 w-5 rounded-full transition-all duration-500 ${
+                          isActive ? "" : "opacity-50 group-hover:opacity-100"
+                        }`}
+                        style={{
+                          backgroundColor: isActive ? st?.glow : "rgba(255,255,255,0.5)",
+                          boxShadow: isActive
+                            ? `0 0 0 6px ${st?.glow}33, 0 0 24px ${st?.glow}`
+                            : "none",
+                        }}
+                      >
+                        {isActive && <span className="hotspot-ping" aria-hidden="true" style={{ borderColor: st?.glow }} />}
+                      </span>
+                      <span className="sr-only">{p.name}</span>
+                    </button>
+                  );
+                })}
+              </div>
+              <div className="mt-2 flex flex-wrap justify-center gap-2">
+                {pillars.map((p, i) => {
+                  const st = ACTIVE_STYLES[i % ACTIVE_STYLES.length];
+                  const isActive = i === active;
+                  return (
+                    <button
+                      key={p.name}
+                      type="button"
+                      onClick={() => focusPillar(i)}
+                      aria-pressed={isActive}
+                      className={`rounded-full px-4 py-1.5 text-sm font-bold transition-all duration-300 ${
+                        isActive
+                          ? "bg-white text-navy-950"
+                          : "bg-white/10 text-white/60 hover:bg-white/20 hover:text-white"
+                      }`}
+                    >
+                      <span className={isActive ? "" : st?.text} aria-hidden="true">
+                        {i + 1} ·{" "}
+                      </span>
+                      {p.name}
+                    </button>
+                  );
+                })}
+              </div>
             </div>
           </div>
 
@@ -133,10 +169,11 @@ export default function Scheme({ dict }: { dict: SchemeDict }) {
               return (
                 <li
                   key={p.name}
+                  id={`pilar-${i}`}
                   data-pillar
                   data-reveal
                   aria-current={isActive ? "step" : undefined}
-                  className={`rounded-3xl border-2 bg-white/5 p-7 backdrop-blur transition-colors duration-500 ${
+                  className={`scroll-mt-32 rounded-3xl border-2 bg-white/5 p-7 backdrop-blur transition-colors duration-500 ${
                     isActive ? st?.card : "border-white/10"
                   }`}
                 >
