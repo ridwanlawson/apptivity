@@ -85,8 +85,19 @@ export default function Orb({ className = "" }: { className?: string }) {
     };
 
     if (reduce) {
-      draw(angleY, tiltBase);
-      return () => ro.disconnect();
+      // Static frame, but keep it painted: any resize clears the canvas,
+      // so redraw after resize instead of leaving a blank orb behind.
+      const paintStatic = () => {
+        resize();
+        draw(angleY, tiltBase);
+      };
+      paintStatic();
+      const ro2 = new ResizeObserver(paintStatic);
+      ro2.observe(canvas);
+      return () => {
+        ro.disconnect();
+        ro2.disconnect();
+      };
     }
 
     const tick = () => {

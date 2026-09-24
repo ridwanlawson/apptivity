@@ -1,21 +1,23 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 // Gold dot + trailing ring. Fine pointers only; never on touch or reduced motion.
+// The two layers always render (SSR + client identical → no hydration mismatch);
+// a class on <html> turns them on, so a cursor-less device never sees them.
 export default function Cursor() {
   const dotRef = useRef<HTMLDivElement>(null);
   const ringRef = useRef<HTMLDivElement>(null);
-  // Decided at mount (SSR-safe): fine pointer + no reduced motion.
-  const [enabled] = useState(
-    () =>
-      typeof window !== "undefined" &&
-      !window.matchMedia("(prefers-reduced-motion: reduce)").matches &&
-      window.matchMedia("(hover: hover) and (pointer: fine)").matches,
-  );
 
   useEffect(() => {
-    if (!enabled) return;
+    if (
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
+      !window.matchMedia("(hover: hover) and (pointer: fine)").matches
+    ) {
+      return;
+    }
+    const root = document.documentElement;
+    root.classList.add("cursor-on");
     document.body.classList.add("has-cursor");
 
     const pos = { x: -100, y: -100 };
@@ -30,8 +32,10 @@ export default function Cursor() {
         "a, button, [role='button'], [role='tab'], [role='option'], input, textarea, select",
       );
       ringRef.current?.classList.toggle("cursor-hot", !!t);
-      const visible = (e.target as HTMLElement).closest("input, textarea, select");
-      document.body.classList.toggle("cursor-text", !!visible);
+      document.body.classList.toggle(
+        "cursor-text",
+        !!(e.target as HTMLElement).closest("input, textarea, select"),
+      );
     };
     const onDown = () => {
       down = true;
@@ -57,8 +61,7 @@ export default function Cursor() {
         dotRef.current.style.transform = `translate(${pos.x}px, ${pos.y}px)`;
       }
       if (ringRef.current) {
-        const s = down ? 0.8 : 1;
-        ringRef.current.style.transform = `translate(${ring.x}px, ${ring.y}px) scale(${s})`;
+        ringRef.current.style.transform = `translate(${ring.x}px, ${ring.y}px) scale(${down ? 0.8 : 1})`;
       }
       raf = requestAnimationFrame(loop);
     };
@@ -67,20 +70,20 @@ export default function Cursor() {
     window.addEventListener("pointermove", onMove, { passive: true });
     window.addEventListener("pointerdown", onDown);
     window.addEventListener("pointerup", onUp);
-    document.documentElement.addEventListener("mouseleave", onLeave);
-    document.documentElement.addEventListener("mouseenter", onEnter);
+    root.addEventListener("mouseleave", onLeave);
+    root.addEventListener("mouseenter", onEnter);
     return () => {
       cancelAnimationFrame(raf);
+      root.classList.remove("cursor-on");
       document.body.classList.remove("has-cursor", "cursor-text");
       window.removeEventListener("pointermove", onMove);
       window.removeEventListener("pointerdown", onDown);
       window.removeEventListener("pointerup", onUp);
-      document.documentElement.removeEventListener("mouseleave", onLeave);
-      document.documentElement.removeEventListener("mouseenter", onEnter);
+      root.removeEventListener("mouseleave", onLeave);
+      root.removeEventListener("mouseenter", onEnter);
     };
-  }, [enabled]);
+  }, []);
 
-  if (!enabled) return null;
   return (
     <>
       <div ref={dotRef} aria-hidden="true" className="cursor-dot" />

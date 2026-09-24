@@ -29,7 +29,8 @@ export default function Backdrop({ variant = "hero" }: { variant?: "hero" | "cta
     const root = rootRef.current;
     const shift = shiftRef.current;
     const canvas = canvasRef.current;
-    if (!root || !shift || !canvas || prefersReducedMotion()) return;
+    if (!root || !shift || !canvas) return;
+    const reduce = prefersReducedMotion();
 
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
@@ -85,41 +86,8 @@ export default function Backdrop({ variant = "hero" }: { variant?: "hero" | "cta
     });
     io.observe(root);
 
-    const tick = () => {
-      if (!visible || document.hidden) {
-        raf = requestAnimationFrame(tick);
-        return;
-      }
-      // Blob parallax toward cursor (max ±18px).
-      const nx = mouse.inside ? (mouse.x / w - 0.5) * 2 : 0;
-      const ny = mouse.inside ? (mouse.y / h - 0.5) * 2 : 0;
-      shift.style.transform = `translate(${(nx * 18).toFixed(1)}px, ${(ny * 18).toFixed(1)}px)`;
-
+    const paint = () => {
       ctx.clearRect(0, 0, w, h);
-
-      for (const p of parts) {
-        // Gentle mouse repulsion.
-        const dx = p.x - mouse.x;
-        const dy = p.y - mouse.y;
-        const d2 = dx * dx + dy * dy;
-        if (mouse.inside && d2 < MOUSE_DIST * MOUSE_DIST && d2 > 1) {
-          const d = Math.sqrt(d2);
-          const f = ((MOUSE_DIST - d) / MOUSE_DIST) * 0.6;
-          p.vx += (dx / d) * f * 0.06;
-          p.vy += (dy / d) * f * 0.06;
-        }
-        // Damping back to drift speed.
-        p.vx *= 0.985;
-        p.vy *= 0.985;
-        if (Math.abs(p.vx) < 0.08) p.vx += (Math.random() - 0.5) * 0.02;
-        if (Math.abs(p.vy) < 0.08) p.vy += (Math.random() - 0.5) * 0.02;
-        p.x += p.vx;
-        p.y += p.vy;
-        if (p.x < -10) p.x = w + 10;
-        if (p.x > w + 10) p.x = -10;
-        if (p.y < -10) p.y = h + 10;
-        if (p.y > h + 10) p.y = -10;
-      }
 
       // Links.
       for (let i = 0; i < parts.length; i++) {
@@ -161,9 +129,56 @@ export default function Backdrop({ variant = "hero" }: { variant?: "hero" | "cta
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
         ctx.fill();
       }
+    };
 
+    const tick = () => {
+      if (!visible || document.hidden) {
+        raf = requestAnimationFrame(tick);
+        return;
+      }
+      // Blob parallax toward cursor (max ±18px).
+      const nx = mouse.inside ? (mouse.x / w - 0.5) * 2 : 0;
+      const ny = mouse.inside ? (mouse.y / h - 0.5) * 2 : 0;
+      shift.style.transform = `translate(${(nx * 18).toFixed(1)}px, ${(ny * 18).toFixed(1)}px)`;
+
+      for (const p of parts) {
+        // Gentle mouse repulsion.
+        const dx = p.x - mouse.x;
+        const dy = p.y - mouse.y;
+        const d2 = dx * dx + dy * dy;
+        if (mouse.inside && d2 < MOUSE_DIST * MOUSE_DIST && d2 > 1) {
+          const d = Math.sqrt(d2);
+          const f = ((MOUSE_DIST - d) / MOUSE_DIST) * 0.6;
+          p.vx += (dx / d) * f * 0.06;
+          p.vy += (dy / d) * f * 0.06;
+        }
+        // Damping back to drift speed.
+        p.vx *= 0.985;
+        p.vy *= 0.985;
+        if (Math.abs(p.vx) < 0.08) p.vx += (Math.random() - 0.5) * 0.02;
+        if (Math.abs(p.vy) < 0.08) p.vy += (Math.random() - 0.5) * 0.02;
+        p.x += p.vx;
+        p.y += p.vy;
+        if (p.x < -10) p.x = w + 10;
+        if (p.x > w + 10) p.x = -10;
+        if (p.y < -10) p.y = h + 10;
+        if (p.y > h + 10) p.y = -10;
+      }
+
+      paint();
       raf = requestAnimationFrame(tick);
     };
+
+    if (reduce) {
+      // Reduced motion: draw the same field once (and on resize), no loop.
+      paint();
+      const onResize = () => {
+        resize();
+        paint();
+      };
+      window.addEventListener("resize", onResize);
+      return () => window.removeEventListener("resize", onResize);
+    }
     raf = requestAnimationFrame(tick);
 
     return () => {

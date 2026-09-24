@@ -67,7 +67,18 @@ body {
   top: 12px;
 }
 
-/* ---- Custom cursor (fine pointers only, gated by body.has-cursor) ---- */
+/* ---- Preloader: skipped before first paint for returning visitors ---- */
+html[data-preload-hidden] .preloader,
+html.cursor-on .preloader {
+  display: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .preloader {
+    display: none;
+  }
+}
+
+/* ---- Custom cursor (fine pointers only, enabled via html.cursor-on) ---- */
 .cursor-dot,
 .cursor-ring {
   position: fixed;
@@ -76,6 +87,11 @@ body {
   z-index: 120;
   pointer-events: none;
   border-radius: 9999px;
+  display: none;
+}
+html.cursor-on .cursor-dot,
+html.cursor-on .cursor-ring {
+  display: block;
 }
 .cursor-dot {
   width: 8px;
