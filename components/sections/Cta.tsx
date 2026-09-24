@@ -71,7 +71,8 @@ export default function Cta({ dict }: { dict: CtaDict }) {
         href={waLink(dict.waText)}
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed inset-x-4 bottom-4 z-[70] rounded-full bg-gold py-3.5 text-center font-bold text-navy-950 shadow-2xl sm:hidden"
+        className="fixed inset-x-4 z-[70] rounded-full bg-gold py-3.5 text-center font-bold text-navy-950 shadow-2xl sm:hidden"
+        style={{ bottom: "max(1rem, env(safe-area-inset-bottom))" }}
         aria-label={dict.waButton}
       >
         {dict.waButton}

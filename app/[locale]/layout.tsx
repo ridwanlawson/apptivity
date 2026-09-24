@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
 import { hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -9,6 +9,7 @@ import { IG_URL, SITE_URL, SITE_NAME, TAGLINE, COMPANY } from "@/lib/site";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Preloader from "@/components/Preloader";
+import Cursor from "@/components/Cursor";
 import LenisProvider from "@/components/LenisProvider";
 
 const jakarta = Plus_Jakarta_Sans({
@@ -31,6 +32,12 @@ const notoSc = Noto_Sans_SC({
   variable: "--font-noto-sc",
   display: "swap",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#061029",
+};
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -116,6 +123,7 @@ export default async function LocaleLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <LenisProvider>
+          <Cursor />
           <Preloader />
           <Header
             locale={loc}

@@ -19,6 +19,11 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  overflow-x: clip;
+}
+
 html.lenis,
 html.lenis body {
   height: auto;
@@ -62,7 +67,53 @@ body {
   top: 12px;
 }
 
-/* Word-reveal initial state (JS animates to visible; no-JS stays visible) */
+/* ---- Custom cursor (fine pointers only, gated by body.has-cursor) ---- */
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 120;
+  pointer-events: none;
+  border-radius: 9999px;
+}
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  margin: -4px 0 0 -4px;
+  background: var(--color-gold);
+}
+.cursor-ring {
+  width: 38px;
+  height: 38px;
+  margin: -19px 0 0 -19px;
+  border: 1.5px solid rgba(240, 191, 76, 0.65);
+  transition: width 0.25s, height 0.25s, margin 0.25s, background-color 0.25s;
+}
+.cursor-ring.cursor-hot {
+  width: 56px;
+  height: 56px;
+  margin: -28px 0 0 -28px;
+  background: rgba(240, 191, 76, 0.12);
+}
+.cursor-hidden {
+  opacity: 0;
+}
+@media (hover: hover) and (pointer: fine) {
+  body.has-cursor,
+  body.has-cursor a,
+  body.has-cursor button,
+  body.has-cursor [role="button"] {
+    cursor: none;
+  }
+  body.has-cursor.cursor-text,
+  body.has-cursor.cursor-text input,
+  body.has-cursor.cursor-text textarea {
+    cursor: text;
+  }
+}
+
+/* ---- Word-reveal initial state (JS animates to visible; no-JS stays visible) ---- */
 .js .reveal-word {
   display: inline-block;
   transform: translateY(110%);
