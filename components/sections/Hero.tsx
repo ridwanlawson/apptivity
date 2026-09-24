@@ -2,8 +2,8 @@
 
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import LogoMark from "../LogoMark";
 import Backdrop from "../Backdrop";
+import Orb from "../Orb";
 import MagneticButton from "../MagneticButton";
 import { markJs, whenReady } from "@/lib/anim";
 import { waLink } from "@/lib/site";
@@ -136,11 +136,11 @@ export default function Hero({ dict, locale }: { dict: HeroDict; locale: Locale 
 
         <div
           data-hero-logo
-          className="relative mx-auto hidden w-full max-w-sm lg:block"
-          aria-hidden="true"
+          className="relative mx-auto aspect-square w-full max-w-sm lg:max-w-md"
+          aria-hidden="false"
         >
-          <div className="absolute inset-0 rounded-full bg-sky-hi/20 blur-[80px]" />
-          <LogoMark className="relative aspect-square w-full drop-shadow-2xl" />
+          <div className="absolute inset-0 rounded-full bg-sky-hi/10 blur-[80px]" aria-hidden="true" />
+          <Orb className="relative h-full w-full" />
         </div>
       </div>
 
