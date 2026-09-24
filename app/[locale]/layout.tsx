@@ -68,7 +68,7 @@ export async function generateMetadata({
       siteName: SITE_NAME,
       title: t("title"),
       description: t("description"),
-      images: [{ url: "/og.svg", width: 1200, height: 630, alt: SITE_NAME }],
+      images: [{ url: "/og.png", width: 1200, height: 630, alt: SITE_NAME }],
     },
     twitter: {
       card: "summary_large_image",
@@ -113,6 +113,12 @@ export default async function LocaleLayout({
     logo: `${SITE_URL}/logo.png`,
     sameAs: [IG_URL],
     areaServed: "ID",
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+62-812-7038-9862",
+      contactType: "customer service",
+      availableLanguage: ["id", "en"],
+    },
   };
 
   return (
