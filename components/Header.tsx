@@ -14,6 +14,7 @@ type NavDict = {
   legal: string;
   brief: string;
   contact: string;
+  skip: string;
 };
 
 export default function Header({
@@ -53,7 +54,7 @@ export default function Header({
       }`}
     >
       <a href="#konten" className="skip-link">
-        Skip to content
+        {nav.skip}
       </a>
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
         <a

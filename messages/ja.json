@@ -10,7 +10,8 @@
     "mechanism": "進め方",
     "legal": "法的根拠",
     "brief": "案件相談",
-    "contact": "お問い合わせ"
+    "contact": "お問い合わせ",
+    "skip": "コンテンツへスキップ"
   },
   "hero": {
     "eyebrow": "インドネシアのソフトウェアハウス",
@@ -20,7 +21,7 @@
     "sub": "ITで解決できるお困りごとを、手頃で透明性が高く、親しみやすいソリューションで支援します。",
     "ctaPrimary": "WhatsAppで無料相談",
     "ctaSecondary": "ビジネススキームを見る",
-    "waText": "こんにちは、Apptivity。プロジェクトについて相談したいです。詳しく教えてください。"
+    "waText": "こんにちは、apptivity.id。プロジェクトについて相談したいです。詳しく教えてください。"
   },
   "about": {
     "eyebrow": "01 — Apptivityとは？",
@@ -60,7 +61,7 @@
     "eyebrow": "アプリの所有形態",
     "title": "購入かレンタルか — 合う方を。",
     "intro": "アプリの所有形態は2つの選択肢をご用意しています。",
-    "tabBuy": "購入（買い取り）",
+    "tabBuy": "購入",
     "tabRent": "レンタル",
     "pros": "メリット",
     "cons": "デメリット",
@@ -93,6 +94,7 @@
   "mechanism": {
     "eyebrow": "04 — Apptivityの進め方",
     "title": "明確な4つのステップ。",
+    "badge": "保証",
     "steps": [
       {
         "title": "お問い合わせ",
@@ -113,7 +115,7 @@
     ]
   },
   "legal": {
-    "eyebrow": "05 — ライセンス／法的根拠",
+    "eyebrow": "05 — 法的根拠",
     "title": "法人格を持ち、取引は記録されます。",
     "body": "ApptivityはPT Lawson Semesta Indonesia（個人有限会社／PT perorangan）として運営され、すべての取引と税務が報告され法的責任が明確です。Apptivity.idを通じた取引やビジネスに安心してご参加いただけます。",
     "company": "PT Lawson Semesta Indonesia",
@@ -124,7 +126,7 @@
     "sub": "まずは無料相談から。課題をお聞かせください。最良の助言と選択肢をご提案します。",
     "waButton": "WhatsAppで相談",
     "igButton": "Instagram DM",
-    "note": "ぜひ「いいね・コメント・保存・シェア」をご家族、ご友人、お知り合い、同僚の方へ！"
+    "note": "営業時間内に返信 — まずは無料相談、コミットメントなし。"
   },
   "brief": {
     "eyebrow": "案件相談",
@@ -149,9 +151,11 @@
     "required": "必須項目",
     "waIntro": "こんにちは、apptivity.id！新規案件のご相談です："
   },
-  "ticker": ["永久無料相談", "中小企業", "専門家", "政府機関", "BUMN/D", "返金保証", "主要アフィリエイター", "PT Lawson Semesta Indonesia"],
+  "ticker": ["返金保証", "手頃で透明な価格", "取引の強制なし", "永久無料相談", "質の高い信頼できる人材", "中小企業・専門家・政府機関・BUMN/D向け", "法人格 — PT Lawson Semesta Indonesia"],
   "footer": {
     "tagline": "Apps for every activity",
+    "contactTitle": "お問い合わせ",
+    "links": ["概要", "ビジネススキーム", "所有形態", "進め方"],
     "rights": "© 2026 PT Lawson Semesta Indonesia. All rights reserved."
   }
 }

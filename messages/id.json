@@ -10,17 +10,18 @@
     "mechanism": "Mekanisme",
     "legal": "Legalitas",
     "brief": "Mulai Project",
-    "contact": "Hubungi Kami"
+    "contact": "Hubungi Kami",
+    "skip": "Lewati ke konten"
   },
   "hero": {
     "eyebrow": "Software House Indonesia",
     "titleA": "Yuk Kenalan",
     "titleB": "dengan Apptivity",
     "tagline": "Apps for every activity",
-    "sub": "Membantu siapa saja yang kesulitannya bisa diatasi dengan solusi IT — dengan harga terjangkau, murah, dan transparan.",
+    "sub": "Membantu siapa saja yang kesulitannya bisa diatasi dengan solusi IT — dengan harga terjangkau dan transparan.",
     "ctaPrimary": "Chat WhatsApp Gratis",
     "ctaSecondary": "Lihat Skema Bisnis",
-    "waText": "Halo Apptivity, saya tertarik diskusi project. Boleh info lebih lanjut?"
+    "waText": "Halo apptivity.id, saya tertarik diskusi project. Boleh info lebih lanjut?"
   },
   "about": {
     "eyebrow": "01 — Apa itu Apptivity?",
@@ -60,8 +61,8 @@
     "eyebrow": "Kepemilikan Aplikasi",
     "title": "Beli atau sewa — pilih yang cocok.",
     "intro": "Untuk kepemilikan aplikasi kami menyediakan 2 pilihan.",
-    "tabBuy": "Pembelian (Beli)",
-    "tabRent": "Penyewaan (Sewa)",
+    "tabBuy": "Beli",
+    "tabRent": "Sewa",
     "pros": "Kelebihan",
     "cons": "Kekurangan",
     "buy": {
@@ -93,13 +94,14 @@
   "mechanism": {
     "eyebrow": "04 — Mekanisme Apptivity",
     "title": "Empat langkah yang jelas.",
+    "badge": "Garansi",
     "steps": [
       {
         "title": "Hubungi kami",
         "body": "Users atau client bisa langsung menghubungi nomor yang tertera atau Direct Message (DM) saja ke akun social media kami, lalu akan dibahas terkait masalah dan solusi terbaik."
       },
       {
-        "title": "Bahasa project detail",
+        "title": "Bahas project hingga kontrak",
         "body": "Jika membutuhkan tenaga profesional dari Apptivity maka akan dihubungkan untuk membahas project secara detail hingga kontrak."
       },
       {
@@ -113,7 +115,7 @@
     ]
   },
   "legal": {
-    "eyebrow": "05 — License / Legalitas",
+    "eyebrow": "05 — Legalitas",
     "title": "Berbadan hukum, transaksi tercatat.",
     "body": "Apptivity berdiri di atas nama PT Lawson Semesta Indonesia sebagai PT perorangan, dengan begitu setiap transaksi dan pajak akan dilaporkan dan untuk legalitas dapat dipertanggungjawabkan sehingga semua stakeholders tidak perlu ragu terkait transaksi dan bisnis melalui Apptivity.id.",
     "company": "PT Lawson Semesta Indonesia",
@@ -124,24 +126,24 @@
     "sub": "Konsultasi dulu tanpa komitmen. Ceritakan masalah Anda, kami beri saran dan alternatif terbaik.",
     "waButton": "Chat WhatsApp",
     "igButton": "DM Instagram",
-    "note": "Ayo like, comment, save dan share kepada keluarga, teman, kenalan dan kolega Anda!"
+    "note": "Dibalas di jam kerja — konsultasi dulu, tanpa komitmen."
   },
   "brief": {
     "eyebrow": "Mulai Project",
-    "title": "Ceritakan aplikasi impianmu.",
+    "title": "Ceritakan aplikasi impian Anda.",
     "sub": "Jawab 3 langkah cepat, lalu kirim langsung ke WhatsApp kami — gratis, tanpa komitmen.",
     "steps": ["Jenis aplikasi", "Kepemilikan", "Data diri"],
-    "typeLabel": "Mau buat aplikasi apa?",
+    "typeLabel": "Ingin membuat aplikasi apa?",
     "types": ["Platform / Web App", "Aplikasi Mobile", "Fitur AI / Integrasi", "Konsultasi / Scoping", "Lainnya"],
-    "ownLabel": "Mau yang mana?",
+    "ownLabel": "Pilih yang mana?",
     "buy": "Beli (hak milik)",
     "rent": "Sewa (tahunan)",
     "nameLabel": "Nama",
-    "namePh": "Nama kamu / perusahaan",
+    "namePh": "Nama Anda / perusahaan",
     "contactLabel": "No. WA / Email",
     "contactPh": "08xx atau email aktif",
-    "detailLabel": "Ceritakan kebutuhanmu",
-    "detailPh": "Contoh: aplikasi kasir untuk toko saya, perlu laporan dan struk...",
+    "detailLabel": "Ceritakan kebutuhan Anda",
+    "detailPh": "Contoh: aplikasi kasir untuk toko kami, perlu laporan dan struk...",
     "back": "Kembali",
     "next": "Lanjut",
     "submit": "Kirim via WhatsApp",
@@ -149,9 +151,11 @@
     "required": "Wajib diisi",
     "waIntro": "Halo apptivity.id! Brief project baru:"
   },
-  "ticker": ["Konsultasi Gratis Selamanya", "UMKM", "Profesional", "Pemerintahan", "BUMN/D", "Jaminan Pengembalian Dana", "Affiliator Utama", "PT Lawson Semesta Indonesia"],
+  "ticker": ["Jaminan Pengembalian Dana", "Harga Murah & Transparan", "Tanpa Paksaan Transaksi", "Konsultasi Gratis Selamanya", "SDM Berkualitas & Terpercaya", "Untuk UMKM, Profesional, Pemerintahan, BUMN/D", "Berbadan Hukum — PT Lawson Semesta Indonesia"],
   "footer": {
     "tagline": "Apps for every activity",
+    "contactTitle": "Kontak",
+    "links": ["Tentang", "Skema Bisnis", "Kepemilikan", "Mekanisme"],
     "rights": "© 2026 PT Lawson Semesta Indonesia. Seluruh hak cipta dilindungi."
   }
 }

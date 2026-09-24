@@ -5,14 +5,19 @@ import type { Locale } from "@/lib/i18n";
 export default function Footer({
   locale,
   tagline,
+  contactTitle,
+  links,
   rights,
   waText,
 }: {
   locale: Locale;
   tagline: string;
+  contactTitle: string;
+  links: string[];
   rights: string;
   waText: string;
 }) {
+  const hrefs = ["tentang", "skema", "kepemilikan", "mekanisme"];
   return (
     <footer className="bg-navy-950 text-white">
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:px-6 md:grid-cols-3">
@@ -27,30 +32,17 @@ export default function Footer({
         <nav aria-label="Footer" className="text-sm">
           <p className="font-bold text-gold">Apptivity.id</p>
           <ul className="mt-2 space-y-2 text-white/75">
-            <li>
-              <a href={`/${locale}#tentang`} className="hover:text-gold">
-                Tentang
-              </a>
-            </li>
-            <li>
-              <a href={`/${locale}#skema`} className="hover:text-gold">
-                Skema Bisnis
-              </a>
-            </li>
-            <li>
-              <a href={`/${locale}#kepemilikan`} className="hover:text-gold">
-                Kepemilikan
-              </a>
-            </li>
-            <li>
-              <a href={`/${locale}#mekanisme`} className="hover:text-gold">
-                Mekanisme
-              </a>
-            </li>
+            {links.slice(0, 4).map((label, i) => (
+              <li key={label}>
+                <a href={`/${locale}#${hrefs[i]}`} className="hover:text-gold">
+                  {label}
+                </a>
+              </li>
+            ))}
           </ul>
         </nav>
         <div className="text-sm">
-          <p className="font-bold text-gold">Kontak</p>
+          <p className="font-bold text-gold">{contactTitle}</p>
           <ul className="mt-2 space-y-2 text-white/75">
             <li>
               <a

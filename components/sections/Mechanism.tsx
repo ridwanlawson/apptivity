@@ -11,6 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 export type MechanismDict = {
   eyebrow: string;
   title: string;
+  badge: string;
   steps: { title: string; body: string }[];
 };
 
@@ -91,7 +92,7 @@ export default function Mechanism({ dict }: { dict: MechanismDict }) {
                     {s.title}
                     {last && (
                       <span className="ml-2 inline-block rounded-full bg-gold px-3 py-0.5 align-middle text-xs font-bold uppercase text-navy-950">
-                        Guarantee
+                        {dict.badge}
                       </span>
                     )}
                   </h3>

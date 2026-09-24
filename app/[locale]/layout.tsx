@@ -127,6 +127,7 @@ export default async function LocaleLayout({
               legal: tNav("legal"),
               brief: tNav("brief"),
               contact: tNav("contact"),
+              skip: tNav("skip"),
             }}
             waText={tHero("waText")}
           />
@@ -136,6 +137,8 @@ export default async function LocaleLayout({
           <Footer
             locale={loc}
             tagline={tFooter("tagline")}
+            contactTitle={tFooter("contactTitle")}
+            links={tFooter.raw("links") as unknown as string[]}
             rights={tFooter("rights")}
             waText={tHero("waText")}
           />

@@ -10,7 +10,8 @@
     "mechanism": "合作流程",
     "legal": "法律资质",
     "brief": "发起项目",
-    "contact": "联系我们"
+    "contact": "联系我们",
+    "skip": "跳到内容"
   },
   "hero": {
     "eyebrow": "印度尼西亚软件公司",
@@ -20,7 +21,7 @@
     "sub": "帮助每一位遇到可用IT方案解决的困难的人——价格实惠、低廉且透明。",
     "ctaPrimary": "免费WhatsApp咨询",
     "ctaSecondary": "查看商业模式",
-    "waText": "你好Apptivity，我想咨询项目合作，能详细介绍一下吗？"
+    "waText": "你好apptivity.id，我想咨询项目合作，能详细介绍一下吗？"
   },
   "about": {
     "eyebrow": "01 — 什么是Apptivity？",
@@ -60,7 +61,7 @@
     "eyebrow": "应用归属",
     "title": "买断或租赁——随心选择。",
     "intro": "应用归属我们提供2种选择。",
-    "tabBuy": "买断（购买）",
+    "tabBuy": "买断",
     "tabRent": "租赁",
     "pros": "优点",
     "cons": "不足",
@@ -93,6 +94,7 @@
   "mechanism": {
     "eyebrow": "04 — Apptivity合作流程",
     "title": "清晰的四个步骤。",
+    "badge": "保障",
     "steps": [
       {
         "title": "联系我们",
@@ -113,7 +115,7 @@
     ]
   },
   "legal": {
-    "eyebrow": "05 — 证照/法律资质",
+    "eyebrow": "05 — 法律资质",
     "title": "合法主体，交易可查。",
     "body": "Apptivity隶属于PT Lawson Semesta Indonesia（个人有限责任公司／PT perorangan），每笔交易与税务均如实申报，法律资质可追责，因此各利益相关方无需对经由Apptivity.id的交易与合作存疑。",
     "company": "PT Lawson Semesta Indonesia",
@@ -124,7 +126,7 @@
     "sub": "先免费咨询，无需承诺。告诉我们您的问题，我们将给出最佳建议与方案。",
     "waButton": "WhatsApp咨询",
     "igButton": "Instagram私信",
-    "note": "欢迎点赞、评论、收藏并分享给家人、朋友、熟人与同事！"
+    "note": "工作时间内回复——先免费咨询，无需承诺。"
   },
   "brief": {
     "eyebrow": "发起项目",
@@ -149,9 +151,11 @@
     "required": "必填",
     "waIntro": "你好apptivity.id！新的项目需求："
   },
-  "ticker": ["永久免费咨询", "中小企业", "专业人士", "政府机构", "BUMN/D", "退款保障", "主要推广员", "PT Lawson Semesta Indonesia"],
+  "ticker": ["退款保障", "实惠透明的价格", "不强制成交", "永久免费咨询", "高质量值得信赖的人才", "面向中小企业、专业人士、政府机构、BUMN/D", "合法主体 — PT Lawson Semesta Indonesia"],
   "footer": {
     "tagline": "Apps for every activity",
+    "contactTitle": "联系我们",
+    "links": ["关于我们", "商业模式", "应用归属", "合作流程"],
     "rights": "© 2026 PT Lawson Semesta Indonesia. 版权所有。"
   }
 }

@@ -10,7 +10,8 @@
     "mechanism": "Process",
     "legal": "Legality",
     "brief": "Start a Project",
-    "contact": "Contact Us"
+    "contact": "Contact Us",
+    "skip": "Skip to content"
   },
   "hero": {
     "eyebrow": "Indonesian Software House",
@@ -20,7 +21,7 @@
     "sub": "Helping anyone whose problems can be solved with IT solutions — at affordable, low, and transparent prices.",
     "ctaPrimary": "Free WhatsApp Chat",
     "ctaSecondary": "See Business Scheme",
-    "waText": "Hello Apptivity, I'd like to discuss a project. Could you share more info?"
+    "waText": "Hello apptivity.id, I'd like to discuss a project. Could you share more info?"
   },
   "about": {
     "eyebrow": "01 — What is Apptivity?",
@@ -60,8 +61,8 @@
     "eyebrow": "App Ownership",
     "title": "Buy or rent — pick what fits.",
     "intro": "For app ownership we offer 2 options.",
-    "tabBuy": "Purchase (Buy)",
-    "tabRent": "Subscription (Rent)",
+    "tabBuy": "Buy",
+    "tabRent": "Rent",
     "pros": "Advantages",
     "cons": "Drawbacks",
     "buy": {
@@ -93,6 +94,7 @@
   "mechanism": {
     "eyebrow": "04 — Apptivity Mechanism",
     "title": "Four clear steps.",
+    "badge": "Guarantee",
     "steps": [
       {
         "title": "Contact us",
@@ -113,7 +115,7 @@
     ]
   },
   "legal": {
-    "eyebrow": "05 — License / Legality",
+    "eyebrow": "05 — Legality",
     "title": "A legal entity, recorded transactions.",
     "body": "Apptivity operates under PT Lawson Semesta Indonesia as a single-shareholder company (PT perorangan); as such every transaction and tax is reported and legality is accountable, so all stakeholders need not hesitate about transactions and business through Apptivity.id.",
     "company": "PT Lawson Semesta Indonesia",
@@ -124,7 +126,7 @@
     "sub": "Consult first with zero commitment. Tell us your problem, we'll give our best advice and alternatives.",
     "waButton": "WhatsApp Chat",
     "igButton": "Instagram DM",
-    "note": "Like, comment, save, and share with your family, friends, acquaintances, and colleagues!"
+    "note": "Replies during business hours — consult first, no commitment."
   },
   "brief": {
     "eyebrow": "Start a Project",
@@ -149,9 +151,11 @@
     "required": "Required",
     "waIntro": "Hello apptivity.id! New project brief:"
   },
-  "ticker": ["Free Consultation Forever", "SMEs", "Professionals", "Government", "BUMN/D", "Money-Back Guarantee", "Primary Affiliator", "PT Lawson Semesta Indonesia"],
+  "ticker": ["Money-Back Guarantee", "Affordable & Transparent Pricing", "No Forced Transactions", "Free Consultation Forever", "Qualified & Trusted Professionals", "For SMEs, Professionals, Government, BUMN/D", "Legal Entity — PT Lawson Semesta Indonesia"],
   "footer": {
     "tagline": "Apps for every activity",
+    "contactTitle": "Contact",
+    "links": ["About", "Business Scheme", "Ownership", "Process"],
     "rights": "© 2026 PT Lawson Semesta Indonesia. All rights reserved."
   }
 }
