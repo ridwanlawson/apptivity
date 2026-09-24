@@ -126,7 +126,7 @@
     "sub": "まずは無料相談から。課題をお聞かせください。最良の助言と選択肢をご提案します。",
     "waButton": "WhatsAppで相談",
     "igButton": "Instagram DM",
-    "note": "営業時間内に返信 — まずは無料相談、コミットメントなし。"
+    "note": "24時間無料相談、7時間以内に返信。"
   },
   "brief": {
     "eyebrow": "案件相談",
@@ -156,6 +156,6 @@
     "tagline": "Apps for every activity",
     "contactTitle": "お問い合わせ",
     "links": ["概要", "ビジネススキーム", "所有形態", "進め方"],
-    "rights": "© 2026 PT Lawson Semesta Indonesia. All rights reserved."
+    "rights": "© 2026 PT Lawson Semesta Indonesia. 無断複写・転載を禁じます。"
   }
 }
