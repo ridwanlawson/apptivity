@@ -69,7 +69,6 @@ export async function generateMetadata({
       description: t("description"),
     },
     robots: { index: true, follow: true },
-    icons: { icon: "/logo.png", apple: "/logo.png" },
   };
 }
 
