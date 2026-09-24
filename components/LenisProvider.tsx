@@ -8,7 +8,7 @@ import { storeLenis } from "@/lib/scroll";
 export default function LenisProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (prefersReducedMotion()) return;
-    const lenis = new Lenis({ lerp: 0.1, smoothWheel: true, anchors: true });
+    const lenis = new Lenis({ lerp: 0.1, smoothWheel: true });
     storeLenis(lenis);
     let raf = 0;
     const loop = (time: number) => {
