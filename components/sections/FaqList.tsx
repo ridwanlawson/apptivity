@@ -20,16 +20,29 @@ export default function FaqList({ items }: { items: { q: string; a: string }[] }
                 aria-expanded={isOpen}
                 aria-controls={`faq-panel-${i}`}
                 id={`faq-button-${i}`}
-                className="flex w-full items-center justify-between gap-4 py-5 text-left font-bold text-ink hover:text-brand"
+                className="group flex w-full items-center justify-between gap-4 py-5 text-left font-bold text-ink hover:text-brand"
               >
                 {it.q}
                 <span
                   aria-hidden="true"
-                  className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-navy-950 text-lg text-white transition-transform duration-300 ${
-                    isOpen ? "rotate-45" : ""
+                  className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${
+                    isOpen
+                      ? "rotate-45 bg-gold"
+                      : "bg-navy-950 group-hover:bg-brand"
                   }`}
                 >
-                  +
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 14 14"
+                    fill="none"
+                    stroke={isOpen ? "#061029" : "#ffffff"}
+                    strokeWidth="2.2"
+                    strokeLinecap="round"
+                    className="transition-colors duration-300"
+                  >
+                    <path d="M7 1v12M1 7h12" />
+                  </svg>
                 </span>
               </button>
             </h3>
