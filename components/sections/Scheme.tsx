@@ -22,11 +22,12 @@ const ACTIVE_STYLES = [
   { dot: "bg-emerald-300", text: "text-emerald-300", card: "border-emerald-300", glow: "#6ee7b7" },
 ];
 
-// Hotspot positions (% of the logo image): peak, left foot, right foot.
+// Hotspot positions (% of the logo image), measured from logo.png pixels:
+// peak tip x≈46%, shadow-foot centroid ≈(20%, 70%), right-foot ≈(76%, 68%).
 const HOTSPOTS = [
-  { left: "50%", top: "13%" },
-  { left: "28%", top: "76%" },
-  { left: "72%", top: "71%" },
+  { left: "46%", top: "9%" },
+  { left: "20%", top: "70%" },
+  { left: "76%", top: "68%" },
 ];
 
 // Scrollytelling on the real logo: the trilogy "tergambar pada logo kami" —
