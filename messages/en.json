@@ -10,6 +10,7 @@
     "mechanism": "Process",
     "legal": "Legality",
     "brief": "Start a Project",
+    "faq": "FAQ",
     "contact": "Contact Us",
     "skip": "Skip to content"
   },
@@ -151,11 +152,41 @@
     "required": "Required",
     "waIntro": "Hello apptivity.id! New project brief:"
   },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Questions about our app development services.",
+    "items": [
+      {
+        "q": "What is apptivity.id?",
+        "a": "apptivity.id is a software house that helps anyone whose problems can be solved with IT solutions — at affordable, low, transparent prices. We work on a win-win trilogy scheme: Friends (clients) at the peak, supported by Affiliators and Developers."
+      },
+      {
+        "q": "Buy or rent an app — which fits me?",
+        "a": "Buying gives full ownership with no fees after close, ideal if you want to customize anytime. Renting is lighter: small additions free, built-in server and domain free, just a yearly fee. Both include free consultation forever and Primary Affiliator registration."
+      },
+      {
+        "q": "How does collaboration work?",
+        "a": "Four steps: contact us via WhatsApp or DM to discuss your problem and solution, detail the project up to contract, we supervise everything until done, with a money-back guarantee if results miss the agreement."
+      },
+      {
+        "q": "What if results don't match the agreement?",
+        "a": "Your money is refunded proportionally to the missing features or agreement. Conversely, added requests beyond the agreement are adjusted transparently."
+      },
+      {
+        "q": "Is apptivity.id a legal entity?",
+        "a": "Yes. apptivity.id operates under PT Lawson Semesta Indonesia as a single-shareholder company (PT perorangan) — every transaction and tax is reported, so legality is accountable."
+      },
+      {
+        "q": "How do I start a project?",
+        "a": "Chat our WhatsApp or Instagram DM — free, replied within 7 hours. Or fill the 3-step form on this page; your brief goes straight to our WhatsApp."
+      }
+    ]
+  },
   "ticker": ["Money-Back Guarantee", "Affordable & Transparent Pricing", "No Forced Transactions", "Free Consultation Forever", "Qualified & Trusted Professionals", "For Professionals, SMEs, Governments, and Enterprises", "Legal Entity — PT Lawson Semesta Indonesia"],
   "footer": {
     "tagline": "Apps for every activity",
     "contactTitle": "Contact",
-    "links": ["About", "Business Scheme", "Ownership", "Process"],
+    "links": ["About", "Business Scheme", "Ownership", "Process", "FAQ"],
     "rights": "© 2026 PT Lawson Semesta Indonesia. All rights reserved."
   }
 }

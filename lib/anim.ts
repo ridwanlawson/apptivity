@@ -18,8 +18,8 @@ export function markJs(): void {
 }
 
 // Generic scroll reveal: animates [data-reveal] children with stagger on enter.
-export function useReveal(
-  ref: RefObject<HTMLElement | null>,
+export function useReveal<T extends HTMLElement>(
+  ref: RefObject<T | null>,
   deps: unknown[] = [],
 ): void {
   useEffect(() => {

@@ -15,6 +15,7 @@ type NavDict = {
   brief: string;
   contact: string;
   skip: string;
+  faq: string;
 };
 
 export default function Header({
@@ -43,6 +44,7 @@ export default function Header({
     { href: `/${locale}#mekanisme`, label: nav.mechanism },
     { href: `/${locale}#legalitas`, label: nav.legal },
     { href: `/${locale}#mulai`, label: nav.brief },
+    { href: `/${locale}#faq`, label: nav.faq },
   ];
 
   return (

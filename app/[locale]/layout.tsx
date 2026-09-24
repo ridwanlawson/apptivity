@@ -140,6 +140,7 @@ export default async function LocaleLayout({
               mechanism: tNav("mechanism"),
               legal: tNav("legal"),
               brief: tNav("brief"),
+              faq: tNav("faq"),
               contact: tNav("contact"),
               skip: tNav("skip"),
             }}

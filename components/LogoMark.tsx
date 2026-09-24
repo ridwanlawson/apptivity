@@ -6,7 +6,7 @@ export default function LogoMark({ className = "" }: { className?: string }) {
     <span className={`relative inline-block shrink-0 ${className}`} aria-hidden="false">
       <Image
         src="/logo.png"
-        alt="Apptivity logo"
+        alt="Logo apptivity.id — jasa pembuatan aplikasi"
         fill
         sizes="160px"
         className="object-contain"

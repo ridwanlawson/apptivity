@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "apptivity.id — Apps for Every Activity | Software House Indonesia",
+    "title": "Jasa Pembuatan Aplikasi Murah & Transparan | apptivity.id",
     "description": "apptivity.id — software house win-win trilogy: solusi IT murah, transparan, bersahabat untuk profesional, UMKM, pemerintahan, dan perusahaan."
   },
   "nav": {
@@ -10,6 +10,7 @@
     "mechanism": "Mekanisme",
     "legal": "Legalitas",
     "brief": "Mulai Project",
+    "faq": "FAQ",
     "contact": "Hubungi Kami",
     "skip": "Lewati ke konten"
   },
@@ -151,11 +152,41 @@
     "required": "Wajib diisi",
     "waIntro": "Halo apptivity.id! Brief project baru:"
   },
+  "faq": {
+    "eyebrow": "Pertanyaan Umum",
+    "title": "Pertanyaan seputar jasa pembuatan aplikasi.",
+    "items": [
+      {
+        "q": "Apa itu apptivity.id?",
+        "a": "apptivity.id adalah software house yang membantu siapa saja yang kesulitannya bisa diatasi dengan solusi IT — dengan harga terjangkau, murah, dan transparan. Kami bekerja dengan skema win-win trilogy: Sahabat (klien) di puncak, ditopang Affiliator dan Developer."
+      },
+      {
+        "q": "Beli atau sewa aplikasi — mana yang cocok untuk saya?",
+        "a": "Beli memberi hak milik penuh dan bebas biaya setelah project selesai, cocok jika Anda ingin custom kapan saja. Sewa lebih ringan: penambahan kecil gratis, server dan domain bawaan gratis, cukup bayar sewa tahunan. Keduanya gratis konsultasi selamanya dan terdaftar sebagai Affiliator Utama."
+      },
+      {
+        "q": "Bagaimana alur kerja samanya?",
+        "a": "Empat langkah: hubungi kami via WhatsApp atau DM untuk membahas masalah dan solusi, bahas project hingga kontrak, seluruh pengerjaan kami awasi hingga tuntas, dan ada jaminan pengembalian dana jika hasil tidak sesuai kesepakatan."
+      },
+      {
+        "q": "Bagaimana jika hasilnya tidak sesuai kesepakatan?",
+        "a": "Uang Anda dikembalikan senilai fitur atau kesepakatan yang kurang tersebut. Berlaku sebaliknya: jika permintaan Anda bertambah di luar kesepakatan, ada penyesuaian biaya yang dibahas transparan."
+      },
+      {
+        "q": "Apakah apptivity.id berbadan hukum?",
+        "a": "Ya. apptivity.id berdiri di atas nama PT Lawson Semesta Indonesia sebagai PT perorangan — setiap transaksi dan pajak dilaporkan sehingga legalitas dapat dipertanggungjawabkan."
+      },
+      {
+        "q": "Bagaimana cara memulai project?",
+        "a": "Chat WhatsApp atau DM Instagram kami — gratis, dibalas maksimal 7 jam. Atau isi form 3 langkah di halaman ini, brief Anda langsung terkirim ke WhatsApp kami."
+      }
+    ]
+  },
   "ticker": ["Jaminan Pengembalian Dana", "Harga Murah & Transparan", "Tanpa Paksaan Transaksi", "Konsultasi Gratis Selamanya", "SDM Berkualitas & Terpercaya", "Untuk Profesional, UMKM, Pemerintahan, hingga Perusahaan Besar", "Berbadan Hukum — PT Lawson Semesta Indonesia"],
   "footer": {
     "tagline": "Apps for every activity",
     "contactTitle": "Kontak",
-    "links": ["Tentang", "Skema Bisnis", "Kepemilikan", "Mekanisme"],
+    "links": ["Tentang", "Skema Bisnis", "Kepemilikan", "Mekanisme", "FAQ"],
     "rights": "© 2026 PT Lawson Semesta Indonesia. Seluruh hak cipta dilindungi."
   }
 }

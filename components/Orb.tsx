@@ -115,7 +115,7 @@ export default function Orb({ className = "" }: { className?: string }) {
       ref={canvasRef}
       className={className}
       role="img"
-      aria-label="Apptivity orb — rotating logo constellation"
+      aria-label="Orb apptivity.id — jasa pembuatan aplikasi"
     />
   );
 }
