@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import Backdrop from "../Backdrop";
 import Orb from "../Orb";
+import { scrollToHash } from "@/lib/scroll";
 import MagneticButton from "../MagneticButton";
 import { markJs, whenReady } from "@/lib/anim";
 import { waLink } from "@/lib/site";
@@ -127,6 +128,10 @@ export default function Hero({ dict, locale }: { dict: HeroDict; locale: Locale 
             </MagneticButton>
             <a
               href={`/${locale}#skema`}
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToHash("#skema");
+              }}
               className="inline-block rounded-full border border-white/25 px-7 py-3.5 font-bold text-white hover:border-gold hover:text-gold"
             >
               {dict.ctaSecondary}

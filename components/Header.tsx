@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import LogoMark from "./LogoMark";
 import LocaleSwitcher from "./LocaleSwitcher";
 import { SITE_DOMAIN, waLink } from "@/lib/site";
+import { scrollToHash } from "@/lib/scroll";
 import type { Locale } from "@/lib/i18n";
 
 type NavDict = {
@@ -36,6 +37,14 @@ export default function Header({
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const go = (e: { preventDefault: () => void }, href: string) => {
+    const i = href.indexOf("#");
+    if (i === -1) return;
+    e.preventDefault();
+    setOpen(false);
+    scrollToHash(href.slice(i));
+  };
 
   const links: { href: string; label: string }[] = [
     { href: `/${locale}#tentang`, label: nav.about },
@@ -75,7 +84,12 @@ export default function Header({
           aria-label="Primary"
         >
           {links.map((l) => (
-            <a key={l.href} href={l.href} className="hover:text-gold">
+            <a
+              key={l.href}
+              href={l.href}
+              onClick={(e) => go(e, l.href)}
+              className="hover:text-gold"
+            >
               {l.label}
             </a>
           ))}
@@ -114,7 +128,7 @@ export default function Header({
             <a
               key={l.href}
               href={l.href}
-              onClick={() => setOpen(false)}
+              onClick={(e) => go(e, l.href)}
               className="block rounded-lg px-2 py-3 font-semibold text-white hover:bg-white/5 hover:text-gold"
             >
               {l.label}

@@ -1,5 +1,8 @@
+"use client";
+
 import LogoMark from "./LogoMark";
 import { SITE_DOMAIN, COMPANY, IG_URL, waLink } from "@/lib/site";
+import { scrollToHash } from "@/lib/scroll";
 import type { Locale } from "@/lib/i18n";
 
 export default function Footer({
@@ -34,7 +37,14 @@ export default function Footer({
           <ul className="mt-2 space-y-2 text-white/75">
             {links.slice(0, 5).map((label, i) => (
               <li key={label}>
-                <a href={`/${locale}#${hrefs[i]}`} className="hover:text-gold">
+                <a
+                  href={`/${locale}#${hrefs[i]}`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToHash(`#${hrefs[i]}`);
+                  }}
+                  className="hover:text-gold"
+                >
                   {label}
                 </a>
               </li>
