@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "apptivity.id — Apps for Every Activity | Indonesian Software House",
-    "description": "Apptivity (PT Lawson Semesta Indonesia) is a software house built on a win-win trilogy: affordable, transparent, friendly IT solutions for SMEs, professionals, government, and state-owned enterprises."
+    "description": "apptivity.id (PT Lawson Semesta Indonesia) is a software house built on a win-win trilogy: affordable, transparent, friendly IT solutions for professionals, SMEs, governments, and companies — anywhere."
   },
   "nav": {
     "about": "About",
@@ -29,7 +29,7 @@
     "body1": "Apptivity is a software house that helps anyone facing difficulties that can be solved with IT solutions, at affordable, low, and transparent prices. Apptivity uses a trilogy scheme: users sit at the roof, supported below by affiliators and programmers as the foundation.",
     "eyebrow2": "02 — What is our goal?",
     "body2": "To help anyone make their work easier through digital solutions — affordable, friendly, and highly effective, for professionals, SMEs, governments, and companies of any size, anywhere.",
-    "audiences": ["Professionals", "SMEs", "Government", "Private", "BUMN/D"]
+    "audiences": ["Professionals", "SMEs", "Government", "Private Companies", "Enterprises"]
   },
   "why": {
     "eyebrow": "03 — Why Apptivity?",
@@ -151,7 +151,7 @@
     "required": "Required",
     "waIntro": "Hello apptivity.id! New project brief:"
   },
-  "ticker": ["Money-Back Guarantee", "Affordable & Transparent Pricing", "No Forced Transactions", "Free Consultation Forever", "Qualified & Trusted Professionals", "For SMEs, Professionals, Government, BUMN/D", "Legal Entity — PT Lawson Semesta Indonesia"],
+  "ticker": ["Money-Back Guarantee", "Affordable & Transparent Pricing", "No Forced Transactions", "Free Consultation Forever", "Qualified & Trusted Professionals", "For Professionals, SMEs, Governments, and Enterprises", "Legal Entity — PT Lawson Semesta Indonesia"],
   "footer": {
     "tagline": "Apps for every activity",
     "contactTitle": "Contact",

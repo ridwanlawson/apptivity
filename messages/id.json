@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "apptivity.id — Apps for Every Activity | Software House Indonesia",
-    "description": "Apptivity (PT Lawson Semesta Indonesia) adalah software house dengan skema win-win trilogy: solusi IT murah, transparan, dan bersahabat untuk UMKM, profesional, pemerintahan, dan BUMN/D."
+    "description": "apptivity.id (PT Lawson Semesta Indonesia) adalah software house dengan skema win-win trilogy: solusi IT murah, transparan, dan bersahabat untuk profesional, UMKM, pemerintahan, dan perusahaan — di mana pun berada."
   },
   "nav": {
     "about": "Tentang",
@@ -29,7 +29,7 @@
     "body1": "Apptivity adalah perusahaan software house yang membantu siapa saja yang sedang dalam kesulitan yang solusinya bisa diatasi dengan solusi IT dengan harga yang terjangkau, murah dan transparan. Apptivity menggunakan skema trilogi yaitu pada posisi atap sebagai users dan untuk sisi di bawah adalah affiliator dan programmer sebagai pondasinya.",
     "eyebrow2": "02 — Apa tujuan kami?",
     "body2": "Membantu siapa saja mempermudah pekerjaannya melalui solusi digital — dengan cara yang murah, bersahabat, dan sangat solutif, untuk profesional, UMKM, pemerintahan, hingga perusahaan besar, di mana pun berada.",
-    "audiences": ["Profesional", "UMKM", "Pemerintahan", "Swasta", "BUMN/D"]
+    "audiences": ["Profesional", "UMKM", "Pemerintahan", "Perusahaan Swasta", "Perusahaan Besar"]
   },
   "why": {
     "eyebrow": "03 — Kenapa harus Apptivity?",
@@ -151,7 +151,7 @@
     "required": "Wajib diisi",
     "waIntro": "Halo apptivity.id! Brief project baru:"
   },
-  "ticker": ["Jaminan Pengembalian Dana", "Harga Murah & Transparan", "Tanpa Paksaan Transaksi", "Konsultasi Gratis Selamanya", "SDM Berkualitas & Terpercaya", "Untuk UMKM, Profesional, Pemerintahan, BUMN/D", "Berbadan Hukum — PT Lawson Semesta Indonesia"],
+  "ticker": ["Jaminan Pengembalian Dana", "Harga Murah & Transparan", "Tanpa Paksaan Transaksi", "Konsultasi Gratis Selamanya", "SDM Berkualitas & Terpercaya", "Untuk Profesional, UMKM, Pemerintahan, hingga Perusahaan Besar", "Berbadan Hukum — PT Lawson Semesta Indonesia"],
   "footer": {
     "tagline": "Apps for every activity",
     "contactTitle": "Kontak",

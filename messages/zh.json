@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "apptivity.id — Apps for Every Activity | 印度尼西亚软件公司",
-    "description": "Apptivity（PT Lawson Semesta Indonesia）是一家基于三赢三位一体模式的软件公司：为中小企业、专业人士、政府机构和国有企业提供实惠、透明、友好的IT解决方案。"
+    "description": "apptivity.id（PT Lawson Semesta Indonesia）是一家基于三赢三位一体模式的软件公司：为专业人士、中小企业、政府机构和企业提供实惠、透明、友好的IT解决方案，无论身在何处。"
   },
   "nav": {
     "about": "关于我们",
@@ -29,7 +29,7 @@
     "body1": "Apptivity是一家软件公司，帮助所有遇到可用IT方案解决的困难的人，以实惠、低廉且透明的价格提供服务。Apptivity采用三位一体模式：用户位于屋顶位置，下方两侧由推广员和程序员作为基石支撑。",
     "eyebrow2": "02 — 我们的目标是什么？",
     "body2": "帮助任何人通过数字化方案让工作更轻松——以实惠、友好、高效的解决方案，服务专业人士、中小企业、政府机构以及各种规模的企业，无论身在何处。",
-    "audiences": ["专业人士", "中小企业", "政府机构", "私营企业", "BUMN/D"]
+    "audiences": ["专业人士", "中小企业", "政府机构", "私营企业", "大企业"]
   },
   "why": {
     "eyebrow": "03 — 为什么选择Apptivity？",
@@ -151,7 +151,7 @@
     "required": "必填",
     "waIntro": "你好apptivity.id！新的项目需求："
   },
-  "ticker": ["退款保障", "实惠透明的价格", "不强制成交", "永久免费咨询", "高质量值得信赖的人才", "面向中小企业、专业人士、政府机构、BUMN/D", "合法主体 — PT Lawson Semesta Indonesia"],
+  "ticker": ["退款保障", "实惠透明的价格", "不强制成交", "永久免费咨询", "高质量值得信赖的人才", "面向专业人士、中小企业、政府机构与大企业", "合法主体 — PT Lawson Semesta Indonesia"],
   "footer": {
     "tagline": "Apps for every activity",
     "contactTitle": "联系我们",
