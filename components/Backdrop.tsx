@@ -44,7 +44,10 @@ export default function Backdrop({ variant = "hero" }: { variant?: "hero" | "cta
 
     const seed = () => {
       const n = Math.max(28, Math.min(90, Math.floor((w * h) / 22000)));
-      parts = Array.from({ length: n }, () => ({
+      // ponytail: O(n²) link checks per frame — cap particles on small
+      // screens; raise the cap if high-end mobile still feels empty.
+      const count = w < 640 ? Math.min(n, 36) : n;
+      parts = Array.from({ length: count }, () => ({
         x: Math.random() * w,
         y: Math.random() * h,
         vx: (Math.random() - 0.5) * 0.35,

@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
 import { hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Plus_Jakarta_Sans, Noto_Sans_JP, Noto_Sans_SC } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "../globals.css";
 import { routing, type Locale } from "@/lib/i18n";
 import { IG_URL, SITE_URL, SITE_NAME, TAGLINE, COMPANY } from "@/lib/site";
@@ -12,24 +12,13 @@ import Preloader from "@/components/Preloader";
 import Cursor from "@/components/Cursor";
 import LenisProvider from "@/components/LenisProvider";
 
+// CJK locales use system fonts (Hiragino/Yu Gothic/PingFang/YaHei via
+// --font-sans): Noto webfonts cost ~560KB render-blocking CSS + MBs of woff2
+// on every locale, while OS CJK rendering is excellent.
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
   variable: "--font-jakarta",
-  display: "swap",
-});
-
-const notoJp = Noto_Sans_JP({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  variable: "--font-noto-jp",
-  display: "swap",
-});
-
-const notoSc = Noto_Sans_SC({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  variable: "--font-noto-sc",
   display: "swap",
 });
 
@@ -53,6 +42,11 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: "meta" });
   const languages: Record<string, string> = {};
   for (const l of routing.locales) languages[l] = `${SITE_URL}/${l}`;
+  // Preview deployments (vercel.app) must never compete with production:
+  // noindex keeps canonical → apptivity.id valid and self-consistent.
+  const isPreview =
+    process.env.VERCEL_ENV !== undefined &&
+    process.env.VERCEL_ENV !== "production";
   return {
     metadataBase: new URL(SITE_URL),
     title: t("title"),
@@ -74,8 +68,9 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: t("title"),
       description: t("description"),
+      images: ["/og.png"],
     },
-    robots: { index: true, follow: true },
+    robots: isPreview ? { index: false, follow: false } : { index: true, follow: true },
   };
 }
 
@@ -95,13 +90,7 @@ export default async function LocaleLayout({
   const tHero = await getTranslations({ locale: loc, namespace: "hero" });
   const tFooter = await getTranslations({ locale: loc, namespace: "footer" });
 
-  const fontVars = [
-    jakarta.variable,
-    loc === "ja" ? notoJp.variable : "",
-    loc === "zh" ? notoSc.variable : "",
-  ]
-    .filter(Boolean)
-    .join(" ");
+  const fontVars = jakarta.variable;
 
   const jsonLd = {
     "@context": "https://schema.org",

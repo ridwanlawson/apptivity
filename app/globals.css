@@ -11,7 +11,9 @@
   --color-paper: #f5f6fa;
   --color-ink: #0a1020;
   --color-muted: #4b5568;
-  --font-sans: "Plus Jakarta Sans", "Noto Sans JP", "Noto Sans SC",
+  --font-sans: "Plus Jakarta Sans", "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", "Yu Gothic", "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "Noto Sans CJK JP", "Noto Sans CJK SC",
     system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
