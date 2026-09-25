@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
 import { usePathname, useRouter } from "next/navigation";
 import { routing, localeNames, type Locale } from "@/lib/i18n";
 
@@ -73,17 +72,18 @@ export default function LocaleSwitcher({ locale }: { locale: Locale }) {
         </svg>
       </button>
 
-      <AnimatePresence>
-        {open && (
-          <motion.ul
-            role="listbox"
-            aria-label="Language / Bahasa"
-            initial={{ opacity: 0, y: -6, scale: 0.97 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: -6, scale: 0.97 }}
-            transition={{ duration: 0.18 }}
-            className="absolute right-0 z-[85] mt-2 w-44 overflow-hidden rounded-2xl border border-white/10 bg-navy-950/95 p-1.5 shadow-2xl shadow-black/40 backdrop-blur"
-          >
+      {/* Always mounted; visibility classes animate open AND close without a runtime.
+          left-aligned on mobile (trigger sits left), right-aligned on desktop. */}
+      <ul
+        role="listbox"
+        aria-label="Language / Bahasa"
+        inert={!open}
+        className={`absolute left-0 z-[85] mt-2 w-44 origin-top-left overflow-hidden rounded-2xl border border-white/10 bg-navy-950/95 p-1.5 shadow-2xl shadow-black/40 backdrop-blur transition-all duration-200 lg:left-auto lg:right-0 lg:origin-top-right ${
+          open
+            ? "visible translate-y-0 scale-100 opacity-100"
+            : "invisible -translate-y-1.5 scale-[0.97] opacity-0"
+        }`}
+      >
             {(routing.locales as readonly Locale[]).map((l) => (
               <li key={l} role="option" aria-selected={l === locale}>
                 <button
@@ -103,9 +103,7 @@ export default function LocaleSwitcher({ locale }: { locale: Locale }) {
                 </button>
               </li>
             ))}
-          </motion.ul>
-        )}
-      </AnimatePresence>
+          </ul>
     </div>
   );
 }

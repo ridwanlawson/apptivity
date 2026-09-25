@@ -82,7 +82,7 @@ export default function Backdrop({ variant = "hero" }: { variant?: "hero" | "cta
 
     const io = new IntersectionObserver(([entry]) => {
       visible = !!entry?.isIntersecting;
-      if (visible) {
+      if (visible && started) {
         cancelAnimationFrame(raf);
         raf = requestAnimationFrame(tick);
       }
@@ -182,12 +182,25 @@ export default function Backdrop({ variant = "hero" }: { variant?: "hero" | "cta
       window.addEventListener("resize", onResize);
       return () => window.removeEventListener("resize", onResize);
     }
-    raf = requestAnimationFrame(tick);
+    // Canvas loops are pure decoration: never compete with load. Start only
+    // once the page is fully loaded (usually already the case at hydration).
+    let started = false;
+    const kick = () => {
+      if (started) return;
+      started = true;
+      raf = requestAnimationFrame(tick);
+    };
+    if (document.readyState === "complete") {
+      kick();
+    } else {
+      window.addEventListener("load", kick, { once: true });
+    }
 
     return () => {
       cancelAnimationFrame(raf);
       window.removeEventListener("resize", resize);
       window.removeEventListener("pointermove", onMove);
+      window.removeEventListener("load", kick);
       io.disconnect();
     };
   }, []);

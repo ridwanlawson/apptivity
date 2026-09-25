@@ -131,6 +131,17 @@ html.cursor-on .cursor-ring {
   }
 }
 
+/* ---- Scroll reveal (JS adds .reveal-hidden on observe; IO adds .is-visible) ---- */
+[data-reveal].reveal-hidden {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+[data-reveal].reveal-hidden.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* ---- Word-reveal initial state (JS animates to visible; no-JS stays visible) ---- */
 .js .reveal-word {
   display: inline-block;

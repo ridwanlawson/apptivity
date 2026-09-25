@@ -1,10 +1,6 @@
 "use client";
 
 import { useEffect, type RefObject } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
 
 export function prefersReducedMotion(): boolean {
   return (
@@ -17,7 +13,10 @@ export function markJs(): void {
   document.documentElement.classList.add("js");
 }
 
-// Generic scroll reveal: animates [data-reveal] children with stagger on enter.
+// Generic scroll reveal: [data-reveal] items fade up once on enter.
+// Hiding happens via JS only (no-JS stays visible). IntersectionObserver +
+// CSS replaces gsap/ScrollTrigger here: same effect, zero runtime on load.
+// (The 0.08s stagger of the old batch reveal is intentionally dropped.)
 export function useReveal<T extends HTMLElement>(
   ref: RefObject<T | null>,
   deps: unknown[] = [],
@@ -25,25 +24,22 @@ export function useReveal<T extends HTMLElement>(
   useEffect(() => {
     const el = ref.current;
     if (!el || prefersReducedMotion()) return;
-    const ctx = gsap.context(() => {
-      const items = el.querySelectorAll("[data-reveal]");
-      if (!items.length) return;
-      gsap.set(items, { y: 24, opacity: 0 });
-      ScrollTrigger.batch(items, {
-        start: "top 88%",
-        once: true,
-        onEnter: (batch) =>
-          gsap.to(batch, {
-            y: 0,
-            opacity: 1,
-            duration: 0.8,
-            stagger: 0.08,
-            ease: "power3.out",
-            overwrite: true,
-          }),
-      });
-    }, el);
-    return () => ctx.revert();
+    const items = el.querySelectorAll("[data-reveal]");
+    if (!items.length) return;
+    items.forEach((it) => it.classList.add("reveal-hidden"));
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((en) => {
+          if (en.isIntersecting) {
+            en.target.classList.add("is-visible");
+            io.unobserve(en.target);
+          }
+        });
+      },
+      { rootMargin: "0px 0px -10% 0px" },
+    );
+    items.forEach((it) => io.observe(it));
+    return () => io.disconnect();
     // deps are caller-owned static keys (section dicts never change identity per mount).
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, deps);

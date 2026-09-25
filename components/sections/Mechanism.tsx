@@ -1,12 +1,8 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SectionHeading from "../SectionHeading";
 import { prefersReducedMotion, useReveal } from "@/lib/anim";
-
-gsap.registerPlugin(ScrollTrigger);
 
 export type MechanismDict = {
   eyebrow: string;
@@ -23,26 +19,26 @@ export default function Mechanism({ dict }: { dict: MechanismDict }) {
   useEffect(() => {
     const el = ref.current;
     if (!el || prefersReducedMotion()) return;
-    const ctx = gsap.context(() => {
-      const line = el.querySelector("[data-progress]");
-      if (line) {
-        gsap.fromTo(
-          line,
-          { scaleY: 0 },
-          {
-            scaleY: 1,
-            ease: "none",
-            scrollTrigger: {
-              trigger: el.querySelector("[data-timeline]"),
-              start: "top 75%",
-              end: "bottom 55%",
-              scrub: 0.6,
-            },
-          },
-        );
-      }
-    }, el);
-    return () => ctx.revert();
+    // Progress line draws as the timeline scrolls through view. Threshold
+    // crossings (not per-frame reads) drive it: cheap, scrub-like feel.
+    const tl = el.querySelector("[data-timeline]");
+    const line = el.querySelector("[data-progress]") as HTMLElement | null;
+    if (!tl || !line) return;
+    line.style.transition = "transform 0.15s linear";
+    const update = () => {
+      const r = tl.getBoundingClientRect();
+      const p = Math.min(
+        1,
+        Math.max(0, (window.innerHeight * 0.75 - r.top) / (r.height || 1)),
+      );
+      line.style.transform = `scaleY(${p.toFixed(3)})`;
+    };
+    update();
+    const io = new IntersectionObserver(update, {
+      threshold: Array.from({ length: 21 }, (_, i) => i / 20),
+    });
+    io.observe(tl);
+    return () => io.disconnect();
   }, []);
 
   return (

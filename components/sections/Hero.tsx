@@ -6,7 +6,7 @@ import Backdrop from "../Backdrop";
 import Orb from "../Orb";
 import { scrollToHash } from "@/lib/scroll";
 import MagneticButton from "../MagneticButton";
-import { markJs, whenReady } from "@/lib/anim";
+import { markJs } from "@/lib/anim";
 import { waLink } from "@/lib/site";
 import type { Locale } from "@/lib/i18n";
 
@@ -43,7 +43,13 @@ export default function Hero({ dict, locale }: { dict: HeroDict; locale: Locale 
     const el = ref.current;
     if (!el) return;
     // Non-JS / reduced-motion safe: CSS keeps words visible without .js choreography.
-    const off = whenReady(() => {
+    // Start once fonts are in (or quickly time out) — deliberately NOT gated on
+    // window load / preloader exit, so LCP isn't held hostage by full page load.
+    // The preloader overlay still covers the screen on its own schedule.
+    let started = false;
+    const start = () => {
+      if (started) return;
+      started = true;
       if (cjk) {
         gsap.fromTo(
           el.querySelectorAll("[data-hero-fade]"),
@@ -70,8 +76,15 @@ export default function Hero({ dict, locale }: { dict: HeroDict; locale: Locale 
         { opacity: 1, scale: 1, duration: 1, ease: "power3.out" },
         0,
       );
-    });
-    return off;
+    };
+    let timer = 0;
+    if (document.fonts?.ready) {
+      document.fonts.ready.then(start);
+      timer = window.setTimeout(start, 900);
+    } else {
+      start();
+    }
+    return () => window.clearTimeout(timer);
   }, [cjk]);
 
   return (

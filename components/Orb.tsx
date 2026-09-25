@@ -112,10 +112,23 @@ export default function Orb({ className = "" }: { className?: string }) {
       visible = !!entry?.isIntersecting;
     });
     io.observe(canvas);
-    raf = requestAnimationFrame(tick);
+    // Decorative loop: start only after full load so it never contends
+    // with hydration / LCP on the main thread.
+    let started = false;
+    const kick = () => {
+      if (started) return;
+      started = true;
+      raf = requestAnimationFrame(tick);
+    };
+    if (document.readyState === "complete") {
+      kick();
+    } else {
+      window.addEventListener("load", kick, { once: true });
+    }
 
     return () => {
       cancelAnimationFrame(raf);
+      window.removeEventListener("load", kick);
       io.disconnect();
       ro.disconnect();
     };

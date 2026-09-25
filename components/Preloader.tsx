@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import LogoMark from "./LogoMark";
 import { TAGLINE, SITE_DOMAIN, COMPANY } from "@/lib/site";
+import { prefersReducedMotion } from "@/lib/anim";
 
 const SEEN_KEY = "apptivity:seen";
 
@@ -16,14 +16,24 @@ function signalReady(): void {
 // flashing first). Shown only while the page is still loading, and only
 // on the first visit of a session — sessionStorage is marked by a blocking
 // inline script in <head>, so returning visitors never see it at all.
+// Entrance + exit are pure CSS (no animation runtime on the critical path).
 export default function Preloader() {
   const [show, setShow] = useState(true);
+  const [entered, setEntered] = useState(false);
+  const [leaving, setLeaving] = useState(false);
   const barRef = useRef<HTMLDivElement>(null);
-  const reduce = useReducedMotion();
+  const [reduce] = useState(() => prefersReducedMotion());
+
+  // Entrance: kick transitions on the next frame after mount.
+  useEffect(() => {
+    const raf = requestAnimationFrame(() => setEntered(true));
+    return () => cancelAnimationFrame(raf);
+  }, []);
 
   useEffect(() => {
     let done = false;
-    const finish = () => {
+    let exitTimer = 0;
+    const finish = (animated: boolean) => {
       if (done) return;
       done = true;
       try {
@@ -32,7 +42,14 @@ export default function Preloader() {
       } catch {
         /* private mode */
       }
-      setShow(false);
+      if (animated) {
+        setLeaving(true);
+        // Match the exit transition below (duration-500).
+        exitTimer = window.setTimeout(() => setShow(false), 500);
+      } else {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
+        setShow(false);
+      }
       window.setTimeout(signalReady, 350);
     };
 
@@ -46,9 +63,7 @@ export default function Preloader() {
     }
     const loadedAlready = document.readyState === "complete";
     if (seen || reduce || loadedAlready) {
-      // eslint-disable-next-line react-hooks/set-state-in-effect
-      setShow(false);
-      signalReady();
+      finish(false);
       return;
     }
 
@@ -62,7 +77,7 @@ export default function Preloader() {
       const p = Math.min(1, (t - t0) / MAX);
       if (barRef.current) barRef.current.style.width = `${Math.round(p * 100)}%`;
       if (p >= 1) {
-        finish();
+        finish(true);
         return;
       }
       raf = requestAnimationFrame(tick);
@@ -72,7 +87,7 @@ export default function Preloader() {
     let fontsDone = false;
     let loaded = false;
     const maybeFinish = () => {
-      if (fontsDone && loaded && performance.now() - t0 >= MIN) finish();
+      if (fontsDone && loaded && performance.now() - t0 >= MIN) finish(true);
     };
     const onLoad = () => {
       loaded = true;
@@ -87,56 +102,56 @@ export default function Preloader() {
       fontsDone = true;
     }
     window.addEventListener("load", onLoad);
-    const hard = window.setTimeout(finish, MAX + 400);
+    const hard = window.setTimeout(() => finish(true), MAX + 400);
 
     return () => {
       cancelAnimationFrame(raf);
       window.removeEventListener("load", onLoad);
       window.clearTimeout(hard);
+      window.clearTimeout(exitTimer);
     };
   }, [reduce]);
 
+  if (!show) return null;
+
   return (
-    <AnimatePresence>
-      {show && (
-        <motion.div
-          className="preloader fixed inset-0 z-[90] flex flex-col items-center justify-center gap-4 bg-navy-950"
-          role="status"
-          aria-label={`${SITE_DOMAIN} loading`}
-          exit={{ opacity: 0, y: -40, transition: { duration: 0.45 } }}
-        >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.92 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-          >
-            <LogoMark className="h-20 w-20" />
-          </motion.div>
-          <motion.p
-            className="text-2xl font-extrabold tracking-tight text-white"
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.15 }}
-          >
-            {SITE_DOMAIN}
-          </motion.p>
-          <motion.p
-            className="text-sm font-medium tracking-wide text-sky-hi"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-          >
-            {TAGLINE}
-          </motion.p>
-          <div
-            className="mt-2 h-[3px] w-44 overflow-hidden rounded-full bg-white/15"
-            aria-hidden="true"
-          >
-            <div ref={barRef} className="h-full w-0 rounded-full bg-gold" />
-          </div>
-          <p className="sr-only">{COMPANY}</p>
-        </motion.div>
-      )}
-    </AnimatePresence>
+    <div
+      className={`preloader fixed inset-0 z-[90] flex flex-col items-center justify-center gap-4 bg-navy-950 transition-all duration-500 ${
+        leaving ? "-translate-y-10 opacity-0" : "translate-y-0 opacity-100"
+      }`}
+      role="status"
+      aria-label={`${SITE_DOMAIN} loading`}
+    >
+      <div
+        className={`transition-all duration-500 ${
+          entered && !leaving ? "scale-100 opacity-100" : "scale-[0.92] opacity-0"
+        }`}
+      >
+        <LogoMark className="h-20 w-20" />
+      </div>
+      <p
+        className={`text-2xl font-extrabold tracking-tight text-white transition-all delay-150 duration-500 ${
+          entered && !leaving
+            ? "translate-y-0 opacity-100"
+            : "translate-y-3 opacity-0"
+        }`}
+      >
+        {SITE_DOMAIN}
+      </p>
+      <p
+        className={`text-sm font-medium tracking-wide text-sky-hi transition-opacity delay-300 duration-500 ${
+          entered && !leaving ? "opacity-100" : "opacity-0"
+        }`}
+      >
+        {TAGLINE}
+      </p>
+      <div
+        className="mt-2 h-[3px] w-44 overflow-hidden rounded-full bg-white/15"
+        aria-hidden="true"
+      >
+        <div ref={barRef} className="h-full w-0 rounded-full bg-gold" />
+      </div>
+      <p className="sr-only">{COMPANY}</p>
+    </div>
   );
 }

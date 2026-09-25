@@ -2,12 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SectionHeading from "../SectionHeading";
 import { prefersReducedMotion, useReveal } from "@/lib/anim";
-
-gsap.registerPlugin(ScrollTrigger);
 
 export type SchemeDict = {
   eyebrow: string;
@@ -41,19 +37,21 @@ export default function Scheme({ dict }: { dict: SchemeDict }) {
   useEffect(() => {
     const el = ref.current;
     if (!el || prefersReducedMotion()) return;
-    const ctx = gsap.context(() => {
-      el.querySelectorAll("[data-pillar]").forEach((card, i) => {
-        ScrollTrigger.create({
-          trigger: card,
-          start: "top 60%",
-          end: "bottom 40%",
-          onToggle: (self) => {
-            if (self.isActive) setActive(i);
-          },
+    // Pillar highlight when its card crosses the viewport middle band.
+    const cards = el.querySelectorAll("[data-pillar]");
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((en) => {
+          if (en.isIntersecting) {
+            const i = Array.prototype.indexOf.call(cards, en.target);
+            if (i >= 0) setActive(i);
+          }
         });
-      });
-    }, el);
-    return () => ctx.revert();
+      },
+      { rootMargin: "-40% 0px -40% 0px" },
+    );
+    cards.forEach((c) => io.observe(c));
+    return () => io.disconnect();
   }, []);
 
   const focusPillar = (i: number) => {
