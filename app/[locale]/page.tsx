@@ -46,7 +46,7 @@ export default async function LocalePage({
       <Legal dict={m.legal} />
       <Brief dict={m.brief} />
       <Faq dict={m.faq} />
-      <Cta dict={m.cta} />
+      <Cta dict={m.cta} waText={m.hero.waText} />
     </>
   );
 }

@@ -12,10 +12,9 @@ export type CtaDict = {
   waButton: string;
   igButton: string;
   note: string;
-  waText: string;
 };
 
-export default function Cta({ dict }: { dict: CtaDict }) {
+export default function Cta({ dict, waText }: { dict: CtaDict; waText: string }) {
   const ref = useRef<HTMLElement>(null);
   useReveal(ref);
 
@@ -44,7 +43,7 @@ export default function Cta({ dict }: { dict: CtaDict }) {
         <div data-reveal className="mt-8 flex flex-wrap justify-center gap-3">
           <MagneticButton>
             <a
-              href={waLink(dict.waText)}
+              href={waLink(waText)}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block rounded-full bg-gold px-8 py-4 text-lg font-bold text-navy-950 shadow-xl shadow-gold/20 transition-shadow hover:shadow-gold/40"
@@ -68,7 +67,7 @@ export default function Cta({ dict }: { dict: CtaDict }) {
 
       {/* Sticky mobile CTA */}
       <a
-        href={waLink(dict.waText)}
+        href={waLink(waText)}
         target="_blank"
         rel="noopener noreferrer"
         className="fixed inset-x-4 z-[70] rounded-full bg-gold py-3.5 text-center font-bold text-navy-950 shadow-2xl sm:hidden"
