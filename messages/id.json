@@ -1,13 +1,19 @@
 {
   "meta": {
-    "title": "Jasa Pembuatan Aplikasi Murah & Transparan | apptivity.id",
-    "description": "apptivity.id — software house win-win trilogy: solusi IT murah, transparan, bersahabat untuk profesional, UMKM, pemerintahan, dan perusahaan."
+    "title": "Jasa Pembuatan Aplikasi Web & Mobile Transparan | apptivity.id",
+    "description": "Jasa pembuatan aplikasi web & mobile di Indonesia. Konsultasi gratis, harga transparan, garansi uang kembali. Berbadan hukum PT."
   },
   "nav": {
     "about": "Tentang",
-    "scheme": "Skema Bisnis",
+    "how": "Cara Kerja",
+    "scheme": "Skema",
     "ownership": "Kepemilikan",
     "mechanism": "Mekanisme",
+    "pricing": "Harga",
+    "portfolio": "Portofolio",
+    "company": "Apptivity",
+    "proof": "Bukti & Testimoni",
+    "join": "Gabung",
     "legal": "Legalitas",
     "brief": "Mulai Project",
     "faq": "FAQ",
@@ -15,119 +21,270 @@
     "skip": "Lewati ke konten"
   },
   "hero": {
-    "eyebrow": "Software House Indonesia",
-    "titleA": "Yuk Kenalan",
-    "titleB": "dengan Apptivity",
+    "eyebrow": "Software House Indonesia — Berbadan Hukum PT",
+    "titleA": "Punya Ide Aplikasi?",
+    "titleB": "Kami Wujudkan.",
     "tagline": "Apps for every activity",
-    "sub": "Membantu siapa saja yang kesulitannya bisa diatasi dengan solusi IT — dengan harga terjangkau dan transparan.",
-    "ctaPrimary": "Chat WhatsApp Gratis",
-    "ctaSecondary": "Lihat Skema Bisnis",
-    "waText": "Halo apptivity.id, saya tertarik diskusi project. Boleh info lebih lanjut?"
+    "sub": "Konsultasi gratis, harga jelas sejak awal, dan garansi uang kembali jika hasil tidak sesuai kesepakatan.",
+    "ctaPrimary": "Konsultasi Gratis via WhatsApp",
+    "ctaSecondary": "Lihat Estimasi Harga",
+    "waText": "Halo apptivity.id, saya mau konsultasi gratis tentang kebutuhan aplikasi saya."
   },
   "about": {
-    "eyebrow": "01 — Apa itu Apptivity?",
-    "title": "Solusi IT murah, transparan, bersahabat.",
-    "body1": "Apptivity adalah perusahaan software house yang membantu siapa saja yang sedang dalam kesulitan yang solusinya bisa diatasi dengan solusi IT dengan harga yang terjangkau, murah dan transparan. Apptivity menggunakan skema trilogi yaitu pada posisi atap sebagai users dan untuk sisi di bawah adalah affiliator dan programmer sebagai pondasinya.",
-    "eyebrow2": "02 — Apa tujuan kami?",
-    "body2": "Membantu siapa saja mempermudah pekerjaannya melalui solusi digital — dengan cara yang murah, bersahabat, dan sangat solutif, untuk profesional, UMKM, pemerintahan, hingga perusahaan besar, di mana pun berada.",
-    "audiences": ["Profesional", "UMKM", "Pemerintahan", "Perusahaan Swasta", "Perusahaan Besar"]
+    "eyebrow": "01 — Tentang Apptivity",
+    "title": "Software house yang mengutamakan kejelasan.",
+    "body1": "Apptivity (apptivity.id) adalah software house Indonesia di bawah PT Lawson Semesta Indonesia. Kami membangun aplikasi web dan mobile untuk profesional, UMKM, instansi pemerintah, dan perusahaan.",
+    "eyebrow2": "02 — Anda kami sebut Sahabat",
+    "body2": "Sahabat artinya partner, bukan sekadar pembeli. Kami memberi saran dan alternatif terbaik untuk kebutuhan Anda, tanpa tekanan untuk membeli. Jika Anda membutuhkan tim profesional, kami siap mengerjakannya.",
+    "audiences": ["Profesional", "UMKM", "Pemerintahan", "Startup", "Perusahaan Besar"]
   },
   "why": {
-    "eyebrow": "03 — Kenapa harus Apptivity?",
-    "body": "Karena kami membantu users/client dalam mendapatkan solusi terbaik untuk kebutuhan atau masalahnya dengan saran dan alternatif terbaik, tanpa memaksakan apakah users/client harus melakukan transaksi. Tetapi jika dibutuhkan, Apptivity sudah memiliki SDM yang berkualitas dan terpercaya dalam mengerjakan proyek-proyek IT baik yang berskala besar maupun kecil."
+    "eyebrow": "03 — Kenapa Apptivity?",
+    "body": "Karena Anda selalu tahu apa yang dibayar, kapan selesai, dan apa yang didapat. Setiap proyek tercatat resmi oleh perusahaan berbadan hukum. Jika hasil tidak sesuai kesepakatan, dana Anda kembali."
   },
   "scheme": {
-    "eyebrow": "Skema Bisnis — Win-Win Trilogy",
-    "title": "Sahabat di puncak, ditopang dua kekuatan.",
-    "intro": "Apptivity mengusung skema bisnis win-win trilogy yang tergambar pada logo kami, dimana puncak dari trilogy ini adalah kepuasan dan tercapainya tujuan dari digitalisasi klien Apptivity atau kita sebut juga dengan sahabat. Sementara itu yang menjadi kekuatan yang membantu tercapainya puncak trilogy ini adalah freelance affiliator dan developer yang bersinergi sehingga terbentuk kekuatan win-win trilogy ini.",
+    "eyebrow": "Skema Apptivity",
+    "title": "Anda di puncak, kami yang menopang.",
+    "intro": "Kepuasan Anda adalah tujuan utama kami. Dua kekuatan menopangnya: tim developer yang mengeksekusi dan jaringan affiliator tepercaya yang mendampingi. Skema ini tergambar pada logo kami.",
     "pillars": [
       {
-        "name": "Klien (Sahabat)",
-        "tag": "Puncak trilogy",
-        "body": "Sahabat adalah prioritas kami dalam memberikan solusi terbaik untuk sahabat kami."
+        "name": "Anda (Sahabat)",
+        "tag": "Fokus utama",
+        "body": "Kebutuhan Anda yang menentukan solusi. Kami memberi alternatif terbaik, tanpa kewajiban membeli."
+      },
+      {
+        "name": "Tim Developer",
+        "tag": "Eksekusi",
+        "body": "Developer terkurasi mengerjakan proyek Anda. Progres dilaporkan berkala sampai selesai."
       },
       {
         "name": "Affiliator",
-        "tag": "Garda terdepan",
-        "body": "Menjadi garda terdepan dalam mengantarkan sahabat untuk menyelesaikan masalah dengan solusi terbaik pada Apptivity.id. Terdapat 2 jenis affiliator yaitu Utama dan Biasa. Affiliator Utama adalah sahabat yang juga menjadi affiliator, sedangkan Affiliator Biasa adalah siapapun yang menjadi penghubung dengan sahabat."
-      },
-      {
-        "name": "Developer",
-        "tag": "Tim eksekusi",
-        "body": "Tim cepat tanggap dalam mengerjakan proyek sesuai dengan kebutuhan sahabat kami."
+        "tag": "Pendamping",
+        "body": "Jaringan partner tepercaya yang menghubungkan dan mendampingi Anda sejak awal."
       }
-    ]
+    ],
+    "joinCta": "Tertarik jadi partner kami? Ke bagian Gabung Bersama Kami"
   },
   "ownership": {
     "eyebrow": "Kepemilikan Aplikasi",
     "title": "Beli atau sewa — pilih yang cocok.",
-    "intro": "Untuk kepemilikan aplikasi kami menyediakan 2 pilihan.",
+    "intro": "Untuk kepemilikan aplikasi, kami menyediakan 2 pilihan.",
+    "guide": "Panduan singkat: pilih Beli jika Anda ingin memiliki dan mengubah aplikasi kapan saja. Pilih Sewa jika Anda ingin biaya awal ringan dengan server dan domain sudah termasuk.",
     "tabBuy": "Beli",
     "tabRent": "Sewa",
     "pros": "Kelebihan",
-    "cons": "Kekurangan",
+    "cons": "Perlu Diketahui",
     "buy": {
       "pros": [
-        "Gratis konsultasi selamanya",
-        "Terdaftar sebagai Affiliator Utama",
-        "Dapat hak milik atas aplikasi dan bisa custom sendiri sesuai kebutuhan",
-        "Tidak dikenakan biaya apapun setelah close project"
+        "Hak milik penuh atas aplikasi dan source code",
+        "Bebas custom kapan saja sesuai kebutuhan",
+        "Tanpa biaya lanjutan setelah proyek selesai",
+        "Gratis konsultasi untuk klien Apptivity",
+        "Terdaftar sebagai Affiliator Utama"
       ],
       "cons": [
-        "Apabila terjadi penambahan kecil atau besar di luar kesepakatan awal akan dikenakan tambahan biaya",
-        "Sewa server, domain dan alat-alat tambahan lainnya tidak termasuk ke dalam nilai project"
+        "Penambahan di luar kesepakatan awal dikenakan biaya tambahan",
+        "Server, domain, dan layanan pihak ketiga tidak termasuk"
       ]
     },
     "rent": {
       "pros": [
-        "Gratis konsultasi selamanya",
-        "Terdaftar sebagai Affiliator Utama",
-        "Penambahan kecil bebas biaya",
-        "Sewa server dan domain bawaan diberikan secara gratis di server dan domain Apptivity.id",
-        "Penambahan besar akan dikenakan biaya ringan"
+        "Biaya awal ringan dengan sewa tahunan",
+        "Penambahan kecil gratis",
+        "Server dan domain bawaan gratis di Apptivity.id",
+        "Penambahan besar dikenakan biaya ringan",
+        "Gratis konsultasi untuk klien Apptivity",
+        "Terdaftar sebagai Affiliator Utama"
       ],
       "cons": [
-        "Aplikasi tidak dimiliki sehingga tidak bisa diubah kapanpun dibutuhkan",
-        "Dikenakan biaya sewa pertahun"
+        "Aplikasi tidak dimiliki, perubahan mengikuti ketentuan sewa",
+        "Dikenakan biaya sewa setiap tahun"
       ]
     }
   },
   "mechanism": {
-    "eyebrow": "04 — Mekanisme Apptivity",
+    "eyebrow": "04 — Cara Kerja Sama",
     "title": "Empat langkah yang jelas.",
     "badge": "Garansi",
     "steps": [
       {
-        "title": "Hubungi kami",
-        "body": "Users atau client bisa langsung menghubungi nomor yang tertera atau Direct Message (DM) saja ke akun social media kami, lalu akan dibahas terkait masalah dan solusi terbaik."
+        "title": "Konsultasi gratis",
+        "body": "Hubungi kami kapan saja via WhatsApp atau DM. Ceritakan kebutuhan Anda. Kami beri saran dan alternatif terbaik, tanpa kewajiban membeli."
       },
       {
-        "title": "Bahas project hingga kontrak",
-        "body": "Jika membutuhkan tenaga profesional dari Apptivity maka akan dihubungkan untuk membahas project secara detail hingga kontrak."
+        "title": "Kesepakatan tertulis",
+        "body": "Ruang lingkup, timeline, dan biaya kami tuangkan dalam kontrak. Harga final mengikuti hasil konsultasi, tanpa biaya tersembunyi."
       },
       {
-        "title": "Diawasi hingga tuntas",
-        "body": "Seluruh kegiatan akan diawasi oleh Apptivity hingga proyek tuntas."
+        "title": "Pengerjaan terpantau",
+        "body": "Progres dilaporkan berkala sampai selesai. Anda selalu tahu status proyek Anda."
       },
       {
-        "title": "Jaminan pengembalian dana",
-        "body": "Jika proyek tidak seperti kesepakatan di awal maka uang users/client akan dikembalikan sebanyak dari fitur atau kesepakatan yang kurang tersebut, begitu juga sebaliknya jika ada permintaan berlebih."
+        "title": "Garansi uang kembali",
+        "body": "Jika ada fitur yang tidak sesuai kesepakatan, kami kembalikan dana sebesar nilai fitur tersebut. Permintaan di luar kesepakatan kami bicarakan terbuka sejak awal."
       }
     ]
   },
+  "pricing": {
+    "eyebrow": "05 — Estimasi Harga",
+    "title": "Harga jelas sejak awal.",
+    "intro": "Semua proyek mulai dari harga yang sama. Harga final mengikuti hasil konsultasi dan kami tuangkan tertulis sebelum mulai — tanpa biaya tersembunyi.",
+    "fromLabel": "Mulai dari",
+    "price": "Rp500 ribu",
+    "usd": "US$10",
+    "usdNote": "untuk klien luar negeri",
+    "payTitle": "Pembayaran bertahap",
+    "payBody": "Pembayaran mengikuti milestone proyek: 30% DP sebagai tanda jadi, 40% saat demo progres disetujui, dan 30% pelunasan saat serah terima.",
+    "cta": "Minta Estimasi Pasti — Gratis",
+    "note": "Harga final selalu tertulis di kontrak sebelum pengerjaan mulai.",
+    "productNote": "Kami juga memiliki produk jadi siap pakai — konsultasikan kebutuhan Anda, mungkin sudah ada yang cocok."
+  },
+  "portfolio": {
+    "eyebrow": "06 — Portofolio",
+    "title": "Sebagian karya kami sejak 2017.",
+    "intro": "Sebagian dari 36+ proyek yang kami kerjakan sejak 2017 — dari instansi pemerintah, BUMN, hingga UMKM. Klik kartu untuk detail.",
+    "all": "Semua",
+    "categories": ["Web App", "Mobile", "AI & Integrasi"],
+    "close": "Tutup",
+    "ctaSimilar": "Tanya project mirip ini",
+    "waTemplate": "Halo apptivity.id! Saya tertarik project mirip _TITLE_ (_CAT_). Boleh info lebih lanjut?",
+    "hint": "Klik kartu untuk detail",
+    "note": "Dan 28+ proyek lainnya sejak 2017 — dari web profil, absensi, hingga ERP.",
+    "items": [
+      {
+        "title": "SIM Bidang Hukum",
+        "tagline": "Manajemen hukum Kanwil Kemenkumham Sumbar",
+        "description": "Sistem informasi manajemen bidang hukum untuk Kantor Wilayah Kemenkumham Sumatera Barat.",
+        "tech": ["PHP", "MySQL"],
+        "result": "Dipakai instansi pemerintah",
+        "year": "2018"
+      },
+      {
+        "title": "Marketplace Fotografi",
+        "tagline": "Jasa studio & foto se-Kota Padang",
+        "description": "Marketplace jasa studio dan fotografi di Kota Padang, berjalan di Android berbasis WebView.",
+        "tech": ["Android", "WebView"],
+        "result": "Rilis di Android",
+        "year": "2021"
+      },
+      {
+        "title": "Sistem Pakar Kanker Mulut",
+        "tagline": "Diagnosa AI untuk klinik",
+        "description": "Sistem pakar diagnosa penyakit kanker mulut dengan metode forward chaining untuk klinik di Pasir Pengaraian.",
+        "tech": ["PHP", "Forward Chaining"],
+        "result": "Metode forward chaining",
+        "year": "2021"
+      },
+      {
+        "title": "PPDB & Rapor Online",
+        "tagline": "Pendaftaran siswa 7 sekolah",
+        "description": "Sistem penerimaan siswa baru online dan rapor online untuk SMA Kartika 1–5, SMA Pertiwi 1, dan SMKN 2 Padang Panjang.",
+        "tech": ["PHP", "MySQL"],
+        "result": "Dipakai 7 sekolah",
+        "year": "2019"
+      },
+      {
+        "title": "SIPS Mobile",
+        "tagline": "Operasional kebun offline-first",
+        "description": "Aplikasi mobile manajemen operasional perkebunan PT Sentosa Kalimantan Jaya. Backend Laravel + Oracle, sisi mobile Next.js yang tetap jalan tanpa sinyal.",
+        "tech": ["Laravel", "Oracle", "Next.js"],
+        "result": "Tetap jalan tanpa sinyal",
+        "year": "2024"
+      },
+      {
+        "title": "Pengajuan KUR BNI",
+        "tagline": "Kredit usaha rakyat",
+        "description": "Aplikasi pengajuan Kredit Usaha Rakyat untuk Bank BNI.",
+        "tech": ["PHP", "MySQL"],
+        "result": "Klien Bank BUMN",
+        "year": "2020"
+      },
+      {
+        "title": "E-Procurement Sawit",
+        "tagline": "Pengadaan digital PT KSI",
+        "description": "Sistem e-procurement kelapa sawit untuk PT Kencana Sawit Indonesia.",
+        "tech": ["PHP", "MySQL"],
+        "result": "Klien perkebunan sawit",
+        "year": "2021"
+      },
+      {
+        "title": "Absensi PT Kuanda",
+        "tagline": "Kehadiran karyawan tercatat rapi",
+        "description": "Aplikasi absensi untuk PT Kuanda Maju Jaya.",
+        "tech": ["PHP", "MySQL"],
+        "result": "Disiplin tercatat digital",
+        "year": "2018"
+      }
+    ]
+  },
+  "proof": {
+    "eyebrow": "07 — Bukti & Testimoni",
+    "title": "Angka dan cerita di baliknya.",
+    "intro": "Rekam jejak kami sejak 2017 — dari instansi pemerintah, BUMN, hingga UMKM. Daftar lengkap 36+ proyek bisa kami tunjukkan saat konsultasi.",
+    "stats": [
+      { "value": "9+", "label": "Tahun pengalaman — 2027 genap 10 tahun" },
+      { "value": "36+", "label": "Proyek selesai" },
+      { "value": "30+", "label": "Klien & instansi" }
+    ],
+    "casesTitle": "Contoh studi kasus",
+    "cases": [
+      {
+        "problem": "Tiga sekolah di Padang Panjang (Kartika 1–5, Pertiwi 1, SMKN 2) kewalahan melayani pendaftaran siswa baru yang menumpuk setiap tahun ajaran.",
+        "solution": "Kami membangun sistem PPDB online dan rapor online yang bisa dipakai bersama.",
+        "result": "Dipakai 7 sekolah sejak 2019 — pendaftaran rapi tanpa antre berkas."
+      },
+      {
+        "problem": "Stok barang dan obat di beberapa instansi masih dicatat manual — selisih stok ketahuan belakangan.",
+        "solution": "Kami membangun sistem persediaan metode FIFO untuk gudang, swalayan, dan puskesmas.",
+        "result": "Stok tercatat rapi per batch. Barang kedaluwarsa lebih mudah terpantau."
+      }
+    ],
+    "problemLabel": "Masalah",
+    "solutionLabel": "Solusi",
+    "resultLabel": "Hasil",
+    "testiTitle": "Kata mereka",
+    "testimonial": {
+      "quote": "Pendaftarannya rapi, tidak ada lagi berkas menumpuk di meja. Dibantu sampai bisa dipakai sendiri.",
+      "name": "— Pengelola PPDB SMA, Padang Panjang (nama disamarkan atas permintaan klien)"
+    },
+    "techTitle": "Teknologi utama",
+    "tech": ["PHP / Laravel", "Oracle / MySQL / PostgreSQL", "Next.js / React", "React Native / Expo", "Flutter", "Node.js", "AI / RAG", "WhatsApp API", "Android WebView"],
+    "techNote": "Tidak terbatas pada daftar ini — teknologi lain mengikuti kebutuhan proyek Anda.",
+    "cta": "Diskusikan Kebutuhan Anda — Gratis"
+  },
+  "join": {
+    "eyebrow": "08 — Gabung Bersama Kami",
+    "title": "Mari bertumbuh bersama.",
+    "intro": "Skema kami ditopang affiliator dan developer. Jika Anda salah satunya, pintu kami terbuka.",
+    "cards": [
+      {
+        "name": "Affiliator",
+        "tag": "Untuk penghubung",
+        "body": "Ada dua jenis: Affiliator Utama (Anda adalah klien sekaligus partner) dan Affiliator Biasa (siapa pun yang menghubungkan kami dengan calon klien).",
+        "cta": "Daftar jadi Affiliator"
+      },
+      {
+        "name": "Developer",
+        "tag": "Untuk programmer",
+        "body": "Programmer terkurasi yang mengerjakan proyek klien dengan standar Apptivity: progres terbuka dan hasil sesuai kesepakatan.",
+        "cta": "Daftar jadi Developer"
+      }
+    ],
+    "waTemplate": "Halo apptivity.id! Saya tertarik gabung sebagai _ROLE_. Boleh info syarat dan caranya?"
+  },
   "legal": {
-    "eyebrow": "05 — Legalitas",
+    "eyebrow": "09 — Legalitas",
     "title": "Berbadan hukum, transaksi tercatat.",
-    "body": "Apptivity berdiri di atas nama PT Lawson Semesta Indonesia sebagai PT perorangan, dengan begitu setiap transaksi dan pajak akan dilaporkan dan untuk legalitas dapat dipertanggungjawabkan sehingga semua stakeholders tidak perlu ragu terkait transaksi dan bisnis melalui Apptivity.id.",
+    "body": "Apptivity beroperasi di bawah PT Lawson Semesta Indonesia (PT Perorangan). Setiap transaksi tercatat dan pajak dilaporkan. Legalitas dapat dipertanggungjawabkan.",
     "company": "PT Lawson Semesta Indonesia",
     "entity": "PT Perorangan"
   },
   "cta": {
-    "title": "Ingin bertanya lebih lanjut? DM dan WhatsApp segera — GRATIS!",
-    "sub": "Konsultasi dulu tanpa komitmen. Ceritakan masalah Anda, kami beri saran dan alternatif terbaik.",
+    "title": "Masih ragu? Cerita dulu saja — gratis!",
+    "sub": "Ceritakan kebutuhan Anda. Kami beri saran dan alternatif terbaik, tanpa kewajiban membeli.",
     "waButton": "Chat WhatsApp",
     "igButton": "DM Instagram",
-    "note": "Konsultasi gratis 24 jam, respons < 7 jam."
+    "note": "Bisa dihubungi 24 jam, dibalas maksimal 7 jam."
   },
   "brief": {
     "eyebrow": "Mulai Project",
@@ -154,27 +311,47 @@
   },
   "faq": {
     "eyebrow": "Pertanyaan Umum",
-    "title": "Pertanyaan seputar jasa pembuatan aplikasi.",
+    "title": "Yang sering ditanyakan.",
     "items": [
       {
         "q": "Apa itu apptivity.id?",
-        "a": "apptivity.id adalah software house yang membantu siapa saja yang kesulitannya bisa diatasi dengan solusi IT — dengan harga terjangkau, murah, dan transparan. Kami bekerja dengan skema win-win trilogy: Sahabat (klien) di puncak, ditopang Affiliator dan Developer."
+        "a": "apptivity.id adalah software house Indonesia di bawah PT Lawson Semesta Indonesia. Kami membangun aplikasi web dan mobile dengan harga jelas, progres terbuka, dan garansi uang kembali. Klien kami sebut Sahabat — partner, bukan sekadar pembeli."
+      },
+      {
+        "q": "Berapa estimasi biayanya?",
+        "a": "Tergantung ruang lingkup. Semua proyek mulai dari Rp500 ribu — lihat bagian Estimasi Harga di halaman ini. Harga final kami tetapkan setelah konsultasi gratis, lalu kami tuangkan tertulis sebelum mulai. Pembayaran bertahap mengikuti milestone: 30% DP, 40% progres, 30% serah terima."
+      },
+      {
+        "q": "Berapa lama pengerjaannya?",
+        "a": "Landing page umumnya 2–4 minggu, aplikasi web 1–3 bulan, aplikasi mobile 2–4 bulan. Timeline pasti tercantum di kontrak sebelum pengerjaan mulai."
+      },
+      {
+        "q": "Teknologi apa yang digunakan?",
+        "a": "Kami memakai PHP/Laravel, Next.js/React, React Native/Expo, hingga Flutter — dengan database Oracle, MySQL, atau PostgreSQL, plus integrasi AI maupun WhatsApp API. Teknologi final mengikuti kebutuhan proyek Anda. Daftar lengkap ada di bagian Bukti & Testimoni."
       },
       {
         "q": "Beli atau sewa aplikasi — mana yang cocok untuk saya?",
-        "a": "Beli memberi hak milik penuh dan bebas biaya setelah project selesai, cocok jika Anda ingin custom kapan saja. Sewa lebih ringan: penambahan kecil gratis, server dan domain bawaan gratis, cukup bayar sewa tahunan. Keduanya gratis konsultasi selamanya dan terdaftar sebagai Affiliator Utama."
+        "a": "Pilih Beli jika Anda ingin memiliki dan mengubah aplikasi kapan saja, tanpa biaya lanjutan setelah selesai. Pilih Sewa jika Anda ingin biaya awal ringan: penambahan kecil gratis, server dan domain bawaan gratis, cukup bayar sewa tahunan. Keduanya gratis konsultasi untuk klien dan terdaftar sebagai Affiliator Utama."
+      },
+      {
+        "q": "Siapa pemilik source code?",
+        "a": "Pada skema Beli, source code adalah milik Anda dan diserahkan penuh saat pelunasan. Pada skema Sewa, aplikasi tetap dikelola Apptivity selama masa sewa."
       },
       {
         "q": "Bagaimana alur kerja samanya?",
-        "a": "Empat langkah: hubungi kami via WhatsApp atau DM untuk membahas masalah dan solusi, bahas project hingga kontrak, seluruh pengerjaan kami awasi hingga tuntas, dan ada jaminan pengembalian dana jika hasil tidak sesuai kesepakatan."
+        "a": "Empat langkah: konsultasi gratis tanpa kewajiban membeli, kesepakatan tertulis dalam kontrak, progres dilaporkan berkala sampai selesai, dan garansi uang kembali jika tidak sesuai kesepakatan."
       },
       {
         "q": "Bagaimana jika hasilnya tidak sesuai kesepakatan?",
-        "a": "Uang Anda dikembalikan senilai fitur atau kesepakatan yang kurang tersebut. Berlaku sebaliknya: jika permintaan Anda bertambah di luar kesepakatan, ada penyesuaian biaya yang dibahas transparan."
+        "a": "Kami kembalikan dana sebesar nilai fitur yang tidak sesuai tersebut. Sebaliknya, permintaan di luar kesepakatan kami bicarakan terbuka sejak awal."
+      },
+      {
+        "q": "Apakah ada dukungan setelah proyek selesai?",
+        "a": "Ya. Klien Apptivity mendapat konsultasi gratis. Perbaikan dalam masa garansi 30 hari setelah serah terima tidak dikenakan biaya. Penambahan fitur baru dibahas terbuka."
       },
       {
         "q": "Apakah apptivity.id berbadan hukum?",
-        "a": "Ya. apptivity.id berdiri di atas nama PT Lawson Semesta Indonesia sebagai PT perorangan — setiap transaksi dan pajak dilaporkan sehingga legalitas dapat dipertanggungjawabkan."
+        "a": "Ya. Kami beroperasi di bawah PT Lawson Semesta Indonesia (PT Perorangan). Setiap transaksi tercatat dan pajak dilaporkan."
       },
       {
         "q": "Bagaimana cara memulai project?",
@@ -182,11 +359,11 @@
       }
     ]
   },
-  "ticker": ["Jaminan Pengembalian Dana", "Harga Murah & Transparan", "Tanpa Paksaan Transaksi", "Konsultasi Gratis Selamanya", "SDM Berkualitas & Terpercaya", "Untuk Profesional, UMKM, Pemerintahan, hingga Perusahaan Besar", "Berbadan Hukum — PT Lawson Semesta Indonesia"],
+  "ticker": ["Garansi Uang Kembali", "Harga Jelas Tanpa Biaya Tersembunyi", "Konsultasi Tanpa Tekanan", "Gratis Konsultasi untuk Klien", "Tim Terkurasi & Terpantau", "Untuk Profesional, UMKM, Pemerintahan, hingga Perusahaan Besar", "Berbadan Hukum — PT Lawson Semesta Indonesia"],
   "footer": {
     "tagline": "Apps for every activity",
     "contactTitle": "Kontak",
-    "links": ["Tentang", "Skema Bisnis", "Kepemilikan", "Mekanisme", "FAQ"],
+    "links": ["Tentang", "Harga", "Portofolio", "Bukti", "Gabung", "FAQ"],
     "rights": "© 2026 PT Lawson Semesta Indonesia. Seluruh hak cipta dilindungi."
   }
 }

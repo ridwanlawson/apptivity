@@ -4,12 +4,14 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import SectionHeading from "../SectionHeading";
 import { prefersReducedMotion, useReveal } from "@/lib/anim";
+import { scrollToHash } from "@/lib/scroll";
 
 export type SchemeDict = {
   eyebrow: string;
   title: string;
   intro: string;
   pillars: { name: string; tag: string; body: string }[];
+  joinCta: string;
 };
 
 const ACTIVE_STYLES = [
@@ -197,6 +199,16 @@ export default function Scheme({ dict }: { dict: SchemeDict }) {
               );
             })}
           </ol>
+        </div>
+
+        <div data-reveal className="mt-10 text-center">
+          <button
+            type="button"
+            onClick={() => scrollToHash("#gabung")}
+            className="rounded-full border border-white/25 px-7 py-3 font-bold text-white transition-colors hover:border-gold hover:text-gold"
+          >
+            {dict.joinCta} →
+          </button>
         </div>
       </div>
     </section>

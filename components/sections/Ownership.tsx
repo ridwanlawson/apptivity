@@ -12,6 +12,7 @@ export type OwnershipDict = {
   eyebrow: string;
   title: string;
   intro: string;
+  guide: string;
   tabBuy: string;
   tabRent: string;
   pros: string;
@@ -63,6 +64,12 @@ export default function Ownership({ dict }: { dict: OwnershipDict }) {
         </div>
         <p data-reveal className="mt-4 max-w-3xl text-lg text-muted">
           {dict.intro}
+        </p>
+        <p
+          data-reveal
+          className="mt-3 max-w-3xl rounded-2xl bg-gold/10 px-5 py-3 font-semibold leading-relaxed text-ink ring-1 ring-gold/30"
+        >
+          {dict.guide}
         </p>
 
         <div data-reveal className="mt-8 flex justify-center">

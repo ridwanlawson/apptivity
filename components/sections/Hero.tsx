@@ -140,10 +140,10 @@ export default function Hero({ dict, locale }: { dict: HeroDict; locale: Locale 
               </a>
             </MagneticButton>
             <a
-              href={`/${locale}#skema`}
+              href={`/${locale}#harga`}
               onClick={(e) => {
                 e.preventDefault();
-                scrollToHash("#skema");
+                scrollToHash("#harga");
               }}
               className="inline-block rounded-full border border-white/25 px-7 py-3.5 font-bold text-white hover:border-gold hover:text-gold"
             >

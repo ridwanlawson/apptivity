@@ -1,13 +1,19 @@
 {
   "meta": {
     "title": "apptivity.id — Apps for Every Activity | Indonesian Software House",
-    "description": "apptivity.id — win-win trilogy software house: affordable, transparent, friendly IT solutions for professionals, SMEs, governments, and companies."
+    "description": "Web & mobile app development in Indonesia. Free consultation, transparent pricing, money-back guarantee. A legal PT entity."
   },
   "nav": {
     "about": "About",
-    "scheme": "Business Scheme",
+    "how": "How It Works",
+    "scheme": "Scheme",
     "ownership": "Ownership",
     "mechanism": "Process",
+    "pricing": "Pricing",
+    "portfolio": "Portfolio",
+    "company": "Apptivity",
+    "proof": "Proof & Reviews",
+    "join": "Join Us",
     "legal": "Legality",
     "brief": "Start a Project",
     "faq": "FAQ",
@@ -15,119 +21,270 @@
     "skip": "Skip to content"
   },
   "hero": {
-    "eyebrow": "Indonesian Software House",
-    "titleA": "Meet",
-    "titleB": "Apptivity",
+    "eyebrow": "Indonesian Software House — Legal PT Entity",
+    "titleA": "Have an App Idea?",
+    "titleB": "We'll Build It.",
     "tagline": "Apps for every activity",
-    "sub": "Helping anyone whose problems can be solved with IT solutions — at affordable, low, and transparent prices.",
-    "ctaPrimary": "Free WhatsApp Chat",
-    "ctaSecondary": "See Business Scheme",
-    "waText": "Hello apptivity.id, I'd like to discuss a project. Could you share more info?"
+    "sub": "Free consultation, clear pricing from the start, and a money-back guarantee if results miss the agreement.",
+    "ctaPrimary": "Free Consultation via WhatsApp",
+    "ctaSecondary": "See Price Estimates",
+    "waText": "Hello apptivity.id, I'd like a free consultation about my app needs."
   },
   "about": {
-    "eyebrow": "01 — What is Apptivity?",
-    "title": "Affordable, transparent, friendly IT solutions.",
-    "body1": "Apptivity is a software house that helps anyone facing difficulties that can be solved with IT solutions, at affordable, low, and transparent prices. Apptivity uses a trilogy scheme: users sit at the roof, supported below by affiliators and programmers as the foundation.",
-    "eyebrow2": "02 — What is our goal?",
-    "body2": "To help anyone make their work easier through digital solutions — affordable, friendly, and highly effective, for professionals, SMEs, governments, and companies of any size, anywhere.",
-    "audiences": ["Professionals", "SMEs", "Government", "Private Companies", "Enterprises"]
+    "eyebrow": "01 — About Apptivity",
+    "title": "A software house built on clarity.",
+    "body1": "Apptivity (apptivity.id) is an Indonesian software house under PT Lawson Semesta Indonesia. We build web and mobile apps for professionals, SMEs, government agencies, and companies.",
+    "eyebrow2": "02 — We call you Sahabat",
+    "body2": "Sahabat means partner, not just a buyer. We give our best advice and alternatives for your needs — with zero pressure to buy. When you need professionals, we're ready to deliver.",
+    "audiences": ["Professionals", "SMEs", "Government", "Startups", "Enterprises"]
   },
   "why": {
     "eyebrow": "03 — Why Apptivity?",
-    "body": "Because we help users/clients get the best solution for their needs or problems with the best advice and alternatives — never forcing users/clients into a transaction. But when needed, Apptivity already has qualified and trusted professionals to deliver IT projects of any scale, large or small."
+    "body": "Because you always know what you pay for, when it finishes, and what you get. Every project is officially recorded by a legal company. If results miss the agreement, your money comes back."
   },
   "scheme": {
-    "eyebrow": "Business Scheme — Win-Win Trilogy",
-    "title": "Clients at the peak, carried by two strengths.",
-    "intro": "Apptivity runs a win-win trilogy business scheme reflected in our logo: the peak of the trilogy is the satisfaction and fulfillment of our clients' digitalization goals — whom we call friends (sahabat). The strength that holds up that peak is freelance affiliators and developers working in synergy, forming the win-win trilogy.",
+    "eyebrow": "The Apptivity Scheme",
+    "title": "You're at the peak, we hold you up.",
+    "intro": "Your satisfaction is our ultimate goal. Two strengths hold it up: a developer team that executes and a trusted affiliator network that guides you. This scheme is drawn in our logo.",
     "pillars": [
       {
-        "name": "Client (Sahabat)",
-        "tag": "Peak of the trilogy",
-        "body": "Friends are our priority in delivering the best solutions for them."
+        "name": "You (Sahabat)",
+        "tag": "The focus",
+        "body": "Your needs decide the solution. We offer the best alternatives, with no obligation to buy."
       },
       {
-        "name": "Affiliator",
-        "tag": "Front line",
-        "body": "The front line guiding friends to solve problems with the best solutions at Apptivity.id. There are 2 types: Primary and Regular. A Primary Affiliator is a friend who is also an affiliator, while a Regular Affiliator is anyone connecting friends to us."
+        "name": "Developer Team",
+        "tag": "Execution",
+        "body": "Curated developers work on your project. Progress is reported regularly until done."
       },
       {
-        "name": "Developer",
-        "tag": "Execution team",
-        "body": "A fast-response team delivering projects according to our friends' needs."
+        "name": "Affiliators",
+        "tag": "Guidance",
+        "body": "A trusted partner network that connects and guides you from the start."
       }
-    ]
+    ],
+    "joinCta": "Want to partner with us? See Join Us"
   },
   "ownership": {
     "eyebrow": "App Ownership",
     "title": "Buy or rent — pick what fits.",
     "intro": "For app ownership we offer 2 options.",
+    "guide": "Quick guide: choose Buy if you want to own and change the app anytime. Choose Rent if you want light upfront cost with server and domain included.",
     "tabBuy": "Buy",
     "tabRent": "Rent",
     "pros": "Advantages",
-    "cons": "Drawbacks",
+    "cons": "Good to Know",
     "buy": {
       "pros": [
-        "Free consultation forever",
-        "Registered as a Primary Affiliator",
-        "Full app ownership with freedom to customize as needed",
-        "No charges whatsoever after project close"
+        "Full ownership of the app and source code",
+        "Customize freely anytime as needed",
+        "No further charges after project close",
+        "Free consultation for Apptivity clients",
+        "Registered as a Primary Affiliator"
       ],
       "cons": [
-        "Any small or large additions beyond the initial agreement incur extra cost",
-        "Server rental, domain, and additional tools are not included in the project value"
+        "Additions beyond the initial agreement incur extra cost",
+        "Server, domain, and third-party services are not included"
       ]
     },
     "rent": {
       "pros": [
-        "Free consultation forever",
-        "Registered as a Primary Affiliator",
+        "Light upfront cost with yearly rent",
         "Small additions free of charge",
-        "Built-in server and domain rental provided free on Apptivity.id servers and domain",
-        "Large additions at a light extra cost"
+        "Built-in server and domain free on Apptivity.id",
+        "Large additions at a light extra cost",
+        "Free consultation for Apptivity clients",
+        "Registered as a Primary Affiliator"
       ],
       "cons": [
-        "The app is not owned, so it cannot be modified at any time",
+        "The app is not owned; changes follow the rental terms",
         "Yearly rental fee applies"
       ]
     }
   },
   "mechanism": {
-    "eyebrow": "04 — Apptivity Mechanism",
+    "eyebrow": "04 — Working With Us",
     "title": "Four clear steps.",
     "badge": "Guarantee",
     "steps": [
       {
-        "title": "Contact us",
-        "body": "Users or clients can directly contact the listed number or simply send a Direct Message (DM) to our social media accounts, then we discuss the problem and the best solution."
+        "title": "Free consultation",
+        "body": "Reach us anytime via WhatsApp or DM. Tell us your needs. We give our best advice and alternatives, with no obligation to buy."
       },
       {
-        "title": "Detail the project",
-        "body": "If you need Apptivity professionals, you will be connected to discuss the project in detail, up to the contract."
+        "title": "Written agreement",
+        "body": "Scope, timeline, and cost go into a contract. Final pricing follows the consultation, with no hidden fees."
       },
       {
-        "title": "Supervised until done",
-        "body": "All activities are supervised by Apptivity until the project is complete."
+        "title": "Supervised delivery",
+        "body": "Progress is reported regularly until done. You always know your project status."
       },
       {
         "title": "Money-back guarantee",
-        "body": "If the project does not match the initial agreement, the user's/client's money is refunded proportionally to the missing features or agreement — and vice versa if there are excess requests."
+        "body": "If any feature misses the agreement, we refund that feature's value. Out-of-scope requests are discussed openly from the start."
       }
     ]
   },
+  "pricing": {
+    "eyebrow": "05 — Price Estimates",
+    "title": "Clear pricing from the start.",
+    "intro": "Every project starts from the same price. Final pricing follows the consultation and is written down before we start — no hidden fees.",
+    "fromLabel": "Starting from",
+    "price": "Rp500 thousand",
+    "usd": "US$10",
+    "usdNote": "for international clients",
+    "payTitle": "Staged payments",
+    "payBody": "Payments follow project milestones: 30% down payment to start, 40% when the progress demo is approved, and 30% on handover.",
+    "cta": "Get an Exact Estimate — Free",
+    "note": "Final pricing is always written in the contract before work begins.",
+    "productNote": "We also have ready-made products — tell us your needs, one of them might already fit."
+  },
+  "portfolio": {
+    "eyebrow": "06 — Portfolio",
+    "title": "Selected work since 2017.",
+    "intro": "A selection of 36+ projects we've delivered since 2017 — from government agencies and state enterprises to SMEs. Click a card for details.",
+    "all": "All",
+    "categories": ["Web App", "Mobile", "AI & Integration"],
+    "close": "Close",
+    "ctaSimilar": "Ask about a similar project",
+    "waTemplate": "Hello apptivity.id! I'm interested in a project like _TITLE_ (_CAT_). Could you share more info?",
+    "hint": "Click a card for details",
+    "note": "Plus 28+ more projects since 2017 — from profile sites and attendance to ERP.",
+    "items": [
+      {
+        "title": "Legal Affairs MIS",
+        "tagline": "Legal management, Kemenkumham West Sumatra",
+        "description": "Management information system for the legal division of the Ministry of Law regional office in West Sumatra.",
+        "tech": ["PHP", "MySQL"],
+        "result": "Used by a government agency",
+        "year": "2018"
+      },
+      {
+        "title": "Photography Marketplace",
+        "tagline": "Studio & photo services across Padang",
+        "description": "Marketplace for studio and photography services in Padang city, running on Android via WebView.",
+        "tech": ["Android", "WebView"],
+        "result": "Released on Android",
+        "year": "2021"
+      },
+      {
+        "title": "Oral Cancer Expert System",
+        "tagline": "AI diagnosis for a clinic",
+        "description": "Expert system for diagnosing oral cancer with forward chaining for a clinic in Pasir Pengaraian.",
+        "tech": ["PHP", "Forward Chaining"],
+        "result": "Forward chaining method",
+        "year": "2021"
+      },
+      {
+        "title": "Online Admission & Reports",
+        "tagline": "Student enrollment for 7 schools",
+        "description": "Online new-student admission and report systems for SMA Kartika 1–5, SMA Pertiwi 1, and SMKN 2 Padang Panjang.",
+        "tech": ["PHP", "MySQL"],
+        "result": "Used by 7 schools",
+        "year": "2019"
+      },
+      {
+        "title": "SIPS Mobile",
+        "tagline": "Offline-first plantation ops",
+        "description": "Mobile app for plantation operations at PT Sentosa Kalimantan Jaya. Laravel + Oracle backend, Next.js mobile that keeps working with no signal.",
+        "tech": ["Laravel", "Oracle", "Next.js"],
+        "result": "Works with no signal",
+        "year": "2024"
+      },
+      {
+        "title": "BNI Microloan Filing",
+        "tagline": "People's business credit",
+        "description": "Application for filing Kredit Usaha Rakyat (microloans) at Bank BNI.",
+        "tech": ["PHP", "MySQL"],
+        "result": "State-bank client",
+        "year": "2020"
+      },
+      {
+        "title": "Palm E-Procurement",
+        "tagline": "Digital procurement, PT KSI",
+        "description": "E-procurement system for palm oil at PT Kencana Sawit Indonesia.",
+        "tech": ["PHP", "MySQL"],
+        "result": "Palm plantation client",
+        "year": "2021"
+      },
+      {
+        "title": "Kuanda Attendance",
+        "tagline": "Neat employee attendance records",
+        "description": "Attendance app for PT Kuanda Maju Jaya.",
+        "tech": ["PHP", "MySQL"],
+        "result": "Digital attendance records",
+        "year": "2018"
+      }
+    ]
+  },
+  "proof": {
+    "eyebrow": "07 — Proof & Reviews",
+    "title": "Numbers and stories behind them.",
+    "intro": "Our track record since 2017 — from government agencies and state enterprises to SMEs. The full list of 36+ projects is ready to show during consultation.",
+    "stats": [
+      { "value": "9+", "label": "Years of experience — 10 years in 2027" },
+      { "value": "36+", "label": "Projects delivered" },
+      { "value": "30+", "label": "Clients & institutions" }
+    ],
+    "casesTitle": "Sample case studies",
+    "cases": [
+      {
+        "problem": "Three schools in Padang Panjang (Kartika 1–5, Pertiwi 1, SMKN 2) struggled with piles of new-student registrations every school year.",
+        "solution": "We built a shared online admission system and online report cards.",
+        "result": "Used by 7 schools since 2019 — tidy enrollment, no more paper queues."
+      },
+      {
+        "problem": "Stock of goods and medicine at several institutions was still logged manually — discrepancies surfaced late.",
+        "solution": "We built FIFO-based inventory systems for warehouses, a supermarket, and health centers.",
+        "result": "Neat per-batch stock records. Expiring goods easier to monitor."
+      }
+    ],
+    "problemLabel": "Problem",
+    "solutionLabel": "Solution",
+    "resultLabel": "Outcome",
+    "testiTitle": "In their words",
+    "testimonial": {
+      "quote": "Enrollment is tidy — no more piles of papers on the desk. They guided us until we could run it ourselves.",
+      "name": "— School admission officer, Padang Panjang (name withheld at the client's request)"
+    },
+    "techTitle": "Core technologies",
+    "tech": ["PHP / Laravel", "Oracle / MySQL / PostgreSQL", "Next.js / React", "React Native / Expo", "Flutter", "Node.js", "AI / RAG", "WhatsApp API", "Android WebView"],
+    "techNote": "Not limited to this list — other technologies follow your project needs.",
+    "cta": "Discuss Your Needs — Free"
+  },
+  "join": {
+    "eyebrow": "08 — Join Us",
+    "title": "Let's grow together.",
+    "intro": "Our scheme runs on affiliators and developers. If you're one of them, our door is open.",
+    "cards": [
+      {
+        "name": "Affiliator",
+        "tag": "For connectors",
+        "body": "Two kinds: Primary Affiliators (you're a client and a partner) and Regular Affiliators (anyone connecting us with future clients).",
+        "cta": "Register as Affiliator"
+      },
+      {
+        "name": "Developer",
+        "tag": "For programmers",
+        "body": "Curated programmers delivering client projects to Apptivity standards: open progress and results per agreement.",
+        "cta": "Register as Developer"
+      }
+    ],
+    "waTemplate": "Hello apptivity.id! I'd like to join as _ROLE_. Could you share the terms and how?"
+  },
   "legal": {
-    "eyebrow": "05 — Legality",
+    "eyebrow": "09 — Legality",
     "title": "A legal entity, recorded transactions.",
-    "body": "Apptivity operates under PT Lawson Semesta Indonesia as a single-shareholder company (PT perorangan); as such every transaction and tax is reported and legality is accountable, so all stakeholders need not hesitate about transactions and business through Apptivity.id.",
+    "body": "Apptivity operates under PT Lawson Semesta Indonesia (single-shareholder company). Every transaction is recorded and taxes reported. Legality is accountable.",
     "company": "PT Lawson Semesta Indonesia",
     "entity": "PT Perorangan"
   },
   "cta": {
-    "title": "Want to ask further? DM and WhatsApp us now — FREE!",
-    "sub": "Consult first with zero commitment. Tell us your problem, we'll give our best advice and alternatives.",
+    "title": "Still unsure? Just tell us — it's free!",
+    "sub": "Tell us your needs. We'll give our best advice and alternatives, with no obligation to buy.",
     "waButton": "WhatsApp Chat",
     "igButton": "Instagram DM",
-    "note": "Free consultation, 24 hours — replies within 7 hours."
+    "note": "Reachable 24 hours, replied within 7 hours max."
   },
   "brief": {
     "eyebrow": "Start a Project",
@@ -154,27 +311,47 @@
   },
   "faq": {
     "eyebrow": "FAQ",
-    "title": "Questions about our app development services.",
+    "title": "Frequently asked questions.",
     "items": [
       {
         "q": "What is apptivity.id?",
-        "a": "apptivity.id is a software house that helps anyone whose problems can be solved with IT solutions — at affordable, low, transparent prices. We work on a win-win trilogy scheme: Friends (clients) at the peak, supported by Affiliators and Developers."
+        "a": "apptivity.id is an Indonesian software house under PT Lawson Semesta Indonesia. We build web and mobile apps with clear pricing, open progress, and a money-back guarantee. We call our clients Sahabat — partners, not just buyers."
       },
       {
-        "q": "Buy or rent an app — which fits me?",
-        "a": "Buying gives full ownership with no fees after close, ideal if you want to customize anytime. Renting is lighter: small additions free, built-in server and domain free, just a yearly fee. Both include free consultation forever and Primary Affiliator registration."
+        "q": "What does it cost?",
+        "a": "It depends on scope. Every project starts from Rp500 thousand — see Price Estimates on this page. Final pricing is set after a free consultation, then written down before we start. Payments follow milestones: 30% DP, 40% progress, 30% handover."
+      },
+      {
+        "q": "How long does it take?",
+        "a": "Landing pages typically take 2–4 weeks, web apps 1–3 months, mobile apps 2–4 months. The exact timeline is written in the contract before work begins."
+      },
+      {
+        "q": "What technologies do you use?",
+        "a": "We work with PHP/Laravel, Next.js/React, React Native/Expo, and Flutter — with Oracle, MySQL, or PostgreSQL databases, plus AI and WhatsApp API integrations. The final stack follows your project needs. See the full list in Proof & Reviews."
+      },
+      {
+        "q": "Buy or rent — which fits me?",
+        "a": "Choose Buy if you want to own and change the app anytime, with no charges after close. Choose Rent for light upfront cost: small additions free, built-in server and domain free, just a yearly fee. Both include free consultation for clients and Primary Affiliator registration."
+      },
+      {
+        "q": "Who owns the source code?",
+        "a": "On the Buy scheme, the source code is yours and fully handed over on final payment. On the Rent scheme, the app stays managed by Apptivity during the rental period."
       },
       {
         "q": "How does collaboration work?",
-        "a": "Four steps: contact us via WhatsApp or DM to discuss your problem and solution, detail the project up to contract, we supervise everything until done, with a money-back guarantee if results miss the agreement."
+        "a": "Four steps: free consultation with no obligation, a written agreement in a contract, regularly reported progress until done, and a money-back guarantee if results miss the agreement."
       },
       {
         "q": "What if results don't match the agreement?",
-        "a": "Your money is refunded proportionally to the missing features or agreement. Conversely, added requests beyond the agreement are adjusted transparently."
+        "a": "We refund the value of the features that miss the agreement. Conversely, out-of-scope requests are discussed openly from the start."
+      },
+      {
+        "q": "Is there support after the project ends?",
+        "a": "Yes. Apptivity clients get free consultation. Fixes within the 30-day warranty after handover are free. New features are discussed openly."
       },
       {
         "q": "Is apptivity.id a legal entity?",
-        "a": "Yes. apptivity.id operates under PT Lawson Semesta Indonesia as a single-shareholder company (PT perorangan) — every transaction and tax is reported, so legality is accountable."
+        "a": "Yes. We operate under PT Lawson Semesta Indonesia (single-shareholder company). Every transaction is recorded and taxes reported."
       },
       {
         "q": "How do I start a project?",
@@ -182,11 +359,11 @@
       }
     ]
   },
-  "ticker": ["Money-Back Guarantee", "Affordable & Transparent Pricing", "No Forced Transactions", "Free Consultation Forever", "Qualified & Trusted Professionals", "For Professionals, SMEs, Governments, and Enterprises", "Legal Entity — PT Lawson Semesta Indonesia"],
+  "ticker": ["Money-Back Guarantee", "Clear Pricing, No Hidden Fees", "Consultation Without Pressure", "Free Consultation for Clients", "Curated & Supervised Team", "For Professionals, SMEs, Governments, and Enterprises", "Legal Entity — PT Lawson Semesta Indonesia"],
   "footer": {
     "tagline": "Apps for every activity",
     "contactTitle": "Contact",
-    "links": ["About", "Business Scheme", "Ownership", "Process", "FAQ"],
+    "links": ["About", "Pricing", "Portfolio", "Proof", "Join Us", "FAQ"],
     "rights": "© 2026 PT Lawson Semesta Indonesia. All rights reserved."
   }
 }

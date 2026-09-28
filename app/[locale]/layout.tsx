@@ -139,9 +139,15 @@ export default async function LocaleLayout({
             locale={loc}
             nav={{
               about: tNav("about"),
+              how: tNav("how"),
               scheme: tNav("scheme"),
               ownership: tNav("ownership"),
               mechanism: tNav("mechanism"),
+              pricing: tNav("pricing"),
+              portfolio: tNav("portfolio"),
+              company: tNav("company"),
+              proof: tNav("proof"),
+              join: tNav("join"),
               legal: tNav("legal"),
               brief: tNav("brief"),
               faq: tNav("faq"),
