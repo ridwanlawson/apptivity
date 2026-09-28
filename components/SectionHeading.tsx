@@ -17,14 +17,16 @@ export default function SectionHeading({
       >
         {eyebrow}
       </p>
-      <h2
-        data-reveal
-        className={`mt-2 text-3xl font-extrabold tracking-tight sm:text-4xl ${
-          dark ? "text-white" : "text-ink"
-        }`}
-      >
-        {title}
-      </h2>
+      {title !== "" && (
+        <h2
+          data-reveal
+          className={`mt-2 text-3xl font-extrabold tracking-tight sm:text-4xl ${
+            dark ? "text-white" : "text-ink"
+          }`}
+        >
+          {title}
+        </h2>
+      )}
     </div>
   );
 }

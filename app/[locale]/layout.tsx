@@ -5,7 +5,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "../globals.css";
 import { routing, type Locale } from "@/lib/i18n";
-import { IG_URL, SITE_URL, SITE_NAME, TAGLINE, COMPANY } from "@/lib/site";
+import { IG_URL, SITE_URL, SITE_NAME, SITE_DOMAIN, TAGLINE, COMPANY } from "@/lib/site";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Preloader from "@/components/Preloader";
@@ -26,6 +26,38 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   themeColor: "#061029",
+};
+
+const OG_LOCALE: Record<string, string> = {
+  id: "id_ID",
+  en: "en_US",
+  ja: "ja_JP",
+  zh: "zh_CN",
+};
+
+const KEYWORDS: Record<string, string[]> = {
+  id: [
+    "jasa pembuatan aplikasi",
+    "jasa pembuatan aplikasi web",
+    "jasa pembuatan aplikasi mobile",
+    "software house indonesia",
+    "jasa pembuatan website",
+    "aplikasi kasir",
+    "aplikasi untuk umkm",
+  ],
+  en: [
+    "app development services",
+    "web app development",
+    "mobile app development",
+    "software house indonesia",
+  ],
+  ja: [
+    "アプリ開発",
+    "Webアプリ開発",
+    "モバイルアプリ開発",
+    "インドネシアソフトウェアハウス",
+  ],
+  zh: ["应用开发", "Web应用开发", "移动应用开发", "印度尼西亚软件公司"],
 };
 
 export function generateStaticParams() {
@@ -51,13 +83,17 @@ export async function generateMetadata({
     metadataBase: new URL(SITE_URL),
     title: t("title"),
     description: t("description"),
+    keywords: KEYWORDS[locale] ?? KEYWORDS.id,
+    authors: [{ name: COMPANY, url: SITE_URL }],
+    creator: COMPANY,
+    publisher: COMPANY,
     alternates: {
       canonical: `${SITE_URL}/${locale}`,
       languages: { ...languages, "x-default": `${SITE_URL}/id` },
     },
     openGraph: {
       type: "website",
-      locale,
+      locale: OG_LOCALE[locale] ?? locale,
       url: `${SITE_URL}/${locale}`,
       siteName: SITE_NAME,
       title: t("title"),
@@ -94,20 +130,34 @@ export default async function LocaleLayout({
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    name: COMPANY,
-    alternateName: SITE_NAME,
-    slogan: TAGLINE,
-    url: SITE_URL,
-    logo: `${SITE_URL}/logo.png`,
-    sameAs: [IG_URL],
-    areaServed: "ID",
-    contactPoint: {
-      "@type": "ContactPoint",
-      telephone: "+62-812-7038-9862",
-      contactType: "customer service",
-      availableLanguage: ["id", "en"],
-    },
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": `${SITE_URL}/#organisasi`,
+        name: COMPANY,
+        alternateName: SITE_NAME,
+        slogan: TAGLINE,
+        url: SITE_URL,
+        logo: `${SITE_URL}/logo.png`,
+        sameAs: [IG_URL],
+        areaServed: "ID",
+        contactPoint: {
+          "@type": "ContactPoint",
+          telephone: "+62-812-7038-9862",
+          contactType: "customer service",
+          availableLanguage: ["id", "en"],
+        },
+      },
+      {
+        "@type": "WebSite",
+        "@id": `${SITE_URL}/#situs`,
+        url: SITE_URL,
+        name: SITE_NAME,
+        alternateName: SITE_DOMAIN,
+        inLanguage: [...routing.locales],
+        publisher: { "@id": `${SITE_URL}/#organisasi` },
+      },
+    ],
   };
 
   return (

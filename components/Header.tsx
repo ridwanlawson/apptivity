@@ -212,7 +212,7 @@ export default function Header({
   );
 
   return (
-    <header className="fixed inset-x-0 top-0 z-[80] px-3 pt-3 sm:px-5 sm:pt-4">
+    <header className="fixed inset-x-0 top-0 z-[80] px-2 pt-2 xl:px-5 xl:pt-4">
       <a href="#konten" className="skip-link">
         {nav.skip}
       </a>
@@ -223,7 +223,7 @@ export default function Header({
             : "border-transparent bg-transparent"
         }`}
       >
-        <div className="flex h-18 items-center justify-between gap-6 px-4 sm:px-6">
+        <div className="flex h-16 items-center justify-between gap-6 px-4 xl:h-18 xl:px-6">
           <a
             href={`/${locale}`}
             className="flex shrink-0 items-center gap-2.5"

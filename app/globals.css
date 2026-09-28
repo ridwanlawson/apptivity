@@ -21,6 +21,12 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Anchored sections: keep titles clear of the floating pill on every
+   viewport (overrides scroll-mt-20 utilities). */
+section[id] {
+  scroll-margin-top: 6.5rem;
+}
+
 html,
 body {
   overflow-x: clip;
