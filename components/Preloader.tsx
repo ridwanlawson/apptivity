@@ -14,8 +14,8 @@ function signalReady(): void {
 
 // Preloader is server-rendered (first paint is the logo, never the page
 // flashing first). Shown only while the page is still loading, and only
-// on the first visit of a session — sessionStorage is marked by a blocking
-// inline script in <head>, so returning visitors never see it at all.
+// on the first visit of a session — on mount it checks sessionStorage and
+// hides instantly for returning visitors.
 // Entrance + exit are pure CSS (no animation runtime on the critical path).
 export default function Preloader() {
   const [show, setShow] = useState(true);
@@ -55,9 +55,7 @@ export default function Preloader() {
 
     let seen = false;
     try {
-      seen =
-        sessionStorage.getItem(SEEN_KEY) === "1" ||
-        document.documentElement.hasAttribute("data-preload-hidden");
+      seen = sessionStorage.getItem(SEEN_KEY) === "1";
     } catch {
       seen = false;
     }

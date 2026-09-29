@@ -304,6 +304,7 @@ export default function Header({
           <nav
             className="max-h-[70vh] overflow-y-auto border-t border-white/10 px-4 pb-5 pt-3 xl:hidden"
             aria-label="Mobile"
+            data-lenis-prevent
           >
             <a
               href={singles[0]?.href}

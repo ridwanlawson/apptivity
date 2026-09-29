@@ -220,6 +220,7 @@ export default function Portfolio({ dict }: { dict: PortfolioDict }) {
           <div
             className="max-h-[92vh] w-full max-w-2xl overflow-y-auto rounded-t-3xl bg-white p-6 sm:rounded-3xl sm:p-8"
             onClick={(e) => e.stopPropagation()}
+            data-lenis-prevent
           >
             <div
               className="relative h-40 overflow-hidden rounded-2xl sm:h-52"

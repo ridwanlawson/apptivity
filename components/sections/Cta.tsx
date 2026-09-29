@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import { MessageCircle, Send } from "lucide-react";
 import MagneticButton from "../MagneticButton";
 import Backdrop from "../Backdrop";
 import { useReveal } from "@/lib/anim";
@@ -46,8 +47,9 @@ export default function Cta({ dict, waText }: { dict: CtaDict; waText: string })
               href={waLink(waText)}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block rounded-full bg-gold px-8 py-4 text-lg font-bold text-navy-950 shadow-xl shadow-gold/20 transition-shadow hover:shadow-gold/40"
+              className="inline-flex items-center gap-2.5 rounded-full bg-gold px-8 py-4 text-lg font-bold text-navy-950 shadow-xl shadow-gold/20 transition-shadow hover:shadow-gold/40"
             >
+              <MessageCircle size={22} strokeWidth={2.25} aria-hidden="true" />
               {dict.waButton}
             </a>
           </MagneticButton>
@@ -55,8 +57,9 @@ export default function Cta({ dict, waText }: { dict: CtaDict; waText: string })
             href={IG_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block rounded-full border border-white/25 px-8 py-4 text-lg font-bold text-white hover:border-gold hover:text-gold"
+            className="inline-flex items-center gap-2.5 rounded-full border border-white/25 px-8 py-4 text-lg font-bold text-white hover:border-gold hover:text-gold"
           >
+            <Send size={22} strokeWidth={2.25} aria-hidden="true" />
             {dict.igButton}
           </a>
         </div>
@@ -65,16 +68,16 @@ export default function Cta({ dict, waText }: { dict: CtaDict; waText: string })
         </p>
       </div>
 
-      {/* Sticky mobile CTA */}
+      {/* Floating WhatsApp button (mobile only) */}
       <a
         href={waLink(waText)}
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed inset-x-4 z-[70] rounded-full bg-gold py-3.5 text-center font-bold text-navy-950 shadow-2xl sm:hidden"
-        style={{ bottom: "max(1rem, env(safe-area-inset-bottom))" }}
+        className="fixed bottom-5 right-5 z-[70] grid h-14 w-14 place-items-center rounded-full bg-gold text-navy-950 shadow-2xl shadow-gold/30 transition-transform active:scale-95 sm:hidden"
+        style={{ bottom: "max(1.25rem, env(safe-area-inset-bottom))" }}
         aria-label={dict.waButton}
       >
-        {dict.waButton}
+        <MessageCircle size={26} strokeWidth={2.25} aria-hidden="true" />
       </a>
     </section>
   );

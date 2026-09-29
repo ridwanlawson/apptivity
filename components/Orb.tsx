@@ -72,16 +72,19 @@ export default function Orb({ className = "" }: { className?: string }) {
         const size = (1.0 + depth * 1.9) * k * pt.scale;
         ctx.beginPath();
         ctx.fillStyle = `rgba(${pt.r | 0}, ${pt.g | 0}, ${pt.b | 0}, ${alpha.toFixed(2)})`;
-        if (depth > 0.6) {
-          ctx.shadowColor = `rgba(${pt.r | 0}, ${pt.g | 0}, ${pt.b | 0}, 0.85)`;
-          ctx.shadowBlur = 7 * k;
-        } else {
-          ctx.shadowBlur = 0;
+        // ponytail: no shadowBlur — per-point canvas shadows stall weak
+        // GPUs; depth already reads through alpha + size. Front points get
+        // a cheap halo dot instead.
+        if (depth > 0.75) {
+          ctx.arc(pt.sx, pt.sy, size * 2.4, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(${pt.r | 0}, ${pt.g | 0}, ${pt.b | 0}, 0.12)`;
+          ctx.fill();
+          ctx.beginPath();
+          ctx.fillStyle = `rgba(${pt.r | 0}, ${pt.g | 0}, ${pt.b | 0}, ${alpha.toFixed(2)})`;
         }
         ctx.arc(pt.sx, pt.sy, size, 0, Math.PI * 2);
         ctx.fill();
       }
-      ctx.shadowBlur = 0;
     };
 
     if (reduce) {

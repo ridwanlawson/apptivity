@@ -82,6 +82,9 @@ export default function Backdrop({ variant = "hero" }: { variant?: "hero" | "cta
 
     const io = new IntersectionObserver(([entry]) => {
       visible = !!entry?.isIntersecting;
+      // Pause the CSS aurora too — huge blurred layers repaint on every
+      // frame while scrolling, even though the canvas already stops.
+      root.classList.toggle("backdrop-paused", !visible);
       if (visible && started) {
         cancelAnimationFrame(raf);
         raf = requestAnimationFrame(tick);

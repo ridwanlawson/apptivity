@@ -17,9 +17,10 @@
     system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+/* NOTE: no global scroll-behavior here on purpose — Lenis owns smooth
+   scrolling (its CSS forces auto while active) and scrollToHash passes
+   behavior explicitly. A global smooth rule fights App Router route
+   transitions (Next.js missing-data-scroll-behavior warning). */
 
 /* Anchored sections: keep titles clear of the floating pill on every
    viewport (overrides scroll-mt-20 utilities). */
@@ -75,8 +76,8 @@ body {
   top: 12px;
 }
 
-/* ---- Preloader: skipped before first paint for returning visitors ---- */
-html[data-preload-hidden] .preloader,
+/* ---- Preloader: skipped for returning visitors (Preloader hides itself
+   on mount when sessionStorage is marked) ---- */
 html.cursor-on .preloader {
   display: none;
 }
@@ -168,6 +169,17 @@ html.cursor-on .cursor-ring {
   filter: blur(110px);
   will-change: transform;
 }
+/* Paused by Backdrop when the section scrolls out of view: blurred
+   layers are the most expensive thing to repaint during scroll. */
+.backdrop-paused .aurora-blob {
+  animation-play-state: paused;
+}
+/* Smaller GPUs paint huge blurs slowly — shrink the glow on mobile. */
+@media (max-width: 639px) {
+  .aurora-blob {
+    filter: blur(60px);
+  }
+}
 .aurora-a {
   width: 34rem;
   height: 34rem;
@@ -233,9 +245,6 @@ html.cursor-on .cursor-ring {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
   .js .reveal-word {
     transform: none;
   }

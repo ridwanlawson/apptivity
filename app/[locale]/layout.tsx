@@ -161,22 +161,13 @@ export default async function LocaleLayout({
   };
 
   return (
-    // suppressHydrationWarning: the inline <head> script sets
+    // suppressHydrationWarning: the preload gate (root layout) sets
     // data-preload-hidden on <html> before hydration (returning visitors).
     <html
       lang={loc}
       className={`h-full ${fontVars} antialiased`}
       suppressHydrationWarning
     >
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html:
-              "try{if(sessionStorage.getItem('apptivity:seen')==='1')" +
-              "document.documentElement.setAttribute('data-preload-hidden','')}catch(e){}",
-          }}
-        />
-      </head>
       <body className="flex min-h-full flex-col">
         <script
           type="application/ld+json"
