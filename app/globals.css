@@ -231,25 +231,11 @@ html.cursor-on .cursor-ring {
   from { transform: scale(0.6); opacity: 1; }
   to { transform: scale(1.5); opacity: 0; }
 }
-.marquee-wrap:hover .marquee {
-  animation-play-state: paused;
-}
-.marquee {
-  display: flex;
-  gap: 0;
-  width: max-content;
-  animation: marquee 28s linear infinite;
-}
-@keyframes marquee {
-  to { transform: translateX(-50%); }
-}
-
 @media (prefers-reduced-motion: reduce) {
   .js .reveal-word {
     transform: none;
   }
   .aurora-blob,
-  .marquee,
   .hotspot-ping {
     animation: none;
   }

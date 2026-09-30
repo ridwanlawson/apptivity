@@ -146,7 +146,7 @@
     "title": "2017年以来的代表作。",
     "intro": "从2017年以来交付的36+个项目中精选——政府机构、国企到中小企业，点击卡片查看详情。",
     "all": "全部",
-    "categories": ["Web应用", "移动应用", "AI与集成"],
+    "categories": ["Web应用", "移动应用"],
     "close": "关闭",
     "ctaSimilar": "咨询类似项目",
     "waTemplate": "你好apptivity.id！我对类似「_TITLE_（_CAT_）」的项目感兴趣，能详细介绍一下吗？",
@@ -154,28 +154,34 @@
     "note": "2017年以来还有28+个项目——从官网、考勤到ERP。",
     "items": [
       {
+        "title": "Plantation ERP System (PES)",
+        "tagline": "棕榈种植园专用ERP",
+        "description": "专为棕榈油企业打造的ERP系统：种植园与工厂运营、生产与预算、人力、采购、库存、资产、销售、会计及管理报表，尽在一个一体化平台。",
+        "tech": ["Oracle", ".NET", "IIS"],
+        "result": "10大集成模块",
+        "year": "2026",
+        "category": 0,
+        "image": "/portfolio/erp-plantation.png"
+      },
+      {
+        "title": "SIPS Mobile",
+        "tagline": "离线优先的种植园运营",
+        "description": "PT Sentosa Kalimantan Jaya种植园运营管理移动应用。Laravel＋Oracle后端，Kotlin Jetpack Compose安卓应用无信号也能用。",
+        "tech": ["Laravel", "Oracle", "Kotlin"],
+        "result": "无信号也能用",
+        "year": "2024",
+        "category": 1,
+        "image": "/portfolio/sips-mobile.png"
+      },
+      {
         "title": "法务管理系统",
         "tagline": "西苏门答腊法律人权厅法务管理",
         "description": "为西苏门答腊省法律人权厅地方办公室法务部门打造的管理信息系统。",
         "tech": ["PHP", "MySQL"],
         "result": "政府机构在用",
-        "year": "2018"
-      },
-      {
-        "title": "摄影集市",
-        "tagline": "巴东全市摄影服务",
-        "description": "巴东市影楼与摄影服务集市，基于WebView的安卓应用。",
-        "tech": ["Android", "WebView"],
-        "result": "已上架安卓",
-        "year": "2021"
-      },
-      {
-        "title": "口腔癌诊断专家系统",
-        "tagline": "诊所AI诊断",
-        "description": "为Pasir Pengaraian诊所打造的口腔癌前向推理诊断专家系统。",
-        "tech": ["PHP", "Forward Chaining"],
-        "result": "前向推理方法",
-        "year": "2021"
+        "year": "2017",
+        "category": 0,
+        "image": "/portfolio/sim-kemenkumham.png"
       },
       {
         "title": "在线招生与成绩",
@@ -183,39 +189,19 @@
         "description": "为SMA Kartika 1–5、SMA Pertiwi 1、SMKN 2 Padang Panjang打造的在线招生与成绩系统。",
         "tech": ["PHP", "MySQL"],
         "result": "7所学校在用",
-        "year": "2019"
+        "year": "2019",
+        "category": 0,
+        "image": "/portfolio/ppdb.png"
       },
       {
-        "title": "SIPS Mobile",
-        "tagline": "离线优先的种植园运营",
-        "description": "PT Sentosa Kalimantan Jaya种植园运营管理移动应用。Laravel＋Oracle后端，Next.js移动端无信号也能用。",
-        "tech": ["Laravel", "Oracle", "Next.js"],
-        "result": "无信号也能用",
-        "year": "2024"
-      },
-      {
-        "title": "BNI小额信贷申请",
-        "tagline": "人民企业贷款",
-        "description": "为Bank BNI打造的人民企业贷款（KUR）申请应用。",
-        "tech": ["PHP", "MySQL"],
-        "result": "国有银行客户",
-        "year": "2020"
-      },
-      {
-        "title": "棕榈采购系统",
-        "tagline": "PT KSI数字化采购",
-        "description": "为PT Kencana Sawit Indonesia打造的棕榈油电子采购系统。",
-        "tech": ["PHP", "MySQL"],
-        "result": "种植园客户",
-        "year": "2021"
-      },
-      {
-        "title": "Kuanda考勤",
-        "tagline": "员工出勤准确记录",
-        "description": "为PT Kuanda Maju Jaya打造的考勤应用。",
-        "tech": ["PHP", "MySQL"],
-        "result": "出勤数字化记录",
-        "year": "2018"
+        "title": "摄影集市",
+        "tagline": "巴东全市摄影服务",
+        "description": "巴东市影楼与摄影服务集市，基于WebView的安卓应用。",
+        "tech": ["Android", "WebView"],
+        "result": "已上架安卓",
+        "year": "2021",
+        "category": 1,
+        "image": "/portfolio/marketplace.png"
       }
     ]
   },
@@ -224,6 +210,7 @@
     "title": "即买即用，即刻演示。",
     "intro": "不断增加的现货产品——从教育到其他领域。免费演示，无需承诺。",
     "demo": "预约演示",
+    "close": "关闭",
     "waTemplate": "你好apptivity.id！我想咨询／演示「_PRODUCT_」，能详细介绍一下吗？",
     "items": [
       {
@@ -260,6 +247,13 @@
         "description": "学生用手机即可使用的教务信息系统：在线选课、课表、成绩、账单信息、个人资料与校园通知。教务事项不用排队。",
         "badge": "Web & Mobile",
         "image": "/products/akadapp.jpg"
+      },
+      {
+        "name": "PES",
+        "tagline": "种植园企业系统",
+        "description": "专为棕榈油企业打造的ERP系统——连接种植园与工厂运营及业务流程：生产、人力、采购、库存、资产、销售、会计与报表。一个让运营互联可控的平台。",
+        "badge": "企业级Web",
+        "image": "/products/pes.jpg"
       }
     ]
   },
@@ -405,7 +399,6 @@
       }
     ]
   },
-  "ticker": ["退款保障", "价格透明、无隐性收费", "咨询无压力", "客户永久免费咨询", "精选且受监督的团队", "面向专业人士、中小企业、政府机构与大企业", "合法主体 — PT Lawson Semesta Indonesia"],
   "footer": {
     "tagline": "Apps for every activity",
     "contactTitle": "联系我们",

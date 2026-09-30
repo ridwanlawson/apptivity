@@ -146,7 +146,7 @@
     "title": "Selected work since 2017.",
     "intro": "A selection of 36+ projects we've delivered since 2017 — from government agencies and state enterprises to SMEs. Click a card for details.",
     "all": "All",
-    "categories": ["Web App", "Mobile", "AI & Integration"],
+    "categories": ["Web App", "Mobile"],
     "close": "Close",
     "ctaSimilar": "Ask about a similar project",
     "waTemplate": "Hello apptivity.id! I'm interested in a project like _TITLE_ (_CAT_). Could you share more info?",
@@ -154,28 +154,34 @@
     "note": "Plus 28+ more projects since 2017 — from profile sites and attendance to ERP.",
     "items": [
       {
+        "title": "Plantation ERP System (PES)",
+        "tagline": "ERP built for palm plantations",
+        "description": "An ERP system exclusively for palm oil companies: estate and mill operations, production and budgeting, workforce, procurement, inventory, assets, sales, accounting, and management reporting — in one integrated platform.",
+        "tech": ["Oracle", ".NET", "IIS"],
+        "result": "10 integrated modules",
+        "year": "2026",
+        "category": 0,
+        "image": "/portfolio/erp-plantation.png"
+      },
+      {
+        "title": "SIPS Mobile",
+        "tagline": "Offline-first plantation ops",
+        "description": "Mobile app for plantation operations at PT Sentosa Kalimantan Jaya. Laravel + Oracle backend, Android app in Kotlin Jetpack Compose that keeps working with no signal.",
+        "tech": ["Laravel", "Oracle", "Kotlin"],
+        "result": "Works with no signal",
+        "year": "2024",
+        "category": 1,
+        "image": "/portfolio/sips-mobile.png"
+      },
+      {
         "title": "Legal Affairs MIS",
         "tagline": "Legal management, Kemenkumham West Sumatra",
         "description": "Management information system for the legal division of the Ministry of Law regional office in West Sumatra.",
         "tech": ["PHP", "MySQL"],
         "result": "Used by a government agency",
-        "year": "2018"
-      },
-      {
-        "title": "Photography Marketplace",
-        "tagline": "Studio & photo services across Padang",
-        "description": "Marketplace for studio and photography services in Padang city, running on Android via WebView.",
-        "tech": ["Android", "WebView"],
-        "result": "Released on Android",
-        "year": "2021"
-      },
-      {
-        "title": "Oral Cancer Expert System",
-        "tagline": "AI diagnosis for a clinic",
-        "description": "Expert system for diagnosing oral cancer with forward chaining for a clinic in Pasir Pengaraian.",
-        "tech": ["PHP", "Forward Chaining"],
-        "result": "Forward chaining method",
-        "year": "2021"
+        "year": "2017",
+        "category": 0,
+        "image": "/portfolio/sim-kemenkumham.png"
       },
       {
         "title": "Online Admission & Reports",
@@ -183,39 +189,19 @@
         "description": "Online new-student admission and report systems for SMA Kartika 1–5, SMA Pertiwi 1, and SMKN 2 Padang Panjang.",
         "tech": ["PHP", "MySQL"],
         "result": "Used by 7 schools",
-        "year": "2019"
+        "year": "2019",
+        "category": 0,
+        "image": "/portfolio/ppdb.png"
       },
       {
-        "title": "SIPS Mobile",
-        "tagline": "Offline-first plantation ops",
-        "description": "Mobile app for plantation operations at PT Sentosa Kalimantan Jaya. Laravel + Oracle backend, Next.js mobile that keeps working with no signal.",
-        "tech": ["Laravel", "Oracle", "Next.js"],
-        "result": "Works with no signal",
-        "year": "2024"
-      },
-      {
-        "title": "BNI Microloan Filing",
-        "tagline": "People's business credit",
-        "description": "Application for filing Kredit Usaha Rakyat (microloans) at Bank BNI.",
-        "tech": ["PHP", "MySQL"],
-        "result": "State-bank client",
-        "year": "2020"
-      },
-      {
-        "title": "Palm E-Procurement",
-        "tagline": "Digital procurement, PT KSI",
-        "description": "E-procurement system for palm oil at PT Kencana Sawit Indonesia.",
-        "tech": ["PHP", "MySQL"],
-        "result": "Palm plantation client",
-        "year": "2021"
-      },
-      {
-        "title": "Kuanda Attendance",
-        "tagline": "Neat employee attendance records",
-        "description": "Attendance app for PT Kuanda Maju Jaya.",
-        "tech": ["PHP", "MySQL"],
-        "result": "Digital attendance records",
-        "year": "2018"
+        "title": "Photography Marketplace",
+        "tagline": "Studio & photo services across Padang",
+        "description": "Marketplace for studio and photography services in Padang city, running on Android via WebView.",
+        "tech": ["Android", "WebView"],
+        "result": "Released on Android",
+        "year": "2021",
+        "category": 1,
+        "image": "/portfolio/marketplace.png"
       }
     ]
   },
@@ -224,6 +210,7 @@
     "title": "Ready to use, ready to demo.",
     "intro": "Ready-made products, growing — from education to other fields. Ask for a free demo, no commitment.",
     "demo": "Ask for Demo",
+    "close": "Close",
     "waTemplate": "Hello apptivity.id! I'd like to ask about / demo _PRODUCT_. Could you share more info?",
     "items": [
       {
@@ -260,6 +247,13 @@
         "description": "An academic information system students access from their phones: online KRS, class schedules, KHS and grades, billing info, personal data, and campus notifications. Academic affairs done without queues.",
         "badge": "Web & Mobile",
         "image": "/products/akadapp.jpg"
+      },
+      {
+        "name": "PES",
+        "tagline": "Plantation Enterprise System",
+        "description": "An ERP system exclusively for palm oil companies — connecting estate and mill operations with business processes: production, workforce, procurement, inventory, assets, sales, accounting, and reporting. One platform for connected, controlled operations.",
+        "badge": "Enterprise Web",
+        "image": "/products/pes.jpg"
       }
     ]
   },
@@ -405,7 +399,6 @@
       }
     ]
   },
-  "ticker": ["Money-Back Guarantee", "Clear Pricing, No Hidden Fees", "Consultation Without Pressure", "Free Consultation for Clients", "Curated & Supervised Team", "For Professionals, SMEs, Governments, and Enterprises", "Legal Entity — PT Lawson Semesta Indonesia"],
   "footer": {
     "tagline": "Apps for every activity",
     "contactTitle": "Contact",

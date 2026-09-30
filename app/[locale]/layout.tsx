@@ -93,6 +93,7 @@ export async function generateMetadata({
         { url: "/favicon.svg", type: "image/svg+xml" },
         { url: "/favicon.ico", sizes: "any" },
       ],
+      apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
     },
     alternates: {
       canonical: `${SITE_URL}/${locale}`,

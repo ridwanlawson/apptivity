@@ -146,7 +146,7 @@
     "title": "Sebagian karya kami sejak 2017.",
     "intro": "Sebagian dari 36+ proyek yang kami kerjakan sejak 2017 — dari instansi pemerintah, BUMN, hingga UMKM. Klik kartu untuk detail.",
     "all": "Semua",
-    "categories": ["Web App", "Mobile", "AI & Integrasi"],
+    "categories": ["Web App", "Mobile"],
     "close": "Tutup",
     "ctaSimilar": "Tanya project mirip ini",
     "waTemplate": "Halo apptivity.id! Saya tertarik project mirip _TITLE_ (_CAT_). Boleh info lebih lanjut?",
@@ -154,28 +154,34 @@
     "note": "Dan 28+ proyek lainnya sejak 2017 — dari web profil, absensi, hingga ERP.",
     "items": [
       {
+        "title": "Plantation ERP System (PES)",
+        "tagline": "ERP khusus perkebunan sawit",
+        "description": "Sistem ERP khusus perusahaan kelapa sawit: operasional kebun dan pabrik, produksi dan budgeting, workforce, procurement, inventory, aset, penjualan, akuntansi, hingga reporting manajemen — dalam satu platform terintegrasi.",
+        "tech": ["Oracle", ".NET", "IIS"],
+        "result": "10 modul terintegrasi",
+        "year": "2026",
+        "category": 0,
+        "image": "/portfolio/erp-plantation.png"
+      },
+      {
+        "title": "SIPS Mobile",
+        "tagline": "Operasional kebun offline-first",
+        "description": "Aplikasi mobile manajemen operasional perkebunan PT Sentosa Kalimantan Jaya. Backend Laravel + Oracle, aplikasi Android Kotlin Jetpack Compose yang tetap jalan tanpa sinyal.",
+        "tech": ["Laravel", "Oracle", "Kotlin"],
+        "result": "Tetap jalan tanpa sinyal",
+        "year": "2024",
+        "category": 1,
+        "image": "/portfolio/sips-mobile.png"
+      },
+      {
         "title": "SIM Bidang Hukum",
         "tagline": "Manajemen hukum Kanwil Kemenkumham Sumbar",
         "description": "Sistem informasi manajemen bidang hukum untuk Kantor Wilayah Kemenkumham Sumatera Barat.",
         "tech": ["PHP", "MySQL"],
         "result": "Dipakai instansi pemerintah",
-        "year": "2018"
-      },
-      {
-        "title": "Marketplace Fotografi",
-        "tagline": "Jasa studio & foto se-Kota Padang",
-        "description": "Marketplace jasa studio dan fotografi di Kota Padang, berjalan di Android berbasis WebView.",
-        "tech": ["Android", "WebView"],
-        "result": "Rilis di Android",
-        "year": "2021"
-      },
-      {
-        "title": "Sistem Pakar Kanker Mulut",
-        "tagline": "Diagnosa AI untuk klinik",
-        "description": "Sistem pakar diagnosa penyakit kanker mulut dengan metode forward chaining untuk klinik di Pasir Pengaraian.",
-        "tech": ["PHP", "Forward Chaining"],
-        "result": "Metode forward chaining",
-        "year": "2021"
+        "year": "2017",
+        "category": 0,
+        "image": "/portfolio/sim-kemenkumham.png"
       },
       {
         "title": "PPDB & Rapor Online",
@@ -183,39 +189,19 @@
         "description": "Sistem penerimaan siswa baru online dan rapor online untuk SMA Kartika 1–5, SMA Pertiwi 1, dan SMKN 2 Padang Panjang.",
         "tech": ["PHP", "MySQL"],
         "result": "Dipakai 7 sekolah",
-        "year": "2019"
+        "year": "2019",
+        "category": 0,
+        "image": "/portfolio/ppdb.png"
       },
       {
-        "title": "SIPS Mobile",
-        "tagline": "Operasional kebun offline-first",
-        "description": "Aplikasi mobile manajemen operasional perkebunan PT Sentosa Kalimantan Jaya. Backend Laravel + Oracle, sisi mobile Next.js yang tetap jalan tanpa sinyal.",
-        "tech": ["Laravel", "Oracle", "Next.js"],
-        "result": "Tetap jalan tanpa sinyal",
-        "year": "2024"
-      },
-      {
-        "title": "Pengajuan KUR BNI",
-        "tagline": "Kredit usaha rakyat",
-        "description": "Aplikasi pengajuan Kredit Usaha Rakyat untuk Bank BNI.",
-        "tech": ["PHP", "MySQL"],
-        "result": "Klien Bank BUMN",
-        "year": "2020"
-      },
-      {
-        "title": "E-Procurement Sawit",
-        "tagline": "Pengadaan digital PT KSI",
-        "description": "Sistem e-procurement kelapa sawit untuk PT Kencana Sawit Indonesia.",
-        "tech": ["PHP", "MySQL"],
-        "result": "Klien perkebunan sawit",
-        "year": "2021"
-      },
-      {
-        "title": "Absensi PT Kuanda",
-        "tagline": "Kehadiran karyawan tercatat rapi",
-        "description": "Aplikasi absensi untuk PT Kuanda Maju Jaya.",
-        "tech": ["PHP", "MySQL"],
-        "result": "Disiplin tercatat digital",
-        "year": "2018"
+        "title": "Marketplace Fotografi",
+        "tagline": "Jasa studio & foto se-Kota Padang",
+        "description": "Marketplace jasa studio dan fotografi di Kota Padang, berjalan di Android berbasis WebView.",
+        "tech": ["Android", "WebView"],
+        "result": "Rilis di Android",
+        "year": "2021",
+        "category": 1,
+        "image": "/portfolio/marketplace.png"
       }
     ]
   },
@@ -224,6 +210,7 @@
     "title": "Siap pakai, siap demo.",
     "intro": "Produk siap pakai yang terus bertambah — mulai dari pendidikan hingga bidang lainnya. Minta demo gratis, tanpa komitmen.",
     "demo": "Minta Demo",
+    "close": "Tutup",
     "waTemplate": "Halo apptivity.id! Saya mau tanya / minta demo _PRODUCT_. Boleh info lebih lanjut?",
     "items": [
       {
@@ -260,6 +247,13 @@
         "description": "Sistem informasi akademik yang bisa diakses mahasiswa dari ponsel: pengisian KRS online, jadwal kuliah, KHS dan nilai, informasi tagihan, data diri, dan notifikasi dari kampus. Urusan akademik selesai tanpa antre.",
         "badge": "Web & Mobile",
         "image": "/products/akadapp.jpg"
+      },
+      {
+        "name": "PES",
+        "tagline": "Plantation Enterprise System",
+        "description": "Sistem ERP khusus perusahaan kelapa sawit — menghubungkan operasional kebun dan pabrik dengan proses bisnis: produksi, workforce, procurement, inventory, aset, penjualan, akuntansi, dan reporting. Satu platform untuk operasi yang terhubung dan terkendali.",
+        "badge": "Web Enterprise",
+        "image": "/products/pes.jpg"
       }
     ]
   },
@@ -405,7 +399,6 @@
       }
     ]
   },
-  "ticker": ["Garansi Uang Kembali", "Harga Jelas Tanpa Biaya Tersembunyi", "Konsultasi Tanpa Tekanan", "Gratis Konsultasi untuk Klien", "Tim Terkurasi & Terpantau", "Untuk Profesional, UMKM, Pemerintahan, hingga Perusahaan Besar", "Berbadan Hukum — PT Lawson Semesta Indonesia"],
   "footer": {
     "tagline": "Apps for every activity",
     "contactTitle": "Kontak",

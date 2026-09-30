@@ -14,7 +14,6 @@ import Join, { type JoinDict } from "@/components/sections/Join";
 import Brief, { type BriefDict } from "@/components/sections/Brief";
 import Faq, { type FaqDict } from "@/components/sections/Faq";
 import Cta, { type CtaDict } from "@/components/sections/Cta";
-import Marquee from "@/components/Marquee";
 import type { Locale } from "@/lib/i18n";
 
 type PageMessages = {
@@ -33,7 +32,6 @@ type PageMessages = {
   brief: BriefDict;
   faq: FaqDict;
   cta: CtaDict;
-  ticker: string[];
 };
 
 export default async function LocalePage({
@@ -48,7 +46,6 @@ export default async function LocalePage({
   return (
     <>
       <Hero dict={m.hero} locale={locale as Locale} />
-      <Marquee items={m.ticker} />
       <About dict={m.about} why={m.why} />
       <Scheme dict={m.scheme} />
       <Ownership dict={m.ownership} />

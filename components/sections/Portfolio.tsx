@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import SectionHeading from "../SectionHeading";
+import ProductImage from "../ProductImage";
 import { prefersReducedMotion, useReveal } from "@/lib/anim";
 import { waLink } from "@/lib/site";
 
@@ -12,6 +13,7 @@ export type PortfolioItem = {
   tech: string[];
   result: string;
   year: string;
+  image?: string;
 };
 
 export type PortfolioDict = {
@@ -154,15 +156,25 @@ export default function Portfolio({ dict }: { dict: PortfolioDict }) {
                   featured ? "sm:col-span-2" : ""
                 }`}
               >
-                {/* Cover */}
+                {/* Cover: real screenshot when available, gradient art otherwise */}
                 <div
-                  className="relative h-44 overflow-hidden sm:h-48"
-                  style={{ background: COVERS[globalIdx % COVERS.length] }}
+                  className="relative h-44 overflow-hidden bg-paper sm:h-48"
+                  style={
+                    it.image
+                      ? undefined
+                      : { background: COVERS[globalIdx % COVERS.length] }
+                  }
                   aria-hidden="true"
                 >
-                  <div className="grain" />
-                  <div className="absolute -right-8 -top-10 h-40 w-40 rounded-full bg-white/15 blur-2xl transition-transform duration-500 group-hover:scale-125" />
-                  <div className="absolute -bottom-12 -left-6 h-36 w-36 rounded-full bg-gold/25 blur-2xl transition-transform duration-500 group-hover:scale-125" />
+                  {it.image ? (
+                    <ProductImage src={it.image} alt="" />
+                  ) : (
+                    <>
+                      <div className="grain" />
+                      <div className="absolute -right-8 -top-10 h-40 w-40 rounded-full bg-white/15 blur-2xl transition-transform duration-500 group-hover:scale-125" />
+                      <div className="absolute -bottom-12 -left-6 h-36 w-36 rounded-full bg-gold/25 blur-2xl transition-transform duration-500 group-hover:scale-125" />
+                    </>
+                  )}
                   <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-4">
                     <span className="rounded-full bg-navy-950/70 px-3 py-1 text-xs font-bold text-gold backdrop-blur">
                       {catName(dict, it.category)}
@@ -222,24 +234,45 @@ export default function Portfolio({ dict }: { dict: PortfolioDict }) {
             onClick={(e) => e.stopPropagation()}
             data-lenis-prevent
           >
-            <div
-              className="relative h-40 overflow-hidden rounded-2xl sm:h-52"
-              style={{
-                background:
-                  COVERS[items.indexOf(active) % COVERS.length],
-              }}
-              aria-hidden="true"
-            >
-              <div className="grain" />
-              <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-4">
-                <span className="rounded-full bg-navy-950/70 px-3 py-1 text-xs font-bold text-gold backdrop-blur">
-                  {catName(dict, active.category)}
-                </span>
-                <span className="rounded-full bg-white/20 px-3 py-1 text-xs font-bold text-white backdrop-blur">
-                  {active.year}
-                </span>
+            {active.image ? (
+              <div
+                className="relative h-[60vh] overflow-hidden rounded-2xl bg-navy-950 sm:h-[65vh]"
+                aria-hidden="true"
+              >
+                <ProductImage src={active.image} alt="" fit="contain" />
+                <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-4">
+                  <span className="rounded-full bg-navy-950/70 px-3 py-1 text-xs font-bold text-gold backdrop-blur">
+                    {catName(dict, active.category)}
+                  </span>
+                  <span className="rounded-full bg-white/20 px-3 py-1 text-xs font-bold text-white backdrop-blur">
+                    {active.year}
+                  </span>
+                </div>
               </div>
-            </div>
+            ) : (
+              <div
+                className="relative h-40 overflow-hidden rounded-2xl bg-paper sm:h-52"
+                aria-hidden="true"
+              >
+                <div
+                  className="absolute inset-0"
+                  style={{
+                    background:
+                      COVERS[items.indexOf(active) % COVERS.length],
+                  }}
+                >
+                  <div className="grain" />
+                </div>
+                <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-4">
+                  <span className="rounded-full bg-navy-950/70 px-3 py-1 text-xs font-bold text-gold backdrop-blur">
+                    {catName(dict, active.category)}
+                  </span>
+                  <span className="rounded-full bg-white/20 px-3 py-1 text-xs font-bold text-white backdrop-blur">
+                    {active.year}
+                  </span>
+                </div>
+              </div>
+            )}
 
             <h3 className="mt-5 text-2xl font-extrabold text-ink">{active.title}</h3>
             <p className="mt-1 font-semibold text-brand">{active.tagline}</p>

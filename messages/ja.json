@@ -146,7 +146,7 @@
     "title": "2017年以来の代表作。",
     "intro": "2017年以来手がけた36件以上の案件から抜粋 — 政府機関、国営企業、中小企業まで。カードをクリックで詳細へ。",
     "all": "すべて",
-    "categories": ["Webアプリ", "モバイル", "AI・連携"],
+    "categories": ["Webアプリ", "モバイル"],
     "close": "閉じる",
     "ctaSimilar": "似た案件を相談する",
     "waTemplate": "こんにちは、apptivity.id。「_TITLE_（_CAT_）」のような案件に興味があります。詳しく教えてください。",
@@ -154,28 +154,34 @@
     "note": "2017年以来さらに28件以上 — 会社紹介、勤怠管理からERPまで。",
     "items": [
       {
+        "title": "Plantation ERP System (PES)",
+        "tagline": "パーム農園専用ERP",
+        "description": "パーム油企業専用のERPシステム。農園・工場運営、生産・予算、労務、調達、在庫、資産、販売、会計、管理レポートまで一つの統合プラットフォームに。",
+        "tech": ["Oracle", ".NET", "IIS"],
+        "result": "10モジュール統合",
+        "year": "2026",
+        "category": 0,
+        "image": "/portfolio/erp-plantation.png"
+      },
+      {
+        "title": "SIPS Mobile",
+        "tagline": "オフライン優先の農園運営",
+        "description": "PT Sentosa Kalimantan Jayaの農園運営管理モバイルアプリ。Laravel＋Oracleのバックエンドと、圏外でも動くKotlin Jetpack Compose製Androidアプリ。",
+        "tech": ["Laravel", "Oracle", "Kotlin"],
+        "result": "圏外でも動作",
+        "year": "2024",
+        "category": 1,
+        "image": "/portfolio/sips-mobile.png"
+      },
+      {
         "title": "法務管理システム",
         "tagline": "西スマトラ法務局の法務管理",
         "description": "西スマトラ州法務人権省地方事務所の法務部門向け管理情報システム。",
         "tech": ["PHP", "MySQL"],
         "result": "政府機関で利用",
-        "year": "2018"
-      },
-      {
-        "title": "フォトマーケット",
-        "tagline": "パダン市内の撮影サービス",
-        "description": "パダン市内のスタジオ・撮影サービス向けマーケット。WebViewベースのAndroidアプリ。",
-        "tech": ["Android", "WebView"],
-        "result": "Androidでリリース",
-        "year": "2021"
-      },
-      {
-        "title": "口腔がん診断エキスパート",
-        "tagline": "クリニック向けAI診断",
-        "description": "パシル・プンガラヤンのクリニック向け、前向き推論による口腔がん診断エキスパートシステム。",
-        "tech": ["PHP", "Forward Chaining"],
-        "result": "前向き推論方式",
-        "year": "2021"
+        "year": "2017",
+        "category": 0,
+        "image": "/portfolio/sim-kemenkumham.png"
       },
       {
         "title": "オンライン入学・成績管理",
@@ -183,39 +189,19 @@
         "description": "SMA Kartika 1–5、SMA Pertiwi 1、SMKN 2 Padang Panjang向けのオンライン入学受付と成績管理システム。",
         "tech": ["PHP", "MySQL"],
         "result": "7校で利用",
-        "year": "2019"
+        "year": "2019",
+        "category": 0,
+        "image": "/portfolio/ppdb.png"
       },
       {
-        "title": "SIPS Mobile",
-        "tagline": "オフライン優先の農園運営",
-        "description": "PT Sentosa Kalimantan Jayaの農園運営管理モバイルアプリ。Laravel＋Oracleのバックエンドと、圏外でも動くNext.jsモバイル。",
-        "tech": ["Laravel", "Oracle", "Next.js"],
-        "result": "圏外でも動作",
-        "year": "2024"
-      },
-      {
-        "title": "BNI小口融資申請",
-        "tagline": "国民事業信用",
-        "description": "Bank BNI向け国民事業信用（KUR）の申請アプリ。",
-        "tech": ["PHP", "MySQL"],
-        "result": "国営銀行のお客様",
-        "year": "2020"
-      },
-      {
-        "title": "パーム調達システム",
-        "tagline": "PT KSIのデジタル調達",
-        "description": "PT Kencana Sawit Indonesia向けパーム油調達の電子化システム。",
-        "tech": ["PHP", "MySQL"],
-        "result": "パーム農園のお客様",
-        "year": "2021"
-      },
-      {
-        "title": "Kuanda勤怠管理",
-        "tagline": "従業員の出勤を正確に記録",
-        "description": "PT Kuanda Maju Jaya向け勤怠アプリ。",
-        "tech": ["PHP", "MySQL"],
-        "result": "出勤をデジタル記録",
-        "year": "2018"
+        "title": "フォトマーケット",
+        "tagline": "パダン市内の撮影サービス",
+        "description": "パダン市内のスタジオ・撮影サービス向けマーケット。WebViewベースのAndroidアプリ。",
+        "tech": ["Android", "WebView"],
+        "result": "Androidでリリース",
+        "year": "2021",
+        "category": 1,
+        "image": "/portfolio/marketplace.png"
       }
     ]
   },
@@ -224,6 +210,7 @@
     "title": "すぐ使えて、すぐ試せる。",
     "intro": "増え続ける既製プロダクト — 教育から他分野まで。無料デモをご用意しています。",
     "demo": "デモを依頼",
+    "close": "閉じる",
     "waTemplate": "こんにちは、apptivity.id。「_PRODUCT_」について相談・デモをお願いします。詳しく教えてください。",
     "items": [
       {
@@ -260,6 +247,13 @@
         "description": "学生がスマホから使える学務情報システム。オンライン履修登録、時間割、成績、請求情報、個人データ、大学からの通知に対応。学務手続きは行列なしで完了します。",
         "badge": "Web & Mobile",
         "image": "/products/akadapp.jpg"
+      },
+      {
+        "name": "PES",
+        "tagline": "プランテーション基幹システム",
+        "description": "パーム油企業専用のERPシステム — 農園・工場運営と業務プロセス（生産、労務、調達、在庫、資産、販売、会計、報告）をつなぎます。つながり管理できる運営のための一つのプラットフォーム。",
+        "badge": "エンタープライズWeb",
+        "image": "/products/pes.jpg"
       }
     ]
   },
@@ -405,7 +399,6 @@
       }
     ]
   },
-  "ticker": ["返金保証", "明確な料金・隠れた費用なし", "購入圧力のない相談", "お客様は永久無料相談", "厳選・監理されたチーム", "専門家・中小企業・政府機関・大企業向け", "法人格 — PT Lawson Semesta Indonesia"],
   "footer": {
     "tagline": "Apps for every activity",
     "contactTitle": "お問い合わせ",

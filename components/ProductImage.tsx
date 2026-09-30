@@ -7,7 +7,15 @@ import Image from "next/image";
 // file exists, otherwise an elegant branded placeholder (gradient +
 // product initial). Once the real files land in public/products, the
 // photos appear automatically — no code change needed.
-export default function ProductImage({ src, alt }: { src: string; alt: string }) {
+export default function ProductImage({
+  src,
+  alt,
+  fit = "cover",
+}: {
+  src: string;
+  alt: string;
+  fit?: "cover" | "contain";
+}) {
   const [err, setErr] = useState(false);
 
   if (err) {
@@ -36,7 +44,7 @@ export default function ProductImage({ src, alt }: { src: string; alt: string })
       alt={alt}
       fill
       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-      className="object-cover object-top"
+      className={fit === "contain" ? "object-contain" : "object-cover object-top"}
       loading="lazy"
       onError={() => setErr(true)}
     />
