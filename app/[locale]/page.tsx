@@ -8,6 +8,7 @@ import Mechanism, { type MechanismDict } from "@/components/sections/Mechanism";
 import Pricing, { type PricingDict } from "@/components/sections/Pricing";
 import Legal, { type LegalDict } from "@/components/sections/Legal";
 import Portfolio, { type PortfolioDict } from "@/components/sections/Portfolio";
+import Products, { type ProductsDict } from "@/components/sections/Products";
 import Proof, { type ProofDict } from "@/components/sections/Proof";
 import Join, { type JoinDict } from "@/components/sections/Join";
 import Brief, { type BriefDict } from "@/components/sections/Brief";
@@ -26,6 +27,7 @@ type PageMessages = {
   pricing: PricingDict;
   legal: LegalDict;
   portfolio: PortfolioDict;
+  products: ProductsDict;
   proof: ProofDict;
   join: JoinDict;
   brief: BriefDict;
@@ -53,6 +55,7 @@ export default async function LocalePage({
       <Mechanism dict={m.mechanism} />
       <Pricing dict={m.pricing} />
       <Portfolio dict={m.portfolio} />
+      <Products dict={m.products} />
       <Proof dict={m.proof} />
       <Join dict={m.join} />
       <Legal dict={m.legal} />

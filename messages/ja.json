@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "apptivity.id — Apps for Every Activity | インドネシアのソフトウェアハウス",
+    "title": "Apptivity | Web・モバイルアプリ開発インドネシア",
     "description": "インドネシアのWeb・モバイルアプリ開発。無料相談、透明な料金、返金保証付き。法人格（PT）を持つ企業です。"
   },
   "nav": {
@@ -11,6 +11,7 @@
     "mechanism": "手順",
     "pricing": "料金",
     "portfolio": "実績",
+    "products": "製品",
     "company": "Apptivity",
     "proof": "実績・お客様の声",
     "join": "参加する",
@@ -137,7 +138,8 @@
     "payBody": "お支払いはマイルストーンに沿って行います。着手金30%、進捗デモ承認時40%、納品時30%です。",
     "cta": "正確な見積もりを依頼 — 無料",
     "note": "最終料金は着手前に必ず契約書に明記します。",
-    "productNote": "すぐに使える既製プロダクトもあります — ご要望をお聞かせください。ぴったりのものがあるかもしれません。"
+    "productNote": "すぐに使える既製プロダクトもあります — ご要望をお聞かせください。ぴったりのものがあるかもしれません。",
+    "productLink": "製品を見る"
   },
   "portfolio": {
     "eyebrow": "06 — 実績",
@@ -214,6 +216,50 @@
         "tech": ["PHP", "MySQL"],
         "result": "出勤をデジタル記録",
         "year": "2018"
+      }
+    ]
+  },
+  "products": {
+    "eyebrow": "既製プロダクト — 無料デモ",
+    "title": "すぐ使えて、すぐ試せる。",
+    "intro": "増え続ける既製プロダクト — 教育から他分野まで。無料デモをご用意しています。",
+    "demo": "デモを依頼",
+    "waTemplate": "こんにちは、apptivity.id。「_PRODUCT_」について相談・デモをお願いします。詳しく教えてください。",
+    "items": [
+      {
+        "name": "Camptivapp",
+        "tagline": "統合キャンパス管理",
+        "description": "教学、品質保証、OBE、SPMI、連携、学科、LPPM、認証を一つのシステムに統合したキャンパス管理プラットフォーム。データは学科から学部、大学へと流れ、幹部は一つのダッシュボードで全学を把握できます。Web・モバイル対応。",
+        "badge": "Web & Mobile",
+        "image": "/products/camptivapp.jpg"
+      },
+      {
+        "name": "Sekolapp",
+        "tagline": "完全な学校アプリ",
+        "description": "生徒・教師データ、オンライン出欠、成績・通知表、時間割、財務・授業料、課題・試験、お知らせ、レポートを管理する完全な学校アプリ。生徒・教師・保護者・管理者のアクセスを分離。手作業からデジタルへ移行したい学校に最適です。",
+        "badge": "Web & Mobile",
+        "image": "/products/sekolapp.jpg"
+      },
+      {
+        "name": "Risetapp",
+        "tagline": "LPPM情報システム",
+        "description": "研究、社会貢献、教員業績、HKI・イノベーションを管理するシステム。提案申請、査読者割当、提案評価、進捗報告、デジタル文書アーカイブを一つのアプリに。",
+        "badge": "Web & Mobile",
+        "image": "/products/risetapp.jpg"
+      },
+      {
+        "name": "Akredapp",
+        "tagline": "認証証跡管理",
+        "description": "基準ごとに認証証跡文書を保存・分類・監視する場所。高速検索、文書検証ステータス、チーム連携、そのまま使える集計レポート付き。実地調査前のフォルダ探しはもう不要です。",
+        "badge": "Web & Mobile",
+        "image": "/products/akredapp.jpg"
+      },
+      {
+        "name": "Akadapp",
+        "tagline": "手のひらの学務システム",
+        "description": "学生がスマホから使える学務情報システム。オンライン履修登録、時間割、成績、請求情報、個人データ、大学からの通知に対応。学務手続きは行列なしで完了します。",
+        "badge": "Web & Mobile",
+        "image": "/products/akadapp.jpg"
       }
     ]
   },
@@ -363,7 +409,7 @@
   "footer": {
     "tagline": "Apps for every activity",
     "contactTitle": "お問い合わせ",
-    "links": ["概要", "料金", "実績", "お客様の声", "参加する", "FAQ"],
+    "links": ["概要", "料金", "実績", "製品", "お客様の声", "参加する", "FAQ"],
     "rights": "© 2026 PT Lawson Semesta Indonesia. 無断複写・転載を禁じます。"
   }
 }

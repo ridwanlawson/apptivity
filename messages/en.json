@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "apptivity.id — Apps for Every Activity | Indonesian Software House",
-    "description": "Web & mobile app development in Indonesia. Free consultation, transparent pricing, money-back guarantee. A legal PT entity."
+    "title": "Apptivity | Web & Mobile App Development Indonesia",
+    "description": "Web & mobile app development in Indonesia. Free consultation, transparent pricing, money-back guarantee."
   },
   "nav": {
     "about": "About",
@@ -11,6 +11,7 @@
     "mechanism": "Process",
     "pricing": "Pricing",
     "portfolio": "Portfolio",
+    "products": "Products",
     "company": "Apptivity",
     "proof": "Proof & Reviews",
     "join": "Join Us",
@@ -137,7 +138,8 @@
     "payBody": "Payments follow project milestones: 30% down payment to start, 40% when the progress demo is approved, and 30% on handover.",
     "cta": "Get an Exact Estimate — Free",
     "note": "Final pricing is always written in the contract before work begins.",
-    "productNote": "We also have ready-made products — tell us your needs, one of them might already fit."
+    "productNote": "We also have ready-made products — tell us your needs, one of them might already fit.",
+    "productLink": "See Ready Products"
   },
   "portfolio": {
     "eyebrow": "06 — Portfolio",
@@ -214,6 +216,50 @@
         "tech": ["PHP", "MySQL"],
         "result": "Digital attendance records",
         "year": "2018"
+      }
+    ]
+  },
+  "products": {
+    "eyebrow": "Ready Products — Free Demo",
+    "title": "Ready to use, ready to demo.",
+    "intro": "Ready-made products, growing — from education to other fields. Ask for a free demo, no commitment.",
+    "demo": "Ask for Demo",
+    "waTemplate": "Hello apptivity.id! I'd like to ask about / demo _PRODUCT_. Could you share more info?",
+    "items": [
+      {
+        "name": "Camptivapp",
+        "tagline": "Integrated Campus Management",
+        "description": "A campus management platform uniting academics, quality assurance, OBE, SPMI, partnerships, study programs, LPPM, and accreditation in one system. Data flows from programs to faculties to the university, so leaders can monitor the whole campus from one dashboard. Available on web and mobile.",
+        "badge": "Web & Mobile",
+        "image": "/products/camptivapp.jpg"
+      },
+      {
+        "name": "Sekolapp",
+        "tagline": "Complete School App",
+        "description": "A complete school app for managing student and teacher data, online attendance, grades and report cards, schedules, finance/tuition, assignments and exams, announcements, and reports. Separate access for students, teachers, parents, and admins. Perfect for schools moving from manual records to digital.",
+        "badge": "Web & Mobile",
+        "image": "/products/sekolapp.jpg"
+      },
+      {
+        "name": "Risetapp",
+        "tagline": "LPPM Information System",
+        "description": "A system for managing research, community service, lecturer publications, plus HKI and innovation. Covers proposal submission, reviewer assignment, proposal scoring, progress reports, and a digital document archive in one app.",
+        "badge": "Web & Mobile",
+        "image": "/products/risetapp.jpg"
+      },
+      {
+        "name": "Akredapp",
+        "tagline": "Accreditation Evidence Management",
+        "description": "A place to store, group, and monitor accreditation evidence documents by standard. With fast search, document verification status, team collaboration, and ready-to-use recap reports — no more hunting files across folders before visitation.",
+        "badge": "Web & Mobile",
+        "image": "/products/akredapp.jpg"
+      },
+      {
+        "name": "Akadapp",
+        "tagline": "Campus SIAKAD in Hand",
+        "description": "An academic information system students access from their phones: online KRS, class schedules, KHS and grades, billing info, personal data, and campus notifications. Academic affairs done without queues.",
+        "badge": "Web & Mobile",
+        "image": "/products/akadapp.jpg"
       }
     ]
   },
@@ -363,7 +409,7 @@
   "footer": {
     "tagline": "Apps for every activity",
     "contactTitle": "Contact",
-    "links": ["About", "Pricing", "Portfolio", "Proof", "Join Us", "FAQ"],
+    "links": ["About", "Pricing", "Portfolio", "Products", "Proof", "Join Us", "FAQ"],
     "rights": "© 2026 PT Lawson Semesta Indonesia. All rights reserved."
   }
 }

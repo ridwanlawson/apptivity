@@ -18,6 +18,7 @@ export type PricingDict = {
   cta: string;
   note: string;
   productNote: string;
+  productLink: string;
 };
 
 export default function Pricing({ dict }: { dict: PricingDict }) {
@@ -66,6 +67,15 @@ export default function Pricing({ dict }: { dict: PricingDict }) {
         <p data-reveal className="mx-auto mt-6 max-w-2xl text-center text-[15px] leading-relaxed text-white/65">
           {dict.productNote}
         </p>
+        <div data-reveal className="mt-4 text-center">
+          <button
+            type="button"
+            onClick={() => scrollToHash("#produk")}
+            className="rounded-full border border-gold/60 px-6 py-2.5 text-sm font-bold text-gold transition-colors hover:bg-gold hover:text-navy-950"
+          >
+            {dict.productLink}
+          </button>
+        </div>
 
         <div data-reveal className="mt-8 flex flex-col items-center gap-3 text-center">
           <button

@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Jasa Pembuatan Aplikasi Web & Mobile Transparan | apptivity.id",
-    "description": "Jasa pembuatan aplikasi web & mobile di Indonesia. Konsultasi gratis, harga transparan, garansi uang kembali. Berbadan hukum PT."
+    "title": "Jasa Pembuatan Aplikasi Web & Mobile | apptivity.id",
+    "description": "Jasa pembuatan aplikasi web & mobile Indonesia. Konsultasi gratis, harga transparan, garansi uang kembali."
   },
   "nav": {
     "about": "Tentang",
@@ -11,6 +11,7 @@
     "mechanism": "Mekanisme",
     "pricing": "Harga",
     "portfolio": "Portofolio",
+    "products": "Produk",
     "company": "Apptivity",
     "proof": "Bukti & Testimoni",
     "join": "Gabung",
@@ -131,13 +132,14 @@
     "intro": "Semua proyek mulai dari harga yang sama. Harga final mengikuti hasil konsultasi dan kami tuangkan tertulis sebelum mulai — tanpa biaya tersembunyi.",
     "fromLabel": "Mulai dari",
     "price": "Rp500 ribu",
-    "usd": "US$50",
+    "usd": "US$10",
     "usdNote": "untuk klien luar negeri",
     "payTitle": "Pembayaran bertahap",
     "payBody": "Pembayaran mengikuti milestone proyek: 30% DP sebagai tanda jadi, 40% saat demo progres disetujui, dan 30% pelunasan saat serah terima.",
     "cta": "Minta Estimasi Pasti — Gratis",
     "note": "Harga final selalu tertulis di kontrak sebelum pengerjaan mulai.",
-    "productNote": "Kami juga memiliki produk jadi siap pakai — konsultasikan kebutuhan Anda, mungkin sudah ada yang cocok."
+    "productNote": "Kami juga memiliki produk jadi siap pakai — konsultasikan kebutuhan Anda, mungkin sudah ada yang cocok.",
+    "productLink": "Lihat Produk Jadi"
   },
   "portfolio": {
     "eyebrow": "06 — Portofolio",
@@ -214,6 +216,50 @@
         "tech": ["PHP", "MySQL"],
         "result": "Disiplin tercatat digital",
         "year": "2018"
+      }
+    ]
+  },
+  "products": {
+    "eyebrow": "Produk Jadi — Siap Demo",
+    "title": "Siap pakai, siap demo.",
+    "intro": "Produk siap pakai yang terus bertambah — mulai dari pendidikan hingga bidang lainnya. Minta demo gratis, tanpa komitmen.",
+    "demo": "Minta Demo",
+    "waTemplate": "Halo apptivity.id! Saya mau tanya / minta demo _PRODUCT_. Boleh info lebih lanjut?",
+    "items": [
+      {
+        "name": "Camptivapp",
+        "tagline": "Manajemen Kampus Terintegrasi",
+        "description": "Platform manajemen kampus yang menyatukan akademik, penjaminan mutu, OBE, SPMI, kerja sama, program studi, LPPM, dan akreditasi dalam satu sistem. Data mengalir dari prodi ke fakultas hingga universitas, sehingga pimpinan bisa memantau seluruh kampus dari satu dasbor. Tersedia di web dan mobile.",
+        "badge": "Web & Mobile",
+        "image": "/products/camptivapp.jpg"
+      },
+      {
+        "name": "Sekolapp",
+        "tagline": "Aplikasi Sekolah Lengkap",
+        "description": "Aplikasi sekolah lengkap untuk mengelola data siswa dan guru, absensi online, nilai dan rapor, jadwal, keuangan/SPP, tugas dan ujian, pengumuman, serta laporan. Tersedia akses terpisah untuk siswa, guru, orang tua, dan admin. Cocok untuk sekolah yang ingin beralih dari pencatatan manual ke digital.",
+        "badge": "Web & Mobile",
+        "image": "/products/sekolapp.jpg"
+      },
+      {
+        "name": "Risetapp",
+        "tagline": "Sistem Informasi LPPM",
+        "description": "Sistem untuk mengelola penelitian, pengabdian kepada masyarakat, publikasi dosen, serta HKI dan inovasi. Mencakup pengajuan usulan, penugasan reviewer, penilaian proposal, laporan kemajuan, dan arsip dokumen digital dalam satu aplikasi.",
+        "badge": "Web & Mobile",
+        "image": "/products/risetapp.jpg"
+      },
+      {
+        "name": "Akredapp",
+        "tagline": "Manajemen Bukti Fisik Akreditasi",
+        "description": "Tempat menyimpan, mengelompokkan, dan memantau dokumen bukti akreditasi berdasarkan standar. Dilengkapi pencarian cepat, status verifikasi dokumen, kolaborasi antar tim, dan laporan rekap siap pakai, sehingga kampus tidak perlu lagi mencari berkas di banyak folder menjelang visitasi.",
+        "badge": "Web & Mobile",
+        "image": "/products/akredapp.jpg"
+      },
+      {
+        "name": "Akadapp",
+        "tagline": "SIAKAD Kampus di Genggaman",
+        "description": "Sistem informasi akademik yang bisa diakses mahasiswa dari ponsel: pengisian KRS online, jadwal kuliah, KHS dan nilai, informasi tagihan, data diri, dan notifikasi dari kampus. Urusan akademik selesai tanpa antre.",
+        "badge": "Web & Mobile",
+        "image": "/products/akadapp.jpg"
       }
     ]
   },
@@ -363,7 +409,7 @@
   "footer": {
     "tagline": "Apps for every activity",
     "contactTitle": "Kontak",
-    "links": ["Tentang", "Harga", "Portofolio", "Bukti", "Gabung", "FAQ"],
+    "links": ["Tentang", "Harga", "Portofolio", "Produk", "Bukti", "Gabung", "FAQ"],
     "rights": "© 2026 PT Lawson Semesta Indonesia. Seluruh hak cipta dilindungi."
   }
 }

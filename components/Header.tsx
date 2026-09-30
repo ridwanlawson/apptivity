@@ -15,6 +15,7 @@ type NavDict = {
   mechanism: string;
   pricing: string;
   portfolio: string;
+  products: string;
   company: string;
   proof: string;
   join: string;
@@ -35,6 +36,7 @@ const SECTION_IDS = [
   "mekanisme",
   "harga",
   "portofolio",
+  "produk",
   "bukti",
   "gabung",
   "legalitas",
@@ -68,6 +70,7 @@ export default function Header({
     item("#tentang", nav.about),
     item("#harga", nav.pricing),
     item("#portofolio", nav.portfolio),
+    item("#produk", nav.products),
     item("#faq", nav.faq),
   ];
   const menus: Menu[] = [
@@ -265,12 +268,20 @@ export default function Header({
             >
               {nav.portfolio}
             </a>
-            {menus[1] && renderMenu(menus[1])}
             <a
               href={singles[3]?.href}
               onClick={(e) => singles[3] && go(e, singles[3].href)}
               aria-current={singles[3] && isActive(singles[3]) ? "true" : undefined}
               className={singles[3] ? linkCls(singles[3]) : undefined}
+            >
+              {nav.products}
+            </a>
+            {menus[1] && renderMenu(menus[1])}
+            <a
+              href={singles[4]?.href}
+              onClick={(e) => singles[4] && go(e, singles[4].href)}
+              aria-current={singles[4] && isActive(singles[4]) ? "true" : undefined}
+              className={singles[4] ? linkCls(singles[4]) : undefined}
             >
               {nav.faq}
             </a>
@@ -357,7 +368,7 @@ export default function Header({
                 )}
               </div>
             ))}
-            {[singles[1], singles[2], singles[3], brief].map(
+            {[singles[1], singles[2], singles[3], singles[4], brief].map(
               (l) =>
                 l && (
                   <a

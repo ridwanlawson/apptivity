@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "apptivity.id — Apps for Every Activity | 印度尼西亚软件公司",
+    "title": "Apptivity | 印度尼西亚Web与移动应用开发",
     "description": "印度尼西亚Web与移动应用开发。免费咨询、价格透明、退款保障。合法PT企业。"
   },
   "nav": {
@@ -11,6 +11,7 @@
     "mechanism": "流程",
     "pricing": "价格",
     "portfolio": "案例",
+    "products": "产品",
     "company": "Apptivity",
     "proof": "实证与评价",
     "join": "加入我们",
@@ -137,7 +138,8 @@
     "payBody": "按项目里程碑付款：开工首付30%、进度演示通过付40%、交付付30%。",
     "cta": "获取准确报价 — 免费",
     "note": "最终价格在开工前一定写入合同。",
-    "productNote": "我们也有现成的产品——告诉我们您的需求，也许已经有合适的。"
+    "productNote": "我们也有现成的产品——告诉我们您的需求，也许已经有合适的。",
+    "productLink": "查看现货产品"
   },
   "portfolio": {
     "eyebrow": "06 — 案例",
@@ -214,6 +216,50 @@
         "tech": ["PHP", "MySQL"],
         "result": "出勤数字化记录",
         "year": "2018"
+      }
+    ]
+  },
+  "products": {
+    "eyebrow": "现货产品 — 免费演示",
+    "title": "即买即用，即刻演示。",
+    "intro": "不断增加的现货产品——从教育到其他领域。免费演示，无需承诺。",
+    "demo": "预约演示",
+    "waTemplate": "你好apptivity.id！我想咨询／演示「_PRODUCT_」，能详细介绍一下吗？",
+    "items": [
+      {
+        "name": "Camptivapp",
+        "tagline": "一体化校园管理",
+        "description": "将教学、质量保障、OBE、SPMI、合作、专业、LPPM与认证融为一体的校园管理平台。数据从专业流向学院再到大学，领导在一个看板尽览全校。支持网页与移动端。",
+        "badge": "Web & Mobile",
+        "image": "/products/camptivapp.jpg"
+      },
+      {
+        "name": "Sekolapp",
+        "tagline": "完整学校应用",
+        "description": "管理学生教师数据、在线考勤、成绩单、课表、财务学费、作业考试、通知与报表的完整学校应用。学生、教师、家长、管理员分权访问。适合想从手工转向数字化的学校。",
+        "badge": "Web & Mobile",
+        "image": "/products/sekolapp.jpg"
+      },
+      {
+        "name": "Risetapp",
+        "tagline": "LPPM信息系统",
+        "description": "管理科研、社会服务、教师成果以及HKI与创新的系统。立项申请、评审指派、提案打分、进展报告、数字文档归档，尽在一个应用。",
+        "badge": "Web & Mobile",
+        "image": "/products/risetapp.jpg"
+      },
+      {
+        "name": "Akredapp",
+        "tagline": "认证证据管理",
+        "description": "按标准存储、归类、监控认证证据文档。快速搜索、文档核验状态、团队协作、开箱即用的汇总报告——迎评前再也不用翻遍文件夹找材料。",
+        "badge": "Web & Mobile",
+        "image": "/products/akredapp.jpg"
+      },
+      {
+        "name": "Akadapp",
+        "tagline": "掌上教务系统",
+        "description": "学生用手机即可使用的教务信息系统：在线选课、课表、成绩、账单信息、个人资料与校园通知。教务事项不用排队。",
+        "badge": "Web & Mobile",
+        "image": "/products/akadapp.jpg"
       }
     ]
   },
@@ -363,7 +409,7 @@
   "footer": {
     "tagline": "Apps for every activity",
     "contactTitle": "联系我们",
-    "links": ["关于我们", "价格", "案例", "实证", "加入我们", "常见问题"],
+    "links": ["关于我们", "价格", "案例", "产品", "实证", "加入我们", "常见问题"],
     "rights": "© 2026 PT Lawson Semesta Indonesia. 版权所有。"
   }
 }

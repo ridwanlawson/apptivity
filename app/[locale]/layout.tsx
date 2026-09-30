@@ -87,6 +87,13 @@ export async function generateMetadata({
     authors: [{ name: COMPANY, url: SITE_URL }],
     creator: COMPANY,
     publisher: COMPANY,
+    manifest: "/site.webmanifest",
+    icons: {
+      icon: [
+        { url: "/favicon.svg", type: "image/svg+xml" },
+        { url: "/favicon.ico", sizes: "any" },
+      ],
+    },
     alternates: {
       canonical: `${SITE_URL}/${locale}`,
       languages: { ...languages, "x-default": `${SITE_URL}/id` },
@@ -186,6 +193,7 @@ export default async function LocaleLayout({
               mechanism: tNav("mechanism"),
               pricing: tNav("pricing"),
               portfolio: tNav("portfolio"),
+              products: tNav("products"),
               company: tNav("company"),
               proof: tNav("proof"),
               join: tNav("join"),

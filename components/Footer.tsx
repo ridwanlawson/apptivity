@@ -20,7 +20,7 @@ export default function Footer({
   rights: string;
   waText: string;
 }) {
-  const hrefs = ["tentang", "harga", "portofolio", "bukti", "gabung", "faq"];
+  const hrefs = ["tentang", "harga", "portofolio", "produk", "bukti", "gabung", "faq"];
   return (
     <footer className="bg-navy-950 text-white">
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:px-6 md:grid-cols-3">
@@ -35,7 +35,7 @@ export default function Footer({
         <nav aria-label="Footer" className="text-sm">
           <p className="font-bold text-gold">Apptivity.id</p>
           <ul className="mt-2 space-y-2 text-white/75">
-            {links.slice(0, 6).map((label, i) => (
+            {links.slice(0, 7).map((label, i) => (
               <li key={label}>
                 <a
                   href={`/${locale}#${hrefs[i]}`}
