@@ -11,15 +11,33 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     new URL(SITE_URL).host;
   const base = `https://${host}`;
   const now = new Date();
-  return routing.locales.map((locale) => ({
-    url: `${base}/${locale}`,
-    lastModified: now,
-    changeFrequency: "weekly",
-    priority: locale === "id" ? 1 : 0.8,
-    alternates: {
-      languages: Object.fromEntries(
-        routing.locales.map((l) => [l, `${base}/${l}`]),
-      ),
-    },
-  }));
+  const slugs = ["tentang", "harga", "portofolio", "produk", "faq"];
+  const entries: MetadataRoute.Sitemap = [];
+  for (const locale of routing.locales) {
+    entries.push({
+      url: `${base}/${locale}`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: locale === "id" ? 1 : 0.8,
+      alternates: {
+        languages: Object.fromEntries(
+          routing.locales.map((l) => [l, `${base}/${l}`]),
+        ),
+      },
+    });
+    for (const slug of slugs) {
+      entries.push({
+        url: `${base}/${locale}/${slug}`,
+        lastModified: now,
+        changeFrequency: "weekly",
+        priority: 0.7,
+        alternates: {
+          languages: Object.fromEntries(
+            routing.locales.map((l) => [l, `${base}/${l}/${slug}`]),
+          ),
+        },
+      });
+    }
+  }
+  return entries;
 }

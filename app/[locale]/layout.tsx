@@ -165,6 +165,23 @@ export default async function LocaleLayout({
         inLanguage: [...routing.locales],
         publisher: { "@id": `${SITE_URL}/#organisasi` },
       },
+      {
+        "@type": "SiteNavigationElement",
+        "@id": `${SITE_URL}/#navigasi`,
+        name: SITE_NAME,
+        url: SITE_URL,
+        hasPart: [
+          "tentang",
+          "harga",
+          "portofolio",
+          "produk",
+          "faq",
+        ].map((slug) => ({
+          "@type": "WebPage",
+          name: slug,
+          url: `${SITE_URL}/${loc}/${slug}`,
+        })),
+      },
     ],
   };
 

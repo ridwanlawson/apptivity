@@ -2,7 +2,6 @@
 
 import LogoMark from "./LogoMark";
 import { SITE_DOMAIN, COMPANY, IG_URL, waLink } from "@/lib/site";
-import { scrollToHash } from "@/lib/scroll";
 import type { Locale } from "@/lib/i18n";
 
 export default function Footer({
@@ -20,7 +19,12 @@ export default function Footer({
   rights: string;
   waText: string;
 }) {
+  // Footer links point to dedicated crawlable pages (sitelinks candidates),
+  // not same-page anchors.
   const hrefs = ["tentang", "harga", "portofolio", "produk", "bukti", "gabung", "faq"];
+  const pageSlugs = new Set(["tentang", "harga", "portofolio", "produk", "faq"]);
+  const pageHref = (slug: string) =>
+    pageSlugs.has(slug) ? `/${locale}/${slug}` : `/${locale}#${slug}`;
   return (
     <footer className="bg-navy-950 text-white">
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:px-6 md:grid-cols-3">
@@ -38,11 +42,7 @@ export default function Footer({
             {links.slice(0, 7).map((label, i) => (
               <li key={label}>
                 <a
-                  href={`/${locale}#${hrefs[i]}`}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    scrollToHash(`#${hrefs[i]}`);
-                  }}
+                  href={pageHref(hrefs[i] ?? "")}
                   className="hover:text-gold"
                 >
                   {label}
