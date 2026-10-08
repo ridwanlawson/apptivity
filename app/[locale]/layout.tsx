@@ -80,6 +80,15 @@ export async function generateMetadata({
   const isPreview =
     process.env.VERCEL_ENV !== undefined &&
     process.env.VERCEL_ENV !== "production";
+  // Search-console verification tokens come from env (never committed).
+  // Set GOOGLE_SITE_VERIFICATION / BING_SITE_VERIFICATION in Vercel.
+  const verification: Record<string, string> = {};
+  if (process.env.GOOGLE_SITE_VERIFICATION) {
+    verification.google = process.env.GOOGLE_SITE_VERIFICATION;
+  }
+  if (process.env.BING_SITE_VERIFICATION) {
+    verification.bing = process.env.BING_SITE_VERIFICATION;
+  }
   return {
     metadataBase: new URL(SITE_URL),
     title: t("title"),
@@ -116,6 +125,7 @@ export async function generateMetadata({
       images: ["/og.jpg"],
     },
     robots: isPreview ? { index: false, follow: false } : { index: true, follow: true },
+    ...(Object.keys(verification).length > 0 ? { verification } : {}),
   };
 }
 
