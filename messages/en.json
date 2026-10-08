@@ -473,9 +473,98 @@
       "Join Us",
       "FAQ"
     ],
-    "rights": "© 2026 PT Lawson Semesta Indonesia. All rights reserved."
+    "rights": "© 2026 PT Lawson Semesta Indonesia. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
   },
   "pages": {
+    "privasi": {
+      "title": "Privacy Policy | apptivity.id",
+      "description": "Apptivity.id privacy policy under Indonesia's PDP Law No. 27/2022: data collected, purpose, retention, and your rights.",
+      "h1": "Privacy Policy",
+      "intro": "Apptivity (PT Lawson Semesta Indonesia) respects your privacy. This page explains what data we collect through this site, why, and your rights — under Indonesia's Personal Data Protection Law No. 27 of 2022. Last updated: October 2026.",
+      "blocks": [
+        {
+          "h2": "Data we collect",
+          "body": "Only data you provide yourself through the 3-step brief form:",
+          "points": [
+            "Your / company name",
+            "Active WhatsApp number or email",
+            "Your project needs in your own words",
+            "App type and ownership plan choice (Buy/Rent)"
+          ]
+        },
+        {
+          "h2": "How we use it",
+          "body": "Your data is used solely to follow up on your needs:",
+          "points": [
+            "Contacting you via WhatsApp for a free consultation",
+            "Preparing estimates and the written agreement",
+            "Official company transaction records and tax reporting"
+          ]
+        },
+        {
+          "h2": "Cookies and analytics",
+          "body": "This site uses a single functional cookie (NEXT_LOCALE) to remember your language choice — not a tracking cookie, no consent needed. Visit statistics use cookieless analytics that does not identify individuals.",
+          "points": []
+        },
+        {
+          "h2": "Storage and security",
+          "body": "Brief messages are forwarded to our WhatsApp and kept as long as needed for service and company record obligations. We never sell or share your data with third parties for marketing.",
+          "points": []
+        },
+        {
+          "h2": "Your rights",
+          "body": "Under the PDP Law you may request access, correction, or deletion of your personal data. Reach us at the email below.",
+          "points": []
+        },
+        {
+          "h2": "Privacy contact",
+          "body": "PT Lawson Semesta Indonesia — email: lawsonsemestaindonesia@gmail.com, WhatsApp: +62 812-7038-9862.",
+          "points": []
+        }
+      ],
+      "faq": []
+    },
+    "syarat-ketentuan": {
+      "title": "Terms of Service | apptivity.id",
+      "description": "Apptivity.id terms: pricing, staged payment, money-back guarantee, 30-day warranty, source-code ownership.",
+      "h1": "Terms of Service",
+      "intro": "These terms govern app-development work between you and Apptivity (PT Lawson Semesta Indonesia). Everything agreed is written into a contract before work starts. Last updated: October 2026.",
+      "blocks": [
+        {
+          "h2": "Pricing and payment",
+          "body": "Every project starts at US$50 (Rp500 ribu). The final price follows a free consultation and is written in the contract — no hidden fees. Staged payment by milestone: 30% deposit, 40% on approved progress demo, 30% on handover.",
+          "points": []
+        },
+        {
+          "h2": "Money-back guarantee",
+          "body": "If any feature misses the written agreement, we refund that feature's value. Requests beyond the initial agreement are discussed openly and may cost extra.",
+          "points": []
+        },
+        {
+          "h2": "30-day fix warranty",
+          "body": "Fixes for non-conforming results within 30 days after handover are free. New features beyond the agreement are discussed openly.",
+          "points": []
+        },
+        {
+          "h2": "Ownership (Buy plan)",
+          "body": "Under Buy, full ownership of the app and source code is yours, handed over in full on final payment. Server, domain, and third-party services are excluded unless agreed in writing.",
+          "points": []
+        },
+        {
+          "h2": "Terms (Rental plan)",
+          "body": "Under yearly Rental, Apptivity manages the app during the rental period: built-in server and domain free, small additions free, large additions at a light fee, changes follow the rental terms.",
+          "points": []
+        },
+        {
+          "h2": "Consultation",
+          "body": "Initial consultation is always free with no obligation to buy. Apptivity clients get ongoing free consultation.",
+          "points": []
+        }
+      ],
+      "faq": []
+    },
     "jasa-pembuatan-website": {
       "title": "Website Development Services | apptivity.id",
       "description": "Indonesian website & web app development. From US$50, written contract, money-back guarantee. Free consultation.",
@@ -719,5 +808,14 @@
         }
       ]
     }
+  },
+  "notfound": {
+    "title": "Page not found",
+    "body": "This address does not exist or has moved.",
+    "home": "Back to homepage",
+    "contact": "Contact via WhatsApp",
+    "errorTitle": "Something went wrong",
+    "errorBody": "Reload this page. If it still fails, reach us on WhatsApp.",
+    "retry": "Try again"
   }
 }

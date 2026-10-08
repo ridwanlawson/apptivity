@@ -473,6 +473,17 @@
       "参加する",
       "FAQ"
     ],
-    "rights": "© 2026 PT Lawson Semesta Indonesia. 無断複写・転載を禁じます。"
+    "rights": "© 2026 PT Lawson Semesta Indonesia. 無断複写・転載を禁じます。",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約"
+  },
+  "notfound": {
+    "title": "ページが見つかりません",
+    "body": "このアドレスは存在しないか、移動しました。",
+    "home": "ホームに戻る",
+    "contact": "WhatsAppで問い合わせ",
+    "errorTitle": "エラーが発生しました",
+    "errorBody": "このページを再読み込みしてください。改善しない場合はWhatsAppでご連絡ください。",
+    "retry": "再試行"
   }
 }

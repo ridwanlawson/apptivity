@@ -473,9 +473,98 @@
       "Gabung",
       "FAQ"
     ],
-    "rights": "© 2026 PT Lawson Semesta Indonesia. Seluruh hak cipta dilindungi."
+    "rights": "© 2026 PT Lawson Semesta Indonesia. Seluruh hak cipta dilindungi.",
+    "privacy": "Kebijakan Privasi",
+    "terms": "Syarat & Ketentuan"
   },
   "pages": {
+    "privasi": {
+      "title": "Kebijakan Privasi | apptivity.id",
+      "description": "Kebijakan privasi apptivity.id sesuai UU PDP No. 27/2022: data yang dikumpulkan, tujuan, retensi, dan hak Anda.",
+      "h1": "Kebijakan Privasi",
+      "intro": "Apptivity (PT Lawson Semesta Indonesia) menghormati privasi Anda. Halaman ini menjelaskan data apa yang kami kumpulkan melalui situs ini, untuk apa, dan hak Anda atas data tersebut — sesuai UU Pelindungan Data Pribadi No. 27 Tahun 2022. Terakhir diperbarui: Oktober 2026.",
+      "blocks": [
+        {
+          "h2": "Data yang kami kumpulkan",
+          "body": "Hanya data yang Anda berikan sendiri melalui form brief 3 langkah:",
+          "points": [
+            "Nama Anda / perusahaan",
+            "Nomor WA atau email aktif",
+            "Ceritakan kebutuhan Anda (detail proyek)",
+            "Pilihan jenis aplikasi dan skema kepemilikan (Beli/Sewa)"
+          ]
+        },
+        {
+          "h2": "Tujuan penggunaan",
+          "body": "Data dipakai semata-mata untuk menindaklanjuti kebutuhan Anda:",
+          "points": [
+            "Menghubungi Anda via WhatsApp untuk konsultasi gratis",
+            "Menyusun estimasi dan kesepakatan tertulis",
+            "Pencatatan transaksi resmi perusahaan dan pelaporan pajak"
+          ]
+        },
+        {
+          "h2": "Cookie dan analytics",
+          "body": "Situs ini hanya memakai satu cookie fungsional (NEXT_LOCALE) untuk mengingat pilihan bahasa Anda — bukan cookie pelacakan dan tidak butuh persetujuan. Statistik kunjungan memakai analytics tanpa cookie yang tidak mengidentifikasi individu.",
+          "points": []
+        },
+        {
+          "h2": "Penyimpanan dan keamanan",
+          "body": "Pesan brief diteruskan ke WhatsApp kami dan disimpan selama diperlukan untuk layanan serta kewajiban pencatatan perusahaan. Kami tidak menjual atau membagikan data Anda ke pihak ketiga untuk pemasaran.",
+          "points": []
+        },
+        {
+          "h2": "Hak Anda",
+          "body": "Sesuai UU PDP, Anda berhak meminta akses, koreksi, atau penghapusan data pribadi Anda. Hubungi kami via email di bawah.",
+          "points": []
+        },
+        {
+          "h2": "Kontak privasi",
+          "body": "PT Lawson Semesta Indonesia — email: lawsonsemestaindonesia@gmail.com, WhatsApp: 0812-7038-9862.",
+          "points": []
+        }
+      ],
+      "faq": []
+    },
+    "syarat-ketentuan": {
+      "title": "Syarat & Ketentuan Layanan | apptivity.id",
+      "description": "Syarat & ketentuan apptivity.id: harga, termin, garansi uang kembali, garansi 30 hari, dan kepemilikan source code.",
+      "h1": "Syarat & Ketentuan Layanan",
+      "intro": "Ketentuan ini mengatur kerja sama pembuatan aplikasi antara Anda (Sahabat) dan Apptivity (PT Lawson Semesta Indonesia). Hal yang disepakati selalu dituangkan tertulis dalam kontrak sebelum pengerjaan mulai. Terakhir diperbarui: Oktober 2026.",
+      "blocks": [
+        {
+          "h2": "Harga dan pembayaran",
+          "body": "Semua proyek mulai dari Rp500 ribu (US$50 untuk klien luar negeri). Harga final mengikuti hasil konsultasi gratis dan tertulis di kontrak — tanpa biaya tersembunyi. Pembayaran bertahap mengikuti milestone: 30% DP sebagai tanda jadi, 40% saat demo progres disetujui, 30% pelunasan saat serah terima.",
+          "points": []
+        },
+        {
+          "h2": "Garansi uang kembali",
+          "body": "Jika ada fitur yang tidak sesuai kesepakatan tertulis, kami kembalikan dana sebesar nilai fitur tersebut. Permintaan di luar kesepakatan awal dibicarakan terbuka dan dapat dikenakan biaya tambahan.",
+          "points": []
+        },
+        {
+          "h2": "Garansi perbaikan 30 hari",
+          "body": "Perbaikan atas ketidaksesuaian hasil dalam 30 hari setelah serah terima tidak dikenakan biaya. Penambahan fitur baru di luar kesepakatan dibahas terbuka.",
+          "points": []
+        },
+        {
+          "h2": "Kepemilikan (skema Beli)",
+          "body": "Pada skema Beli, hak milik penuh atas aplikasi dan source code ada pada Anda dan diserahkan penuh saat pelunasan. Server, domain, dan layanan pihak ketiga tidak termasuk kecuali disepakati tertulis.",
+          "points": []
+        },
+        {
+          "h2": "Ketentuan (skema Sewa)",
+          "body": "Pada skema Sewa tahunan, aplikasi dikelola Apptivity selama masa sewa: server dan domain bawaan gratis, penambahan kecil gratis, penambahan besar dikenakan biaya ringan, dan perubahan mengikuti ketentuan sewa.",
+          "points": []
+        },
+        {
+          "h2": "Konsultasi",
+          "body": "Konsultasi awal selalu gratis tanpa kewajiban membeli. Klien Apptivity mendapat konsultasi gratis berkelanjutan.",
+          "points": []
+        }
+      ],
+      "faq": []
+    },
     "blog": {
       "title": "Blog Apptivity | apptivity.id",
       "description": "Panduan praktis: biaya aplikasi, beli vs sewa, digitalisasi sekolah dan kampus, memilih jasa pembuatan website.",
@@ -719,5 +808,14 @@
         }
       ]
     }
+  },
+  "notfound": {
+    "title": "Halaman tidak ditemukan",
+    "body": "Alamat yang Anda tuju tidak ada atau sudah dipindahkan.",
+    "home": "Kembali ke beranda",
+    "contact": "Hubungi via WhatsApp",
+    "errorTitle": "Terjadi kesalahan",
+    "errorBody": "Muat ulang halaman ini. Jika masih gagal, hubungi kami via WhatsApp.",
+    "retry": "Coba lagi"
   }
 }

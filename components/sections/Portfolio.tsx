@@ -167,7 +167,7 @@ export default function Portfolio({ dict }: { dict: PortfolioDict }) {
                   aria-hidden="true"
                 >
                   {it.image ? (
-                    <ProductImage src={it.image} alt="" />
+                    <ProductImage src={it.image} alt={it.title} />
                   ) : (
                     <>
                       <div className="grain" />
@@ -239,7 +239,7 @@ export default function Portfolio({ dict }: { dict: PortfolioDict }) {
                 className="relative h-[60vh] overflow-hidden rounded-2xl bg-navy-950 sm:h-[65vh]"
                 aria-hidden="true"
               >
-                <ProductImage src={active.image} alt="" fit="contain" />
+                <ProductImage src={active.image} alt={active.title} fit="contain" />
                 <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-4">
                   <span className="rounded-full bg-navy-950/70 px-3 py-1 text-xs font-bold text-gold backdrop-blur">
                     {catName(dict, active.category)}

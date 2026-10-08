@@ -473,6 +473,17 @@
       "加入我们",
       "常见问题"
     ],
-    "rights": "© 2026 PT Lawson Semesta Indonesia. 版权所有。"
+    "rights": "© 2026 PT Lawson Semesta Indonesia. 版权所有。",
+    "privacy": "隐私政策",
+    "terms": "服务条款"
+  },
+  "notfound": {
+    "title": "页面未找到",
+    "body": "该地址不存在或已移动。",
+    "home": "返回首页",
+    "contact": "通过WhatsApp联系",
+    "errorTitle": "发生错误",
+    "errorBody": "请重新加载此页面。如果仍然失败,请通过WhatsApp联系我们。",
+    "retry": "重试"
   }
 }

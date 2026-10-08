@@ -1,5 +1,5 @@
 import LogoMark from "./LogoMark";
-import { SITE_DOMAIN, SITE_URL, COMPANY, IG_URL, waLink } from "@/lib/site";
+import { SITE_DOMAIN, SITE_URL, COMPANY, EMAIL, IG_URL, waLink } from "@/lib/site";
 import type { Locale } from "@/lib/i18n";
 
 export default function Footer({
@@ -8,6 +8,8 @@ export default function Footer({
   contactTitle,
   links,
   rights,
+  privacy,
+  terms,
   waText,
 }: {
   locale: Locale;
@@ -15,6 +17,8 @@ export default function Footer({
   contactTitle: string;
   links: string[];
   rights: string;
+  privacy: string;
+  terms: string;
   waText: string;
 }) {
   // Footer links point to dedicated crawlable pages (sitelinks candidates),
@@ -65,6 +69,14 @@ export default function Footer({
             </li>
             <li>
               <a
+                href={`mailto:${EMAIL}`}
+                className="hover:text-gold"
+              >
+                Email: {EMAIL}
+              </a>
+            </li>
+            <li>
+              <a
                 href={IG_URL}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -83,9 +95,17 @@ export default function Footer({
         </div>
       </div>
       <div className="border-t border-white/10">
-        <p className="mx-auto max-w-6xl px-4 py-4 text-xs text-white/50 sm:px-6">
-          {rights}
-        </p>
+        <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-4 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+          <p>{rights}</p>
+          <nav aria-label="Legal" className="flex gap-4">
+            <a href={`/${locale}/privasi`} className="hover:text-gold">
+              {privacy}
+            </a>
+            <a href={`/${locale}/syarat-ketentuan`} className="hover:text-gold">
+              {terms}
+            </a>
+          </nav>
+        </div>
       </div>
     </footer>
   );

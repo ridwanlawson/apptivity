@@ -16,7 +16,13 @@ export const KEYWORD_SLUGS = [
   "aplikasi-kampus",
 ] as const;
 
-export const ALL_SLUGS: readonly string[] = [...SECTION_SLUGS, ...KEYWORD_SLUGS];
+// Legal pages render through the same long-form template (title,
+// description, h1, blocks, faq) as keyword pages.
+export const LEGAL_SLUGS = ["privasi", "syarat-ketentuan"] as const;
+
+export const ALL_SLUGS: readonly string[] = [...SECTION_SLUGS, ...KEYWORD_SLUGS, ...LEGAL_SLUGS];
+
+export const CONTENT_SET = new Set<string>([...KEYWORD_SLUGS, ...LEGAL_SLUGS]);
 
 export const KEYWORD_SET = new Set<string>(KEYWORD_SLUGS);
 

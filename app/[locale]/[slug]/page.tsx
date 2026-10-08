@@ -19,7 +19,7 @@ import type { HeroDict } from "@/components/sections/Hero";
 // ship English copy until native translations land — server-only import).
 import enMessages from "@/messages/en.json";
 
-import { ALL_SLUGS, KEYWORD_SET } from "@/lib/slugs";
+import { ALL_SLUGS, CONTENT_SET } from "@/lib/slugs";
 
 const Portfolio = dynamic(() => import("@/components/sections/Portfolio"), {});
 const Products = dynamic(() => import("@/components/sections/Products"), {});
@@ -74,7 +74,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     languages: { ...languages, "x-default": `${SITE_URL}/id/${slug}` },
   };
 
-  if (KEYWORD_SET.has(slug)) {
+  if (CONTENT_SET.has(slug)) {
     const dict = await getKeywordDict(locale, slug);
     if (!dict) return {};
     return {
@@ -154,7 +154,7 @@ export default async function SlugPage({ params }: Props) {
     ],
   };
 
-  if (KEYWORD_SET.has(slug)) {
+  if (CONTENT_SET.has(slug)) {
     const dict = await getKeywordDict(locale, slug);
     if (!dict) notFound();
     const related = [

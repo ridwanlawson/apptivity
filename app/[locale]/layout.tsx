@@ -256,6 +256,8 @@ export default async function LocaleLayout({
             contactTitle={tFooter("contactTitle")}
             links={tFooter.raw("links") as unknown as string[]}
             rights={tFooter("rights")}
+            privacy={tFooter("privacy")}
+            terms={tFooter("terms")}
             waText={tHero("waText")}
           />
           <Analytics />
