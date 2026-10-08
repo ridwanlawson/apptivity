@@ -178,14 +178,14 @@ export default async function SlugPage({ params }: Props) {
       {slug === "tentang" && <About dict={m.about} why={m.why} />}
       {slug === "harga" && (
         <>
-          <Pricing dict={m.pricing} />
+          <Pricing dict={m.pricing} base={`/${locale}`} />
           <Ownership dict={m.ownership} />
         </>
       )}
       {slug === "portofolio" && (
         <>
           <Portfolio dict={m.portfolio} />
-          <Proof dict={m.proof} />
+          <Proof dict={m.proof} base={`/${locale}`} />
         </>
       )}
       {slug === "produk" && <Products dict={m.products} />}

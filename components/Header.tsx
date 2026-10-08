@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 import LogoMark from "./LogoMark";
 import LocaleSwitcher from "./LocaleSwitcher";
 import { SITE_DOMAIN, waLink } from "@/lib/site";
@@ -59,6 +60,7 @@ export default function Header({
   const [openMenu, setOpenMenu] = useState<string | null>(null);
   const [openGroup, setOpenGroup] = useState<string | null>(null);
   const navRef = useRef<HTMLElement>(null);
+  const pathname = usePathname();
 
   const item = (hash: string, label: string): Item => ({
     href: `/${locale}${hash}`,
@@ -141,6 +143,9 @@ export default function Header({
   const go = (e: { preventDefault: () => void }, href: string) => {
     const i = href.indexOf("#");
     if (i === -1) return;
+    // On subpages there is nothing to smooth-scroll to: follow the link
+    // to the homepage section instead of intercepting it.
+    if (pathname !== `/${locale}`) return;
     e.preventDefault();
     setOpen(false);
     setOpenMenu(null);

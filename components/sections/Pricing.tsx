@@ -19,7 +19,7 @@ export type PricingDict = {
 // TODO(data): tampilkan estimasi harga per jenis proyek (web profil,
 // web app, mobile, AI/integrasi) hanya jika angka resmi diberikan.
 // Tanpa data: halaman ini tetap memakai "mulai dari Rp500 ribu".
-export default function Pricing({ dict }: { dict: PricingDict }) {
+export default function Pricing({ dict, base = "" }: { dict: PricingDict; base?: string }) {
   return (
     <section
       id="harga"
@@ -63,7 +63,7 @@ export default function Pricing({ dict }: { dict: PricingDict }) {
         </p>
         <div data-reveal className="mt-4 text-center">
           <a
-            href="#produk"
+            href={`${base}#produk`}
             className="inline-block rounded-full border border-gold/60 px-6 py-2.5 text-sm font-bold text-gold transition-colors hover:bg-gold hover:text-navy-950"
           >
             {dict.productLink}
@@ -72,7 +72,7 @@ export default function Pricing({ dict }: { dict: PricingDict }) {
 
         <div data-reveal className="mt-8 flex flex-col items-center gap-3 text-center">
           <a
-            href="#mulai"
+            href={`${base}#mulai`}
             className="inline-block rounded-full bg-gold px-8 py-3.5 font-bold text-navy-950 shadow-lg shadow-gold/20 transition-all hover:-translate-y-0.5 hover:shadow-gold/40"
           >
             {dict.cta}

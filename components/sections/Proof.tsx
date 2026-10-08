@@ -22,7 +22,7 @@ export type ProofDict = {
   cta: string;
 };
 
-export default function Proof({ dict }: { dict: ProofDict }) {
+export default function Proof({ dict, base = "" }: { dict: ProofDict; base?: string }) {
   const items =
     dict.testimonials.length > 0 ? dict.testimonials : [dict.testimonial];
   return (
@@ -134,7 +134,7 @@ export default function Proof({ dict }: { dict: ProofDict }) {
 
         <div data-reveal className="mt-10 text-center">
           <a
-            href="#mulai"
+            href={`${base}#mulai`}
             className="inline-block rounded-full bg-navy-950 px-8 py-3.5 font-bold text-white transition-all hover:-translate-y-0.5 hover:bg-navy-800"
           >
             {dict.cta}
