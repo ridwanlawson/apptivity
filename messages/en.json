@@ -37,7 +37,13 @@
     "body1": "Apptivity (apptivity.id) is an Indonesian software house under PT Lawson Semesta Indonesia. We build web and mobile apps for professionals, SMEs, government agencies, and companies.",
     "eyebrow2": "02 — We call you Sahabat",
     "body2": "Sahabat means partner, not just a buyer. We give our best advice and alternatives for your needs — with zero pressure to buy. When you need professionals, we're ready to deliver.",
-    "audiences": ["Professionals", "SMEs", "Government", "Startups", "Enterprises"]
+    "audiences": [
+      "Professionals",
+      "SMEs",
+      "Government",
+      "Startups",
+      "Enterprises"
+    ]
   },
   "why": {
     "eyebrow": "03 — Why Apptivity?",
@@ -146,7 +152,10 @@
     "title": "Selected work since 2017.",
     "intro": "A selection of 36+ projects we've delivered since 2017 — from government agencies and state enterprises to SMEs. Click a card for details.",
     "all": "All",
-    "categories": ["Web App", "Mobile"],
+    "categories": [
+      "Web App",
+      "Mobile"
+    ],
     "close": "Close",
     "ctaSimilar": "Ask about a similar project",
     "waTemplate": "Hello apptivity.id! I'm interested in a project like _TITLE_ (_CAT_). Could you share more info?",
@@ -157,7 +166,11 @@
         "title": "Plantation ERP System (PES)",
         "tagline": "ERP built for palm plantations",
         "description": "An ERP system exclusively for palm oil companies: estate and mill operations, production and budgeting, workforce, procurement, inventory, assets, sales, accounting, and management reporting — in one integrated platform.",
-        "tech": ["Oracle", ".NET", "IIS"],
+        "tech": [
+          "Oracle",
+          ".NET",
+          "IIS"
+        ],
         "result": "10 integrated modules",
         "year": "2026",
         "category": 0,
@@ -167,7 +180,11 @@
         "title": "SIPS Mobile",
         "tagline": "Offline-first plantation ops",
         "description": "Mobile app for plantation operations at PT Sentosa Kalimantan Jaya. Laravel + Oracle backend, Android app in Kotlin Jetpack Compose that keeps working with no signal.",
-        "tech": ["Laravel", "Oracle", "Kotlin"],
+        "tech": [
+          "Laravel",
+          "Oracle",
+          "Kotlin"
+        ],
         "result": "Works with no signal",
         "year": "2024",
         "category": 1,
@@ -177,7 +194,10 @@
         "title": "Legal Affairs MIS",
         "tagline": "Legal management, Kemenkumham West Sumatra",
         "description": "Management information system for the legal division of the Ministry of Law regional office in West Sumatra.",
-        "tech": ["PHP", "MySQL"],
+        "tech": [
+          "PHP",
+          "MySQL"
+        ],
         "result": "Used by a government agency",
         "year": "2017",
         "category": 0,
@@ -187,7 +207,10 @@
         "title": "Online Admission & Reports",
         "tagline": "Student enrollment for 7 schools",
         "description": "Online new-student admission and report systems for SMA Kartika 1–5, SMA Pertiwi 1, and SMKN 2 Padang Panjang.",
-        "tech": ["PHP", "MySQL"],
+        "tech": [
+          "PHP",
+          "MySQL"
+        ],
         "result": "Used by 7 schools",
         "year": "2019",
         "category": 0,
@@ -197,7 +220,10 @@
         "title": "Photography Marketplace",
         "tagline": "Studio & photo services across Padang",
         "description": "Marketplace for studio and photography services in Padang city, running on Android via WebView.",
-        "tech": ["Android", "WebView"],
+        "tech": [
+          "Android",
+          "WebView"
+        ],
         "result": "Released on Android",
         "year": "2021",
         "category": 1,
@@ -262,9 +288,18 @@
     "title": "Numbers and stories behind them.",
     "intro": "Our track record since 2017 — from government agencies and state enterprises to SMEs. The full list of 36+ projects is ready to show during consultation.",
     "stats": [
-      { "value": "9+", "label": "Years of experience — 10 years in 2027" },
-      { "value": "36+", "label": "Projects delivered" },
-      { "value": "30+", "label": "Clients & institutions" }
+      {
+        "value": "9+",
+        "label": "Years of experience — 10 years in 2027"
+      },
+      {
+        "value": "36+",
+        "label": "Projects delivered"
+      },
+      {
+        "value": "30+",
+        "label": "Clients & institutions"
+      }
     ],
     "casesTitle": "Sample case studies",
     "cases": [
@@ -288,7 +323,17 @@
       "name": "— School admission officer, Padang Panjang (name withheld at the client's request)"
     },
     "techTitle": "Core technologies",
-    "tech": ["PHP / Laravel", "Oracle / MySQL / PostgreSQL", "Next.js / React", "React Native / Expo", "Flutter", "Node.js", "AI / RAG", "WhatsApp API", "Android WebView"],
+    "tech": [
+      "PHP / Laravel",
+      "Oracle / MySQL / PostgreSQL",
+      "Next.js / React",
+      "React Native / Expo",
+      "Flutter",
+      "Node.js",
+      "AI / RAG",
+      "WhatsApp API",
+      "Android WebView"
+    ],
     "techNote": "Not limited to this list — other technologies follow your project needs.",
     "cta": "Discuss Your Needs — Free"
   },
@@ -330,9 +375,19 @@
     "eyebrow": "Start a Project",
     "title": "Tell us your dream app.",
     "sub": "Answer 3 quick steps, then send it straight to our WhatsApp — free, no commitment.",
-    "steps": ["App type", "Ownership", "Your details"],
+    "steps": [
+      "App type",
+      "Ownership",
+      "Your details"
+    ],
     "typeLabel": "What do you want to build?",
-    "types": ["Platform / Web App", "Mobile App", "AI Feature / Integration", "Consultation / Scoping", "Other"],
+    "types": [
+      "Platform / Web App",
+      "Mobile App",
+      "AI Feature / Integration",
+      "Consultation / Scoping",
+      "Other"
+    ],
     "ownLabel": "Which one?",
     "buy": "Buy (full ownership)",
     "rent": "Rent (yearly)",
@@ -402,7 +457,260 @@
   "footer": {
     "tagline": "Apps for every activity",
     "contactTitle": "Contact",
-    "links": ["About", "Pricing", "Portfolio", "Products", "Proof", "Join Us", "FAQ"],
+    "links": [
+      "About",
+      "Pricing",
+      "Portfolio",
+      "Products",
+      "Proof",
+      "Join Us",
+      "FAQ"
+    ],
     "rights": "© 2026 PT Lawson Semesta Indonesia. All rights reserved."
+  },
+  "pages": {
+    "jasa-pembuatan-website": {
+      "title": "Website Development Services | apptivity.id",
+      "description": "Indonesian website & web app development. From US$50, written contract, money-back guarantee. Free consultation.",
+      "h1": "Website Development, Clear From Day One",
+      "intro": "We build websites and web apps for professionals, SMEs, institutions, and companies — with pricing written into the contract before we start, regular progress reports, and a money-back guarantee.",
+      "blocks": [
+        {
+          "h2": "What websites do we build?",
+          "body": "From profile sites to complex web applications:",
+          "points": [
+            "Company, institution, and school profile websites",
+            "Web apps: online admission, online report cards, inventory, ERP",
+            "WhatsApp API integration and AI features as needed"
+          ]
+        },
+        {
+          "h2": "How we work",
+          "body": "The same four clear steps for every project:",
+          "points": [
+            "Free consultation via WhatsApp — no obligation to buy",
+            "Written agreement: scope, timeline, and cost",
+            "Monitored progress with regular reports",
+            "Money-back guarantee if results miss the agreement"
+          ]
+        },
+        {
+          "h2": "Pricing and guarantees",
+          "body": "Every project starts at US$50. The final price is set after a free consultation and written down before we start. Staged payment: 30% deposit, 40% on approved progress demo, 30% on handover. Fixes within 30 days after handover are free.",
+          "points": []
+        }
+      ],
+      "faq": [
+        {
+          "q": "How long does a website take?",
+          "a": "Landing pages typically take 2–4 weeks, web apps 1–3 months. The exact timeline is written in the contract before work starts."
+        },
+        {
+          "q": "Do I own the website?",
+          "a": "Yes — under the Buy plan the source code is yours, handed over in full on final payment. A yearly Rental plan with server and domain included is also available."
+        },
+        {
+          "q": "How do I start?",
+          "a": "Chat us on WhatsApp — free, replied within 7 hours. Or fill the 3-step form on the homepage; your brief goes straight to our WhatsApp."
+        }
+      ]
+    },
+    "jasa-pembuatan-aplikasi": {
+      "title": "Mobile & Web App Development | apptivity.id",
+      "description": "Indonesian mobile & web app development. From US$50, you own the source code, money-back guarantee. Free consultation.",
+      "h1": "Mobile & Web App Development",
+      "intro": "We build mobile and web apps for SMEs, startups, government institutions, and companies — 36+ projects since 2017, from offline-first plantation operations to Android marketplaces.",
+      "blocks": [
+        {
+          "h2": "What apps do we build?",
+          "body": "Web and mobile apps matched to your operations:",
+          "points": [
+            "Android mobile apps, including ones that work with no signal",
+            "Web apps: ERP, management information systems, marketplaces",
+            "Ready-made products: school, campus, and plantation ERP apps"
+          ]
+        },
+        {
+          "h2": "Our tech stack",
+          "body": "Final technology follows your project needs:",
+          "points": [
+            "PHP/Laravel, Next.js/React, Node.js",
+            "React Native/Expo, Flutter, native Android",
+            "Oracle, MySQL, PostgreSQL, AI & WhatsApp API integrations"
+          ]
+        },
+        {
+          "h2": "Pricing and guarantees",
+          "body": "Every project starts at US$50 for international clients. The final price is written in the contract before we start. Staged 30-40-30 payment. Money-back guarantee plus 30-day fix warranty.",
+          "points": []
+        }
+      ],
+      "faq": [
+        {
+          "q": "How long does a mobile app take?",
+          "a": "Mobile apps typically take 2–4 months. The exact timeline is written in the contract before work starts."
+        },
+        {
+          "q": "Who owns the source code?",
+          "a": "Under the Buy plan the source code is yours, handed over in full on final payment. Under Rental, Apptivity manages the app during the rental period."
+        },
+        {
+          "q": "Is there support after handover?",
+          "a": "Yes. Clients get free consultation, and fixes within the 30-day warranty after handover cost nothing."
+        }
+      ]
+    },
+    "aplikasi-sekolah": {
+      "title": "Complete School App (Sekolapp) | apptivity.id",
+      "description": "Sekolapp: school app for attendance, grades & report cards, tuition, and online admission. Used by 7 schools since 2019. Free demo.",
+      "h1": "Complete School App: Sekolapp",
+      "intro": "Sekolapp manages student and teacher data, online attendance, grades and report cards, schedules, tuition finance, assignments and exams, announcements, and reports — with separate access for students, teachers, parents, and admins.",
+      "blocks": [
+        {
+          "h2": "Features for daily operations",
+          "body": "One app replacing manual record-keeping:",
+          "points": [
+            "Online attendance for students and teachers",
+            "Grades, report cards, schedules, assignments and exams",
+            "Tuition/SPP finance and recap reports"
+          ]
+        },
+        {
+          "h2": "Proven in the field",
+          "body": "Our online admission and report-card system has been used by 7 schools (SMA Kartika 1–5, SMA Pertiwi 1, SMKN 2 Padang Panjang) since 2019 — tidy enrollment with no paper queues. The full 36+ project list is available during consultation.",
+          "points": []
+        },
+        {
+          "h2": "Pricing and demo",
+          "body": "Projects start at US$50 with the final price written in the contract. Buy (school owns the source code) and yearly Rental (server and domain included) plans available. Request a free demo with no commitment.",
+          "points": []
+        }
+      ],
+      "faq": [
+        {
+          "q": "Does it support online admission?",
+          "a": "Yes. Our online admission system has served 7 schools since 2019 for new-student enrollment and online report cards."
+        },
+        {
+          "q": "Can parents monitor progress?",
+          "a": "Yes. Separate access is available for students, teachers, parents, and admins."
+        },
+        {
+          "q": "How do I see a demo?",
+          "a": "Chat us on WhatsApp and ask for a Sekolapp demo — free, no commitment."
+        }
+      ]
+    },
+    "aplikasi-kampus": {
+      "title": "Integrated Campus & Research Apps | apptivity.id",
+      "description": "Camptivapp, Akadapp, Risetapp, Akredapp: campus systems, mobile SIAKAD, research management, accreditation. Free demo.",
+      "h1": "Integrated Campus Apps",
+      "intro": "One ecosystem for the whole campus: campus management, academics in students' pockets, research and community service, down to accreditation documents — data flows from study programs to the university.",
+      "blocks": [
+        {
+          "h2": "Ready-to-demo products",
+          "body": "Four connected products:",
+          "points": [
+            "Camptivapp: campus management — academics, quality assurance, OBE, SPMI, partnerships, LPPM, accreditation",
+            "Akadapp: SIAKAD on phones — online course registration, schedules, grades, bills",
+            "Risetapp: research, community service, publications, IP — proposals, reviewers, progress reports",
+            "Akredapp: accreditation evidence — fast search, document verification, visit-ready recaps"
+          ]
+        },
+        {
+          "h2": "Why one ecosystem?",
+          "body": "Data flows from study programs to faculties to the university, so leadership monitors the whole campus from one dashboard — no manual recaps before accreditation visits.",
+          "points": []
+        },
+        {
+          "h2": "Pricing and demo",
+          "body": "Projects start at US$50 with the final price written in the contract. Buy or yearly Rental plans available. Request a free demo with no commitment via WhatsApp.",
+          "points": []
+        }
+      ],
+      "faq": [
+        {
+          "q": "Can students access it from phones?",
+          "a": "Yes. Akadapp gives students online course registration, schedules, grades, bills, and campus notifications from their phones."
+        },
+        {
+          "q": "Does it help accreditation preparation?",
+          "a": "Yes. Akredapp stores and monitors accreditation evidence with fast search and ready-to-use recap reports."
+        },
+        {
+          "q": "How do I see a demo?",
+          "a": "Chat us on WhatsApp and name the product (e.g. Camptivapp) — free demo, no commitment."
+        }
+      ]
+    },
+    "beli-vs-sewa-aplikasi": {
+      "title": "Buy vs Rent an App: Which Fits? | apptivity.id",
+      "description": "Guide to choosing Buy vs Rental for your app: source-code ownership, costs, and when each fits.",
+      "h1": "Buy vs Rent an App: Which Fits You?",
+      "intro": "For app ownership we offer 2 plans: Buy (full ownership) or Rent (light upfront cost, server and domain included). Here is the short guide.",
+      "blocks": [
+        {
+          "h2": "Choose Buy if...",
+          "body": "You want to own and change the app anytime:",
+          "points": [
+            "Full ownership of the app and source code",
+            "Free to customize anytime",
+            "No further fees after the project ends",
+            "Note: additions beyond the initial agreement cost extra; server, domain, and third-party services excluded"
+          ]
+        },
+        {
+          "h2": "Choose Rent if...",
+          "body": "You want a light upfront cost:",
+          "points": [
+            "Yearly rental with free small additions",
+            "Free built-in server and domain at Apptivity.id",
+            "Large additions at a light fee",
+            "Note: the app is not owned; changes follow the rental terms; yearly rental fee applies"
+          ]
+        },
+        {
+          "h2": "Included in both",
+          "body": "Whichever you choose:",
+          "points": [
+            "Free consultation for Apptivity clients",
+            "Registered as a Main Affiliator",
+            "Final price written in the contract, money-back guarantee"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Who owns the source code?",
+          "a": "Under Buy, the source code is yours, handed over in full on final payment. Under Rental, Apptivity manages the app during the rental period."
+        },
+        {
+          "q": "How much is the rental?",
+          "a": "Rental follows your project needs — chat our WhatsApp for a free estimate. Server and domain are included; small additions are free."
+        }
+      ]
+    },
+    "blog": {
+      "title": "Apptivity Blog | apptivity.id",
+      "description": "Practical guides: app costs, buy vs rent, school and campus digitalization, choosing a website vendor.",
+      "h1": "Blog",
+      "intro": "Practical guides on costs, ownership plans, and school or campus digitalization — from 36+ projects since 2017.",
+      "readMore": "Read article",
+      "soonLabel": "Coming soon",
+      "upcoming": [
+        {
+          "title": "How much does a school app cost?",
+          "desc": "Cost components of a school app: features, buy vs rent, and timeline."
+        },
+        {
+          "title": "Campus administration digitalization",
+          "desc": "From academics to accreditation: a roadmap for a one-ecosystem campus."
+        },
+        {
+          "title": "How to choose a website vendor",
+          "desc": "Vendor checklist: contract, monitored progress, source-code ownership, and warranty."
+        }
+      ]
+    }
   }
 }

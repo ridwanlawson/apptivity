@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { routing } from "@/lib/i18n";
 import { SITE_URL } from "@/lib/site";
+import { ALL_SLUGS, BLOG_POSTS } from "@/lib/slugs";
 
 // Manual IndexNow submitter: GET /api/indexnow
 // Setup (once, manual):
@@ -8,8 +9,6 @@ import { SITE_URL } from "@/lib/site";
 //  2. Host it as public/<key>.txt containing the key (IndexNow ownership proof).
 //  3. Set INDEXNOW_KEY to the same value in Vercel env vars (never committed).
 // Then call this route after publishing/changing URLs.
-const SLUGS = ["tentang", "harga", "portofolio", "produk", "faq"];
-
 export async function GET() {
   const key = process.env.INDEXNOW_KEY;
   if (!key) {
@@ -21,7 +20,9 @@ export async function GET() {
   const urlList: string[] = [];
   for (const locale of routing.locales) {
     urlList.push(`${SITE_URL}/${locale}`);
-    for (const slug of SLUGS) urlList.push(`${SITE_URL}/${locale}/${slug}`);
+    for (const slug of ALL_SLUGS) urlList.push(`${SITE_URL}/${locale}/${slug}`);
+    urlList.push(`${SITE_URL}/${locale}/blog`);
+    for (const post of BLOG_POSTS) urlList.push(`${SITE_URL}/${locale}/blog/${post}`);
   }
   const res = await fetch("https://api.indexnow.org/IndexNow", {
     method: "POST",

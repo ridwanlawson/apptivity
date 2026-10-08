@@ -37,7 +37,13 @@
     "body1": "Apptivity (apptivity.id) adalah software house Indonesia di bawah PT Lawson Semesta Indonesia. Kami membangun aplikasi web dan mobile untuk profesional, UMKM, instansi pemerintah, dan perusahaan.",
     "eyebrow2": "02 — Anda kami sebut Sahabat",
     "body2": "Sahabat artinya partner, bukan sekadar pembeli. Kami memberi saran dan alternatif terbaik untuk kebutuhan Anda, tanpa tekanan untuk membeli. Jika Anda membutuhkan tim profesional, kami siap mengerjakannya.",
-    "audiences": ["Profesional", "UMKM", "Pemerintahan", "Startup", "Perusahaan Besar"]
+    "audiences": [
+      "Profesional",
+      "UMKM",
+      "Pemerintahan",
+      "Startup",
+      "Perusahaan Besar"
+    ]
   },
   "why": {
     "eyebrow": "03 — Kenapa Apptivity?",
@@ -146,7 +152,10 @@
     "title": "Sebagian karya kami sejak 2017.",
     "intro": "Sebagian dari 36+ proyek yang kami kerjakan sejak 2017 — dari instansi pemerintah, BUMN, hingga UMKM. Klik kartu untuk detail.",
     "all": "Semua",
-    "categories": ["Web App", "Mobile"],
+    "categories": [
+      "Web App",
+      "Mobile"
+    ],
     "close": "Tutup",
     "ctaSimilar": "Tanya project mirip ini",
     "waTemplate": "Halo apptivity.id! Saya tertarik project mirip _TITLE_ (_CAT_). Boleh info lebih lanjut?",
@@ -157,7 +166,11 @@
         "title": "Plantation ERP System (PES)",
         "tagline": "ERP khusus perkebunan sawit",
         "description": "Sistem ERP khusus perusahaan kelapa sawit: operasional kebun dan pabrik, produksi dan budgeting, workforce, procurement, inventory, aset, penjualan, akuntansi, hingga reporting manajemen — dalam satu platform terintegrasi.",
-        "tech": ["Oracle", ".NET", "IIS"],
+        "tech": [
+          "Oracle",
+          ".NET",
+          "IIS"
+        ],
         "result": "10 modul terintegrasi",
         "year": "2026",
         "category": 0,
@@ -167,7 +180,11 @@
         "title": "SIPS Mobile",
         "tagline": "Operasional kebun offline-first",
         "description": "Aplikasi mobile manajemen operasional perkebunan PT Sentosa Kalimantan Jaya. Backend Laravel + Oracle, aplikasi Android Kotlin Jetpack Compose yang tetap jalan tanpa sinyal.",
-        "tech": ["Laravel", "Oracle", "Kotlin"],
+        "tech": [
+          "Laravel",
+          "Oracle",
+          "Kotlin"
+        ],
         "result": "Tetap jalan tanpa sinyal",
         "year": "2024",
         "category": 1,
@@ -177,7 +194,10 @@
         "title": "SIM Bidang Hukum",
         "tagline": "Manajemen hukum Kanwil Kemenkumham Sumbar",
         "description": "Sistem informasi manajemen bidang hukum untuk Kantor Wilayah Kemenkumham Sumatera Barat.",
-        "tech": ["PHP", "MySQL"],
+        "tech": [
+          "PHP",
+          "MySQL"
+        ],
         "result": "Dipakai instansi pemerintah",
         "year": "2017",
         "category": 0,
@@ -187,7 +207,10 @@
         "title": "PPDB & Rapor Online",
         "tagline": "Pendaftaran siswa 7 sekolah",
         "description": "Sistem penerimaan siswa baru online dan rapor online untuk SMA Kartika 1–5, SMA Pertiwi 1, dan SMKN 2 Padang Panjang.",
-        "tech": ["PHP", "MySQL"],
+        "tech": [
+          "PHP",
+          "MySQL"
+        ],
         "result": "Dipakai 7 sekolah",
         "year": "2019",
         "category": 0,
@@ -197,7 +220,10 @@
         "title": "Marketplace Fotografi",
         "tagline": "Jasa studio & foto se-Kota Padang",
         "description": "Marketplace jasa studio dan fotografi di Kota Padang, berjalan di Android berbasis WebView.",
-        "tech": ["Android", "WebView"],
+        "tech": [
+          "Android",
+          "WebView"
+        ],
         "result": "Rilis di Android",
         "year": "2021",
         "category": 1,
@@ -262,9 +288,18 @@
     "title": "Angka dan cerita di baliknya.",
     "intro": "Rekam jejak kami sejak 2017 — dari instansi pemerintah, BUMN, hingga UMKM. Daftar lengkap 36+ proyek bisa kami tunjukkan saat konsultasi.",
     "stats": [
-      { "value": "9+", "label": "Tahun pengalaman — 2027 genap 10 tahun" },
-      { "value": "36+", "label": "Proyek selesai" },
-      { "value": "30+", "label": "Klien & instansi" }
+      {
+        "value": "9+",
+        "label": "Tahun pengalaman — 2027 genap 10 tahun"
+      },
+      {
+        "value": "36+",
+        "label": "Proyek selesai"
+      },
+      {
+        "value": "30+",
+        "label": "Klien & instansi"
+      }
     ],
     "casesTitle": "Contoh studi kasus",
     "cases": [
@@ -288,7 +323,17 @@
       "name": "— Pengelola PPDB SMA, Padang Panjang (nama disamarkan atas permintaan klien)"
     },
     "techTitle": "Teknologi utama",
-    "tech": ["PHP / Laravel", "Oracle / MySQL / PostgreSQL", "Next.js / React", "React Native / Expo", "Flutter", "Node.js", "AI / RAG", "WhatsApp API", "Android WebView"],
+    "tech": [
+      "PHP / Laravel",
+      "Oracle / MySQL / PostgreSQL",
+      "Next.js / React",
+      "React Native / Expo",
+      "Flutter",
+      "Node.js",
+      "AI / RAG",
+      "WhatsApp API",
+      "Android WebView"
+    ],
     "techNote": "Tidak terbatas pada daftar ini — teknologi lain mengikuti kebutuhan proyek Anda.",
     "cta": "Diskusikan Kebutuhan Anda — Gratis"
   },
@@ -330,9 +375,19 @@
     "eyebrow": "Mulai Project",
     "title": "Ceritakan aplikasi impian Anda.",
     "sub": "Jawab 3 langkah cepat, lalu kirim langsung ke WhatsApp kami — gratis, tanpa komitmen.",
-    "steps": ["Jenis aplikasi", "Kepemilikan", "Data diri"],
+    "steps": [
+      "Jenis aplikasi",
+      "Kepemilikan",
+      "Data diri"
+    ],
     "typeLabel": "Ingin membuat aplikasi apa?",
-    "types": ["Platform / Web App", "Aplikasi Mobile", "Fitur AI / Integrasi", "Konsultasi / Scoping", "Lainnya"],
+    "types": [
+      "Platform / Web App",
+      "Aplikasi Mobile",
+      "Fitur AI / Integrasi",
+      "Konsultasi / Scoping",
+      "Lainnya"
+    ],
     "ownLabel": "Pilih yang mana?",
     "buy": "Beli (hak milik)",
     "rent": "Sewa (tahunan)",
@@ -402,7 +457,260 @@
   "footer": {
     "tagline": "Apps for every activity",
     "contactTitle": "Kontak",
-    "links": ["Tentang", "Harga", "Portofolio", "Produk", "Bukti", "Gabung", "FAQ"],
+    "links": [
+      "Tentang",
+      "Harga",
+      "Portofolio",
+      "Produk",
+      "Bukti",
+      "Gabung",
+      "FAQ"
+    ],
     "rights": "© 2026 PT Lawson Semesta Indonesia. Seluruh hak cipta dilindungi."
+  },
+  "pages": {
+    "blog": {
+      "title": "Blog Apptivity | apptivity.id",
+      "description": "Panduan praktis: biaya aplikasi, beli vs sewa, digitalisasi sekolah dan kampus, memilih jasa pembuatan website.",
+      "h1": "Blog",
+      "intro": "Panduan praktis seputar biaya, skema kepemilikan, dan digitalisasi sekolah maupun kampus — berdasarkan pengalaman 36+ proyek kami sejak 2017.",
+      "readMore": "Baca artikel",
+      "soonLabel": "Segera hadir",
+      "upcoming": [
+        {
+          "title": "Berapa biaya pembuatan aplikasi sekolah?",
+          "desc": "Estimasi komponen biaya aplikasi sekolah: fitur, skema beli vs sewa, dan timeline."
+        },
+        {
+          "title": "Digitalisasi administrasi kampus",
+          "desc": "Dari akademik sampai akreditasi: peta jalan digitalisasi kampus dalam satu ekosistem."
+        },
+        {
+          "title": "Cara memilih jasa pembuatan website",
+          "desc": " Checklist memilih vendor: kontrak, progres terpantau, kepemilikan source code, dan garansi."
+        }
+      ]
+    },
+    "jasa-pembuatan-website": {
+      "title": "Jasa Pembuatan Website Profesional | apptivity.id",
+      "description": "Jasa pembuatan website & web app Indonesia. Mulai Rp500 ribu, kontrak tertulis, garansi uang kembali. Konsultasi gratis.",
+      "h1": "Jasa Pembuatan Website yang Jelas Sejak Awal",
+      "intro": "Kami membangun website dan web app untuk profesional, UMKM, instansi, dan perusahaan — dengan harga tertulis di kontrak sebelum mulai, progres dilaporkan berkala, dan garansi uang kembali.",
+      "blocks": [
+        {
+          "h2": "Website apa yang kami buat?",
+          "body": "Dari web profil sampai aplikasi web yang kompleks:",
+          "points": [
+            "Web profil perusahaan, instansi, dan sekolah",
+            "Web app: PPDB online, rapor online, sistem persediaan, ERP",
+            "Integrasi WhatsApp API dan fitur AI sesuai kebutuhan"
+          ]
+        },
+        {
+          "h2": "Cara kerja sama",
+          "body": "Empat langkah yang sama untuk semua proyek:",
+          "points": [
+            "Konsultasi gratis via WhatsApp — tanpa kewajiban membeli",
+            "Kesepakatan tertulis: ruang lingkup, timeline, dan biaya",
+            "Pengerjaan terpantau dengan laporan progres berkala",
+            "Garansi uang kembali jika hasil tidak sesuai kesepakatan"
+          ]
+        },
+        {
+          "h2": "Harga dan jaminan",
+          "body": "Semua proyek mulai dari Rp500 ribu. Harga final ditetapkan setelah konsultasi gratis dan dituangkan tertulis. Pembayaran bertahap: 30% DP, 40% saat demo progres disetujui, 30% pelunasan. Perbaikan dalam 30 hari setelah serah terima gratis.",
+          "points": []
+        }
+      ],
+      "faq": [
+        {
+          "q": "Berapa lama pembuatan website?",
+          "a": "Landing page umumnya 2–4 minggu, aplikasi web 1–3 bulan. Timeline pasti tercantum di kontrak sebelum pengerjaan mulai."
+        },
+        {
+          "q": "Apakah saya memiliki website-nya?",
+          "a": "Ya, pada skema Beli, source code adalah milik Anda dan diserahkan penuh saat pelunasan. Tersedia juga skema Sewa tahunan dengan server dan domain sudah termasuk."
+        },
+        {
+          "q": "Bagaimana cara memulai?",
+          "a": "Chat WhatsApp kami — gratis, dibalas maksimal 7 jam. Atau isi form 3 langkah di halaman utama, brief Anda langsung terkirim ke WhatsApp kami."
+        }
+      ]
+    },
+    "jasa-pembuatan-aplikasi": {
+      "title": "Jasa Pembuatan Aplikasi Mobile & Web | apptivity.id",
+      "description": "Jasa pembuatan aplikasi mobile & web Indonesia. Mulai Rp500 ribu, source code milik Anda, garansi uang kembali. Konsultasi gratis.",
+      "h1": "Jasa Pembuatan Aplikasi Mobile & Web",
+      "intro": "Kami membangun aplikasi mobile dan web untuk UMKM, startup, instansi pemerintah, dan perusahaan — 36+ proyek sejak 2017, dari operasional kebun offline-first sampai marketplace Android.",
+      "blocks": [
+        {
+          "h2": "Aplikasi apa yang kami buat?",
+          "body": "Web app dan aplikasi mobile sesuai kebutuhan operasional Anda:",
+          "points": [
+            "Aplikasi mobile Android, termasuk yang tetap jalan tanpa sinyal",
+            "Web app: ERP, sistem informasi manajemen, marketplace",
+            "Produk siap pakai: aplikasi sekolah, kampus, dan ERP sawit"
+          ]
+        },
+        {
+          "h2": "Teknologi yang kami pakai",
+          "body": "Teknologi final mengikuti kebutuhan proyek Anda:",
+          "points": [
+            "PHP/Laravel, Next.js/React, Node.js",
+            "React Native/Expo, Flutter, Android native",
+            "Oracle, MySQL, PostgreSQL, integrasi AI & WhatsApp API"
+          ]
+        },
+        {
+          "h2": "Harga dan jaminan",
+          "body": "Semua proyek mulai dari Rp500 ribu (US$50 untuk klien luar negeri). Harga final tertulis di kontrak sebelum mulai. Pembayaran bertahap 30-40-30. Garansi uang kembali dan garansi perbaikan 30 hari.",
+          "points": []
+        }
+      ],
+      "faq": [
+        {
+          "q": "Berapa lama pembuatan aplikasi mobile?",
+          "a": "Aplikasi mobile umumnya 2–4 bulan. Timeline pasti tercantum di kontrak sebelum pengerjaan mulai."
+        },
+        {
+          "q": "Siapa pemilik source code?",
+          "a": "Pada skema Beli, source code milik Anda dan diserahkan penuh saat pelunasan. Pada skema Sewa, aplikasi dikelola Apptivity selama masa sewa."
+        },
+        {
+          "q": "Apakah ada dukungan setelah selesai?",
+          "a": "Ya. Klien mendapat konsultasi gratis dan perbaikan dalam masa garansi 30 hari setelah serah terima tanpa biaya."
+        }
+      ]
+    },
+    "aplikasi-sekolah": {
+      "title": "Aplikasi Sekolah Lengkap (Sekolapp) | apptivity.id",
+      "description": "Sekolapp: aplikasi sekolah untuk absensi, nilai & rapor, SPP, dan PPDB online. Sudah dipakai 7 sekolah sejak 2019. Minta demo gratis.",
+      "h1": "Aplikasi Sekolah Lengkap: Sekolapp",
+      "intro": "Sekolapp mengelola data siswa dan guru, absensi online, nilai dan rapor, jadwal, keuangan/SPP, tugas dan ujian, pengumuman, serta laporan — dengan akses terpisah untuk siswa, guru, orang tua, dan admin.",
+      "blocks": [
+        {
+          "h2": "Fitur untuk operasional harian",
+          "body": "Satu aplikasi menggantikan pencatatan manual:",
+          "points": [
+            "Absensi online siswa dan guru",
+            "Nilai, rapor, jadwal, dan tugas-ujian",
+            "Keuangan/SPP dan laporan rekap"
+          ]
+        },
+        {
+          "h2": "Terbukti di lapangan",
+          "body": "Sistem PPDB online dan rapor online kami dipakai 7 sekolah (SMA Kartika 1–5, SMA Pertiwi 1, SMKN 2 Padang Panjang) sejak 2019 — pendaftaran rapi tanpa antre berkas. Daftar lengkap 36+ proyek bisa kami tunjukkan saat konsultasi.",
+          "points": []
+        },
+        {
+          "h2": "Harga dan demo",
+          "body": "Proyek mulai dari Rp500 ribu dengan harga final tertulis di kontrak. Tersedia skema Beli (source code milik sekolah) dan Sewa tahunan (server dan domain sudah termasuk). Minta demo gratis tanpa komitmen.",
+          "points": []
+        }
+      ],
+      "faq": [
+        {
+          "q": "Apakah bisa PPDB online?",
+          "a": "Ya. Sistem PPDB online kami dipakai 7 sekolah sejak 2019 untuk pendaftaran siswa baru dan rapor online."
+        },
+        {
+          "q": "Apakah orang tua bisa memantau?",
+          "a": "Ya. Tersedia akses terpisah untuk siswa, guru, orang tua, dan admin."
+        },
+        {
+          "q": "Bagaimana cara melihat demonya?",
+          "a": "Chat WhatsApp kami dan minta demo Sekolapp — gratis, tanpa komitmen."
+        }
+      ]
+    },
+    "aplikasi-kampus": {
+      "title": "Aplikasi Kampus & LPPM Terintegrasi | apptivity.id",
+      "description": "Camptivapp, Akadapp, Risetapp, Akredapp: sistem kampus, SIAKAD mobile, LPPM, dan akreditasi. Minta demo gratis.",
+      "h1": "Aplikasi Kampus Terintegrasi",
+      "intro": "Satu ekosistem untuk seluruh kampus: manajemen kampus, akademik di genggaman mahasiswa, penelitian dan pengabdian, sampai dokumen akreditasi — data mengalir dari prodi ke universitas.",
+      "blocks": [
+        {
+          "h2": "Produk siap demo",
+          "body": "Empat produk yang saling terhubung:",
+          "points": [
+            "Camptivapp: manajemen kampus — akademik, penjaminan mutu, OBE, SPMI, kerja sama, LPPM, akreditasi",
+            "Akadapp: SIAKAD di ponsel — KRS online, jadwal, KHS dan nilai, tagihan",
+            "Risetapp: kelola penelitian, pengabdian, publikasi, HKI — usulan, reviewer, laporan kemajuan",
+            "Akredapp: bukti fisik akreditasi — pencarian cepat, verifikasi dokumen, rekap siap visitasi"
+          ]
+        },
+        {
+          "h2": "Kenapa satu ekosistem?",
+          "body": "Data mengalir dari prodi ke fakultas hingga universitas, sehingga pimpinan memantau seluruh kampus dari satu dasbor — tanpa rekap manual menjelang visitasi.",
+          "points": []
+        },
+        {
+          "h2": "Harga dan demo",
+          "body": "Proyek mulai dari Rp500 ribu dengan harga final tertulis di kontrak. Skema Beli atau Sewa tahunan tersedia. Minta demo gratis tanpa komitmen via WhatsApp.",
+          "points": []
+        }
+      ],
+      "faq": [
+        {
+          "q": "Apakah mahasiswa bisa akses dari ponsel?",
+          "a": "Ya. Akadapp memberi mahasiswa KRS online, jadwal, KHS dan nilai, tagihan, dan notifikasi kampus dari ponsel."
+        },
+        {
+          "q": "Apakah membantu persiapan akreditasi?",
+          "a": "Ya. Akredapp menyimpan dan memantau dokumen bukti akreditasi dengan pencarian cepat dan laporan rekap siap pakai."
+        },
+        {
+          "q": "Bagaimana cara melihat demonya?",
+          "a": "Chat WhatsApp kami dan sebutkan produknya (mis. Camptivapp) — demo gratis, tanpa komitmen."
+        }
+      ]
+    },
+    "beli-vs-sewa-aplikasi": {
+      "title": "Beli vs Sewa Aplikasi: Mana yang Cocok? | apptivity.id",
+      "description": "Panduan memilih skema beli vs sewa aplikasi: kepemilikan source code, biaya, dan kapan masing-masing cocok.",
+      "h1": "Beli vs Sewa Aplikasi: Mana yang Cocok untuk Anda?",
+      "intro": "Untuk kepemilikan aplikasi, kami menyediakan 2 pilihan: Beli (hak milik penuh) atau Sewa (biaya awal ringan, server dan domain sudah termasuk). Berikut panduan singkatnya.",
+      "blocks": [
+        {
+          "h2": "Pilih Beli jika...",
+          "body": "Anda ingin memiliki dan mengubah aplikasi kapan saja:",
+          "points": [
+            "Hak milik penuh atas aplikasi dan source code",
+            "Bebas custom kapan saja sesuai kebutuhan",
+            "Tanpa biaya lanjutan setelah proyek selesai",
+            "Perlu diketahui: penambahan di luar kesepakatan awal dikenakan biaya tambahan; server, domain, dan layanan pihak ketiga tidak termasuk"
+          ]
+        },
+        {
+          "h2": "Pilih Sewa jika...",
+          "body": "Anda ingin biaya awal ringan:",
+          "points": [
+            "Sewa tahunan dengan penambahan kecil gratis",
+            "Server dan domain bawaan gratis di Apptivity.id",
+            "Penambahan besar dikenakan biaya ringan",
+            "Perlu diketahui: aplikasi tidak dimiliki, perubahan mengikuti ketentuan sewa; dikenakan biaya sewa setiap tahun"
+          ]
+        },
+        {
+          "h2": "Yang sama di keduanya",
+          "body": "Apapun pilihan Anda:",
+          "points": [
+            "Gratis konsultasi untuk klien Apptivity",
+            "Terdaftar sebagai Affiliator Utama",
+            "Harga final tertulis di kontrak, garansi uang kembali"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Siapa pemilik source code?",
+          "a": "Pada skema Beli, source code adalah milik Anda dan diserahkan penuh saat pelunasan. Pada skema Sewa, aplikasi tetap dikelola Apptivity selama masa sewa."
+        },
+        {
+          "q": "Berapa harga sewanya?",
+          "a": "Harga sewa mengikuti kebutuhan proyek — chat WhatsApp kami untuk estimasi gratis. Yang pasti: server dan domain sudah termasuk, penambahan kecil gratis."
+        }
+      ]
+    }
   }
 }
