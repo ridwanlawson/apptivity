@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { MessageCircle } from "lucide-react";
+import { WhatsAppIcon } from "./BrandIcons";
 
 // Sticky mobile WhatsApp CTA. Hidden above the hero (the hero already has
 // CTAs), slides in after scrolling past ~75% of the viewport. transform +
@@ -42,7 +42,7 @@ export default function FloatingCta({ href, label }: { href: string; label: stri
       }`}
       style={{ bottom: "max(1.25rem, env(safe-area-inset-bottom))" }}
     >
-      <MessageCircle size={26} strokeWidth={2.25} aria-hidden="true" />
+      <WhatsAppIcon size={26} />
     </a>
   );
 }

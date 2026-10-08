@@ -1,4 +1,4 @@
-import { MessageCircle, Send } from "lucide-react";
+import { WhatsAppIcon, InstagramIcon } from "../BrandIcons";
 import MagneticButton from "../MagneticButton";
 import Backdrop from "../Backdrop";
 import FloatingCta from "../FloatingCta";
@@ -43,7 +43,7 @@ export default function Cta({ dict, waText }: { dict: CtaDict; waText: string })
               data-track="cta-wa"
               className="inline-flex items-center gap-2.5 rounded-full bg-gold px-8 py-4 text-lg font-bold text-navy-950 shadow-xl shadow-gold/20 transition-shadow hover:shadow-gold/40"
             >
-              <MessageCircle size={22} strokeWidth={2.25} aria-hidden="true" />
+              <WhatsAppIcon size={22} />
               {dict.waButton}
             </a>
           </MagneticButton>
@@ -54,7 +54,7 @@ export default function Cta({ dict, waText }: { dict: CtaDict; waText: string })
             data-track="cta-ig"
             className="inline-flex items-center gap-2.5 rounded-full border border-white/25 px-8 py-4 text-lg font-bold text-white hover:border-gold hover:text-gold"
           >
-            <Send size={22} strokeWidth={2.25} aria-hidden="true" />
+            <InstagramIcon size={22} />
             {dict.igButton}
           </a>
         </div>
