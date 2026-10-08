@@ -1,9 +1,4 @@
-"use client";
-
-import { useRef } from "react";
 import SectionHeading from "../SectionHeading";
-import { useReveal } from "@/lib/anim";
-import { scrollToHash } from "@/lib/scroll";
 
 export type ProofDict = {
   eyebrow: string;
@@ -24,12 +19,8 @@ export type ProofDict = {
 };
 
 export default function Proof({ dict }: { dict: ProofDict }) {
-  const ref = useRef<HTMLElement>(null);
-  useReveal(ref);
-
   return (
     <section
-      ref={ref}
       id="bukti"
       aria-labelledby="bukti-title"
       className="scroll-mt-20 bg-white"
@@ -132,13 +123,12 @@ export default function Proof({ dict }: { dict: ProofDict }) {
         </div>
 
         <div data-reveal className="mt-10 text-center">
-          <button
-            type="button"
-            onClick={() => scrollToHash("#mulai")}
-            className="rounded-full bg-navy-950 px-8 py-3.5 font-bold text-white transition-all hover:-translate-y-0.5 hover:bg-navy-800"
+          <a
+            href="#mulai"
+            className="inline-block rounded-full bg-navy-950 px-8 py-3.5 font-bold text-white transition-all hover:-translate-y-0.5 hover:bg-navy-800"
           >
             {dict.cta}
-          </button>
+          </a>
         </div>
       </div>
     </section>

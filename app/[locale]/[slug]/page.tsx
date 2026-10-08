@@ -2,13 +2,16 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { hasLocale, type Locale } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
+import dynamic from "next/dynamic";
 import { routing } from "@/lib/i18n";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 import About, { type AboutDict } from "@/components/sections/About";
 import Pricing, { type PricingDict } from "@/components/sections/Pricing";
-import Portfolio, { type PortfolioDict } from "@/components/sections/Portfolio";
-import Products, { type ProductsDict } from "@/components/sections/Products";
+import type { PortfolioDict } from "@/components/sections/Portfolio";
+import type { ProductsDict } from "@/components/sections/Products";
 import Faq, { type FaqDict } from "@/components/sections/Faq";
+const Portfolio = dynamic(() => import("@/components/sections/Portfolio"), {});
+const Products = dynamic(() => import("@/components/sections/Products"), {});
 import Cta, { type CtaDict } from "@/components/sections/Cta";
 import type { HeroDict } from "@/components/sections/Hero";
 

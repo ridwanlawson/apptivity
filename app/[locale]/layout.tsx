@@ -11,6 +11,7 @@ import Footer from "@/components/Footer";
 import Preloader from "@/components/Preloader";
 import Cursor from "@/components/Cursor";
 import LenisProvider from "@/components/LenisProvider";
+import RevealObserver from "@/components/RevealObserver";
 
 // CJK locales use system fonts (Hiragino/Yu Gothic/PingFang/YaHei via
 // --font-sans): Noto webfonts cost ~560KB render-blocking CSS + MBs of woff2
@@ -200,6 +201,7 @@ export default async function LocaleLayout({
         />
         <LenisProvider>
           <Cursor />
+          <RevealObserver />
           <Preloader />
           <Header
             locale={loc}

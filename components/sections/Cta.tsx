@@ -1,10 +1,6 @@
-"use client";
-
-import { useRef } from "react";
 import { MessageCircle, Send } from "lucide-react";
 import MagneticButton from "../MagneticButton";
 import Backdrop from "../Backdrop";
-import { useReveal } from "@/lib/anim";
 import { IG_URL, waLink } from "@/lib/site";
 
 export type CtaDict = {
@@ -16,12 +12,8 @@ export type CtaDict = {
 };
 
 export default function Cta({ dict, waText }: { dict: CtaDict; waText: string }) {
-  const ref = useRef<HTMLElement>(null);
-  useReveal(ref);
-
   return (
     <section
-      ref={ref}
       aria-labelledby="cta-title"
       className="relative overflow-hidden bg-navy-950"
       style={{

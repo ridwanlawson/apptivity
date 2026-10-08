@@ -1,9 +1,4 @@
-"use client";
-
-import { useRef } from "react";
 import SectionHeading from "../SectionHeading";
-import { useReveal } from "@/lib/anim";
-import { scrollToHash } from "@/lib/scroll";
 
 export type PricingDict = {
   eyebrow: string;
@@ -22,12 +17,8 @@ export type PricingDict = {
 };
 
 export default function Pricing({ dict }: { dict: PricingDict }) {
-  const ref = useRef<HTMLElement>(null);
-  useReveal(ref);
-
   return (
     <section
-      ref={ref}
       id="harga"
       aria-labelledby="harga-title"
       className="scroll-mt-20 bg-navy-950"
@@ -68,23 +59,21 @@ export default function Pricing({ dict }: { dict: PricingDict }) {
           {dict.productNote}
         </p>
         <div data-reveal className="mt-4 text-center">
-          <button
-            type="button"
-            onClick={() => scrollToHash("#produk")}
-            className="rounded-full border border-gold/60 px-6 py-2.5 text-sm font-bold text-gold transition-colors hover:bg-gold hover:text-navy-950"
+          <a
+            href="#produk"
+            className="inline-block rounded-full border border-gold/60 px-6 py-2.5 text-sm font-bold text-gold transition-colors hover:bg-gold hover:text-navy-950"
           >
             {dict.productLink}
-          </button>
+          </a>
         </div>
 
         <div data-reveal className="mt-8 flex flex-col items-center gap-3 text-center">
-          <button
-            type="button"
-            onClick={() => scrollToHash("#mulai")}
-            className="rounded-full bg-gold px-8 py-3.5 font-bold text-navy-950 shadow-lg shadow-gold/20 transition-all hover:-translate-y-0.5 hover:shadow-gold/40"
+          <a
+            href="#mulai"
+            className="inline-block rounded-full bg-gold px-8 py-3.5 font-bold text-navy-950 shadow-lg shadow-gold/20 transition-all hover:-translate-y-0.5 hover:shadow-gold/40"
           >
             {dict.cta}
-          </button>
+          </a>
           <p className="text-sm text-white/50">{dict.note}</p>
         </div>
       </div>

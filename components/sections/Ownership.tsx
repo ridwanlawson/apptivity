@@ -1,12 +1,8 @@
 "use client";
 
 import { useLayoutEffect, useRef, useState } from "react";
-import gsap from "gsap";
-import { Flip } from "gsap/Flip";
 import SectionHeading from "../SectionHeading";
 import { prefersReducedMotion, useReveal } from "@/lib/anim";
-
-gsap.registerPlugin(Flip);
 
 export type OwnershipDict = {
   eyebrow: string;
@@ -23,29 +19,53 @@ export type OwnershipDict = {
 
 type Mode = "buy" | "rent";
 
-// Interactive Beli vs Sewa toggle with GSAP Flip layout animation.
+// gsap types stay type-only (erased at build) — zero runtime cost.
+type FlipApi = {
+  getState: (targets: string) => unknown;
+  from: (state: unknown, vars: Record<string, number | string>) => void;
+};
+
+let flipLib: Promise<FlipApi> | null = null;
+function loadFlip(): Promise<FlipApi> {
+  flipLib ??= (async () => {
+    const [{ default: gsap }, { Flip }] = await Promise.all([
+      import("gsap"),
+      import("gsap/Flip"),
+    ]);
+    gsap.registerPlugin(Flip);
+    return Flip as unknown as FlipApi;
+  })();
+  return flipLib;
+}
+
+// Interactive Beli vs Sewa toggle with Flip layout animation.
+// gsap loads on first toggle only (dynamic import) — never in the initial bundle.
 export default function Ownership({ dict }: { dict: OwnershipDict }) {
   const ref = useRef<HTMLElement>(null);
   const [mode, setMode] = useState<Mode>("buy");
-  const flipState = useRef<Flip.FlipState | null>(null);
+  const flipState = useRef<unknown>(null);
   useReveal(ref);
 
   const switchMode = (m: Mode) => {
     if (m === mode) return;
-    if (!prefersReducedMotion()) {
-      flipState.current = Flip.getState("[data-flip]");
+    if (prefersReducedMotion()) {
+      setMode(m);
+      return;
     }
-    setMode(m);
+    // Capture layout BEFORE the DOM swaps, then swap.
+    void loadFlip().then((Flip) => {
+      flipState.current = Flip.getState("[data-flip]");
+      setMode(m);
+    });
   };
 
   useLayoutEffect(() => {
     if (flipState.current && !prefersReducedMotion()) {
-      Flip.from(flipState.current, {
-        duration: 0.6,
-        ease: "power3.inOut",
-        stagger: 0.02,
-      });
+      const state = flipState.current;
       flipState.current = null;
+      void loadFlip().then((Flip) => {
+        Flip.from(state, { duration: 0.6, ease: "power3.inOut", stagger: 0.02 });
+      });
     }
   }, [mode]);
 

@@ -1,12 +1,11 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
+import { useEffect, useRef, type CSSProperties } from "react";
 import Backdrop from "../Backdrop";
 import Orb from "../Orb";
 import { scrollToHash } from "@/lib/scroll";
 import MagneticButton from "../MagneticButton";
-import { markJs } from "@/lib/anim";
+import { markJs, prefersReducedMotion as prefersReduced } from "@/lib/anim";
 import { waLink } from "@/lib/site";
 import type { Locale } from "@/lib/i18n";
 
@@ -21,13 +20,19 @@ export type HeroDict = {
   waText: string;
 };
 
-function Words({ text }: { text: string }) {
+function Words({ text, base = 0 }: { text: string; base?: number }) {
+  const words = text.split(" ");
   return (
     <>
-      {text.split(" ").map((w, i) => (
+      {words.map((w, i) => (
         <span key={i} className="reveal-mask" aria-hidden={false}>
-          <span className="reveal-word">{w}</span>
-          {i < text.split(" ").length - 1 ? " " : ""}
+          <span
+            className="reveal-word"
+            style={{ "--word-delay": `${(base + i * 0.06).toFixed(2)}s` } as CSSProperties}
+          >
+            {w}
+          </span>
+          {i < words.length - 1 ? " " : ""}
         </span>
       ))}
     </>
@@ -37,12 +42,15 @@ function Words({ text }: { text: string }) {
 export default function Hero({ dict, locale }: { dict: HeroDict; locale: Locale }) {
   const ref = useRef<HTMLElement>(null);
   const cjk = locale === "ja" || locale === "zh";
+  const titleAWords = dict.titleA.split(" ").length;
 
   useEffect(() => {
     markJs();
     const el = ref.current;
     if (!el) return;
-    // Non-JS / reduced-motion safe: CSS keeps words visible without .js choreography.
+    // Pure-CSS choreography: .hero-play flips the initial states defined
+    // in globals.css (words rise, fades lift, logo scales). No-JS and
+    // reduced-motion stay visible without waiting.
     // Start once fonts are in (or quickly time out) — deliberately NOT gated on
     // window load / preloader exit, so LCP isn't held hostage by full page load.
     // The preloader overlay still covers the screen on its own schedule.
@@ -50,33 +58,12 @@ export default function Hero({ dict, locale }: { dict: HeroDict; locale: Locale 
     const start = () => {
       if (started) return;
       started = true;
-      if (cjk) {
-        gsap.fromTo(
-          el.querySelectorAll("[data-hero-fade]"),
-          { y: 24, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.9, stagger: 0.1, ease: "power3.out" },
-        );
-        return;
-      }
-      const tl = gsap.timeline({ defaults: { ease: "expo.out" } });
-      tl.to(el.querySelectorAll(".reveal-word"), {
-        y: 0,
-        duration: 0.9,
-        stagger: 0.06,
-      }).fromTo(
-        el.querySelectorAll("[data-hero-fade]"),
-        { y: 24, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, stagger: 0.1, ease: "power3.out" },
-        "-=0.5",
-      );
-      // Brand-mark draw
-      tl.fromTo(
-        el.querySelectorAll("[data-hero-logo]"),
-        { opacity: 0, scale: 0.9 },
-        { opacity: 1, scale: 1, duration: 1, ease: "power3.out" },
-        0,
-      );
+      el.classList.add("hero-play");
     };
+    if (prefersReduced()) {
+      start();
+      return;
+    }
     let timer = 0;
     if (document.fonts?.ready) {
       document.fonts.ready.then(start);
@@ -85,7 +72,7 @@ export default function Hero({ dict, locale }: { dict: HeroDict; locale: Locale 
       start();
     }
     return () => window.clearTimeout(timer);
-  }, [cjk]);
+  }, []);
 
   return (
     <section
@@ -104,6 +91,7 @@ export default function Hero({ dict, locale }: { dict: HeroDict; locale: Locale 
         <div>
           <p
             data-hero-fade
+            style={{ "--hero-delay": "0.45s" } as CSSProperties}
             className="inline-block rounded-full border border-sky-hi/40 bg-white/5 px-4 py-1.5 text-sm font-bold tracking-wide text-sky-hi"
           >
             {dict.eyebrow}
@@ -116,19 +104,20 @@ export default function Hero({ dict, locale }: { dict: HeroDict; locale: Locale 
               {cjk ? dict.titleA : <Words text={dict.titleA} />}
             </span>
             <span className="block text-gold">
-              {cjk ? dict.titleB : <Words text={dict.titleB} />}
+              {cjk ? dict.titleB : <Words text={dict.titleB} base={titleAWords * 0.06} />}
             </span>
           </h1>
           <p
             data-hero-fade
+            style={{ "--hero-delay": "0.55s" } as CSSProperties}
             className="mt-3 text-lg font-semibold tracking-wide text-sky-hi"
           >
             {dict.tagline}
           </p>
-          <p data-hero-fade className="mt-4 max-w-xl text-lg text-white/75">
+          <p data-hero-fade style={{ "--hero-delay": "0.65s" } as CSSProperties} className="mt-4 max-w-xl text-lg text-white/75">
             {dict.sub}
           </p>
-          <div data-hero-fade className="mt-8 flex flex-wrap gap-3">
+          <div data-hero-fade style={{ "--hero-delay": "0.75s" } as CSSProperties} className="mt-8 flex flex-wrap gap-3">
             <MagneticButton>
               <a
                 href={waLink(dict.waText)}
@@ -165,6 +154,7 @@ export default function Hero({ dict, locale }: { dict: HeroDict; locale: Locale 
       <div className="relative mx-auto max-w-6xl px-4 pb-10 sm:px-6">
         <div
           data-hero-fade
+          style={{ "--hero-delay": "0.9s" } as CSSProperties}
           className="flex items-center gap-3 text-sm font-semibold text-white/50"
           aria-hidden="true"
         >

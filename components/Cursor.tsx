@@ -24,8 +24,11 @@ export default function Cursor() {
     const ring = { x: -100, y: -100 };
     let raf = 0;
     let down = false;
+    let lastMove = 0;
 
     const onMove = (e: PointerEvent) => {
+      lastMove = performance.now();
+      kick();
       pos.x = e.clientX;
       pos.y = e.clientY;
       const t = (e.target as HTMLElement).closest(
@@ -63,7 +66,18 @@ export default function Cursor() {
       if (ringRef.current) {
         ringRef.current.style.transform = `translate(${ring.x}px, ${ring.y}px) scale(${down ? 0.8 : 1})`;
       }
+      // Idle stop: when the pointer rests and the ring has settled, park
+      // the loop instead of burning a frame every 16ms forever.
+      const settled =
+        Math.abs(pos.x - ring.x) < 0.1 && Math.abs(pos.y - ring.y) < 0.1;
+      if (settled && performance.now() - lastMove > 2500) {
+        raf = 0;
+        return;
+      }
       raf = requestAnimationFrame(loop);
+    };
+    const kick = () => {
+      if (!raf) raf = requestAnimationFrame(loop);
     };
     raf = requestAnimationFrame(loop);
 

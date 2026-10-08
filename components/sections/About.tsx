@@ -1,8 +1,4 @@
-"use client";
-
-import { useRef } from "react";
 import SectionHeading from "../SectionHeading";
-import { useReveal } from "@/lib/anim";
 
 export type AboutDict = {
   eyebrow: string;
@@ -20,12 +16,8 @@ export default function About({
   dict: AboutDict;
   why: { eyebrow: string; body: string };
 }) {
-  const ref = useRef<HTMLElement>(null);
-  useReveal(ref);
-
   return (
     <section
-      ref={ref}
       id="tentang"
       aria-labelledby="tentang-title"
       className="scroll-mt-20 bg-paper"

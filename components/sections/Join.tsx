@@ -1,8 +1,4 @@
-"use client";
-
-import { useRef } from "react";
 import SectionHeading from "../SectionHeading";
-import { useReveal } from "@/lib/anim";
 import { waLink } from "@/lib/site";
 
 export type JoinDict = {
@@ -14,12 +10,8 @@ export type JoinDict = {
 };
 
 export default function Join({ dict }: { dict: JoinDict }) {
-  const ref = useRef<HTMLElement>(null);
-  useReveal(ref);
-
   return (
     <section
-      ref={ref}
       id="gabung"
       aria-labelledby="gabung-title"
       className="scroll-mt-20 bg-navy-950"

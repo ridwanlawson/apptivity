@@ -1,9 +1,5 @@
-"use client";
-
-import { useRef } from "react";
 import SectionHeading from "../SectionHeading";
 import LogoMark from "../LogoMark";
-import { useReveal } from "@/lib/anim";
 
 export type LegalDict = {
   eyebrow: string;
@@ -14,12 +10,8 @@ export type LegalDict = {
 };
 
 export default function Legal({ dict }: { dict: LegalDict }) {
-  const ref = useRef<HTMLElement>(null);
-  useReveal(ref);
-
   return (
     <section
-      ref={ref}
       id="legalitas"
       aria-labelledby="legalitas-title"
       className="scroll-mt-20 bg-paper"

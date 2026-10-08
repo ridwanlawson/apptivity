@@ -1,5 +1,3 @@
-"use client";
-
 import LogoMark from "./LogoMark";
 import { SITE_DOMAIN, SITE_URL, COMPANY, IG_URL, waLink } from "@/lib/site";
 import type { Locale } from "@/lib/i18n";
