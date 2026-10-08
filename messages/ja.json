@@ -37,7 +37,13 @@
     "body1": "Apptivity（apptivity.id）はPT Lawson Semesta Indonesia傘下のインドネシアのソフトウェアハウスです。専門家、中小企業、政府機関、企業向けにWeb・モバイルアプリを開発しています。",
     "eyebrow2": "02 — お客様をサハバットと呼びます",
     "body2": "サハバットとは単なる買い手ではなくパートナーの意味です。ニーズに最良の助言と選択肢をご提案し、購入の圧力はかけません。専門家が必要な場合は、私たちが責任を持って開発します。",
-    "audiences": ["専門家", "中小企業", "政府機関", "スタートアップ", "大企業"]
+    "audiences": [
+      "専門家",
+      "中小企業",
+      "政府機関",
+      "スタートアップ",
+      "大企業"
+    ]
   },
   "why": {
     "eyebrow": "03 — なぜApptivityなのか？",
@@ -146,7 +152,10 @@
     "title": "2017年以来の代表作。",
     "intro": "2017年以来手がけた36件以上の案件から抜粋 — 政府機関、国営企業、中小企業まで。カードをクリックで詳細へ。",
     "all": "すべて",
-    "categories": ["Webアプリ", "モバイル"],
+    "categories": [
+      "Webアプリ",
+      "モバイル"
+    ],
     "close": "閉じる",
     "ctaSimilar": "似た案件を相談する",
     "waTemplate": "こんにちは、apptivity.id。「_TITLE_（_CAT_）」のような案件に興味があります。詳しく教えてください。",
@@ -157,7 +166,11 @@
         "title": "Plantation ERP System (PES)",
         "tagline": "パーム農園専用ERP",
         "description": "パーム油企業専用のERPシステム。農園・工場運営、生産・予算、労務、調達、在庫、資産、販売、会計、管理レポートまで一つの統合プラットフォームに。",
-        "tech": ["Oracle", ".NET", "IIS"],
+        "tech": [
+          "Oracle",
+          ".NET",
+          "IIS"
+        ],
         "result": "10モジュール統合",
         "year": "2026",
         "category": 0,
@@ -167,7 +180,11 @@
         "title": "SIPS Mobile",
         "tagline": "オフライン優先の農園運営",
         "description": "PT Sentosa Kalimantan Jayaの農園運営管理モバイルアプリ。Laravel＋Oracleのバックエンドと、圏外でも動くKotlin Jetpack Compose製Androidアプリ。",
-        "tech": ["Laravel", "Oracle", "Kotlin"],
+        "tech": [
+          "Laravel",
+          "Oracle",
+          "Kotlin"
+        ],
         "result": "圏外でも動作",
         "year": "2024",
         "category": 1,
@@ -177,7 +194,10 @@
         "title": "法務管理システム",
         "tagline": "西スマトラ法務局の法務管理",
         "description": "西スマトラ州法務人権省地方事務所の法務部門向け管理情報システム。",
-        "tech": ["PHP", "MySQL"],
+        "tech": [
+          "PHP",
+          "MySQL"
+        ],
         "result": "政府機関で利用",
         "year": "2017",
         "category": 0,
@@ -187,7 +207,10 @@
         "title": "オンライン入学・成績管理",
         "tagline": "7校の生徒受付",
         "description": "SMA Kartika 1–5、SMA Pertiwi 1、SMKN 2 Padang Panjang向けのオンライン入学受付と成績管理システム。",
-        "tech": ["PHP", "MySQL"],
+        "tech": [
+          "PHP",
+          "MySQL"
+        ],
         "result": "7校で利用",
         "year": "2019",
         "category": 0,
@@ -197,7 +220,10 @@
         "title": "フォトマーケット",
         "tagline": "パダン市内の撮影サービス",
         "description": "パダン市内のスタジオ・撮影サービス向けマーケット。WebViewベースのAndroidアプリ。",
-        "tech": ["Android", "WebView"],
+        "tech": [
+          "Android",
+          "WebView"
+        ],
         "result": "Androidでリリース",
         "year": "2021",
         "category": 1,
@@ -262,9 +288,18 @@
     "title": "数字と物語。",
     "intro": "2017年以来の実績 — 政府機関、国営企業、中小企業まで。36件以上の全リストは相談時にご提示します。",
     "stats": [
-      { "value": "9+", "label": "年の経験 — 2027年に10年目" },
-      { "value": "36+", "label": "納品実績" },
-      { "value": "30+", "label": "お客様・機関" }
+      {
+        "value": "9+",
+        "label": "年の経験 — 2027年に10年目"
+      },
+      {
+        "value": "36+",
+        "label": "納品実績"
+      },
+      {
+        "value": "30+",
+        "label": "お客様・機関"
+      }
     ],
     "casesTitle": "事例紹介",
     "cases": [
@@ -288,9 +323,20 @@
       "name": "— 高校の入学担当、Padang Panjang（お客様の希望により匿名）"
     },
     "techTitle": "主要技術",
-    "tech": ["PHP / Laravel", "Oracle / MySQL / PostgreSQL", "Next.js / React", "React Native / Expo", "Flutter", "Node.js", "AI / RAG", "WhatsApp API", "Android WebView"],
+    "tech": [
+      "PHP / Laravel",
+      "Oracle / MySQL / PostgreSQL",
+      "Next.js / React",
+      "React Native / Expo",
+      "Flutter",
+      "Node.js",
+      "AI / RAG",
+      "WhatsApp API",
+      "Android WebView"
+    ],
     "techNote": "この一覧に限りません — 案件のニーズに応じて他の技術も対応します。",
-    "cta": "ご要望を相談する — 無料"
+    "cta": "ご要望を相談する — 無料",
+    "testimonials": []
   },
   "join": {
     "eyebrow": "08 — 参加する",
@@ -330,9 +376,19 @@
     "eyebrow": "案件相談",
     "title": "理想のアプリを教えてください。",
     "sub": "3つのステップに答えるだけで、そのままWhatsAppで送信できます — 無料、コミットメントなし。",
-    "steps": ["アプリの種類", "所有形態", "お客様情報"],
+    "steps": [
+      "アプリの種類",
+      "所有形態",
+      "お客様情報"
+    ],
     "typeLabel": "どんなアプリを作りたいですか？",
-    "types": ["プラットフォーム / Webアプリ", "モバイルアプリ", "AI機能 / 連携", "相談 / 要件定義", "その他"],
+    "types": [
+      "プラットフォーム / Webアプリ",
+      "モバイルアプリ",
+      "AI機能 / 連携",
+      "相談 / 要件定義",
+      "その他"
+    ],
     "ownLabel": "どちらにしますか？",
     "buy": "購入（所有権あり）",
     "rent": "レンタル（年額）",
@@ -347,7 +403,13 @@
     "submit": "WhatsAppで送信",
     "reviewTitle": "送信前に確認",
     "required": "必須項目",
-    "waIntro": "こんにちは、apptivity.id！新規案件のご相談です："
+    "waIntro": "こんにちは、apptivity.id！新規案件のご相談です：",
+    "sentTitle": "ブリーフの送信準備ができました!",
+    "sentBody": "メッセージ入りのWhatsApp画面が開いたはずです。開かない場合は、以下のメッセージをコピーしてWhatsAppに貼り付けてください。",
+    "copyLabel": "メッセージをコピー",
+    "copiedLabel": "コピーしました!",
+    "openAgain": "WhatsAppをもう一度開く",
+    "sending": "準備中..."
   },
   "faq": {
     "eyebrow": "よくある質問",
@@ -402,7 +464,15 @@
   "footer": {
     "tagline": "Apps for every activity",
     "contactTitle": "お問い合わせ",
-    "links": ["概要", "料金", "実績", "製品", "お客様の声", "参加する", "FAQ"],
+    "links": [
+      "概要",
+      "料金",
+      "実績",
+      "製品",
+      "お客様の声",
+      "参加する",
+      "FAQ"
+    ],
     "rights": "© 2026 PT Lawson Semesta Indonesia. 無断複写・転載を禁じます。"
   }
 }

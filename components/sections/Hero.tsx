@@ -123,6 +123,7 @@ export default function Hero({ dict, locale }: { dict: HeroDict; locale: Locale 
                 href={waLink(dict.waText)}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-track="hero-cta"
                 className="inline-block rounded-full bg-gold px-7 py-3.5 font-bold text-navy-950 shadow-lg shadow-gold/20 transition-shadow hover:shadow-gold/40"
               >
                 {dict.ctaPrimary}

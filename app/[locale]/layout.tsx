@@ -12,6 +12,7 @@ import Preloader from "@/components/Preloader";
 import Cursor from "@/components/Cursor";
 import LenisProvider from "@/components/LenisProvider";
 import RevealObserver from "@/components/RevealObserver";
+import TrackClicks from "@/components/TrackClicks";
 
 // CJK locales use system fonts (Hiragino/Yu Gothic/PingFang/YaHei via
 // --font-sans): Noto webfonts cost ~560KB render-blocking CSS + MBs of woff2
@@ -151,15 +152,24 @@ export default async function LocaleLayout({
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Organization",
+        "@type": ["Organization", "ProfessionalService"],
         "@id": `${SITE_URL}/#organisasi`,
         name: COMPANY,
         alternateName: SITE_NAME,
         slogan: TAGLINE,
         url: SITE_URL,
         logo: `${SITE_URL}/logo.png`,
+        image: `${SITE_URL}/og.jpg`,
         sameAs: [IG_URL],
-        areaServed: "ID",
+        telephone: "+62-812-7038-9862",
+        priceRange: "Rp500000+",
+        areaServed: { "@type": "Country", name: "ID" },
+        knowsAbout: [
+          "Web application development",
+          "Mobile application development",
+          "School management software",
+          "Campus management software",
+        ],
         contactPoint: {
           "@type": "ContactPoint",
           telephone: "+62-812-7038-9862",
@@ -212,6 +222,7 @@ export default async function LocaleLayout({
         <LenisProvider>
           <Cursor />
           <RevealObserver />
+          <TrackClicks locale={loc} />
           <Preloader />
           <Header
             locale={loc}

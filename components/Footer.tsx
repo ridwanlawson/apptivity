@@ -57,6 +57,7 @@ export default function Footer({
                 href={waLink(waText)}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-track="footer-wa"
                 className="hover:text-gold"
               >
                 WhatsApp: 0812-7038-9862
@@ -67,6 +68,7 @@ export default function Footer({
                 href={IG_URL}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-track="footer-ig"
                 className="hover:text-gold"
               >
                 Instagram: @apptivity.id

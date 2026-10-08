@@ -335,7 +335,8 @@
       "Android WebView"
     ],
     "techNote": "Not limited to this list — other technologies follow your project needs.",
-    "cta": "Discuss Your Needs — Free"
+    "cta": "Discuss Your Needs — Free",
+    "testimonials": []
   },
   "join": {
     "eyebrow": "08 — Join Us",
@@ -402,7 +403,13 @@
     "submit": "Send via WhatsApp",
     "reviewTitle": "Review before sending",
     "required": "Required",
-    "waIntro": "Hello apptivity.id! New project brief:"
+    "waIntro": "Hello apptivity.id! New project brief:",
+    "sentTitle": "Brief ready to send!",
+    "sentBody": "A WhatsApp window should have opened with your message. If not, copy the message below and paste it manually to our WhatsApp.",
+    "copyLabel": "Copy message",
+    "copiedLabel": "Copied!",
+    "openAgain": "Open WhatsApp again",
+    "sending": "Preparing..."
   },
   "faq": {
     "eyebrow": "FAQ",

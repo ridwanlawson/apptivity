@@ -335,7 +335,8 @@
       "Android WebView"
     ],
     "techNote": "Tidak terbatas pada daftar ini — teknologi lain mengikuti kebutuhan proyek Anda.",
-    "cta": "Diskusikan Kebutuhan Anda — Gratis"
+    "cta": "Diskusikan Kebutuhan Anda — Gratis",
+    "testimonials": []
   },
   "join": {
     "eyebrow": "08 — Gabung Bersama Kami",
@@ -402,7 +403,13 @@
     "submit": "Kirim via WhatsApp",
     "reviewTitle": "Cek lagi sebelum kirim",
     "required": "Wajib diisi",
-    "waIntro": "Halo apptivity.id! Brief project baru:"
+    "waIntro": "Halo apptivity.id! Brief project baru:",
+    "sentTitle": "Brief siap dikirim!",
+    "sentBody": "Jendela WhatsApp seharusnya sudah terbuka dengan pesan Anda. Jika tidak terbuka, salin pesan di bawah lalu tempel manual di WhatsApp kami.",
+    "copyLabel": "Salin pesan",
+    "copiedLabel": "Tersalin!",
+    "openAgain": "Buka WhatsApp lagi",
+    "sending": "Menyiapkan..."
   },
   "faq": {
     "eyebrow": "Pertanyaan Umum",

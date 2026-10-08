@@ -140,6 +140,8 @@ export default function Products({ dict }: { dict: ProductsDict }) {
                 href={waFor(active.name)}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-track="product-demo"
+                data-track-label={active.name}
                 className="flex-1 rounded-full bg-gold px-6 py-3 text-center font-bold text-navy-950 hover:brightness-105"
               >
                 {dict.demo}

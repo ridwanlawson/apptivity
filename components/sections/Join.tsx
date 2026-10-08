@@ -43,6 +43,8 @@ export default function Join({ dict }: { dict: JoinDict }) {
                 href={waLink(dict.waTemplate.replace("_ROLE_", c.name))}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-track="join-wa"
+                data-track-label={c.name}
                 className="mt-6 inline-block w-fit rounded-full border border-gold/60 px-6 py-2.5 font-bold text-gold transition-colors hover:bg-gold hover:text-navy-950"
               >
                 {c.cta}

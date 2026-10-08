@@ -293,6 +293,7 @@ export default function Header({
               href={waLink(waText)}
               target="_blank"
               rel="noopener noreferrer"
+              data-track="header-cta"
               className="rounded-full bg-gradient-to-r from-gold to-gold-soft px-5 py-2.5 text-sm font-bold text-navy-950 shadow-lg shadow-gold/25 transition-all hover:-translate-y-0.5 hover:shadow-gold/40"
             >
               {nav.contact}

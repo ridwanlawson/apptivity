@@ -37,7 +37,13 @@
     "body1": "Apptivity（apptivity.id）是隶属于PT Lawson Semesta Indonesia的印度尼西亚软件公司。我们为专业人士、中小企业、政府机构与企业打造Web与移动应用。",
     "eyebrow2": "02 — 我们称您为Sahabat",
     "body2": "Sahabat意为伙伴，而不只是买家。我们为您提供最佳建议与替代方案，绝不施压购买。当您需要专业团队时，我们随时交付。",
-    "audiences": ["专业人士", "中小企业", "政府机构", "初创公司", "大企业"]
+    "audiences": [
+      "专业人士",
+      "中小企业",
+      "政府机构",
+      "初创公司",
+      "大企业"
+    ]
   },
   "why": {
     "eyebrow": "03 — 为什么选择Apptivity？",
@@ -146,7 +152,10 @@
     "title": "2017年以来的代表作。",
     "intro": "从2017年以来交付的36+个项目中精选——政府机构、国企到中小企业，点击卡片查看详情。",
     "all": "全部",
-    "categories": ["Web应用", "移动应用"],
+    "categories": [
+      "Web应用",
+      "移动应用"
+    ],
     "close": "关闭",
     "ctaSimilar": "咨询类似项目",
     "waTemplate": "你好apptivity.id！我对类似「_TITLE_（_CAT_）」的项目感兴趣，能详细介绍一下吗？",
@@ -157,7 +166,11 @@
         "title": "Plantation ERP System (PES)",
         "tagline": "棕榈种植园专用ERP",
         "description": "专为棕榈油企业打造的ERP系统：种植园与工厂运营、生产与预算、人力、采购、库存、资产、销售、会计及管理报表，尽在一个一体化平台。",
-        "tech": ["Oracle", ".NET", "IIS"],
+        "tech": [
+          "Oracle",
+          ".NET",
+          "IIS"
+        ],
         "result": "10大集成模块",
         "year": "2026",
         "category": 0,
@@ -167,7 +180,11 @@
         "title": "SIPS Mobile",
         "tagline": "离线优先的种植园运营",
         "description": "PT Sentosa Kalimantan Jaya种植园运营管理移动应用。Laravel＋Oracle后端，Kotlin Jetpack Compose安卓应用无信号也能用。",
-        "tech": ["Laravel", "Oracle", "Kotlin"],
+        "tech": [
+          "Laravel",
+          "Oracle",
+          "Kotlin"
+        ],
         "result": "无信号也能用",
         "year": "2024",
         "category": 1,
@@ -177,7 +194,10 @@
         "title": "法务管理系统",
         "tagline": "西苏门答腊法律人权厅法务管理",
         "description": "为西苏门答腊省法律人权厅地方办公室法务部门打造的管理信息系统。",
-        "tech": ["PHP", "MySQL"],
+        "tech": [
+          "PHP",
+          "MySQL"
+        ],
         "result": "政府机构在用",
         "year": "2017",
         "category": 0,
@@ -187,7 +207,10 @@
         "title": "在线招生与成绩",
         "tagline": "7所学校新生报名",
         "description": "为SMA Kartika 1–5、SMA Pertiwi 1、SMKN 2 Padang Panjang打造的在线招生与成绩系统。",
-        "tech": ["PHP", "MySQL"],
+        "tech": [
+          "PHP",
+          "MySQL"
+        ],
         "result": "7所学校在用",
         "year": "2019",
         "category": 0,
@@ -197,7 +220,10 @@
         "title": "摄影集市",
         "tagline": "巴东全市摄影服务",
         "description": "巴东市影楼与摄影服务集市，基于WebView的安卓应用。",
-        "tech": ["Android", "WebView"],
+        "tech": [
+          "Android",
+          "WebView"
+        ],
         "result": "已上架安卓",
         "year": "2021",
         "category": 1,
@@ -262,9 +288,18 @@
     "title": "数字与故事。",
     "intro": "我们2017年以来的成绩——政府机构、国企到中小企业。36+个项目的完整清单可在咨询时出示。",
     "stats": [
-      { "value": "9+", "label": "年经验 — 2027年满10年" },
-      { "value": "36+", "label": "个交付项目" },
-      { "value": "30+", "label": "家客户与机构" }
+      {
+        "value": "9+",
+        "label": "年经验 — 2027年满10年"
+      },
+      {
+        "value": "36+",
+        "label": "个交付项目"
+      },
+      {
+        "value": "30+",
+        "label": "家客户与机构"
+      }
     ],
     "casesTitle": "案例示例",
     "cases": [
@@ -288,9 +323,20 @@
       "name": "——高中招生负责人，Padang Panjang（应客户要求匿名）"
     },
     "techTitle": "核心技术",
-    "tech": ["PHP / Laravel", "Oracle / MySQL / PostgreSQL", "Next.js / React", "React Native / Expo", "Flutter", "Node.js", "AI / RAG", "WhatsApp API", "Android WebView"],
+    "tech": [
+      "PHP / Laravel",
+      "Oracle / MySQL / PostgreSQL",
+      "Next.js / React",
+      "React Native / Expo",
+      "Flutter",
+      "Node.js",
+      "AI / RAG",
+      "WhatsApp API",
+      "Android WebView"
+    ],
     "techNote": "不限于这份清单——其他技术按项目需求选用。",
-    "cta": "免费聊聊您的需求"
+    "cta": "免费聊聊您的需求",
+    "testimonials": []
   },
   "join": {
     "eyebrow": "08 — 加入我们",
@@ -330,9 +376,19 @@
     "eyebrow": "发起项目",
     "title": "告诉我们你理想的应用。",
     "sub": "回答3个快速步骤，即可直接发送到我们的WhatsApp——免费、无需承诺。",
-    "steps": ["应用类型", "归属方式", "联系信息"],
+    "steps": [
+      "应用类型",
+      "归属方式",
+      "联系信息"
+    ],
     "typeLabel": "你想做什么应用？",
-    "types": ["平台 / Web应用", "移动应用", "AI功能 / 集成", "咨询 / 需求梳理", "其他"],
+    "types": [
+      "平台 / Web应用",
+      "移动应用",
+      "AI功能 / 集成",
+      "咨询 / 需求梳理",
+      "其他"
+    ],
     "ownLabel": "选择哪一种？",
     "buy": "买断（拥有所有权）",
     "rent": "租赁（按年）",
@@ -347,7 +403,13 @@
     "submit": "通过WhatsApp发送",
     "reviewTitle": "发送前请确认",
     "required": "必填",
-    "waIntro": "你好apptivity.id！新的项目需求："
+    "waIntro": "你好apptivity.id！新的项目需求：",
+    "sentTitle": "需求表已准备好发送!",
+    "sentBody": "WhatsApp窗口应该已经打开并填入您的消息。如果没有,请复制下面的消息并手动粘贴到我们的WhatsApp。",
+    "copyLabel": "复制消息",
+    "copiedLabel": "已复制!",
+    "openAgain": "重新打开WhatsApp",
+    "sending": "准备中..."
   },
   "faq": {
     "eyebrow": "常见问题",
@@ -402,7 +464,15 @@
   "footer": {
     "tagline": "Apps for every activity",
     "contactTitle": "联系我们",
-    "links": ["关于我们", "价格", "案例", "产品", "实证", "加入我们", "常见问题"],
+    "links": [
+      "关于我们",
+      "价格",
+      "案例",
+      "产品",
+      "实证",
+      "加入我们",
+      "常见问题"
+    ],
     "rights": "© 2026 PT Lawson Semesta Indonesia. 版权所有。"
   }
 }

@@ -16,6 +16,9 @@ export type PricingDict = {
   productLink: string;
 };
 
+// TODO(data): tampilkan estimasi harga per jenis proyek (web profil,
+// web app, mobile, AI/integrasi) hanya jika angka resmi diberikan.
+// Tanpa data: halaman ini tetap memakai "mulai dari Rp500 ribu".
 export default function Pricing({ dict }: { dict: PricingDict }) {
   return (
     <section

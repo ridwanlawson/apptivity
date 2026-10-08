@@ -297,6 +297,8 @@ export default function Portfolio({ dict }: { dict: PortfolioDict }) {
                 href={waFor(active)}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-track="portfolio-cta"
+                data-track-label={active.title}
                 className="flex-1 rounded-full bg-gold px-6 py-3 text-center font-bold text-navy-950 hover:brightness-105"
               >
                 {dict.ctaSimilar}

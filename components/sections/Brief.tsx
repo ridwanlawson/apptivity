@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import SectionHeading from "../SectionHeading";
 import { useReveal } from "@/lib/anim";
 import { waLink } from "@/lib/site";
+import { trackEvent } from "@/lib/track";
 
 export type BriefDict = {
   eyebrow: string;
@@ -27,6 +28,12 @@ export type BriefDict = {
   reviewTitle: string;
   required: string;
   waIntro: string;
+  sentTitle: string;
+  sentBody: string;
+  copyLabel: string;
+  copiedLabel: string;
+  openAgain: string;
+  sending: string;
 };
 
 // 3-step project brief → composed into a WhatsApp message (no backend).
@@ -39,6 +46,9 @@ export default function Brief({ dict }: { dict: BriefDict }) {
   const [contact, setContact] = useState("");
   const [detail, setDetail] = useState("");
   const [tried, setTried] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [sentText, setSentText] = useState<string | null>(null);
+  const [copied, setCopied] = useState(false);
   const headRef = useRef<HTMLHeadingElement>(null);
   useReveal(ref);
 
@@ -64,6 +74,7 @@ export default function Brief({ dict }: { dict: BriefDict }) {
       setTried(true);
       return;
     }
+    setSending(true);
     const lines = [
       dict.waIntro,
       ``,
@@ -73,7 +84,32 @@ export default function Brief({ dict }: { dict: BriefDict }) {
       `   ${dict.contactLabel}: ${contact.trim()}`,
       `   ${dict.detailLabel}: ${detail.trim()}`,
     ];
-    window.open(waLink(lines.join("\n")), "_blank", "noopener");
+    const text = lines.join("\n");
+    trackEvent("brief-submit", { type: dict.types[type ?? 0] ?? "", plan: own });
+    // Popup blockers return null: the sent panel below is the fallback
+    // (copy button + reopen link) so the brief is never lost.
+    window.open(waLink(text), "_blank", "noopener");
+    window.setTimeout(() => {
+      setSending(false);
+      setSentText(text);
+      setCopied(false);
+    }, 450);
+  };
+
+  const copy = async () => {
+    if (!sentText) return;
+    try {
+      await navigator.clipboard.writeText(sentText);
+    } catch {
+      // Clipboard API unavailable (old browser/permissions): select-and-copy fallback.
+      const ta = document.createElement("textarea");
+      ta.value = sentText;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand("copy");
+      ta.remove();
+    }
+    setCopied(true);
   };
 
   const err = (bad: boolean) =>
@@ -245,6 +281,38 @@ export default function Brief({ dict }: { dict: BriefDict }) {
             </div>
           )}
 
+          {sentText ? (
+            <div role="status" className="mt-6 rounded-3xl bg-emerald-950 p-6 text-white">
+              <p className="flex items-center gap-2 text-lg font-extrabold text-emerald-300">
+                <span aria-hidden="true">✓</span> {dict.sentTitle}
+              </p>
+              <p className="mt-2 text-[15px] leading-relaxed text-white/80">{dict.sentBody}</p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                <button
+                  type="button"
+                  onClick={() => void copy()}
+                  className="rounded-full bg-emerald-400 px-6 py-2.5 font-bold text-emerald-950 hover:brightness-105"
+                >
+                  {copied ? dict.copiedLabel : dict.copyLabel}
+                </button>
+                <a
+                  href={waLink(sentText)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-full border border-emerald-300/50 px-6 py-2.5 font-bold text-emerald-200 hover:bg-emerald-300 hover:text-emerald-950"
+                >
+                  {dict.openAgain}
+                </a>
+                <button
+                  type="button"
+                  onClick={() => setSentText(null)}
+                  className="px-4 py-2.5 font-bold text-white/60 underline-offset-4 hover:text-white hover:underline"
+                >
+                  {dict.back}
+                </button>
+              </div>
+            </div>
+          ) : (
           <div className="mt-6 flex justify-between gap-3">
             <button
               type="button"
@@ -266,12 +334,14 @@ export default function Brief({ dict }: { dict: BriefDict }) {
               <button
                 type="button"
                 onClick={submit}
-                className="rounded-full bg-gold px-6 py-2.5 font-bold text-navy-950 hover:brightness-105"
+                disabled={sending}
+                className="rounded-full bg-gold px-6 py-2.5 font-bold text-navy-950 hover:brightness-105 disabled:opacity-60"
               >
-                {dict.submit}
+                {sending ? dict.sending : dict.submit}
               </button>
             )}
           </div>
+          )}
         </div>
       </div>
     </section>

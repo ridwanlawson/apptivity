@@ -12,6 +12,10 @@ export type ProofDict = {
   resultLabel: string;
   testiTitle: string;
   testimonial: { quote: string; name: string };
+  // TODO(data): isi testimonials dengan kutipan + nama + logo klien asli
+  // bila tersedia. Kosong = tampil 1 testimoni anonim asli di atas.
+  // JANGAN mengarang testimoni/nama/logo/rating.
+  testimonials: { quote: string; name: string }[];
   techTitle: string;
   tech: string[];
   techNote: string;
@@ -19,6 +23,8 @@ export type ProofDict = {
 };
 
 export default function Proof({ dict }: { dict: ProofDict }) {
+  const items =
+    dict.testimonials.length > 0 ? dict.testimonials : [dict.testimonial];
   return (
     <section
       id="bukti"
@@ -95,13 +101,17 @@ export default function Proof({ dict }: { dict: ProofDict }) {
             <figcaption className="text-sm font-bold uppercase tracking-widest text-gold">
               {dict.testiTitle}
             </figcaption>
-            <blockquote className="mt-4 flex-1 text-lg leading-relaxed text-white/85">
-              <span aria-hidden="true" className="text-3xl leading-none text-gold">
-                &ldquo;
-              </span>
-              {dict.testimonial.quote}
-            </blockquote>
-            <p className="mt-4 text-sm font-bold text-sky-hi">{dict.testimonial.name}</p>
+            <div className="mt-4 flex-1 space-y-6">
+              {items.map((t) => (
+                <blockquote key={t.quote.slice(0, 24)} className="text-lg leading-relaxed text-white/85">
+                  <span aria-hidden="true" className="text-3xl leading-none text-gold">
+                    &ldquo;
+                  </span>
+                  {t.quote}
+                  <footer className="mt-3 text-sm font-bold not-italic text-sky-hi">{t.name}</footer>
+                </blockquote>
+              ))}
+            </div>
           </figure>
 
           <div className="flex flex-col gap-5">
