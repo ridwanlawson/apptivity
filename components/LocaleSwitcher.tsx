@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { routing, localeNames, type Locale } from "@/lib/i18n";
+import { trackEvent } from "@/lib/track";
 
 const SHORT: Record<Locale, string> = { id: "ID", en: "EN", ja: "日", zh: "中" };
 
@@ -33,6 +34,7 @@ export default function LocaleSwitcher({ locale }: { locale: Locale }) {
   const pick = (next: Locale) => {
     setOpen(false);
     if (next === locale) return;
+    trackEvent("switch-locale", { from: locale, to: next });
     // Functional cookie for locale persistence (no consent needed).
     // eslint-disable-next-line react-hooks/immutability
     document.cookie = `NEXT_LOCALE=${next}; path=/; max-age=31536000`;

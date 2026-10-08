@@ -55,6 +55,7 @@ export default function Brief({ dict }: { dict: BriefDict }) {
   const go = (n: number) => {
     setTried(false);
     setStep(n);
+    trackEvent("brief-step", { step: n });
     headRef.current?.focus();
   };
 
