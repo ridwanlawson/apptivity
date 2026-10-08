@@ -1,7 +1,7 @@
 "use client";
 
 import LogoMark from "./LogoMark";
-import { SITE_DOMAIN, COMPANY, IG_URL, waLink } from "@/lib/site";
+import { SITE_DOMAIN, SITE_URL, COMPANY, IG_URL, waLink } from "@/lib/site";
 import type { Locale } from "@/lib/i18n";
 
 export default function Footer({
@@ -75,7 +75,7 @@ export default function Footer({
               </a>
             </li>
             <li>
-              <a href="https://apptivity.id" className="hover:text-gold">
+                <a href={SITE_URL} className="hover:text-gold">
                 apptivity.id
               </a>
             </li>

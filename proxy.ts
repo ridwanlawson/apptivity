@@ -18,6 +18,16 @@ function isValidLocale(v: string | undefined): v is Locale {
 export default function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
+  // Single canonical host: apex → www (301) so sitemap, canonical,
+  // and indexed URLs never split across two hosts.
+  const host = req.headers.get("x-forwarded-host") ?? req.headers.get("host");
+  if (host === "apptivity.id") {
+    const url = req.nextUrl.clone();
+    url.host = "www.apptivity.id";
+    url.protocol = "https";
+    return NextResponse.redirect(url, 301);
+  }
+
   // Geo-based default only for bare "/" (no locale yet, no cookie override).
   if (pathname === "/") {
     const cookie = req.cookies.get("NEXT_LOCALE")?.value;
