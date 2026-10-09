@@ -14,6 +14,7 @@ import LenisProvider from "@/components/LenisProvider";
 import RevealObserver from "@/components/RevealObserver";
 import TrackClicks from "@/components/TrackClicks";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 // CJK locales use system fonts (Hiragino/Yu Gothic/PingFang/YaHei via
 // --font-sans): Noto webfonts cost ~560KB render-blocking CSS + MBs of woff2
@@ -261,6 +262,7 @@ export default async function LocaleLayout({
             waText={tHero("waText")}
           />
           <Analytics />
+          <SpeedInsights />
         </LenisProvider>
       </body>
     </html>
