@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { isLowPower, prefersReducedMotion } from "@/lib/anim";
+import { prefersReducedMotion } from "@/lib/anim";
 
 type P = {
   x: number;
@@ -32,7 +32,7 @@ export default function Backdrop({ variant = "hero" }: { variant?: "hero" | "cta
     if (!root || !shift || !canvas) return;
     // Weak devices get one static frame: no per-frame O(n²) particle
     // physics, no canvas repaint loop at all.
-    const reduce = prefersReducedMotion() || isLowPower();
+    const reduce = prefersReducedMotion();
 
     const ctx = canvas.getContext("2d");
     if (!ctx) return;

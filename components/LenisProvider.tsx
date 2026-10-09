@@ -1,13 +1,13 @@
 "use client";
 
 import { useEffect, type ReactNode } from "react";
-import { isLowPower, prefersReducedMotion } from "@/lib/anim";
+import { prefersReducedMotion } from "@/lib/anim";
 import { storeLenis } from "@/lib/scroll";
 
 export default function LenisProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     // Weak devices keep native scrolling: no rAF loop, no smoothing cost.
-    if (prefersReducedMotion() || isLowPower()) return;
+    if (prefersReducedMotion()) return;
     // Smooth scroll is an enhancement, not load-critical: start it after
     // the browser is idle so it never contends with hydration/LCP.
     // Until then scrollToHash() falls back to native smooth scrolling.

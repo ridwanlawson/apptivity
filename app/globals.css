@@ -215,16 +215,6 @@ html.cursor-on .cursor-ring {
     filter: blur(60px);
   }
 }
-/* Low-power mode (old/weak devices, see isLowPower): freeze the aurora
-   into a static gradient and shrink the blur — the two cheapest wins for
-   weak GPUs. Canvas loops are skipped in JS, not just paused. */
-.low-power .aurora-blob {
-  animation: none;
-  filter: blur(40px);
-}
-.low-power .grain {
-  display: none;
-}
 .aurora-a {
   width: 34rem;
   height: 34rem;

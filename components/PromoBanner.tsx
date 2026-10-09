@@ -197,11 +197,6 @@ export default function PromoBanner({
         @media (prefers-reduced-motion: reduce) {
           .promo-gold-frame::before, .promo-halo, .promo-cta::after { animation: none; }
         }
-        /* Low-spec "lite" mode: motion stays alive but cheap — big blurs
-           off (they're the real GPU killers), spin slowed, backdrop solid. */
-        .low-power .promo-halo { display: none; }
-        .low-power .promo-backdrop { backdrop-filter: none; -webkit-backdrop-filter: none; background: rgba(6,16,41,.9); }
-        .low-power .promo-gold-frame::before { animation-duration: 12s; }
       `}</style>
 
       {/* stage: houses the glow — abs decor must never expand the
