@@ -13,6 +13,7 @@ import Cursor from "@/components/Cursor";
 import LenisProvider from "@/components/LenisProvider";
 import RevealObserver from "@/components/RevealObserver";
 import TrackClicks from "@/components/TrackClicks";
+import PromoBanner from "@/components/PromoBanner";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
@@ -147,6 +148,11 @@ export default async function LocaleLayout({
   const tNav = await getTranslations({ locale: loc, namespace: "nav" });
   const tHero = await getTranslations({ locale: loc, namespace: "hero" });
   const tFooter = await getTranslations({ locale: loc, namespace: "footer" });
+  const tProducts = await getTranslations({ locale: loc, namespace: "products" });
+  const tPromo = await getTranslations({ locale: loc, namespace: "promo" });
+  const productNames = (
+    tProducts.raw("items") as unknown as { name: string }[]
+  ).map((p) => p.name);
 
   const fontVars = jakarta.variable;
 
@@ -249,6 +255,13 @@ export default async function LocaleLayout({
             waText={tHero("waText")}
           />
           <main id="konten" className="flex-1">
+            <PromoBanner
+              title={tProducts("title")}
+              names={productNames}
+              ctaLabel={tProducts("demo")}
+              href={`/${loc}/produk`}
+              closeLabel={tPromo("close")}
+            />
             {children}
           </main>
           <Footer

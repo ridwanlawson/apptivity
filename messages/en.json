@@ -815,5 +815,8 @@
     "errorTitle": "Something went wrong",
     "errorBody": "Reload this page. If it still fails, reach us on WhatsApp.",
     "retry": "Try again"
+  },
+  "promo": {
+    "close": "Close"
   }
 }

@@ -237,7 +237,7 @@ export default function Header({
             className="flex shrink-0 items-center gap-2.5"
             aria-label={`${SITE_DOMAIN} home`}
           >
-            <LogoMark className="h-9 w-9" />
+            <LogoMark className="h-9 w-9" eager />
             <span className="text-lg font-extrabold tracking-tight text-white">
               {SITE_DOMAIN}
             </span>

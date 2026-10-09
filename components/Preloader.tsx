@@ -125,7 +125,7 @@ export default function Preloader() {
           entered && !leaving ? "scale-100 opacity-100" : "scale-[0.92] opacity-0"
         }`}
       >
-        <LogoMark className="h-20 w-20" />
+        <LogoMark className="h-20 w-20" eager />
       </div>
       <p
         className={`text-2xl font-extrabold tracking-tight text-white transition-all delay-150 duration-500 ${

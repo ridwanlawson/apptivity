@@ -43,6 +43,10 @@ export default function Backdrop({ variant = "hero" }: { variant?: "hero" | "cta
     const mouse = { x: -9999, y: -9999, inside: false };
     let visible = true;
     let raf = 0;
+    // Plain object (never `let`): the observer below may fire before the
+    // kick starter further down is reached — a boolean would throw a TDZ
+    // ReferenceError (seen in dev logs).
+    const startedRef = { current: false };
 
     const seed = () => {
       const n = Math.max(28, Math.min(90, Math.floor((w * h) / 22000)));
@@ -87,7 +91,7 @@ export default function Backdrop({ variant = "hero" }: { variant?: "hero" | "cta
       // Pause the CSS aurora too — huge blurred layers repaint on every
       // frame while scrolling, even though the canvas already stops.
       root.classList.toggle("backdrop-paused", !visible);
-      if (visible && started) {
+      if (visible && startedRef.current) {
         cancelAnimationFrame(raf);
         raf = requestAnimationFrame(tick);
       }
@@ -189,10 +193,9 @@ export default function Backdrop({ variant = "hero" }: { variant?: "hero" | "cta
     }
     // Canvas loops are pure decoration: never compete with load. Start only
     // once the page is fully loaded (usually already the case at hydration).
-    let started = false;
     const kick = () => {
-      if (started) return;
-      started = true;
+      if (startedRef.current) return;
+      startedRef.current = true;
       raf = requestAnimationFrame(tick);
     };
     if (document.readyState === "complete") {

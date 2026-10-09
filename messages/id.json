@@ -815,5 +815,8 @@
     "errorTitle": "Terjadi kesalahan",
     "errorBody": "Muat ulang halaman ini. Jika masih gagal, hubungi kami via WhatsApp.",
     "retry": "Coba lagi"
+  },
+  "promo": {
+    "close": "Tutup"
   }
 }

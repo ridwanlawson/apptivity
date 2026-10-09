@@ -483,5 +483,8 @@
     "errorTitle": "发生错误",
     "errorBody": "请重新加载此页面。如果仍然失败,请通过WhatsApp联系我们。",
     "retry": "重试"
+  },
+  "promo": {
+    "close": "关闭"
   }
 }
