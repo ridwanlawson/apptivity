@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { ORB_POINTS } from "@/lib/orb-points";
-import { prefersReducedMotion } from "@/lib/anim";
+import { isLowPower, prefersReducedMotion } from "@/lib/anim";
 
 const ZSCALE = 0.62;
 
@@ -16,7 +16,8 @@ export default function Orb({ className = "" }: { className?: string }) {
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
-    const reduce = prefersReducedMotion();
+    // Weak devices get one static frame: no per-frame 3D projection + sort.
+    const reduce = prefersReducedMotion() || isLowPower();
 
     const DPR = Math.min(window.devicePixelRatio || 1, 1.5);
     const resize = () => {

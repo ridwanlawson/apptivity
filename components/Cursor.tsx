@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { isLowPower } from "@/lib/anim";
 
 // Gold dot + trailing ring. Fine pointers only; never on touch or reduced motion.
 // The two layers always render (SSR + client identical → no hydration mismatch);
@@ -12,7 +13,8 @@ export default function Cursor() {
   useEffect(() => {
     if (
       window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
-      !window.matchMedia("(hover: hover) and (pointer: fine)").matches
+      !window.matchMedia("(hover: hover) and (pointer: fine)").matches ||
+      isLowPower()
     ) {
       return;
     }

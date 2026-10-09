@@ -9,6 +9,29 @@ export function prefersReducedMotion(): boolean {
   );
 }
 
+let lowPowerCache: boolean | null = null;
+
+// Heuristic weak-device detection: few CPU cores, little RAM, or the user
+// asked to save data. Memoized; also stamps <html class="low-power"> so CSS
+// can kill expensive paint (giant blurs) without running any JS loop.
+export function isLowPower(): boolean {
+  if (lowPowerCache !== null) return lowPowerCache;
+  let low = false;
+  if (typeof window !== "undefined" && typeof navigator !== "undefined") {
+    const nav = navigator as Navigator & {
+      deviceMemory?: number;
+      connection?: { saveData?: boolean };
+    };
+    const cores = nav.hardwareConcurrency ?? 8;
+    const ram = nav.deviceMemory ?? 8;
+    low =
+      cores <= 4 || ram <= 4 || nav.connection?.saveData === true;
+    if (low) document.documentElement.classList.add("low-power");
+  }
+  lowPowerCache = low;
+  return low;
+}
+
 export function markJs(): void {
   document.documentElement.classList.add("js");
 }
