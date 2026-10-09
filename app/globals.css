@@ -111,10 +111,10 @@ html.cursor-on .cursor-ring {
   display: block;
 }
 .cursor-dot {
-  width: 8px;
-  height: 8px;
-  margin: -4px 0 0 -4px;
-  background: var(--color-gold);
+  width: 22px;
+  height: 22px;
+  margin: -11px 0 0 -11px;
+  background: transparent;
 }
 .cursor-ring {
   width: 38px;
@@ -197,23 +197,18 @@ html.cursor-on .cursor-ring {
   margin-bottom: -0.08em;
 }
 
-/* ---- Living aurora background (transform/opacity only) ---- */
+/* ---- Living aurora background (transform only, never blur) ----
+   Deliberately NO blur() filter: the radial gradients already fade to
+   transparent, and a 110px blur on a 34rem layer is the single most
+   expensive paint on weak iGPUs (Celeron/Atom stall on it). */
 .aurora-blob {
   position: absolute;
   border-radius: 9999px;
-  filter: blur(110px);
   will-change: transform;
 }
-/* Paused by Backdrop when the section scrolls out of view: blurred
-   layers are the most expensive thing to repaint during scroll. */
+/* Paused by Backdrop when the section scrolls out of view. */
 .backdrop-paused .aurora-blob {
   animation-play-state: paused;
-}
-/* Smaller GPUs paint huge blurs slowly — shrink the glow on mobile. */
-@media (max-width: 639px) {
-  .aurora-blob {
-    filter: blur(60px);
-  }
 }
 .aurora-a {
   width: 34rem;

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import LogoMark from "./LogoMark";
 
 // Gold dot + trailing ring. Fine pointers only; never on touch or reduced motion.
 // The two layers always render (SSR + client identical → no hydration mismatch);
@@ -31,13 +32,18 @@ export default function Cursor() {
       kick();
       pos.x = e.clientX;
       pos.y = e.clientY;
-      const t = (e.target as HTMLElement).closest(
+    };
+    // Hover-state detection on element entry only — not on every
+    // pointermove (the per-move closest() walks were the main-thread jank).
+    const onOver = (e: MouseEvent) => {
+      const el = e.target as HTMLElement;
+      const t = el.closest(
         "a, button, [role='button'], [role='tab'], [role='option'], input, textarea, select",
       );
       ringRef.current?.classList.toggle("cursor-hot", !!t);
       document.body.classList.toggle(
         "cursor-text",
-        !!(e.target as HTMLElement).closest("input, textarea, select"),
+        !!el.closest("input, textarea, select"),
       );
     };
     const onDown = () => {
@@ -58,8 +64,8 @@ export default function Cursor() {
     };
 
     const loop = () => {
-      ring.x += (pos.x - ring.x) * 0.16;
-      ring.y += (pos.y - ring.y) * 0.16;
+      ring.x += (pos.x - ring.x) * 0.22;
+      ring.y += (pos.y - ring.y) * 0.22;
       if (dotRef.current) {
         dotRef.current.style.transform = `translate(${pos.x}px, ${pos.y}px)`;
       }
@@ -82,6 +88,7 @@ export default function Cursor() {
     raf = requestAnimationFrame(loop);
 
     window.addEventListener("pointermove", onMove, { passive: true });
+    window.addEventListener("mouseover", onOver, { passive: true });
     window.addEventListener("pointerdown", onDown);
     window.addEventListener("pointerup", onUp);
     root.addEventListener("mouseleave", onLeave);
@@ -91,6 +98,7 @@ export default function Cursor() {
       root.classList.remove("cursor-on");
       document.body.classList.remove("has-cursor", "cursor-text");
       window.removeEventListener("pointermove", onMove);
+      window.removeEventListener("mouseover", onOver);
       window.removeEventListener("pointerdown", onDown);
       window.removeEventListener("pointerup", onUp);
       root.removeEventListener("mouseleave", onLeave);
@@ -100,7 +108,12 @@ export default function Cursor() {
 
   return (
     <>
-      <div ref={dotRef} aria-hidden="true" className="cursor-dot" />
+      <div ref={dotRef} aria-hidden="true" className="cursor-dot">
+        <LogoMark
+          className="h-full w-full -rotate-12 [filter:drop-shadow(1px_0_0_#f0bf4c)_drop-shadow(-1px_0_0_#f0bf4c)_drop-shadow(0_1px_0_#f0bf4c)_drop-shadow(0_-1px_0_#f0bf4c)_drop-shadow(0_2px_6px_rgba(0,0,0,0.45))]"
+          eager
+        />
+      </div>
       <div ref={ringRef} aria-hidden="true" className="cursor-ring" />
     </>
   );

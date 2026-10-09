@@ -207,12 +207,12 @@ export default function PromoBanner({
       <div className={`promo-gold-frame w-full ${leaving ? "promo-pop-leave" : ""}`}>
         <div
           aria-hidden="true"
-          className="promo-halo pointer-events-none absolute -inset-6 rounded-[2.5rem] bg-[radial-gradient(ellipse_at_center,rgba(240,191,76,0.35),rgba(240,191,76,0.08)_55%,transparent_75%)] blur-2xl"
+          className="promo-halo pointer-events-none absolute -inset-6 rounded-[2.5rem] bg-[radial-gradient(ellipse_at_center,rgba(240,191,76,0.35),rgba(240,191,76,0.08)_55%,transparent_85%)]"
         />
         {/* light leak from the top seam, like a chest cracking open */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -top-10 left-1/2 z-0 h-24 w-2/3 -translate-x-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(255,235,170,0.55),rgba(240,191,76,0.15)_60%,transparent_75%)] blur-xl"
+          className="pointer-events-none absolute -top-10 left-1/2 z-0 h-24 w-2/3 -translate-x-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(255,235,170,0.55),rgba(240,191,76,0.15)_60%,transparent_90%)]"
         />
 
       <div
