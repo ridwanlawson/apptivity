@@ -279,7 +279,8 @@
         "badge": "エンタープライズWeb",
         "image": "/products/pes.jpg"
       }
-    ]
+    ],
+    "brochure": "パンフレットをダウンロード"
   },
   "proof": {
     "eyebrow": "07 — 実績とお客様の声",
@@ -485,6 +486,12 @@
     "retry": "再試行"
   },
   "promo": {
-    "close": "閉じる"
+    "headline": "本日のプロモをゲット！",
+    "sub": "新製品が30%オフ！お見逃しなく！",
+    "cta": "プロモを使う",
+    "close": "閉じる",
+    "codeLabel": "あなたへのプロモコード",
+    "copy": "コピー",
+    "copied": "コピー済み"
   }
 }

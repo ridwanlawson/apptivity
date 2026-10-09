@@ -279,7 +279,8 @@
         "badge": "企业级Web",
         "image": "/products/pes.jpg"
       }
-    ]
+    ],
+    "brochure": "下载手册"
   },
   "proof": {
     "eyebrow": "07 — 实证与评价",
@@ -485,6 +486,12 @@
     "retry": "重试"
   },
   "promo": {
-    "close": "关闭"
+    "headline": "领取今日优惠！",
+    "sub": "所有新产品30%折扣！不要错过！",
+    "cta": "领取优惠",
+    "close": "关闭",
+    "codeLabel": "给你的优惠码",
+    "copy": "复制",
+    "copied": "已复制"
   }
 }

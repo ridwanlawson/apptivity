@@ -22,15 +22,23 @@
    behavior explicitly. A global smooth rule fights App Router route
    transitions (Next.js missing-data-scroll-behavior warning). */
 
-/* Anchored sections: keep titles clear of the floating pill on every
-   viewport (overrides scroll-mt-20 utilities). */
+/* Anchored sections: fallback for native hash jumps (subpage loads).
+   In-page nav uses scrollToHash (title-aligned); this only needs to keep
+   the title clear of the floating pill. */
 section[id] {
-  scroll-margin-top: 6.5rem;
+  scroll-margin-top: 5rem;
 }
 
 html,
 body {
   overflow-x: clip;
+}
+
+/* Reserve the scrollbar gutter once and for all: locking body scroll for
+   a modal no longer widens the viewport, so the page never jumps sideways
+   when a dialog opens or closes. */
+html {
+  scrollbar-gutter: stable;
 }
 
 html.lenis,

@@ -13,22 +13,34 @@ export function prefersReduced(): boolean {
   );
 }
 
-// Scrolls so the target lands centered in the viewport.
-// Uses an absolute Y number so no hidden margin math can interfere.
+// Scrolls so the section TITLE lands just below the fixed header bar.
+// Every section has a `#<id>-title` heading wrapper; targeting it (instead
+// of the section roof, which still carries big py-20/py-28 padding) puts
+// the title flush under the bar with no dead gap and no cut-off titles.
 export function scrollToHash(hash: string): void {
-  const el = document.querySelector(hash) as HTMLElement | null;
-  if (!el) return;
+  const section = document.querySelector(hash) as HTMLElement | null;
+  if (!section) return;
+  const el =
+    (document.querySelector(`${hash}-title`) as HTMLElement | null) ?? section;
   const reduce = prefersReduced();
-  const vh = window.innerHeight;
-  const h = Math.min(el.offsetHeight, vh);
-  const active = lenis();
-  if (active && !reduce) {
-    const y = el.getBoundingClientRect().top + window.scrollY - vh / 2 + h / 2;
-    active.scrollTo(y, { duration: 1.4 });
-  } else {
-    el.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" });
-  }
-  window.history.replaceState(null, "", hash);
+  // Measure after paint: the mobile dropdown may still be open in this
+  // frame (React hasn't committed the close yet) and would inflate the
+  // measured height by hundreds of px, landing the section way too low.
+  // The bar itself never changes height, so it is measured — not <header>.
+  requestAnimationFrame(() =>
+    requestAnimationFrame(() => {
+      const bar = document.querySelector("[data-header-bar]");
+      const headerH = bar?.getBoundingClientRect().height ?? 72;
+      const y = el.getBoundingClientRect().top + window.scrollY - headerH - 4;
+      const active = lenis();
+      if (active && !reduce) {
+        active.scrollTo(y, { duration: 1.4 });
+      } else {
+        window.scrollTo({ top: y, behavior: reduce ? "auto" : "smooth" });
+      }
+      window.history.replaceState(null, "", hash);
+    }),
+  );
 }
 
 export function storeLenis(instance: Lenis | undefined): void {

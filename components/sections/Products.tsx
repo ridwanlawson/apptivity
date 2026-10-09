@@ -20,15 +20,21 @@ export type ProductsDict = {
   intro: string;
   demo: string;
   close: string;
+  brochure: string;
   waTemplate: string;
   items: ProductItem[];
 };
 
-export default function Products({ dict }: { dict: ProductsDict }) {
+export default function Products({ dict, initialImage }: { dict: ProductsDict; initialImage?: string }) {
   const ref = useRef<HTMLElement>(null);
   const closeRef = useRef<HTMLButtonElement>(null);
   const lastFocus = useRef<HTMLElement | null>(null);
-  const [selected, setSelected] = useState<number | null>(null);
+  // Deep-link: ?item=/products/x.jpg preselects that product's modal.
+  const [selected, setSelected] = useState<number | null>(() => {
+    if (!initialImage) return null;
+    const i = dict.items.findIndex((p) => p.image === initialImage);
+    return i >= 0 ? i : null;
+  });
   useReveal(ref);
 
   const active = selected !== null ? dict.items[selected] ?? null : null;
@@ -72,7 +78,7 @@ export default function Products({ dict }: { dict: ProductsDict }) {
         </p>
 
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {dict.items.map((p) => (
+          {dict.items.map((p, i) => (
             <button
               key={p.name}
               type="button"
@@ -82,7 +88,7 @@ export default function Products({ dict }: { dict: ProductsDict }) {
               className="group flex flex-col overflow-hidden rounded-3xl bg-white text-left shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-black/30 focus-visible:outline-none"
             >
               <div className="relative h-64 overflow-hidden bg-paper sm:h-72">
-                <ProductImage src={p.image} alt={p.name} />
+                <ProductImage src={p.image} alt={p.name} eager={i === 0} />
                 <span
                   aria-hidden="true"
                   className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-navy-950/60 text-lg text-white opacity-0 backdrop-blur transition-all duration-300 group-hover:opacity-100"
@@ -126,6 +132,24 @@ export default function Products({ dict }: { dict: ProductsDict }) {
           >
             <div className="relative h-[60vh] overflow-hidden rounded-2xl bg-navy-950 sm:h-[65vh]">
               <ProductImage src={active.image} alt={active.name} fit="contain" />
+              <a
+                href={active.image}
+                download={`${active.name}-brosur.jpg`}
+                data-track="product-brochure"
+                data-track-label={active.name}
+                aria-label={dict.brochure}
+                className="group/dl absolute right-3 top-3 grid h-10 w-10 place-items-center rounded-full border border-white/20 bg-navy-950/60 text-white backdrop-blur-md transition hover:bg-gold hover:text-navy-950"
+              >
+                <svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+                </svg>
+                <span
+                  role="tooltip"
+                  className="pointer-events-none absolute right-full top-1/2 mr-2.5 -translate-y-1/2 whitespace-nowrap rounded-lg bg-navy-950 px-3 py-1.5 text-xs font-bold text-white opacity-0 shadow-xl transition-all duration-200 group-hover/dl:opacity-100 group-focus-visible/dl:opacity-100"
+                >
+                  {dict.brochure}
+                </span>
+              </a>
             </div>
 
             <p className="mt-5 inline-flex items-center rounded-full bg-brand/10 px-3 py-1 text-xs font-bold text-brand">

@@ -11,10 +11,12 @@ export default function ProductImage({
   src,
   alt,
   fit = "cover",
+  eager = false,
 }: {
   src: string;
   alt: string;
   fit?: "cover" | "contain";
+  eager?: boolean;
 }) {
   const [err, setErr] = useState(false);
 
@@ -45,7 +47,8 @@ export default function ProductImage({
       fill
       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
       className={fit === "contain" ? "object-contain" : "object-cover object-top"}
-      loading="lazy"
+      loading={eager ? "eager" : "lazy"}
+      fetchPriority={eager ? "high" : undefined}
       onError={() => setErr(true)}
     />
   );

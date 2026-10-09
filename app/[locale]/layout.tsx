@@ -148,11 +148,7 @@ export default async function LocaleLayout({
   const tNav = await getTranslations({ locale: loc, namespace: "nav" });
   const tHero = await getTranslations({ locale: loc, namespace: "hero" });
   const tFooter = await getTranslations({ locale: loc, namespace: "footer" });
-  const tProducts = await getTranslations({ locale: loc, namespace: "products" });
   const tPromo = await getTranslations({ locale: loc, namespace: "promo" });
-  const productNames = (
-    tProducts.raw("items") as unknown as { name: string }[]
-  ).map((p) => p.name);
 
   const fontVars = jakarta.variable;
 
@@ -253,14 +249,18 @@ export default async function LocaleLayout({
               skip: tNav("skip"),
             }}
             waText={tHero("waText")}
+            promoLabel={tPromo("cta")}
           />
           <main id="konten" className="flex-1">
             <PromoBanner
-              title={tProducts("title")}
-              names={productNames}
-              ctaLabel={tProducts("demo")}
+              headline={tPromo("headline")}
+              sub={tPromo("sub")}
+              ctaLabel={tPromo("cta")}
               href={`/${loc}/produk`}
               closeLabel={tPromo("close")}
+              codeLabel={tPromo("codeLabel")}
+              copyLabel={tPromo("copy")}
+              copiedLabel={tPromo("copied")}
             />
             {children}
           </main>

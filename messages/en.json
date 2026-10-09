@@ -279,7 +279,8 @@
         "badge": "Enterprise Web",
         "image": "/products/pes.jpg"
       }
-    ]
+    ],
+    "brochure": "Download brochure"
   },
   "proof": {
     "eyebrow": "07 — Proof & Reviews",
@@ -817,6 +818,12 @@
     "retry": "Try again"
   },
   "promo": {
-    "close": "Close"
+    "headline": "Grab Today Promo!",
+    "sub": "30% off all our new products. Don t miss out!",
+    "cta": "Claim Promo",
+    "close": "Close",
+    "codeLabel": "A promo code for you",
+    "copy": "Copy",
+    "copied": "Copied!"
   }
 }

@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import LogoMark from "./LogoMark";
 import LocaleSwitcher from "./LocaleSwitcher";
+import { OPEN_PROMO_EVENT } from "./PromoBanner";
 import { SITE_DOMAIN, waLink } from "@/lib/site";
 import { scrollToHash } from "@/lib/scroll";
 import type { Locale } from "@/lib/i18n";
@@ -49,10 +50,12 @@ export default function Header({
   locale,
   nav,
   waText,
+  promoLabel,
 }: {
   locale: Locale;
   nav: NavDict;
   waText: string;
+  promoLabel: string;
 }) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -120,6 +123,14 @@ export default function Header({
     return () => io.disconnect();
   }, []);
 
+  // Deep arrivals (link from a subpage / shared URL with #hash): Next does
+  // a native jump on route change; re-align precisely once layout commits.
+  useEffect(() => {
+    const h = window.location.hash;
+    if (!h || !document.querySelector(h)) return;
+    scrollToHash(h);
+  }, [pathname]);
+
   // Close menus on Escape / outside click.
   useEffect(() => {
     if (!open && !openMenu) return;
@@ -153,8 +164,27 @@ export default function Header({
   };
 
   const isActive = (l: Item) => active === l.hash;
+  const openPromo = () => {
+    setOpen(false);
+    setOpenMenu(null);
+    window.dispatchEvent(new Event(OPEN_PROMO_EVENT));
+  };
+  const promoBtn = (cls: string) => (
+    <button
+      type="button"
+      onClick={openPromo}
+      data-track="header-promo"
+      className={cls}
+    >
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z" />
+        <path d="M13 5v2M13 17v2M13 11v2" />
+      </svg>
+      {promoLabel}
+    </button>
+  );
   const linkCls = (l: Item) =>
-    `rounded-full px-3 py-2 transition-colors duration-200 hover:bg-white/10 hover:text-white ${
+    `whitespace-nowrap rounded-full px-2.5 py-2 transition-colors duration-200 hover:bg-white/10 hover:text-white ${
       isActive(l) ? "bg-white/10 text-gold" : ""
     }`;
 
@@ -172,7 +202,7 @@ export default function Header({
         aria-haspopup="true"
         aria-expanded={openMenu === m.label}
         onClick={() => setOpenMenu((v) => (v === m.label ? null : m.label))}
-        className={`flex items-center gap-1 rounded-full px-3 py-2 transition-colors duration-200 hover:bg-white/10 hover:text-white ${
+        className={`flex items-center gap-1 whitespace-nowrap rounded-full px-2.5 py-2 transition-colors duration-200 hover:bg-white/10 hover:text-white ${
           menuActive(m) || openMenu === m.label ? "bg-white/10 text-gold" : ""
         }`}
       >
@@ -220,18 +250,19 @@ export default function Header({
   );
 
   return (
-    <header className="fixed inset-x-0 top-0 z-[80] px-2 pt-2 xl:px-5 xl:pt-4">
+    <header className="fixed inset-x-0 top-0 z-[80] px-2 xl:px-5">
       <a href="#konten" className="skip-link">
         {nav.skip}
       </a>
       <div
-        className={`mx-auto max-w-6xl rounded-2xl border transition-all duration-300 ${
+        data-header-bar
+        className={`mx-auto max-w-7xl border transition-all duration-300 ${
           scrolled || open
-            ? "border-white/10 bg-navy-950/80 shadow-xl shadow-black/25 backdrop-blur-xl"
-            : "border-transparent bg-transparent"
+            ? "rounded-b-2xl rounded-t-none border-white/10 border-t-transparent bg-navy-950/80 shadow-xl shadow-black/25 backdrop-blur-xl"
+            : "rounded-2xl border-transparent bg-transparent"
         }`}
       >
-        <div className="flex h-16 items-center justify-between gap-6 px-4 xl:h-18 xl:px-6">
+        <div className="flex h-16 items-center justify-between gap-2 px-4 xl:h-18 xl:px-6">
           <a
             href={`/${locale}`}
             className="flex shrink-0 items-center gap-2.5"
@@ -245,7 +276,7 @@ export default function Header({
 
           <nav
             ref={navRef}
-            className="hidden items-center gap-1 text-[13px] font-semibold text-white/75 xl:flex"
+            className="hidden min-w-0 items-center gap-0.5 whitespace-nowrap text-[13px] font-semibold text-white/75 xl:flex"
             aria-label="Primary"
           >
             <a
@@ -290,16 +321,25 @@ export default function Header({
             >
               {nav.faq}
             </a>
+            <a
+              href={brief.href}
+              onClick={(e) => go(e, brief.href)}
+              aria-current={isActive(brief) ? "true" : undefined}
+              className={linkCls(brief)}
+            >
+              {nav.brief}
+            </a>
           </nav>
 
-          <div className="hidden shrink-0 items-center gap-3 xl:flex">
+          <div className="hidden shrink-0 items-center gap-2 xl:flex">
+            {promoBtn("flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full border border-gold/50 px-3 py-2 text-[13px] font-bold text-gold transition hover:bg-gold hover:text-navy-950")}
             <LocaleSwitcher locale={locale} />
             <a
               href={waLink(waText)}
               target="_blank"
               rel="noopener noreferrer"
               data-track="header-cta"
-              className="rounded-full bg-gradient-to-r from-gold to-gold-soft px-5 py-2.5 text-sm font-bold text-navy-950 shadow-lg shadow-gold/25 transition-all hover:-translate-y-0.5 hover:shadow-gold/40"
+              className="shrink-0 whitespace-nowrap rounded-full bg-gradient-to-r from-gold to-gold-soft px-4 py-2.5 text-sm font-bold text-navy-950 shadow-lg shadow-gold/25 transition-all hover:-translate-y-0.5 hover:shadow-gold/40"
             >
               {nav.contact}
             </a>
@@ -389,6 +429,9 @@ export default function Header({
                   </a>
                 ),
             )}
+            <div className="mt-3 border-t border-white/10 pt-4">
+              {promoBtn("flex w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-b from-gold-soft to-gold px-5 py-3 text-sm font-extrabold text-navy-950")}
+            </div>
             <div className="mt-3 flex items-center justify-between gap-3 border-t border-white/10 pt-4">
               <LocaleSwitcher locale={locale} />
               <a

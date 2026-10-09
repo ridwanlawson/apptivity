@@ -279,7 +279,8 @@
         "badge": "Web Enterprise",
         "image": "/products/pes.jpg"
       }
-    ]
+    ],
+    "brochure": "Download brosur"
   },
   "proof": {
     "eyebrow": "07 — Bukti & Testimoni",
@@ -817,6 +818,12 @@
     "retry": "Coba lagi"
   },
   "promo": {
-    "close": "Tutup"
+    "headline": "Ambil Promonya Hari Ini!",
+    "sub": "Diskon 30% untuk semua produk baru kami. Jangan sampai kelewatan!",
+    "cta": "Ambil Promo",
+    "close": "Tutup",
+    "codeLabel": "Kode promo buat kamu",
+    "copy": "Salin",
+    "copied": "Disalin!"
   }
 }

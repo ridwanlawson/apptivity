@@ -43,7 +43,7 @@ export function generateStaticParams() {
   );
 }
 
-type Props = { params: Promise<{ locale: string; slug: string }> };
+type Props = { params: Promise<{ locale: string; slug: string }>; searchParams?: Promise<{ item?: string }> };
 
 type LooseMessages = Record<string, Record<string, unknown>>;
 
@@ -137,7 +137,7 @@ type Messages = {
   nav: Record<string, string>;
 };
 
-export default async function SlugPage({ params }: Props) {
+export default async function SlugPage({ params, searchParams }: Props) {
   const { locale, slug } = await params;
   if (!hasLocale(routing.locales, locale) || !(ALL_SLUGS).includes(slug)) {
     notFound();
@@ -188,7 +188,7 @@ export default async function SlugPage({ params }: Props) {
           <Proof dict={m.proof} base={`/${locale}`} />
         </>
       )}
-      {slug === "produk" && <Products dict={m.products} />}
+      {slug === "produk" && <Products dict={m.products} initialImage={(await searchParams)?.item} />}
       {slug === "faq" && <Faq dict={m.faq} />}
       <Cta dict={m.cta} waText={m.hero.waText} />
     </>
