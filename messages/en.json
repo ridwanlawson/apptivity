@@ -140,8 +140,6 @@
     "price": "Rp500 thousand",
     "usd": "US$50",
     "usdNote": "for international clients",
-    "payTitle": "Staged payments",
-    "payBody": "Payments follow project milestones: 30% down payment to start, 40% when the progress demo is approved, and 30% on handover.",
     "cta": "Get an Exact Estimate — Free",
     "note": "Final pricing is always written in the contract before work begins.",
     "productNote": "We also have ready-made products — tell us your needs, one of them might already fit.",
@@ -421,7 +419,7 @@
       },
       {
         "q": "What does it cost?",
-        "a": "It depends on scope. Every project starts from Rp500 thousand — see Price Estimates on this page. Final pricing is set after a free consultation, then written down before we start. Payments follow milestones: 30% DP, 40% progress, 30% handover."
+        "a": "It depends on scope. Every project starts from Rp500 thousand — see Price Estimates on this page. Final pricing is set after a free consultation, then written down before we start."
       },
       {
         "q": "How long does it take?",
@@ -528,13 +526,13 @@
     },
     "syarat-ketentuan": {
       "title": "Terms of Service | apptivity.id",
-      "description": "Apptivity.id terms: pricing, staged payment, money-back guarantee, 30-day warranty, source-code ownership.",
+      "description": "Apptivity.id terms: pricing, money-back guarantee, 30-day warranty, source-code ownership.",
       "h1": "Terms of Service",
       "intro": "These terms govern app-development work between you and Apptivity (PT Lawson Semesta Indonesia). Everything agreed is written into a contract before work starts. Last updated: October 2026.",
       "blocks": [
         {
           "h2": "Pricing and payment",
-          "body": "Every project starts at US$50 (Rp500 ribu). The final price follows a free consultation and is written in the contract — no hidden fees. Staged payment by milestone: 30% deposit, 40% on approved progress demo, 30% on handover.",
+          "body": "Every project starts at US$50 (Rp500 ribu). The final price follows a free consultation and is written in the contract — no hidden fees.",
           "points": []
         },
         {
@@ -592,7 +590,7 @@
         },
         {
           "h2": "Pricing and guarantees",
-          "body": "Every project starts at US$50. The final price is set after a free consultation and written down before we start. Staged payment: 30% deposit, 40% on approved progress demo, 30% on handover. Fixes within 30 days after handover are free.",
+          "body": "Every project starts at US$50. The final price is set after a free consultation and written down before we start. Fixes within 30 days after handover are free.",
           "points": []
         }
       ],
@@ -637,7 +635,7 @@
         },
         {
           "h2": "Pricing and guarantees",
-          "body": "Every project starts at US$50 for international clients. The final price is written in the contract before we start. Staged 30-40-30 payment. Money-back guarantee plus 30-day fix warranty.",
+          "body": "Every project starts at US$50 for international clients. The final price is written in the contract before we start. Money-back guarantee plus 30-day fix warranty.",
           "points": []
         }
       ],

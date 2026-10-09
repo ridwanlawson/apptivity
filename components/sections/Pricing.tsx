@@ -8,8 +8,6 @@ export type PricingDict = {
   price: string;
   usd: string;
   usdNote: string;
-  payTitle: string;
-  payBody: string;
   cta: string;
   note: string;
   productNote: string;
@@ -48,14 +46,6 @@ export default function Pricing({ dict, base = "" }: { dict: PricingDict; base?:
             {dict.usd}{" "}
             <span className="font-normal text-white/55">{dict.usdNote}</span>
           </p>
-        </div>
-
-        <div
-          data-reveal
-          className="mt-8 rounded-3xl border border-gold/30 bg-gold/5 p-6 sm:p-7"
-        >
-          <h3 className="font-extrabold text-gold">{dict.payTitle}</h3>
-          <p className="mt-2 leading-relaxed text-white/80">{dict.payBody}</p>
         </div>
 
         <p data-reveal className="mx-auto mt-6 max-w-2xl text-center text-[15px] leading-relaxed text-white/65">

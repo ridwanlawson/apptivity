@@ -140,8 +140,6 @@
     "price": "Rp500 ribu",
     "usd": "US$50",
     "usdNote": "untuk klien luar negeri",
-    "payTitle": "Pembayaran bertahap",
-    "payBody": "Pembayaran mengikuti milestone proyek: 30% DP sebagai tanda jadi, 40% saat demo progres disetujui, dan 30% pelunasan saat serah terima.",
     "cta": "Minta Estimasi Pasti — Gratis",
     "note": "Harga final selalu tertulis di kontrak sebelum pengerjaan mulai.",
     "productNote": "Kami juga memiliki produk jadi siap pakai — konsultasikan kebutuhan Anda, mungkin sudah ada yang cocok.",
@@ -421,7 +419,7 @@
       },
       {
         "q": "Berapa estimasi biayanya?",
-        "a": "Tergantung ruang lingkup. Semua proyek mulai dari Rp500 ribu — lihat bagian Estimasi Harga di halaman ini. Harga final kami tetapkan setelah konsultasi gratis, lalu kami tuangkan tertulis sebelum mulai. Pembayaran bertahap mengikuti milestone: 30% DP, 40% progres, 30% serah terima."
+        "a": "Tergantung ruang lingkup. Semua proyek mulai dari Rp500 ribu — lihat bagian Estimasi Harga di halaman ini. Harga final kami tetapkan setelah konsultasi gratis, lalu kami tuangkan tertulis sebelum mulai."
       },
       {
         "q": "Berapa lama pengerjaannya?",
@@ -528,13 +526,13 @@
     },
     "syarat-ketentuan": {
       "title": "Syarat & Ketentuan Layanan | apptivity.id",
-      "description": "Syarat & ketentuan apptivity.id: harga, termin, garansi uang kembali, garansi 30 hari, dan kepemilikan source code.",
+      "description": "Syarat & ketentuan apptivity.id: harga, garansi uang kembali, garansi 30 hari, dan kepemilikan source code.",
       "h1": "Syarat & Ketentuan Layanan",
       "intro": "Ketentuan ini mengatur kerja sama pembuatan aplikasi antara Anda (Sahabat) dan Apptivity (PT Lawson Semesta Indonesia). Hal yang disepakati selalu dituangkan tertulis dalam kontrak sebelum pengerjaan mulai. Terakhir diperbarui: Oktober 2026.",
       "blocks": [
         {
           "h2": "Harga dan pembayaran",
-          "body": "Semua proyek mulai dari Rp500 ribu (US$50 untuk klien luar negeri). Harga final mengikuti hasil konsultasi gratis dan tertulis di kontrak — tanpa biaya tersembunyi. Pembayaran bertahap mengikuti milestone: 30% DP sebagai tanda jadi, 40% saat demo progres disetujui, 30% pelunasan saat serah terima.",
+          "body": "Semua proyek mulai dari Rp500 ribu (US$50 untuk klien luar negeri). Harga final mengikuti hasil konsultasi gratis dan tertulis di kontrak — tanpa biaya tersembunyi.",
           "points": []
         },
         {
@@ -614,7 +612,7 @@
         },
         {
           "h2": "Harga dan jaminan",
-          "body": "Semua proyek mulai dari Rp500 ribu. Harga final ditetapkan setelah konsultasi gratis dan dituangkan tertulis. Pembayaran bertahap: 30% DP, 40% saat demo progres disetujui, 30% pelunasan. Perbaikan dalam 30 hari setelah serah terima gratis.",
+          "body": "Semua proyek mulai dari Rp500 ribu. Harga final ditetapkan setelah konsultasi gratis dan dituangkan tertulis. Perbaikan dalam 30 hari setelah serah terima gratis.",
           "points": []
         }
       ],
@@ -659,7 +657,7 @@
         },
         {
           "h2": "Harga dan jaminan",
-          "body": "Semua proyek mulai dari Rp500 ribu (US$50 untuk klien luar negeri). Harga final tertulis di kontrak sebelum mulai. Pembayaran bertahap 30-40-30. Garansi uang kembali dan garansi perbaikan 30 hari.",
+          "body": "Semua proyek mulai dari Rp500 ribu (US$50 untuk klien luar negeri). Harga final tertulis di kontrak sebelum mulai. Garansi uang kembali dan garansi perbaikan 30 hari.",
           "points": []
         }
       ],
