@@ -14,6 +14,10 @@ type P = {
 
 const SKY = "90,168,232";
 const GOLD = "240,191,76";
+const SKY_CSS = `rgb(${SKY})`;
+const GOLD_CSS = `rgb(${GOLD})`;
+const SKY_DOT = `rgba(${SKY},0.7)`;
+const GOLD_DOT = `rgba(${GOLD},0.9)`;
 const LINK_DIST = 130;
 const MOUSE_DIST = 160;
 
@@ -30,8 +34,7 @@ export default function Backdrop({ variant = "hero" }: { variant?: "hero" | "cta
     const shift = shiftRef.current;
     const canvas = canvasRef.current;
     if (!root || !shift || !canvas) return;
-    // Weak devices get one static frame: no per-frame O(n²) particle
-    // physics, no canvas repaint loop at all.
+    // Reduced motion gets one static frame: no loop at all.
     const reduce = prefersReducedMotion();
 
     const ctx = canvas.getContext("2d");
@@ -47,6 +50,21 @@ export default function Backdrop({ variant = "hero" }: { variant?: "hero" | "cta
     // kick starter further down is reached — a boolean would throw a TDZ
     // ReferenceError (seen in dev logs).
     const startedRef = { current: false };
+    // Adaptive quality: identical animation, fewer backing pixels when the
+    // frame rate sags on weak iGPUs. One-way ratchet, never oscillates.
+    let dpr = Math.min(1.5, window.devicePixelRatio || 1);
+    let frames = 0;
+    let fpsT = performance.now();
+    // Cached hero rect: reading it per pointermove forced a sync layout on
+    // every mousemove (the cursor judder). Refreshed cheaply instead.
+    let rx = 0;
+    let ry = 0;
+    let syncTick = 0;
+    const syncRect = () => {
+      const r = root.getBoundingClientRect();
+      rx = r.left;
+      ry = r.top;
+    };
 
     const seed = () => {
       const n = Math.max(28, Math.min(90, Math.floor((w * h) / 22000)));
@@ -65,7 +83,8 @@ export default function Backdrop({ variant = "hero" }: { variant?: "hero" | "cta
 
     const resize = () => {
       const rect = root.getBoundingClientRect();
-      const dpr = Math.min(1.5, window.devicePixelRatio || 1);
+      rx = rect.left;
+      ry = rect.top;
       w = rect.width;
       h = rect.height;
       canvas.width = Math.floor(w * dpr);
@@ -75,12 +94,23 @@ export default function Backdrop({ variant = "hero" }: { variant?: "hero" | "cta
     };
     resize();
     window.addEventListener("resize", resize);
+    // Rect goes stale on scroll: refresh at most once per frame, never
+    // per pointer event.
+    let scrollQueued = false;
+    const onScroll = () => {
+      if (scrollQueued) return;
+      scrollQueued = true;
+      requestAnimationFrame(() => {
+        scrollQueued = false;
+        syncRect();
+      });
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
 
     const onMove = (e: PointerEvent) => {
       if (e.pointerType !== "mouse") return;
-      const rect = root.getBoundingClientRect();
-      mouse.x = e.clientX - rect.left;
-      mouse.y = e.clientY - rect.top;
+      mouse.x = e.clientX - rx;
+      mouse.y = e.clientY - ry;
       mouse.inside =
         mouse.x >= 0 && mouse.y >= 0 && mouse.x <= w && mouse.y <= h;
     };
@@ -101,7 +131,12 @@ export default function Backdrop({ variant = "hero" }: { variant?: "hero" | "cta
     const paint = () => {
       ctx.clearRect(0, 0, w, h);
 
-      // Links.
+      // Links. Zero per-frame allocation: squared-distance compare, alpha
+      // via globalAlpha, two preset stroke colors (no rgba() strings).
+      const R2 = LINK_DIST * LINK_DIST;
+      const M2 = MOUSE_DIST * MOUSE_DIST;
+      ctx.lineWidth = 1;
+      let cur = "";
       for (let i = 0; i < parts.length; i++) {
         const a = parts[i];
         if (!a) continue;
@@ -110,10 +145,13 @@ export default function Backdrop({ variant = "hero" }: { variant?: "hero" | "cta
           if (!b) continue;
           const dx = a.x - b.x;
           const dy = a.y - b.y;
-          const d = Math.hypot(dx, dy);
-          if (d < LINK_DIST) {
-            ctx.strokeStyle = `rgba(${SKY},${((1 - d / LINK_DIST) * 0.28).toFixed(2)})`;
-            ctx.lineWidth = 1;
+          const d2 = dx * dx + dy * dy;
+          if (d2 < R2) {
+            if (cur !== "s") {
+              ctx.strokeStyle = SKY_CSS;
+              cur = "s";
+            }
+            ctx.globalAlpha = (1 - Math.sqrt(d2) / LINK_DIST) * 0.28;
             ctx.beginPath();
             ctx.moveTo(a.x, a.y);
             ctx.lineTo(b.x, b.y);
@@ -122,10 +160,15 @@ export default function Backdrop({ variant = "hero" }: { variant?: "hero" | "cta
         }
         // Gold thread to cursor.
         if (mouse.inside) {
-          const dm = Math.hypot(a.x - mouse.x, a.y - mouse.y);
-          if (dm < MOUSE_DIST) {
-            ctx.strokeStyle = `rgba(${GOLD},${((1 - dm / MOUSE_DIST) * 0.5).toFixed(2)})`;
-            ctx.lineWidth = 1;
+          const mdx = a.x - mouse.x;
+          const mdy = a.y - mouse.y;
+          const md2 = mdx * mdx + mdy * mdy;
+          if (md2 < M2) {
+            if (cur !== "g") {
+              ctx.strokeStyle = GOLD_CSS;
+              cur = "g";
+            }
+            ctx.globalAlpha = (1 - Math.sqrt(md2) / MOUSE_DIST) * 0.5;
             ctx.beginPath();
             ctx.moveTo(a.x, a.y);
             ctx.lineTo(mouse.x, mouse.y);
@@ -133,10 +176,11 @@ export default function Backdrop({ variant = "hero" }: { variant?: "hero" | "cta
           }
         }
       }
+      ctx.globalAlpha = 1;
 
       // Dots.
       for (const p of parts) {
-        ctx.fillStyle = p.gold ? `rgba(${GOLD},0.9)` : `rgba(${SKY},0.7)`;
+        ctx.fillStyle = p.gold ? GOLD_DOT : SKY_DOT;
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
         ctx.fill();
@@ -178,6 +222,20 @@ export default function Backdrop({ variant = "hero" }: { variant?: "hero" | "cta
       }
 
       paint();
+      // Rolling fps meter: sustained sag steps the backing store down.
+      // Same animation, fewer pixels — the iGPU stops starving.
+      frames++;
+      const now = performance.now();
+      if (now - fpsT >= 2000) {
+        const fps = (frames * 1000) / (now - fpsT);
+        frames = 0;
+        fpsT = now;
+        if (fps < 45 && dpr > 1) {
+          dpr = Math.max(1, dpr - 0.25);
+          resize();
+        }
+      }
+      if (++syncTick % 60 === 0) syncRect();
       raf = requestAnimationFrame(tick);
     };
 
@@ -207,6 +265,7 @@ export default function Backdrop({ variant = "hero" }: { variant?: "hero" | "cta
     return () => {
       cancelAnimationFrame(raf);
       window.removeEventListener("resize", resize);
+      window.removeEventListener("scroll", onScroll);
       window.removeEventListener("pointermove", onMove);
       window.removeEventListener("load", kick);
       io.disconnect();

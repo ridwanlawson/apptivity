@@ -16,14 +16,19 @@ export default function Orb({ className = "" }: { className?: string }) {
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
-    // Weak devices get one static frame: no per-frame 3D projection + sort.
+    // Reduced motion gets one static frame: no per-frame 3D loop.
     const reduce = prefersReducedMotion();
+    // Adaptive quality: identical spin, fewer backing pixels when the
+    // frame rate sags on weak iGPUs. One-way ratchet, never oscillates.
+    // Declared before resize(): resize() runs immediately below.
+    let dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+    let frames = 0;
+    let fpsT = performance.now();
 
-    const DPR = Math.min(window.devicePixelRatio || 1, 1.5);
     const resize = () => {
       const rect = canvas.getBoundingClientRect();
-      canvas.width = Math.max(1, Math.floor(rect.width * DPR));
-      canvas.height = Math.max(1, Math.floor(rect.height * DPR));
+      canvas.width = Math.max(1, Math.floor(rect.width * dpr));
+      canvas.height = Math.max(1, Math.floor(rect.height * dpr));
     };
     resize();
     const ro = new ResizeObserver(resize);
@@ -34,6 +39,26 @@ export default function Orb({ className = "" }: { className?: string }) {
       { x, y, z: d * ZSCALE, r, g, b },
       { x, y, z: -d * ZSCALE, r, g, b },
     ]);
+    // Reused projection slots + prebuilt color strings: zero allocation
+    // per frame (no .map objects, no rgba() strings → no GC pauses).
+    // Each slot keeps its source point so degraded draws can skip slots.
+    const proj = pts.map((p) => ({
+      sx: 0,
+      sy: 0,
+      z: 0,
+      scale: 1,
+      css: `rgb(${p.r | 0},${p.g | 0},${p.b | 0})`,
+      s: p,
+    }));
+    const byZ = (a: { z: number }, b: { z: number }) => a.z - b.z;
+    // Live draw set: full density on capable hardware, subsampled when
+    // the frame rate sags (same shape, fewer dots/arcs — the expensive
+    // part on weak CPUs). Rebuilt only on degrade, never per frame.
+    let step = 1;
+    let live = proj;
+    const applyStep = () => {
+      live = step === 1 ? proj : proj.filter((_, i) => i % step === 0);
+    };
 
     let angleY = 0.15;
     const speed = 0.0018;
@@ -49,43 +74,41 @@ export default function Orb({ className = "" }: { className?: string }) {
       const sinY = Math.sin(aY);
       const cosX = Math.cos(aX);
       const sinX = Math.sin(aX);
-      const projected = pts.map((p) => {
+      for (let k = 0; k < live.length; k++) {
+        const o = live[k]!;
+        const p = o.s;
         const x = p.x * cosY - p.z * sinY;
         const z = p.x * sinY + p.z * cosY;
         const y2 = p.y * cosX - z * sinX;
         const z2 = p.y * sinX + z * cosX;
         const scale = 2.7 / (2.7 - z2 * 0.9);
-        return {
-          sx: w / 2 + x * (w * 0.4) * scale,
-          sy: h / 2 - y2 * (h * 0.4) * scale,
-          z: z2,
-          scale,
-          r: p.r,
-          g: p.g,
-          b: p.b,
-        };
-      });
-      projected.sort((a, b) => a.z - b.z);
+        o.sx = w / 2 + x * (w * 0.4) * scale;
+        o.sy = h / 2 - y2 * (h * 0.4) * scale;
+        o.z = z2;
+        o.scale = scale;
+      }
+      live.sort(byZ);
       const k = w / 1000;
-      for (const pt of projected) {
+      for (const pt of live) {
         const depth = (pt.z + 1) / 2;
         const alpha = 0.22 + depth * 0.72;
         const size = (1.0 + depth * 1.9) * k * pt.scale;
-        ctx.beginPath();
-        ctx.fillStyle = `rgba(${pt.r | 0}, ${pt.g | 0}, ${pt.b | 0}, ${alpha.toFixed(2)})`;
+        ctx.fillStyle = pt.css;
         // ponytail: no shadowBlur — per-point canvas shadows stall weak
         // GPUs; depth already reads through alpha + size. Front points get
         // a cheap halo dot instead.
         if (depth > 0.75) {
-          ctx.arc(pt.sx, pt.sy, size * 2.4, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(${pt.r | 0}, ${pt.g | 0}, ${pt.b | 0}, 0.12)`;
-          ctx.fill();
+          ctx.globalAlpha = 0.12;
           ctx.beginPath();
-          ctx.fillStyle = `rgba(${pt.r | 0}, ${pt.g | 0}, ${pt.b | 0}, ${alpha.toFixed(2)})`;
+          ctx.arc(pt.sx, pt.sy, size * 2.4, 0, Math.PI * 2);
+          ctx.fill();
         }
+        ctx.globalAlpha = alpha;
+        ctx.beginPath();
         ctx.arc(pt.sx, pt.sy, size, 0, Math.PI * 2);
         ctx.fill();
       }
+      ctx.globalAlpha = 1;
     };
 
     if (reduce) {
@@ -108,6 +131,25 @@ export default function Orb({ className = "" }: { className?: string }) {
       if (visible && !document.hidden) {
         angleY += speed;
         draw(angleY, tiltBase + Math.sin(angleY * 0.6) * 0.05);
+        // Rolling fps meter, two adaptive stages (one-way, no oscillation):
+        // 1. fewer backing pixels, 2. fewer dots/arcs (the CPU hog).
+        // Same spin, same shape — never turned off.
+        frames++;
+        const now = performance.now();
+        if (now - fpsT >= 2000) {
+          const fps = (frames * 1000) / (now - fpsT);
+          frames = 0;
+          fpsT = now;
+          if (fps < 45) {
+            if (dpr > 1) {
+              dpr = Math.max(1, dpr - 0.25);
+              resize();
+            } else if (step < 3) {
+              step += 1;
+              applyStep();
+            }
+          }
+        }
       }
       raf = requestAnimationFrame(tick);
     };
