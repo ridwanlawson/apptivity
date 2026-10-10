@@ -21,7 +21,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       url: `${base}/${locale}`,
       lastModified: now,
       changeFrequency: "weekly",
-      priority: locale === "id" ? 1 : 0.8,
+      priority: locale === "en" ? 1 : 0.8,
       alternates: withLangs((l) => `${base}/${l}`),
     });
     for (const slug of ALL_SLUGS) {

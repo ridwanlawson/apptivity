@@ -19,7 +19,9 @@
     "brief": "发起项目",
     "faq": "FAQ",
     "contact": "联系我们",
-    "skip": "跳到内容"
+    "skip": "跳到内容",
+    "openMenu": "打开菜单",
+    "closeMenu": "关闭菜单"
   },
   "hero": {
     "eyebrow": "印度尼西亚软件公司 — 合法PT企业",
@@ -29,7 +31,8 @@
     "sub": "免费咨询、从一开始就价格透明，若成果与约定不符，退款保障。",
     "ctaPrimary": "免费WhatsApp咨询",
     "ctaSecondary": "查看价格估算",
-    "waText": "你好apptivity.id，我想免费咨询应用需求。"
+    "waText": "你好apptivity.id，我想免费咨询应用需求。",
+    "scrollHint": "滚动"
   },
   "about": {
     "eyebrow": "01 — 什么是Apptivity？",
@@ -70,7 +73,9 @@
         "body": "从一开始就连接并陪伴您的可信伙伴网络。"
       }
     ],
-    "joinCta": "想成为我们的伙伴？查看加入我们"
+    "joinCta": "想成为我们的伙伴？查看加入我们",
+    "logoAlt": "Apptivity标志 — 顶部是Sahabat，左脚是Affiliator，右脚是Developer",
+    "focusOn": "聚焦于"
   },
   "ownership": {
     "eyebrow": "应用归属",
@@ -492,6 +497,19 @@
     "close": "关闭",
     "codeLabel": "给你的优惠码",
     "copy": "复制",
-    "copied": "已复制"
+    "copied": "已复制",
+    "badge": "限时优惠",
+    "eyebrow": "新产品",
+    "hh": "时",
+    "mm": "分",
+    "ss": "秒",
+    "endsA": "结束于",
+    "endsB": "午夜",
+    "later": "稍后",
+    "view": "查看",
+    "today": "今天",
+    "prev": "上一个产品",
+    "next": "下一个产品",
+    "trust": "即开即用 · 含修改保障"
   }
 }

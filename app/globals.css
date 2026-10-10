@@ -34,6 +34,14 @@ body {
   overflow-x: clip;
 }
 
+/* Cross-browser/device consistency baseline: dark form controls +
+   scrollbars everywhere, no mobile font-boosting surprises. */
+html {
+  color-scheme: dark;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 /* Reserve the scrollbar gutter once and for all: locking body scroll for
    a modal no longer widens the viewport, so the page never jumps sideways
    when a dialog opens or closes. */

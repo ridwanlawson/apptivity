@@ -27,6 +27,19 @@ export default function PromoBanner({
   codeLabel,
   copyLabel,
   copiedLabel,
+  badge,
+  eyebrow,
+  hhLabel,
+  mmLabel,
+  ssLabel,
+  endsA,
+  endsB,
+  laterLabel,
+  viewLabel,
+  todayLabel,
+  prevLabel,
+  nextLabel,
+  trustLabel,
 }: {
   headline: string;
   sub: string;
@@ -36,6 +49,19 @@ export default function PromoBanner({
   codeLabel: string;
   copyLabel: string;
   copiedLabel: string;
+  badge: string;
+  eyebrow: string;
+  hhLabel: string;
+  mmLabel: string;
+  ssLabel: string;
+  endsA: string;
+  endsB: string;
+  laterLabel: string;
+  viewLabel: string;
+  todayLabel: string;
+  prevLabel: string;
+  nextLabel: string;
+  trustLabel: string;
 }) {
   const [show, setShow] = useState(false);
   const [leaving, setLeaving] = useState(false);
@@ -262,13 +288,13 @@ export default function PromoBanner({
                 className="h-1.5 w-1.5 rounded-full bg-gold"
                 style={{ animation: "promo-pulse-dot 1.6s ease-in-out infinite" }}
               />
-              Promo terbatas
+              {badge}
             </span>
           </div>
 
           <div className="relative">
             <p className="text-[13px] font-bold uppercase tracking-[0.2em] text-sky-hi">
-              Produk baru
+              {eyebrow}
             </p>
             <h2 className="mt-2 text-2xl font-black leading-[1.05] tracking-tight text-white sm:text-4xl">
               Diskon{" "}
@@ -286,9 +312,9 @@ export default function PromoBanner({
           {/* countdown */}
           <div className="relative flex items-center gap-2 sm:gap-2.5">
             {[
-              [hh, "jam"],
-              [mm, "mnt"],
-              [ss, "dtk"],
+              [hh, hhLabel],
+              [mm, mmLabel],
+              [ss, ssLabel],
             ].map(([v, l]) => (
               <div key={l} className="flex flex-col items-center">
                 <span className="min-w-[2.6rem] rounded-xl border border-white/10 bg-white/[0.07] px-2 py-1.5 text-center font-mono text-base font-bold tabular-nums text-white backdrop-blur sm:min-w-[3.2rem] sm:text-xl">
@@ -300,9 +326,9 @@ export default function PromoBanner({
               </div>
             ))}
             <span className="mb-5 ml-1 hidden text-xs font-semibold text-white/45 sm:block">
-              berakhir
+              {endsA}
               <br />
-              tengah malam
+              {endsB}
             </span>
           </div>
 
@@ -334,7 +360,7 @@ export default function PromoBanner({
               onClick={close}
               className="shrink-0 whitespace-nowrap rounded-2xl px-3 py-3 text-[13px] font-bold text-white/50 transition hover:bg-white/10 hover:text-white sm:px-5 sm:py-3.5 sm:text-sm"
             >
-              Nanti saja
+              {laterLabel}
             </button>
           </div>
 
@@ -366,7 +392,7 @@ export default function PromoBanner({
             <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#f0bf4c" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <path d="M20 6 9 17l-5-5" />
             </svg>
-            Siap pakai · Garansi revisi
+            {trustLabel}
           </p>
         </div>
 
@@ -407,7 +433,7 @@ export default function PromoBanner({
               ))}
               <span className="absolute inset-0 grid place-items-center rounded-b-2xl bg-navy-950/0 opacity-0 transition-all duration-200 group-hover/slide:bg-navy-950/25 group-hover/slide:opacity-100">
                 <span className="rounded-full bg-white/15 px-4 py-2 text-xs font-extrabold text-white backdrop-blur-md">
-                  Lihat {active.name} →
+                  {viewLabel} {active.name} →
                 </span>
               </span>
               {/* -30% badge pinned to the photo box corner, always touching it */}
@@ -418,7 +444,7 @@ export default function PromoBanner({
                 <span>
                   <span className="block text-base font-black leading-none text-navy-950 md:text-xl">-30%</span>
                   <span className="mt-0.5 block text-[9px] font-extrabold uppercase tracking-widest text-navy-950/70">
-                    Hari ini
+                    {todayLabel}
                   </span>
                 </span>
               </span>
@@ -433,7 +459,7 @@ export default function PromoBanner({
             <button
               type="button"
               onClick={prev}
-              aria-label="Produk sebelumnya"
+              aria-label={prevLabel}
               className="relative grid h-7 w-7 place-items-center rounded-full border border-white/15 bg-white/10 text-sm font-bold text-white backdrop-blur transition before:absolute before:-inset-3 before:content-[''] hover:bg-gold hover:text-navy-950"
             >
               <span aria-hidden="true">‹</span>
@@ -444,7 +470,7 @@ export default function PromoBanner({
                   key={s.src}
                   type="button"
                   onClick={() => goSlide(i)}
-                  aria-label={`Lihat ${s.name}`}
+                  aria-label={`${viewLabel} ${s.name}`}
                   className={`relative h-1.5 rounded-full transition-all duration-300 before:absolute before:-inset-x-2 before:-inset-y-3 before:content-[''] ${
                     i === slide ? "w-6 bg-gold" : "w-1.5 bg-white/30 hover:bg-white/60"
                   }`}
@@ -454,7 +480,7 @@ export default function PromoBanner({
             <button
               type="button"
               onClick={next}
-              aria-label="Produk berikutnya"
+              aria-label={nextLabel}
               className="relative grid h-7 w-7 place-items-center rounded-full border border-white/15 bg-white/10 text-sm font-bold text-white backdrop-blur transition before:absolute before:-inset-3 before:content-[''] hover:bg-gold hover:text-navy-950"
             >
               <span aria-hidden="true">›</span>

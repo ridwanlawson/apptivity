@@ -71,7 +71,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   for (const l of routing.locales) languages[l] = `${SITE_URL}/${l}/${slug}`;
   const alternates = {
     canonical: url,
-    languages: { ...languages, "x-default": `${SITE_URL}/id/${slug}` },
+    languages: { ...languages, "x-default": `${SITE_URL}/en/${slug}` },
   };
 
   if (CONTENT_SET.has(slug)) {

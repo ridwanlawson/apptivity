@@ -34,8 +34,8 @@ export default function LocaleError({
   reset: () => void;
 }) {
   const pathname = usePathname();
-  const locale = pathname.split("/")[1] ?? "id";
-  const t = STR[locale] ?? STR.id ?? { title: "", body: "", retry: "" };
+  const locale = pathname.split("/")[1] ?? "en";
+  const t = STR[locale] ?? STR.en ?? { title: "", body: "", retry: "" };
   return (
     <div className="bg-paper">
       <div className="mx-auto max-w-3xl px-4 py-28 text-center sm:px-6">

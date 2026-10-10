@@ -19,7 +19,9 @@
     "brief": "Start a Project",
     "faq": "FAQ",
     "contact": "Contact Us",
-    "skip": "Skip to content"
+    "skip": "Skip to content",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
   },
   "hero": {
     "eyebrow": "Indonesian Software House — Legal PT Entity",
@@ -29,7 +31,8 @@
     "sub": "Free consultation, clear pricing from the start, and a money-back guarantee if results miss the agreement.",
     "ctaPrimary": "Free Consultation via WhatsApp",
     "ctaSecondary": "See Price Estimates",
-    "waText": "Hello apptivity.id, I'd like a free consultation about my app needs."
+    "waText": "Hello apptivity.id, I'd like a free consultation about my app needs.",
+    "scrollHint": "Scroll"
   },
   "about": {
     "eyebrow": "01 — About Apptivity",
@@ -70,7 +73,9 @@
         "body": "A trusted partner network that connects and guides you from the start."
       }
     ],
-    "joinCta": "Want to partner with us? See Join Us"
+    "joinCta": "Want to partner with us? See Join Us",
+    "logoAlt": "Apptivity logo — peak is Sahabat, left foot Affiliator, right foot Developer",
+    "focusOn": "Focus on"
   },
   "ownership": {
     "eyebrow": "App Ownership",
@@ -824,6 +829,19 @@
     "close": "Close",
     "codeLabel": "A promo code for you",
     "copy": "Copy",
-    "copied": "Copied!"
+    "copied": "Copied!",
+    "badge": "Limited promo",
+    "eyebrow": "New products",
+    "hh": "hrs",
+    "mm": "min",
+    "ss": "sec",
+    "endsA": "ends at",
+    "endsB": "midnight",
+    "later": "Later",
+    "view": "View",
+    "today": "Today",
+    "prev": "Previous product",
+    "next": "Next product",
+    "trust": "Ready to use · Revision warranty"
   }
 }

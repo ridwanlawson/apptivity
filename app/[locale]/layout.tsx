@@ -111,7 +111,7 @@ export async function generateMetadata({
     },
     alternates: {
       canonical: `${SITE_URL}/${locale}`,
-      languages: { ...languages, "x-default": `${SITE_URL}/id` },
+      languages: { ...languages, "x-default": `${SITE_URL}/en` },
     },
     openGraph: {
       type: "website",
@@ -250,6 +250,8 @@ export default async function LocaleLayout({
             }}
             waText={tHero("waText")}
             promoLabel={tPromo("cta")}
+            openMenuLabel={tNav("openMenu")}
+            closeMenuLabel={tNav("closeMenu")}
           />
           <main id="konten" className="flex-1">
             <PromoBanner
@@ -261,6 +263,19 @@ export default async function LocaleLayout({
               codeLabel={tPromo("codeLabel")}
               copyLabel={tPromo("copy")}
               copiedLabel={tPromo("copied")}
+              badge={tPromo("badge")}
+              eyebrow={tPromo("eyebrow")}
+              hhLabel={tPromo("hh")}
+              mmLabel={tPromo("mm")}
+              ssLabel={tPromo("ss")}
+              endsA={tPromo("endsA")}
+              endsB={tPromo("endsB")}
+              laterLabel={tPromo("later")}
+              viewLabel={tPromo("view")}
+              todayLabel={tPromo("today")}
+              prevLabel={tPromo("prev")}
+              nextLabel={tPromo("next")}
+              trustLabel={tPromo("trust")}
             />
             {children}
           </main>

@@ -19,7 +19,9 @@
     "brief": "案件相談",
     "faq": "FAQ",
     "contact": "お問い合わせ",
-    "skip": "コンテンツへスキップ"
+    "skip": "コンテンツへスキップ",
+    "openMenu": "メニューを開く",
+    "closeMenu": "メニューを閉じる"
   },
   "hero": {
     "eyebrow": "インドネシアのソフトウェアハウス — 法人格（PT）あり",
@@ -29,7 +31,8 @@
     "sub": "無料相談、最初から明確な料金、合意と異なる場合の返金保証付き。",
     "ctaPrimary": "WhatsAppで無料相談",
     "ctaSecondary": "料金目安を見る",
-    "waText": "こんにちは、apptivity.id。アプリについて無料相談したいです。"
+    "waText": "こんにちは、apptivity.id。アプリについて無料相談したいです。",
+    "scrollHint": "スクロール"
   },
   "about": {
     "eyebrow": "01 — Apptivityとは？",
@@ -70,7 +73,9 @@
         "body": "最初からお客様を結び、寄り添う信頼できるパートナーのネットワークです。"
       }
     ],
-    "joinCta": "パートナーになりませんか？参加方法を見る"
+    "joinCta": "パートナーになりませんか？参加方法を見る",
+    "logoAlt": "Apptivityのロゴ — 頂点はSahabat、左足はAffiliator、右足はDeveloper",
+    "focusOn": "にフォーカス"
   },
   "ownership": {
     "eyebrow": "アプリの所有形態",
@@ -492,6 +497,19 @@
     "close": "閉じる",
     "codeLabel": "あなたへのプロモコード",
     "copy": "コピー",
-    "copied": "コピー済み"
+    "copied": "コピー済み",
+    "badge": "期間限定プロモ",
+    "eyebrow": "新製品",
+    "hh": "時間",
+    "mm": "分",
+    "ss": "秒",
+    "endsA": "終了",
+    "endsB": "深夜",
+    "later": "後で",
+    "view": "見る",
+    "today": "今日",
+    "prev": "前の製品",
+    "next": "次の製品",
+    "trust": "すぐ使える · 修正保証付き"
   }
 }

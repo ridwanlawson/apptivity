@@ -18,6 +18,7 @@ export type HeroDict = {
   ctaPrimary: string;
   ctaSecondary: string;
   waText: string;
+  scrollHint: string;
 };
 
 function Words({ text, base = 0 }: { text: string; base?: number }) {
@@ -144,7 +145,7 @@ export default function Hero({ dict, locale }: { dict: HeroDict; locale: Locale 
 
         <div
           data-hero-logo
-          className="relative mx-auto aspect-square w-full max-w-sm lg:max-w-md"
+          className="relative mx-auto aspect-square min-h-[280px] w-full max-w-sm lg:max-w-md"
           aria-hidden="false"
         >
           <div className="absolute inset-0 rounded-full bg-sky-hi/10 blur-[80px]" aria-hidden="true" />
@@ -160,7 +161,7 @@ export default function Hero({ dict, locale }: { dict: HeroDict; locale: Locale 
           aria-hidden="true"
         >
           <span className="h-px w-10 bg-white/25" />
-          Scroll
+          {dict.scrollHint}
           <span aria-hidden="true">↓</span>
         </div>
       </div>

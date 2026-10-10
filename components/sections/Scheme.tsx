@@ -12,6 +12,8 @@ export type SchemeDict = {
   intro: string;
   pillars: { name: string; tag: string; body: string }[];
   joinCta: string;
+  logoAlt: string;
+  focusOn: string;
 };
 
 const ACTIVE_STYLES = [
@@ -94,10 +96,10 @@ export default function Scheme({ dict }: { dict: SchemeDict }) {
               data-reveal
               className="relative mx-auto max-w-sm rounded-3xl border border-white/10 bg-white/5 p-6"
             >
-              <div className="relative aspect-square w-full">
+              <div className="relative aspect-square min-h-[240px] w-full">
                 <Image
                   src="/logo.png"
-                  alt="Logo Apptivity — puncak adalah Sahabat, kaki kiri Affiliator, kaki kanan Developer"
+                  alt={dict.logoAlt}
                   fill
                   sizes="380px"
                   className="object-contain"
@@ -111,7 +113,7 @@ export default function Scheme({ dict }: { dict: SchemeDict }) {
                       key={p.name}
                       type="button"
                       onClick={() => focusPillar(i)}
-                      aria-label={`Fokus ke ${p.name}`}
+                      aria-label={`${dict.focusOn} ${p.name}`}
                       aria-pressed={isActive}
                       className="group absolute -translate-x-1/2 -translate-y-1/2 rounded-full p-3"
                       style={{ left: spot?.left, top: spot?.top }}

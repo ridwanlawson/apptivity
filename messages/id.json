@@ -19,7 +19,9 @@
     "brief": "Mulai Project",
     "faq": "FAQ",
     "contact": "Hubungi Kami",
-    "skip": "Lewati ke konten"
+    "skip": "Lewati ke konten",
+    "openMenu": "Buka menu",
+    "closeMenu": "Tutup menu"
   },
   "hero": {
     "eyebrow": "Software House Indonesia — Berbadan Hukum PT",
@@ -29,7 +31,8 @@
     "sub": "Konsultasi gratis, harga jelas sejak awal, dan garansi uang kembali jika hasil tidak sesuai kesepakatan.",
     "ctaPrimary": "Konsultasi Gratis via WhatsApp",
     "ctaSecondary": "Lihat Estimasi Harga",
-    "waText": "Halo apptivity.id, saya mau konsultasi gratis tentang kebutuhan aplikasi saya."
+    "waText": "Halo apptivity.id, saya mau konsultasi gratis tentang kebutuhan aplikasi saya.",
+    "scrollHint": "Gulir"
   },
   "about": {
     "eyebrow": "01 — Tentang Apptivity",
@@ -70,7 +73,9 @@
         "body": "Jaringan partner tepercaya yang menghubungkan dan mendampingi Anda sejak awal."
       }
     ],
-    "joinCta": "Tertarik jadi partner kami? Ke bagian Gabung Bersama Kami"
+    "joinCta": "Tertarik jadi partner kami? Ke bagian Gabung Bersama Kami",
+    "logoAlt": "Logo Apptivity — puncak adalah Sahabat, kaki kiri Affiliator, kaki kanan Developer",
+    "focusOn": "Fokus ke"
   },
   "ownership": {
     "eyebrow": "Kepemilikan Aplikasi",
@@ -824,6 +829,19 @@
     "close": "Tutup",
     "codeLabel": "Kode promo buat kamu",
     "copy": "Salin",
-    "copied": "Disalin!"
+    "copied": "Disalin!",
+    "badge": "Promo terbatas",
+    "eyebrow": "Produk baru",
+    "hh": "jam",
+    "mm": "mnt",
+    "ss": "dtk",
+    "endsA": "berakhir",
+    "endsB": "tengah malam",
+    "later": "Nanti saja",
+    "view": "Lihat",
+    "today": "Hari ini",
+    "prev": "Produk sebelumnya",
+    "next": "Produk berikutnya",
+    "trust": "Siap pakai · Garansi revisi"
   }
 }

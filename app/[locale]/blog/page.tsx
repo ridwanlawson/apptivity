@@ -52,7 +52,7 @@ export async function generateMetadata({
   return {
     title: dict.title,
     description: dict.description,
-    alternates: { canonical: url, languages: { ...languages, "x-default": `${SITE_URL}/id/blog` } },
+    alternates: { canonical: url, languages: { ...languages, "x-default": `${SITE_URL}/en/blog` } },
     openGraph: {
       type: "website",
       url,

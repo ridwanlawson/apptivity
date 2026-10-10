@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: dict.description,
     alternates: {
       canonical: url,
-      languages: { ...languages, "x-default": `${SITE_URL}/id/blog/${post}` },
+      languages: { ...languages, "x-default": `${SITE_URL}/en/blog/${post}` },
     },
     openGraph: {
       type: "article",

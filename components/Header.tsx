@@ -51,11 +51,15 @@ export default function Header({
   nav,
   waText,
   promoLabel,
+  openMenuLabel,
+  closeMenuLabel,
 }: {
   locale: Locale;
   nav: NavDict;
   waText: string;
   promoLabel: string;
+  openMenuLabel: string;
+  closeMenuLabel: string;
 }) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -348,7 +352,7 @@ export default function Header({
           <button
             className="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-white/15 bg-white/5 text-white transition-colors hover:bg-white/10 xl:hidden"
             aria-expanded={open}
-            aria-label={open ? "Close menu" : "Open menu"}
+            aria-label={open ? closeMenuLabel : openMenuLabel}
             onClick={() => setOpen((v) => !v)}
           >
             <span aria-hidden="true" className="text-xl leading-none">
